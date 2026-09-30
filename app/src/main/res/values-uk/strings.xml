@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_subtitle">Усі документи в одному місці</string>
+    <string name="language">Мова</string>
+    <string name="language_default">За замовчуванням</string>
+    <string name="onb_title_1">Універсальний\nпереглядач документів</string>
+    <string name="onb_title_2">Професійний\nредактор PDF</string>
+    <string name="onb_title_3">Прості й зручні\nшаблони</string>
+    <string name="next">Далі</string>
+    <string name="start">Почати</string>
+    <string name="nav_all_files">Усі файли</string>
+    <string name="nav_tools">Інструменти</string>
+    <string name="nav_settings">Налаштування</string>
+    <string name="cat_all">Усі</string>
+    <string name="cat_image">Зображення</string>
+    <string name="cat_directories">Папки</string>
+    <string name="recent">Нещодавні</string>
+    <string name="bookmarks">Закладки</string>
+    <string name="empty">Порожньо</string>
+    <string name="loading_files">Завантаження файлів…</string>
+    <string name="coach_click_folders">Натисніть на папки вище, щоб переглянути</string>
+    <string name="discover_new_feature">Нова функція:</string>
+    <string name="create_pdf">Створити PDF</string>
+    <string name="permission_title">Дозвольте доступ до файлів</string>
+    <string name="permission_message">Щоб читати файли PDF, Word, Excel, PPT і TXT, дозвольте доступ до всіх файлів на цьому пристрої.</string>
+    <string name="allow">Дозволити</string>
+    <string name="not_now">Не зараз</string>
+    <string name="permission_needed_hint">Дозвольте доступ до файлів, щоб бачити документи</string>
+    <string name="grant_access">Надати доступ</string>
+    <string name="search_hint">Пошук файлів</string>
+    <string name="no_files_found">Файли не знайдено</string>
+    <string name="coming_soon">З’явиться в наступному оновленні</string>
+    <plurals name="files_count">
+        <item quantity="one">%d файл</item>
+        <item quantity="few">%d файли</item>
+        <item quantity="many">%d файлів</item>
+        <item quantity="other">%d файлу</item>
+    </plurals>
+    <!-- step2 -->
+    <string name="all_files_title">Усі файли</string>
+    <string name="selected_count">Вибрано: %d</string>
+    <string name="search_for_files">Пошук файлів…</string>
+    <string name="cancel">Скасувати</string>
+    <string name="filter_by">Сортувати за</string>
+    <string name="sort_name">Назва</string>
+    <string name="sort_date_short">Дата</string>
+    <string name="file_size">Розмір</string>
+    <string name="ascending">За зростанням</string>
+    <string name="descending">За спаданням</string>
+    <string name="share">Поділитися</string>
+    <string name="rename">Перейменувати</string>
+    <string name="to_home_screen">На головний\nекран</string>
+    <string name="delete">Видалити</string>
+    <string name="storage_path">Шлях</string>
+    <string name="last_modified">Змінено</string>
+    <string name="recycle_title">Перемістити в кошик чи видалити?</string>
+    <string name="recycle_message">Файли з кошика можна відновити протягом 30 днів.</string>
+    <string name="move_to_recycle_bin">У кошик</string>
+    <string name="delete_directly">Видалити одразу</string>
+    <string name="permission_required">Потрібен дозвіл</string>
+    <string name="rate_subtitle">Ваша оцінка дуже важлива для нас!</string>
+    <string name="rate_best">Найкраща оцінка</string>
+    <string name="rate">Оцінити</string>
+    <!-- /step2 -->
+    <!-- step3 -->
+    <string name="storage">Сховище</string>
+    <string name="all_documents">Усі документи</string>
+    <string name="recycle_bin">Кошик</string>
+    <string name="recently_added">Нещодавно додані</string>
+    <string name="restore">Відновити</string>
+    <string name="delete_permanently">Видалити назавжди</string>
+    <string name="empty_recycle_bin">Очистити кошик</string>
+    <string name="unsupported_title">Тип файлу не підтримується</string>
+    <string name="loading">Завантаження…</string>
+    <string name="saved_successfully">Успішно збережено</string>
+    <string name="pages">Сторінки</string>
+    <string name="bookmark">Закладка</string>
+    <string name="mode_vertical">Вертикально</string>
+    <string name="mode_horizontal">Горизонтально</string>
+    <string name="rotate">Повернути</string>
+    <string name="search">Пошук</string>
+    <string name="invert">Інверсія</string>
+    <string name="go_to_page">Перейти до сторінки</string>
+    <string name="jump_tip">Торкніться, щоб одразу перейти до сторінки</string>
+    <string name="drag_hint">Утримуйте й перетягуйте для сортування</string>
+    <string name="insert">Вставити</string>
+    <string name="extract">Витягти</string>
+    <string name="blank_pages">Порожні сторінки</string>
+    <string name="images">Зображення</string>
+    <string name="delete_confirm">Підтвердьте видалення</string>
+    <string name="deleted_successfully">Успішно видалено</string>
+    <string name="insert_blank_pages">Вставити порожні сторінки</string>
+    <string name="page_size">Розмір сторінки</string>
+    <string name="page_color">Колір сторінки</string>
+    <string name="orientation">Орієнтація</string>
+    <string name="page_count">Кількість сторінок</string>
+    <string name="follow_previous">Як попередня</string>
+    <string name="apply">Застосувати</string>
+    <!-- /step3 -->
+    <!-- step4 -->
+    <string name="create_files">Створити файли</string>
+    <string name="import_files">Імпорт файлів</string>
+    <string name="use_templates">Шаблони</string>
+    <string name="convert_format">Конвертувати</string>
+    <string name="image_to_pdf">Зображення в PDF</string>
+    <string name="scan_to_pdf">Скан у PDF</string>
+    <string name="word_to_pdf">Word у PDF</string>
+    <string name="ppt_to_pdf">PPT у PDF</string>
+    <string name="select_template">Виберіть шаблон</string>
+    <string name="file_name">Назва файлу</string>
+    <string name="create">Створити</string>
+    <string name="convert_to_pdf">Конвертувати в PDF</string>
+    <string name="converting">Конвертація…</string>
+    <string name="converted_successfully">Успішно конвертовано</string>
+    <string name="color_inversion_on">Інверсія кольорів: увімк.</string>
+    <string name="color_inversion_off">Інверсія кольорів: вимк.</string>
+    <!-- /step4 -->
+    <!-- step5 -->
+    <string name="page_by_page">Посторінково</string>
+    <string name="continuous_pages">Безперервні сторінки</string>
+    <string name="view">Відкрити</string>
+    <string name="extracted_successfully">Успішно витягнуто</string>
+    <string name="saved_as">Збережено як \"%s\".</string>
+    <string name="page_setup">Параметри сторінки</string>
+    <string name="page_for_preview">Ця сторінка для попереднього перегляду</string>
+    <string name="apply_to_selected">Застосувати до вибраних</string>
+    <string name="all_pages_title">Усі сторінки (%1$d/%2$d)</string>
+    <string name="pen">Ручка</string>
+    <string name="highlight">Виділення</string>
+    <string name="eraser">Гумка</string>
+    <!-- /step5 -->
+    <!-- step6 -->
+    <string name="take_a_photo">Зробити фото</string>
+    <string name="choose_from_gallery">Вибрати з галереї</string>
+    <string name="choose_cropping_method">Виберіть спосіб обрізання</string>
+    <string name="crop_method_hint">Змінити можна будь-коли в \"Налаштуваннях сканування\".</string>
+    <string name="auto_crop">Автообрізання</string>
+    <string name="no_crop">Без обрізання</string>
+    <string name="dont_ask_again">Більше не питати</string>
+    <string name="scan_settings">Налаштування сканування</string>
+    <string name="camera_permission_needed">Для зйомки потрібен дозвіл на камеру</string>
+    <string name="capture_failed">Не вдалося зробити фото, спробуйте ще раз</string>
+    <string name="retake">Перезняти</string>
+    <string name="crop">Обрізати</string>
+    <string name="left">Ліворуч</string>
+    <string name="right">Праворуч</string>
+    <string name="apply_to_all">Застосувати до всіх</string>
+    <string name="no_edges_found">Краї документа не знайдено</string>
+    <string name="processing_progress">Обробка… (%d%%)</string>
+    <string name="add_pages">Додати сторінки</string>
+    <string name="converted_successfully_excl">Успішно конвертовано!</string>
+    <string name="view_locally">Відкрити на пристрої</string>
+    <string name="tools">Інструменти</string>
+    <string name="edit_text">Редагувати текст</string>
+    <string name="annotate">Позначки</string>
+    <string name="add_text">Додати текст</string>
+    <string name="print_pdf">Друк PDF</string>
+    <string name="sign">Підписати</string>
+    <string name="tap_to_add_text">Торкніться сторінки, щоб ввести текст</string>
+    <!-- /step6 -->
+    <!-- step8 -->
+    <string name="select_a_file">Виберіть файл</string>
+    <string name="convert_to_word">Конвертувати в Word</string>
+    <!-- /step8 -->
+    <!-- step9 -->
+    <string name="section_convert_create">Конвертація і створення</string>
+    <string name="section_edit">Редагування</string>
+    <string name="section_others">Інше</string>
+    <string name="manage_pages">Керування сторінками</string>
+    <string name="feature_request">Немає потрібної функції?</string>
+    <string name="tell_us">Повідомте нам</string>
+    <string name="add_image">Додати зображення</string>
+    <string name="tap_anywhere_add_text">Торкніться будь-де, щоб додати текст</string>
+    <string name="tap_text_to_edit">Торкніться тексту, який хочете змінити</string>
+    <string name="no_editable_text">У цьому PDF немає тексту для редагування (скани). Скористайтеся «Додати текст».</string>
+    <string name="enter_text">Введіть текст</string>
+    <string name="clear">Очистити</string>
+    <string name="color">Колір</string>
+    <string name="size">Розмір</string>
+    <string name="add_signature">+  Додати підпис</string>
+    <string name="sign_here">Підпишіть тут</string>
+    <string name="edit_pdf">Редагувати PDF</string>
+    <string name="tut_edit_title">Редагуйте PDF легко.</string>
+    <string name="tut_sign_title">Підписуйте документи за секунди.</string>
+    <string name="try_now">Спробувати</string>
+    <string name="later">Пізніше</string>
+    <!-- /step9 -->
+    <!-- step10 -->
+    <string name="theme_system">Як у системі</string>
+    <string name="theme_light">Світла</string>
+    <string name="theme_dark">Темна</string>
+    <string name="file_manager">Файловий менеджер</string>
+    <string name="section_general">Загальні</string>
+    <string name="app_theme">Тема застосунку</string>
+    <string name="feedback_or_suggestion">Відгук або пропозиція</string>
+    <string name="add_widget">Додати віджет</string>
+    <string name="explore_more_apps">Інші наші застосунки</string>
+    <string name="terms_of_use">Умови використання</string>
+    <string name="privacy_policy">Політика конфіденційності</string>
+    <string name="manage_subscriptions">Керування підписками</string>
+    <string name="go_to_google_play">Перейти в Google Play</string>
+    <string name="ask_every_time">Питати щоразу</string>
+    <string name="remove_ads">Прибрати рекламу</string>
+    <string name="unlock_premium">Відкрийте всі преміум-функції</string>
+    <string name="faq_view_edit">Перегляд і редагування</string>
+    <string name="faq_manage">Керування файлами</string>
+    <string name="faq_about_app">Про застосунок</string>
+    <string name="faq_thanks">Дякуємо за відгук!</string>
+    <string name="rate_our_app">Оцініть застосунок</string>
+    <string name="what_problems">З якими проблемами ви зіткнулися?</string>
+    <string name="add_screenshot">Додати знімок екрана</string>
+    <string name="submit">Надіслати</string>
+    <string name="fb_cant_open">Файл не відкривається</string>
+    <string name="fb_too_many_ads">Забагато реклами</string>
+    <string name="fb_slow">Повільно</string>
+    <string name="fb_crashes">Вилітає</string>
+    <string name="fb_others">Інше</string>
+    <!-- /step10 -->
+    <!-- step11 -->
+    <string name="loaded_successfully">Завантажено</string>
+    <string name="back">Назад</string>
+    <string name="bin_info">Файли буде остаточно видалено через 30 днів після переміщення сюди.</string>
+    <string name="bin_empty">Кошик порожній</string>
+    <!-- /step11 -->
+    <!-- step12 -->
+    <string name="welcome_back">З поверненням…</string>
+    <string name="subscribe_failed">Не вдалося оформити підписку</string>
+    <string name="premium_welcome">Ласкаво просимо до Premium!</string>
+    <string name="premium_restored">Premium відновлено</string>
+    <!-- /step12 -->
+    <!-- step14 -->
+    <string name="save_to_drive">Зберігати на Google Диск</string>
+    <string name="drive_off">Вимк.</string>
+    <string name="drive_option_off">Вимк.</string>
+    <!-- /step14 -->
+    <!-- step16 -->
+    <string name="tpl_save">Зберегти</string>
+    <string name="tpl_letter">Лист</string>
+    <string name="tpl_briefing">Брифінг</string>
+    <string name="tpl_poster">Постер</string>
+    <string name="tpl_need_more">Потрібно більше шаблонів?</string>
+    <string name="tpl_fonts">Шрифти</string>
+    <string name="tpl_current_font">Поточний шрифт</string>
+    <string name="tpl_format">Формат</string>
+    <string name="tpl_size_color">Розмір і колір</string>
+    <string name="tpl_replace">Замінити</string>
+    <string name="tpl_select_format">Виберіть формат</string>
+    <string name="tpl_png_desc">Підходить для файлів із зображеннями</string>
+    <string name="tpl_jpg_desc">Підходить для менших файлів</string>
+    <string name="tpl_pdf_desc">Підходить для більшості файлів</string>
+    <string name="tpl_quit_title">Вийти зараз?</string>
+    <string name="tpl_quit_message">Ви ще не зберегли зміни. Зберегти їх зараз?</string>
+    <!-- /step16 -->
+</resources>

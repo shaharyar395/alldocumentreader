@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_subtitle">Tingnan ang lahat ng dokumento sa iisang lugar</string>
+    <string name="language">Wika</string>
+    <string name="language_default">Default</string>
+    <string name="onb_title_1">All-in-one na\nDocument Reader</string>
+    <string name="onb_title_2">Propesyonal na\nPDF Editor</string>
+    <string name="onb_title_3">Madali at Praktikal\nna Template</string>
+    <string name="next">Susunod</string>
+    <string name="start">Simulan</string>
+    <string name="nav_all_files">Lahat ng file</string>
+    <string name="nav_tools">Mga tool</string>
+    <string name="nav_settings">Mga setting</string>
+    <string name="cat_all">Lahat</string>
+    <string name="cat_image">Larawan</string>
+    <string name="cat_directories">Mga direktoryo</string>
+    <string name="recent">Kamakailan</string>
+    <string name="bookmarks">Mga bookmark</string>
+    <string name="empty">Walang laman</string>
+    <string name="loading_files">Nilo-load ang mga file…</string>
+    <string name="coach_click_folders">I-click ang mga folder sa itaas para tingnan</string>
+    <string name="discover_new_feature">Tuklasin ang bagong feature:</string>
+    <string name="create_pdf">Gumawa ng PDF</string>
+    <string name="permission_title">Payagan ang access sa mga file</string>
+    <string name="permission_message">Para mabasa ang iyong PDF, Word, Excel, PPT at TXT file, payagan ang access sa lahat ng file sa device na ito.</string>
+    <string name="allow">Payagan</string>
+    <string name="not_now">Hindi ngayon</string>
+    <string name="permission_needed_hint">Payagan ang access sa file para makita ang mga dokumento</string>
+    <string name="grant_access">Magbigay ng access</string>
+    <string name="search_hint">Maghanap ng file</string>
+    <string name="no_files_found">Walang nahanap na file</string>
+    <string name="coming_soon">Darating sa susunod na update</string>
+    <plurals name="files_count">
+        <item quantity="one">%d file</item>
+        <item quantity="other">%d na file</item>
+    </plurals>
+    <!-- step2 -->
+    <string name="all_files_title">Lahat ng file</string>
+    <string name="selected_count">%d ang napili</string>
+    <string name="search_for_files">Maghanap ng file…</string>
+    <string name="cancel">Kanselahin</string>
+    <string name="filter_by">I-filter ayon sa</string>
+    <string name="sort_name">Pangalan</string>
+    <string name="sort_date_short">Petsa</string>
+    <string name="file_size">Laki ng file</string>
+    <string name="ascending">Pataas</string>
+    <string name="descending">Pababa</string>
+    <string name="share">Ibahagi</string>
+    <string name="rename">Palitan ang pangalan</string>
+    <string name="to_home_screen">Sa home\nscreen</string>
+    <string name="delete">Burahin</string>
+    <string name="storage_path">Lokasyon</string>
+    <string name="last_modified">Huling binago</string>
+    <string name="recycle_title">Ilipat sa recycle bin o burahin?</string>
+    <string name="recycle_message">Maibabalik ang mga file sa recycle bin sa loob ng 30 araw.</string>
+    <string name="move_to_recycle_bin">Ilipat sa recycle bin</string>
+    <string name="delete_directly">Burahin agad</string>
+    <string name="permission_required">Kailangan ng pahintulot</string>
+    <string name="rate_subtitle">Malaking bagay sa amin ang iyong rating!</string>
+    <string name="rate_best">Ang pinakamagandang makukuha namin</string>
+    <string name="rate">I-rate</string>
+    <!-- /step2 -->
+    <!-- step3 -->
+    <string name="storage">Storage</string>
+    <string name="all_documents">Lahat ng dokumento</string>
+    <string name="recycle_bin">Recycle bin</string>
+    <string name="recently_added">Bagong idinagdag</string>
+    <string name="restore">Ibalik</string>
+    <string name="delete_permanently">Burahin nang tuluyan</string>
+    <string name="empty_recycle_bin">Alisan ng laman</string>
+    <string name="unsupported_title">Hindi suportado ang uri ng file</string>
+    <string name="loading">Naglo-load…</string>
+    <string name="saved_successfully">Matagumpay na na-save</string>
+    <string name="pages">Mga pahina</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="mode_vertical">Patayo</string>
+    <string name="mode_horizontal">Pahalang</string>
+    <string name="rotate">I-rotate</string>
+    <string name="search">Maghanap</string>
+    <string name="invert">I-invert</string>
+    <string name="go_to_page">Pumunta sa pahina</string>
+    <string name="jump_tip">I-tap dito para direktang pumunta sa pahina</string>
+    <string name="drag_hint">Pindutin nang matagal at i-drag para ayusin</string>
+    <string name="insert">Magsingit</string>
+    <string name="extract">I-extract</string>
+    <string name="blank_pages">Mga blangkong pahina</string>
+    <string name="images">Mga larawan</string>
+    <string name="delete_confirm">Kumpirmahin ang pagbura</string>
+    <string name="deleted_successfully">Matagumpay na nabura</string>
+    <string name="insert_blank_pages">Magsingit ng blangkong pahina</string>
+    <string name="page_size">Laki ng pahina</string>
+    <string name="page_color">Kulay ng pahina</string>
+    <string name="orientation">Oryentasyon</string>
+    <string name="page_count">Bilang ng pahina</string>
+    <string name="follow_previous">Gaya ng nauna</string>
+    <string name="apply">Ilapat</string>
+    <!-- /step3 -->
+    <!-- step4 -->
+    <string name="create_files">Gumawa ng file</string>
+    <string name="import_files">Mag-import ng file</string>
+    <string name="use_templates">Gumamit ng template</string>
+    <string name="convert_format">I-convert ang format</string>
+    <string name="image_to_pdf">Larawan sa PDF</string>
+    <string name="scan_to_pdf">I-scan sa PDF</string>
+    <string name="word_to_pdf">Word sa PDF</string>
+    <string name="ppt_to_pdf">PPT sa PDF</string>
+    <string name="select_template">Pumili ng template</string>
+    <string name="file_name">Pangalan ng file</string>
+    <string name="create">Gumawa</string>
+    <string name="convert_to_pdf">I-convert sa PDF</string>
+    <string name="converting">Kino-convert…</string>
+    <string name="converted_successfully">Matagumpay na na-convert</string>
+    <string name="color_inversion_on">Pag-invert ng kulay: On</string>
+    <string name="color_inversion_off">Pag-invert ng kulay: Off</string>
+    <!-- /step4 -->
+    <!-- step5 -->
+    <string name="page_by_page">Pahina-pahina</string>
+    <string name="continuous_pages">Tuloy-tuloy na pahina</string>
+    <string name="view">Tingnan</string>
+    <string name="extracted_successfully">Matagumpay na na-extract</string>
+    <string name="saved_as">Na-save bilang \"%s\".</string>
+    <string name="page_setup">Page setup</string>
+    <string name="page_for_preview">Ang pahinang ito ay preview</string>
+    <string name="apply_to_selected">Ilapat sa napili</string>
+    <string name="all_pages_title">Lahat ng pahina (%1$d/%2$d)</string>
+    <string name="pen">Panulat</string>
+    <string name="highlight">I-highlight</string>
+    <string name="eraser">Pambura</string>
+    <!-- /step5 -->
+    <!-- step6 -->
+    <string name="take_a_photo">Kumuha ng litrato</string>
+    <string name="choose_from_gallery">Pumili mula sa gallery</string>
+    <string name="choose_cropping_method">Pumili ng paraan ng pag-crop</string>
+    <string name="crop_method_hint">Mababago mo ito anumang oras sa \"Scan settings\".</string>
+    <string name="auto_crop">Auto crop</string>
+    <string name="no_crop">Walang crop</string>
+    <string name="dont_ask_again">Huwag nang itanong</string>
+    <string name="scan_settings">Scan settings</string>
+    <string name="camera_permission_needed">Kailangan ang pahintulot sa camera para kumuha ng litrato</string>
+    <string name="capture_failed">Hindi nakuha ang litrato, subukang muli</string>
+    <string name="retake">Kunan muli</string>
+    <string name="crop">I-crop</string>
+    <string name="left">Kaliwa</string>
+    <string name="right">Kanan</string>
+    <string name="apply_to_all">Ilapat sa lahat</string>
+    <string name="no_edges_found">Walang nakitang gilid ng dokumento</string>
+    <string name="processing_progress">Pinoproseso… (%d%%)</string>
+    <string name="add_pages">Magdagdag ng pahina</string>
+    <string name="converted_successfully_excl">Matagumpay na na-convert!</string>
+    <string name="view_locally">Tingnan sa device</string>
+    <string name="tools">Mga tool</string>
+    <string name="edit_text">I-edit ang text</string>
+    <string name="annotate">Mag-annotate</string>
+    <string name="add_text">Magdagdag ng text</string>
+    <string name="print_pdf">I-print ang PDF</string>
+    <string name="sign">Pumirma</string>
+    <string name="tap_to_add_text">I-tap ang pahina para mag-type</string>
+    <!-- /step6 -->
+    <!-- step8 -->
+    <string name="select_a_file">Pumili ng file</string>
+    <string name="convert_to_word">I-convert sa Word</string>
+    <!-- /step8 -->
+    <!-- step9 -->
+    <string name="section_convert_create">I-convert at Gumawa</string>
+    <string name="section_edit">I-edit</string>
+    <string name="section_others">Iba pa</string>
+    <string name="manage_pages">Pamahalaan ang mga pahina</string>
+    <string name="feature_request">Wala ang feature na gusto mo?</string>
+    <string name="tell_us">Sabihin sa amin</string>
+    <string name="add_image">Magdagdag ng larawan</string>
+    <string name="tap_anywhere_add_text">I-tap kahit saan para magdagdag ng text</string>
+    <string name="tap_text_to_edit">I-tap ang text na gusto mong i-edit</string>
+    <string name="no_editable_text">Walang nae-edit na text ang PDF na ito (na-scan). Gamitin ang Magdagdag ng text.</string>
+    <string name="enter_text">Ilagay ang text</string>
+    <string name="clear">I-clear</string>
+    <string name="color">Kulay</string>
+    <string name="size">Laki</string>
+    <string name="add_signature">+  Magdagdag ng pirma</string>
+    <string name="sign_here">Pumirma dito</string>
+    <string name="edit_pdf">I-edit ang PDF</string>
+    <string name="tut_edit_title">Madaling mag-edit ng PDF.</string>
+    <string name="tut_sign_title">Pumirma ng dokumento sa ilang segundo.</string>
+    <string name="try_now">Subukan ngayon</string>
+    <string name="later">Mamaya</string>
+    <!-- /step9 -->
+    <!-- step10 -->
+    <string name="theme_system">Default ng system</string>
+    <string name="theme_light">Maliwanag</string>
+    <string name="theme_dark">Madilim</string>
+    <string name="file_manager">File manager</string>
+    <string name="section_general">Pangkalahatan</string>
+    <string name="app_theme">Tema ng app</string>
+    <string name="feedback_or_suggestion">Feedback o mungkahi</string>
+    <string name="add_widget">Magdagdag ng widget</string>
+    <string name="explore_more_apps">Tuklasin ang iba pang app</string>
+    <string name="terms_of_use">Mga tuntunin ng paggamit</string>
+    <string name="privacy_policy">Patakaran sa privacy</string>
+    <string name="manage_subscriptions">Pamahalaan ang subscription</string>
+    <string name="go_to_google_play">Pumunta sa Google Play</string>
+    <string name="ask_every_time">Laging itanong</string>
+    <string name="remove_ads">Alisin ang mga ad</string>
+    <string name="unlock_premium">I-unlock ang lahat ng premium feature</string>
+    <string name="faq_view_edit">Tingnan at i-edit</string>
+    <string name="faq_manage">Pamahalaan ang mga file</string>
+    <string name="faq_about_app">Tungkol sa app</string>
+    <string name="faq_thanks">Salamat sa iyong feedback!</string>
+    <string name="rate_our_app">I-rate ang aming app</string>
+    <string name="what_problems">Anong problema ang naranasan mo?</string>
+    <string name="add_screenshot">Magdagdag ng screenshot</string>
+    <string name="submit">Isumite</string>
+    <string name="fb_cant_open">Hindi mabuksan ang file</string>
+    <string name="fb_too_many_ads">Masyadong maraming ad</string>
+    <string name="fb_slow">Mabagal</string>
+    <string name="fb_crashes">Nagka-crash</string>
+    <string name="fb_others">Iba pa</string>
+    <!-- /step10 -->
+    <!-- step11 -->
+    <string name="loaded_successfully">Matagumpay na na-load</string>
+    <string name="back">Bumalik</string>
+    <string name="bin_info">Permanenteng mabubura ang mga file 30 araw matapos ilipat dito.</string>
+    <string name="bin_empty">Walang laman ang recycle bin</string>
+    <!-- /step11 -->
+    <!-- step12 -->
+    <string name="welcome_back">Maligayang pagbabalik…</string>
+    <string name="subscribe_failed">Nabigo ang subscription</string>
+    <string name="premium_welcome">Maligayang pagdating sa Premium!</string>
+    <string name="premium_restored">Naibalik ang Premium</string>
+    <!-- /step12 -->
+    <!-- step14 -->
+    <string name="save_to_drive">I-save sa Google Drive</string>
+    <string name="drive_off">Naka-off</string>
+    <string name="drive_option_off">Naka-off</string>
+    <!-- /step14 -->
+    <!-- step16 -->
+    <string name="tpl_save">I-save</string>
+    <string name="tpl_letter">Liham</string>
+    <string name="tpl_briefing">Briefing</string>
+    <string name="tpl_poster">Poster</string>
+    <string name="tpl_need_more">Kailangan pa ng mga template?</string>
+    <string name="tpl_fonts">Mga font</string>
+    <string name="tpl_current_font">Kasalukuyang font</string>
+    <string name="tpl_format">Format</string>
+    <string name="tpl_size_color">Laki at Kulay</string>
+    <string name="tpl_replace">Palitan</string>
+    <string name="tpl_select_format">Pumili ng format</string>
+    <string name="tpl_png_desc">Angkop sa mga file na may larawan</string>
+    <string name="tpl_jpg_desc">Angkop sa mas maliliit na file</string>
+    <string name="tpl_pdf_desc">Angkop sa karamihan ng file</string>
+    <string name="tpl_quit_title">Umalis na ngayon?</string>
+    <string name="tpl_quit_message">Hindi mo pa nase-save ang mga pagbabago. Gusto mo bang i-save ngayon?</string>
+    <!-- /step16 -->
+</resources>

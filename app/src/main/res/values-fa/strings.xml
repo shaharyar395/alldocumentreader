@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_subtitle">مشاهده همه اسناد در یک مکان</string>
+    <string name="language">زبان</string>
+    <string name="language_default">پیش‌فرض</string>
+    <string name="onb_title_1">سندخوان\nهمه‌کاره</string>
+    <string name="onb_title_2">ویرایشگر PDF\nحرفه‌ای</string>
+    <string name="onb_title_3">قالب‌های ساده\nو کاربردی</string>
+    <string name="next">بعدی</string>
+    <string name="start">شروع</string>
+    <string name="nav_all_files">همه فایل‌ها</string>
+    <string name="nav_tools">ابزارها</string>
+    <string name="nav_settings">تنظیمات</string>
+    <string name="cat_all">همه</string>
+    <string name="cat_image">تصویر</string>
+    <string name="cat_directories">پوشه‌ها</string>
+    <string name="recent">اخیر</string>
+    <string name="bookmarks">نشانک‌ها</string>
+    <string name="empty">خالی</string>
+    <string name="loading_files">در حال بارگیری فایل‌ها…</string>
+    <string name="coach_click_folders">برای مشاهده روی پوشه‌های بالا ضربه بزنید</string>
+    <string name="discover_new_feature">یک ویژگی جدید را کشف کنید:</string>
+    <string name="create_pdf">ایجاد PDF</string>
+    <string name="permission_title">اجازه دسترسی به فایل‌ها</string>
+    <string name="permission_message">برای خواندن فایل‌های PDF، Word، Excel، PPT و TXT، لطفاً اجازه دسترسی به همه فایل‌های این دستگاه را بدهید.</string>
+    <string name="allow">اجازه</string>
+    <string name="not_now">اکنون نه</string>
+    <string name="permission_needed_hint">برای دیدن اسناد، اجازه دسترسی به فایل‌ها را بدهید</string>
+    <string name="grant_access">اعطای دسترسی</string>
+    <string name="search_hint">جستجوی فایل‌ها</string>
+    <string name="no_files_found">فایلی یافت نشد</string>
+    <string name="coming_soon">در به‌روزرسانی بعدی</string>
+    <plurals name="files_count">
+        <item quantity="one">%d فایل</item>
+        <item quantity="other">%d فایل</item>
+    </plurals>
+    <!-- step2 -->
+    <string name="all_files_title">همه فایل‌ها</string>
+    <string name="selected_count">%d انتخاب شد</string>
+    <string name="search_for_files">جستجوی فایل‌ها…</string>
+    <string name="cancel">لغو</string>
+    <string name="filter_by">فیلتر بر اساس</string>
+    <string name="sort_name">نام</string>
+    <string name="sort_date_short">تاریخ</string>
+    <string name="file_size">اندازه فایل</string>
+    <string name="ascending">صعودی</string>
+    <string name="descending">نزولی</string>
+    <string name="share">اشتراک‌گذاری</string>
+    <string name="rename">تغییر نام</string>
+    <string name="to_home_screen">به صفحه\nاصلی</string>
+    <string name="delete">حذف</string>
+    <string name="storage_path">مسیر ذخیره</string>
+    <string name="last_modified">آخرین تغییر</string>
+    <string name="recycle_title">انتقال به سطل بازیافت یا حذف؟</string>
+    <string name="recycle_message">فایل‌های سطل بازیافت تا ۳۰ روز قابل بازیابی هستند.</string>
+    <string name="move_to_recycle_bin">انتقال به سطل بازیافت</string>
+    <string name="delete_directly">حذف مستقیم</string>
+    <string name="permission_required">مجوز لازم است</string>
+    <string name="rate_subtitle">امتیاز شما برای ما بسیار ارزشمند است!</string>
+    <string name="rate_best">بهترین امتیاز ممکن</string>
+    <string name="rate">امتیاز دادن</string>
+    <!-- /step2 -->
+    <!-- step3 -->
+    <string name="storage">حافظه</string>
+    <string name="all_documents">همه اسناد</string>
+    <string name="recycle_bin">سطل بازیافت</string>
+    <string name="recently_added">اخیراً اضافه‌شده</string>
+    <string name="restore">بازیابی</string>
+    <string name="delete_permanently">حذف دائمی</string>
+    <string name="empty_recycle_bin">خالی کردن سطل</string>
+    <string name="unsupported_title">نوع فایل پشتیبانی نمی‌شود</string>
+    <string name="loading">در حال بارگیری…</string>
+    <string name="saved_successfully">با موفقیت ذخیره شد</string>
+    <string name="pages">صفحات</string>
+    <string name="bookmark">نشانک</string>
+    <string name="mode_vertical">عمودی</string>
+    <string name="mode_horizontal">افقی</string>
+    <string name="rotate">چرخش</string>
+    <string name="search">جستجو</string>
+    <string name="invert">معکوس رنگ</string>
+    <string name="go_to_page">رفتن به صفحه</string>
+    <string name="jump_tip">برای رفتن مستقیم به صفحه اینجا ضربه بزنید</string>
+    <string name="drag_hint">برای جابه‌جایی نگه دارید و بکشید</string>
+    <string name="insert">درج</string>
+    <string name="extract">استخراج</string>
+    <string name="blank_pages">صفحات خالی</string>
+    <string name="images">تصاویر</string>
+    <string name="delete_confirm">تأیید حذف</string>
+    <string name="deleted_successfully">با موفقیت حذف شد</string>
+    <string name="insert_blank_pages">درج صفحات خالی</string>
+    <string name="page_size">اندازه صفحه</string>
+    <string name="page_color">رنگ صفحه</string>
+    <string name="orientation">جهت</string>
+    <string name="page_count">تعداد صفحات</string>
+    <string name="follow_previous">مانند قبلی</string>
+    <string name="apply">اعمال</string>
+    <!-- /step3 -->
+    <!-- step4 -->
+    <string name="create_files">ایجاد فایل</string>
+    <string name="import_files">وارد کردن فایل</string>
+    <string name="use_templates">استفاده از قالب</string>
+    <string name="convert_format">تبدیل قالب</string>
+    <string name="image_to_pdf">تصویر به PDF</string>
+    <string name="scan_to_pdf">اسکن به PDF</string>
+    <string name="word_to_pdf">Word به PDF</string>
+    <string name="ppt_to_pdf">PPT به PDF</string>
+    <string name="select_template">یک قالب انتخاب کنید</string>
+    <string name="file_name">نام فایل</string>
+    <string name="create">ایجاد</string>
+    <string name="convert_to_pdf">تبدیل به PDF</string>
+    <string name="converting">در حال تبدیل…</string>
+    <string name="converted_successfully">با موفقیت تبدیل شد</string>
+    <string name="color_inversion_on">وارونگی رنگ: روشن</string>
+    <string name="color_inversion_off">وارونگی رنگ: خاموش</string>
+    <!-- /step4 -->
+    <!-- step5 -->
+    <string name="page_by_page">صفحه به صفحه</string>
+    <string name="continuous_pages">صفحات پیوسته</string>
+    <string name="view">مشاهده</string>
+    <string name="extracted_successfully">با موفقیت استخراج شد</string>
+    <string name="saved_as">با نام \"%s\" ذخیره شد.</string>
+    <string name="page_setup">تنظیم صفحه</string>
+    <string name="page_for_preview">این صفحه برای پیش‌نمایش است</string>
+    <string name="apply_to_selected">اعمال روی انتخاب‌شده‌ها</string>
+    <string name="all_pages_title">همه صفحات (%1$d/%2$d)</string>
+    <string name="pen">قلم</string>
+    <string name="highlight">هایلایت</string>
+    <string name="eraser">پاک‌کن</string>
+    <!-- /step5 -->
+    <!-- step6 -->
+    <string name="take_a_photo">گرفتن عکس</string>
+    <string name="choose_from_gallery">انتخاب از گالری</string>
+    <string name="choose_cropping_method">روش برش را انتخاب کنید</string>
+    <string name="crop_method_hint">هر زمان می‌توانید آن را در \"تنظیمات اسکن\" تغییر دهید.</string>
+    <string name="auto_crop">برش خودکار</string>
+    <string name="no_crop">بدون برش</string>
+    <string name="dont_ask_again">دیگر نپرس</string>
+    <string name="scan_settings">تنظیمات اسکن</string>
+    <string name="camera_permission_needed">برای گرفتن عکس، اجازه دوربین لازم است</string>
+    <string name="capture_failed">عکس گرفته نشد، دوباره تلاش کنید</string>
+    <string name="retake">عکس مجدد</string>
+    <string name="crop">برش</string>
+    <string name="left">چپ</string>
+    <string name="right">راست</string>
+    <string name="apply_to_all">اعمال روی همه</string>
+    <string name="no_edges_found">لبه‌های سند پیدا نشد</string>
+    <string name="processing_progress">در حال پردازش… (%d%%)</string>
+    <string name="add_pages">افزودن صفحه</string>
+    <string name="converted_successfully_excl">با موفقیت تبدیل شد!</string>
+    <string name="view_locally">مشاهده در دستگاه</string>
+    <string name="tools">ابزارها</string>
+    <string name="edit_text">ویرایش متن</string>
+    <string name="annotate">حاشیه‌نویسی</string>
+    <string name="add_text">افزودن متن</string>
+    <string name="print_pdf">چاپ PDF</string>
+    <string name="sign">امضا</string>
+    <string name="tap_to_add_text">برای نوشتن متن روی صفحه ضربه بزنید</string>
+    <!-- /step6 -->
+    <!-- step8 -->
+    <string name="select_a_file">یک فایل انتخاب کنید</string>
+    <string name="convert_to_word">تبدیل به Word</string>
+    <!-- /step8 -->
+    <!-- step9 -->
+    <string name="section_convert_create">تبدیل و ایجاد</string>
+    <string name="section_edit">ویرایش</string>
+    <string name="section_others">سایر</string>
+    <string name="manage_pages">مدیریت صفحات</string>
+    <string name="feature_request">ویژگی مورد نظرتان را ندارید؟</string>
+    <string name="tell_us">به ما بگویید</string>
+    <string name="add_image">افزودن تصویر</string>
+    <string name="tap_anywhere_add_text">برای افزودن متن هر جا ضربه بزنید</string>
+    <string name="tap_text_to_edit">روی متنی که می‌خواهید ویرایش کنید ضربه بزنید</string>
+    <string name="no_editable_text">این PDF متن قابل ویرایش ندارد (صفحات اسکن‌شده). از افزودن متن استفاده کنید.</string>
+    <string name="enter_text">متن را وارد کنید</string>
+    <string name="clear">پاک کردن</string>
+    <string name="color">رنگ</string>
+    <string name="size">اندازه</string>
+    <string name="add_signature">+  افزودن امضا</string>
+    <string name="sign_here">اینجا امضا کنید</string>
+    <string name="edit_pdf">ویرایش PDF</string>
+    <string name="tut_edit_title">PDFها را به‌راحتی ویرایش کنید.</string>
+    <string name="tut_sign_title">اسناد را در چند ثانیه امضا کنید.</string>
+    <string name="try_now">امتحان کنید</string>
+    <string name="later">بعداً</string>
+    <!-- /step9 -->
+    <!-- step10 -->
+    <string name="theme_system">پیش‌فرض سیستم</string>
+    <string name="theme_light">روشن</string>
+    <string name="theme_dark">تیره</string>
+    <string name="file_manager">مدیر فایل</string>
+    <string name="section_general">عمومی</string>
+    <string name="app_theme">پوسته برنامه</string>
+    <string name="feedback_or_suggestion">بازخورد یا پیشنهاد</string>
+    <string name="add_widget">افزودن ابزارک</string>
+    <string name="explore_more_apps">برنامه‌های بیشتر</string>
+    <string name="terms_of_use">شرایط استفاده</string>
+    <string name="privacy_policy">سیاست حفظ حریم خصوصی</string>
+    <string name="manage_subscriptions">مدیریت اشتراک‌ها</string>
+    <string name="go_to_google_play">رفتن به Google Play</string>
+    <string name="ask_every_time">هر بار بپرس</string>
+    <string name="remove_ads">حذف تبلیغات</string>
+    <string name="unlock_premium">باز کردن همه ویژگی‌های ویژه</string>
+    <string name="faq_view_edit">مشاهده و ویرایش</string>
+    <string name="faq_manage">مدیریت فایل‌ها</string>
+    <string name="faq_about_app">درباره برنامه</string>
+    <string name="faq_thanks">از بازخورد شما متشکریم!</string>
+    <string name="rate_our_app">به برنامه ما امتیاز دهید</string>
+    <string name="what_problems">با چه مشکلاتی روبه‌رو شدید؟</string>
+    <string name="add_screenshot">افزودن اسکرین‌شات</string>
+    <string name="submit">ارسال</string>
+    <string name="fb_cant_open">فایل باز نمی‌شود</string>
+    <string name="fb_too_many_ads">تبلیغات زیاد</string>
+    <string name="fb_slow">کند</string>
+    <string name="fb_crashes">از کار می‌افتد</string>
+    <string name="fb_others">سایر</string>
+    <!-- /step10 -->
+    <!-- step11 -->
+    <string name="loaded_successfully">با موفقیت بارگیری شد</string>
+    <string name="back">بازگشت</string>
+    <string name="bin_info">فایل‌ها ۳۰ روز پس از انتقال به اینجا برای همیشه حذف می‌شوند.</string>
+    <string name="bin_empty">سطل بازیافت خالی است</string>
+    <!-- /step11 -->
+    <!-- step12 -->
+    <string name="welcome_back">خوش برگشتید…</string>
+    <string name="subscribe_failed">اشتراک ناموفق بود</string>
+    <string name="premium_welcome">به Premium خوش آمدید!</string>
+    <string name="premium_restored">Premium بازیابی شد</string>
+    <!-- /step12 -->
+    <!-- step14 -->
+    <string name="save_to_drive">ذخیره در Google Drive</string>
+    <string name="drive_off">خاموش</string>
+    <string name="drive_option_off">خاموش</string>
+    <!-- /step14 -->
+    <!-- step16 -->
+    <string name="tpl_save">ذخیره</string>
+    <string name="tpl_letter">نامه</string>
+    <string name="tpl_briefing">گزارش</string>
+    <string name="tpl_poster">پوستر</string>
+    <string name="tpl_need_more">قالب‌های بیشتری لازم دارید؟</string>
+    <string name="tpl_fonts">فونت‌ها</string>
+    <string name="tpl_current_font">فونت فعلی</string>
+    <string name="tpl_format">قالب‌بندی</string>
+    <string name="tpl_size_color">اندازه و رنگ</string>
+    <string name="tpl_replace">جایگزینی</string>
+    <string name="tpl_select_format">یک قالب انتخاب کنید</string>
+    <string name="tpl_png_desc">مناسب برای فایل‌های دارای تصویر</string>
+    <string name="tpl_jpg_desc">مناسب برای فایل‌های کوچک‌تر</string>
+    <string name="tpl_pdf_desc">مناسب برای بیشتر فایل‌ها</string>
+    <string name="tpl_quit_title">اکنون خارج می‌شوید؟</string>
+    <string name="tpl_quit_message">هنوز تغییرات خود را ذخیره نکرده‌اید. می‌خواهید اکنون ذخیره کنید؟</string>
+    <!-- /step16 -->
+</resources>

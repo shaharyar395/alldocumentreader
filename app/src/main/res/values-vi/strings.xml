@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_subtitle">Xem tất cả tài liệu ở một nơi</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="language_default">Mặc định</string>
+    <string name="onb_title_1">Trình đọc tài liệu\ntất cả trong một</string>
+    <string name="onb_title_2">Trình sửa PDF\nchuyên nghiệp</string>
+    <string name="onb_title_3">Mẫu dễ dùng\nvà thiết thực</string>
+    <string name="next">Tiếp</string>
+    <string name="start">Bắt đầu</string>
+    <string name="nav_all_files">Tất cả tệp</string>
+    <string name="nav_tools">Công cụ</string>
+    <string name="nav_settings">Cài đặt</string>
+    <string name="cat_all">Tất cả</string>
+    <string name="cat_image">Hình ảnh</string>
+    <string name="cat_directories">Thư mục</string>
+    <string name="recent">Gần đây</string>
+    <string name="bookmarks">Dấu trang</string>
+    <string name="empty">Trống</string>
+    <string name="loading_files">Đang tải tệp…</string>
+    <string name="coach_click_folders">Nhấn vào các thư mục ở trên để xem</string>
+    <string name="discover_new_feature">Khám phá tính năng mới:</string>
+    <string name="create_pdf">Tạo PDF</string>
+    <string name="permission_title">Cho phép truy cập tệp</string>
+    <string name="permission_message">Để đọc các tệp PDF, Word, Excel, PPT và TXT, vui lòng cho phép truy cập tất cả tệp trên thiết bị này.</string>
+    <string name="allow">Cho phép</string>
+    <string name="not_now">Để sau</string>
+    <string name="permission_needed_hint">Cho phép truy cập tệp để xem tài liệu của bạn</string>
+    <string name="grant_access">Cấp quyền</string>
+    <string name="search_hint">Tìm kiếm tệp</string>
+    <string name="no_files_found">Không tìm thấy tệp</string>
+    <string name="coming_soon">Sẽ có trong bản cập nhật tới</string>
+    <plurals name="files_count">
+        <item quantity="other">%d tệp</item>
+    </plurals>
+    <!-- step2 -->
+    <string name="all_files_title">Tất cả tệp</string>
+    <string name="selected_count">Đã chọn %d</string>
+    <string name="search_for_files">Tìm kiếm tệp…</string>
+    <string name="cancel">Hủy</string>
+    <string name="filter_by">Lọc theo</string>
+    <string name="sort_name">Tên</string>
+    <string name="sort_date_short">Ngày</string>
+    <string name="file_size">Kích thước</string>
+    <string name="ascending">Tăng dần</string>
+    <string name="descending">Giảm dần</string>
+    <string name="share">Chia sẻ</string>
+    <string name="rename">Đổi tên</string>
+    <string name="to_home_screen">Ra màn hình\nchính</string>
+    <string name="delete">Xóa</string>
+    <string name="storage_path">Đường dẫn</string>
+    <string name="last_modified">Sửa đổi lần cuối</string>
+    <string name="recycle_title">Chuyển vào thùng rác hay xóa?</string>
+    <string name="recycle_message">Tệp trong thùng rác có thể khôi phục trong 30 ngày.</string>
+    <string name="move_to_recycle_bin">Chuyển vào thùng rác</string>
+    <string name="delete_directly">Xóa trực tiếp</string>
+    <string name="permission_required">Cần cấp quyền</string>
+    <string name="rate_subtitle">Đánh giá của bạn rất ý nghĩa với chúng tôi!</string>
+    <string name="rate_best">Điều tuyệt nhất chúng tôi có thể nhận</string>
+    <string name="rate">Đánh giá</string>
+    <!-- /step2 -->
+    <!-- step3 -->
+    <string name="storage">Bộ nhớ</string>
+    <string name="all_documents">Tất cả tài liệu</string>
+    <string name="recycle_bin">Thùng rác</string>
+    <string name="recently_added">Mới thêm gần đây</string>
+    <string name="restore">Khôi phục</string>
+    <string name="delete_permanently">Xóa vĩnh viễn</string>
+    <string name="empty_recycle_bin">Dọn thùng rác</string>
+    <string name="unsupported_title">Không hỗ trợ loại tệp này</string>
+    <string name="loading">Đang tải…</string>
+    <string name="saved_successfully">Đã lưu thành công</string>
+    <string name="pages">Trang</string>
+    <string name="bookmark">Dấu trang</string>
+    <string name="mode_vertical">Dọc</string>
+    <string name="mode_horizontal">Ngang</string>
+    <string name="rotate">Xoay</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="invert">Đảo màu</string>
+    <string name="go_to_page">Đi tới trang</string>
+    <string name="jump_tip">Nhấn vào đây để đi thẳng tới trang</string>
+    <string name="drag_hint">Nhấn giữ và kéo để sắp xếp</string>
+    <string name="insert">Chèn</string>
+    <string name="extract">Trích xuất</string>
+    <string name="blank_pages">Trang trống</string>
+    <string name="images">Hình ảnh</string>
+    <string name="delete_confirm">Xác nhận xóa</string>
+    <string name="deleted_successfully">Đã xóa thành công</string>
+    <string name="insert_blank_pages">Chèn trang trống</string>
+    <string name="page_size">Khổ giấy</string>
+    <string name="page_color">Màu trang</string>
+    <string name="orientation">Hướng</string>
+    <string name="page_count">Số trang</string>
+    <string name="follow_previous">Giống trang trước</string>
+    <string name="apply">Áp dụng</string>
+    <!-- /step3 -->
+    <!-- step4 -->
+    <string name="create_files">Tạo tệp</string>
+    <string name="import_files">Nhập tệp</string>
+    <string name="use_templates">Dùng mẫu</string>
+    <string name="convert_format">Chuyển đổi định dạng</string>
+    <string name="image_to_pdf">Ảnh sang PDF</string>
+    <string name="scan_to_pdf">Quét sang PDF</string>
+    <string name="word_to_pdf">Word sang PDF</string>
+    <string name="ppt_to_pdf">PPT sang PDF</string>
+    <string name="select_template">Chọn mẫu</string>
+    <string name="file_name">Tên tệp</string>
+    <string name="create">Tạo</string>
+    <string name="convert_to_pdf">Chuyển sang PDF</string>
+    <string name="converting">Đang chuyển đổi…</string>
+    <string name="converted_successfully">Chuyển đổi thành công</string>
+    <string name="color_inversion_on">Đảo màu: Bật</string>
+    <string name="color_inversion_off">Đảo màu: Tắt</string>
+    <!-- /step4 -->
+    <!-- step5 -->
+    <string name="page_by_page">Từng trang</string>
+    <string name="continuous_pages">Trang liên tục</string>
+    <string name="view">Xem</string>
+    <string name="extracted_successfully">Trích xuất thành công</string>
+    <string name="saved_as">Đã lưu thành \"%s\".</string>
+    <string name="page_setup">Thiết lập trang</string>
+    <string name="page_for_preview">Trang này để xem trước</string>
+    <string name="apply_to_selected">Áp dụng cho mục đã chọn</string>
+    <string name="all_pages_title">Tất cả trang (%1$d/%2$d)</string>
+    <string name="pen">Bút</string>
+    <string name="highlight">Tô sáng</string>
+    <string name="eraser">Tẩy</string>
+    <!-- /step5 -->
+    <!-- step6 -->
+    <string name="take_a_photo">Chụp ảnh</string>
+    <string name="choose_from_gallery">Chọn từ thư viện</string>
+    <string name="choose_cropping_method">Chọn cách cắt</string>
+    <string name="crop_method_hint">Bạn có thể thay đổi bất cứ lúc nào trong \"Cài đặt quét\".</string>
+    <string name="auto_crop">Tự động cắt</string>
+    <string name="no_crop">Không cắt</string>
+    <string name="dont_ask_again">Không hỏi lại</string>
+    <string name="scan_settings">Cài đặt quét</string>
+    <string name="camera_permission_needed">Cần quyền máy ảnh để chụp ảnh</string>
+    <string name="capture_failed">Không chụp được ảnh, hãy thử lại</string>
+    <string name="retake">Chụp lại</string>
+    <string name="crop">Cắt</string>
+    <string name="left">Trái</string>
+    <string name="right">Phải</string>
+    <string name="apply_to_all">Áp dụng cho tất cả</string>
+    <string name="no_edges_found">Không tìm thấy cạnh tài liệu</string>
+    <string name="processing_progress">Đang xử lý… (%d%%)</string>
+    <string name="add_pages">Thêm trang</string>
+    <string name="converted_successfully_excl">Chuyển đổi thành công!</string>
+    <string name="view_locally">Xem trên máy</string>
+    <string name="tools">Công cụ</string>
+    <string name="edit_text">Sửa văn bản</string>
+    <string name="annotate">Chú thích</string>
+    <string name="add_text">Thêm văn bản</string>
+    <string name="print_pdf">In PDF</string>
+    <string name="sign">Ký tên</string>
+    <string name="tap_to_add_text">Chạm vào trang để nhập văn bản</string>
+    <!-- /step6 -->
+    <!-- step8 -->
+    <string name="select_a_file">Chọn tệp</string>
+    <string name="convert_to_word">Chuyển sang Word</string>
+    <!-- /step8 -->
+    <!-- step9 -->
+    <string name="section_convert_create">Chuyển đổi &amp; Tạo</string>
+    <string name="section_edit">Chỉnh sửa</string>
+    <string name="section_others">Khác</string>
+    <string name="manage_pages">Quản lý trang</string>
+    <string name="feature_request">Không có tính năng bạn cần?</string>
+    <string name="tell_us">Cho chúng tôi biết</string>
+    <string name="add_image">Thêm hình ảnh</string>
+    <string name="tap_anywhere_add_text">Chạm vào bất kỳ đâu để thêm văn bản</string>
+    <string name="tap_text_to_edit">Chạm vào văn bản muốn sửa</string>
+    <string name="no_editable_text">PDF này không có văn bản sửa được (trang quét). Hãy dùng Thêm văn bản.</string>
+    <string name="enter_text">Nhập văn bản</string>
+    <string name="clear">Xóa</string>
+    <string name="color">Màu</string>
+    <string name="size">Cỡ</string>
+    <string name="add_signature">+  Thêm chữ ký</string>
+    <string name="sign_here">Ký tại đây</string>
+    <string name="edit_pdf">Sửa PDF</string>
+    <string name="tut_edit_title">Chỉnh sửa PDF dễ dàng.</string>
+    <string name="tut_sign_title">Ký tài liệu chỉ trong vài giây.</string>
+    <string name="try_now">Thử ngay</string>
+    <string name="later">Để sau</string>
+    <!-- /step9 -->
+    <!-- step10 -->
+    <string name="theme_system">Theo hệ thống</string>
+    <string name="theme_light">Sáng</string>
+    <string name="theme_dark">Tối</string>
+    <string name="file_manager">Trình quản lý tệp</string>
+    <string name="section_general">Chung</string>
+    <string name="app_theme">Giao diện ứng dụng</string>
+    <string name="feedback_or_suggestion">Góp ý hoặc đề xuất</string>
+    <string name="add_widget">Thêm tiện ích</string>
+    <string name="explore_more_apps">Khám phá thêm ứng dụng</string>
+    <string name="terms_of_use">Điều khoản sử dụng</string>
+    <string name="privacy_policy">Chính sách quyền riêng tư</string>
+    <string name="manage_subscriptions">Quản lý gói đăng ký</string>
+    <string name="go_to_google_play">Đến Google Play</string>
+    <string name="ask_every_time">Luôn hỏi</string>
+    <string name="remove_ads">Xóa quảng cáo</string>
+    <string name="unlock_premium">Mở khóa mọi tính năng cao cấp</string>
+    <string name="faq_view_edit">Xem &amp; sửa</string>
+    <string name="faq_manage">Quản lý tệp</string>
+    <string name="faq_about_app">Giới thiệu</string>
+    <string name="faq_thanks">Cảm ơn góp ý của bạn!</string>
+    <string name="rate_our_app">Đánh giá ứng dụng</string>
+    <string name="what_problems">Bạn gặp vấn đề gì?</string>
+    <string name="add_screenshot">Thêm ảnh chụp màn hình</string>
+    <string name="submit">Gửi</string>
+    <string name="fb_cant_open">Không mở được tệp</string>
+    <string name="fb_too_many_ads">Quá nhiều quảng cáo</string>
+    <string name="fb_slow">Chậm</string>
+    <string name="fb_crashes">Bị treo</string>
+    <string name="fb_others">Khác</string>
+    <!-- /step10 -->
+    <!-- step11 -->
+    <string name="loaded_successfully">Đã tải xong</string>
+    <string name="back">Quay lại</string>
+    <string name="bin_info">Tệp sẽ bị xóa vĩnh viễn sau 30 ngày kể từ khi chuyển vào đây.</string>
+    <string name="bin_empty">Thùng rác trống</string>
+    <!-- /step11 -->
+    <!-- step12 -->
+    <string name="welcome_back">Chào mừng trở lại…</string>
+    <string name="subscribe_failed">Đăng ký thất bại</string>
+    <string name="premium_welcome">Chào mừng đến với Premium!</string>
+    <string name="premium_restored">Đã khôi phục Premium</string>
+    <!-- /step12 -->
+    <!-- step14 -->
+    <string name="save_to_drive">Lưu vào Google Drive</string>
+    <string name="drive_off">Tắt</string>
+    <string name="drive_option_off">Tắt</string>
+    <!-- /step14 -->
+    <!-- step16 -->
+    <string name="tpl_save">Lưu</string>
+    <string name="tpl_letter">Thư</string>
+    <string name="tpl_briefing">Bản tóm tắt</string>
+    <string name="tpl_poster">Áp phích</string>
+    <string name="tpl_need_more">Cần thêm mẫu?</string>
+    <string name="tpl_fonts">Phông chữ</string>
+    <string name="tpl_current_font">Phông chữ hiện tại</string>
+    <string name="tpl_format">Định dạng</string>
+    <string name="tpl_size_color">Kích thước &amp; Màu</string>
+    <string name="tpl_replace">Thay thế</string>
+    <string name="tpl_select_format">Chọn định dạng</string>
+    <string name="tpl_png_desc">Phù hợp với tệp có hình ảnh</string>
+    <string name="tpl_jpg_desc">Phù hợp với tệp nhỏ hơn</string>
+    <string name="tpl_pdf_desc">Phù hợp với hầu hết các tệp</string>
+    <string name="tpl_quit_title">Thoát ngay?</string>
+    <string name="tpl_quit_message">Bạn chưa lưu thay đổi. Bạn có muốn lưu ngay không?</string>
+    <!-- /step16 -->
+</resources>

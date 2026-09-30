@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_thumb"
+        android:padding="2dp">
+
+        <ImageView
+            android:id="@+id/ivThumb"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:importantForAccessibility="no"
+            android:scaleType="fitCenter"
+            app:layout_constraintDimensionRatio="3:4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/selectedOverlay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#33000000"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/ivThumb"
+            app:layout_constraintEnd_toEndOf="@id/ivThumb"
+            app:layout_constraintStart_toStartOf="@id/ivThumb"
+            app:layout_constraintTop_toTopOf="@id/ivThumb" />
+
+        <ProgressBar
+            android:id="@+id/pbThumb"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:indeterminateTint="@color/text_hint"
+            app:layout_constraintBottom_toBottomOf="@id/ivThumb"
+            app:layout_constraintEnd_toEndOf="@id/ivThumb"
+            app:layout_constraintStart_toStartOf="@id/ivThumb"
+            app:layout_constraintTop_toTopOf="@id/ivThumb" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            app:buttonTint="@color/checkbox_tint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/bg_page_number"
+            android:gravity="center"
+            android:minWidth="20dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ivThumb"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

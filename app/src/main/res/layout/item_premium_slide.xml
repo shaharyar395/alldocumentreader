@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_paywall_hero">
+
+    <ImageView
+        android:id="@+id/ivArt"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end|bottom"
+        android:importantForAccessibility="no"
+        android:paddingTop="24dp"
+        android:scaleType="fitEnd" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="12dp"
+        android:shadowColor="#99000000"
+        android:shadowRadius="6"
+        android:textColor="#FFFFFFFF"
+        android:textSize="21sp"
+        android:textStyle="bold" />
+</FrameLayout>

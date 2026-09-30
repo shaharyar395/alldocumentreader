@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_subtitle">ดูเอกสารทั้งหมดในที่เดียว</string>
+    <string name="language">ภาษา</string>
+    <string name="language_default">ค่าเริ่มต้น</string>
+    <string name="onb_title_1">โปรแกรมอ่านเอกสาร\nครบในแอปเดียว</string>
+    <string name="onb_title_2">โปรแกรมแก้ไข PDF\nระดับมืออาชีพ</string>
+    <string name="onb_title_3">เทมเพลตที่ใช้ง่าย\nและใช้งานได้จริง</string>
+    <string name="next">ถัดไป</string>
+    <string name="start">เริ่ม</string>
+    <string name="nav_all_files">ไฟล์ทั้งหมด</string>
+    <string name="nav_tools">เครื่องมือ</string>
+    <string name="nav_settings">การตั้งค่า</string>
+    <string name="cat_all">ทั้งหมด</string>
+    <string name="cat_image">รูปภาพ</string>
+    <string name="cat_directories">โฟลเดอร์</string>
+    <string name="recent">ล่าสุด</string>
+    <string name="bookmarks">บุ๊กมาร์ก</string>
+    <string name="empty">ว่างเปล่า</string>
+    <string name="loading_files">กำลังโหลดไฟล์…</string>
+    <string name="coach_click_folders">แตะโฟลเดอร์ด้านบนเพื่อดู</string>
+    <string name="discover_new_feature">ค้นพบฟีเจอร์ใหม่:</string>
+    <string name="create_pdf">สร้าง PDF</string>
+    <string name="permission_title">อนุญาตให้เข้าถึงไฟล์</string>
+    <string name="permission_message">หากต้องการอ่านไฟล์ PDF, Word, Excel, PPT และ TXT โปรดอนุญาตให้เข้าถึงไฟล์ทั้งหมดในอุปกรณ์นี้</string>
+    <string name="allow">อนุญาต</string>
+    <string name="not_now">ไว้ภายหลัง</string>
+    <string name="permission_needed_hint">อนุญาตการเข้าถึงไฟล์เพื่อดูเอกสารของคุณ</string>
+    <string name="grant_access">ให้สิทธิ์เข้าถึง</string>
+    <string name="search_hint">ค้นหาไฟล์</string>
+    <string name="no_files_found">ไม่พบไฟล์</string>
+    <string name="coming_soon">จะมาในการอัปเดตครั้งถัดไป</string>
+    <plurals name="files_count">
+        <item quantity="other">%d ไฟล์</item>
+    </plurals>
+    <!-- step2 -->
+    <string name="all_files_title">ไฟล์ทั้งหมด</string>
+    <string name="selected_count">เลือกแล้ว %d</string>
+    <string name="search_for_files">ค้นหาไฟล์…</string>
+    <string name="cancel">ยกเลิก</string>
+    <string name="filter_by">กรองตาม</string>
+    <string name="sort_name">ชื่อ</string>
+    <string name="sort_date_short">วันที่</string>
+    <string name="file_size">ขนาดไฟล์</string>
+    <string name="ascending">น้อยไปมาก</string>
+    <string name="descending">มากไปน้อย</string>
+    <string name="share">แชร์</string>
+    <string name="rename">เปลี่ยนชื่อ</string>
+    <string name="to_home_screen">ไปที่หน้า\nจอหลัก</string>
+    <string name="delete">ลบ</string>
+    <string name="storage_path">ตำแหน่งจัดเก็บ</string>
+    <string name="last_modified">แก้ไขล่าสุด</string>
+    <string name="recycle_title">ย้ายไปถังขยะหรือลบ?</string>
+    <string name="recycle_message">ไฟล์ในถังขยะสามารถกู้คืนได้ภายใน 30 วัน</string>
+    <string name="move_to_recycle_bin">ย้ายไปถังขยะ</string>
+    <string name="delete_directly">ลบทันที</string>
+    <string name="permission_required">ต้องได้รับอนุญาต</string>
+    <string name="rate_subtitle">คะแนนของคุณมีความหมายกับเรามาก!</string>
+    <string name="rate_best">คะแนนที่ดีที่สุด</string>
+    <string name="rate">ให้คะแนน</string>
+    <!-- /step2 -->
+    <!-- step3 -->
+    <string name="storage">ที่จัดเก็บ</string>
+    <string name="all_documents">เอกสารทั้งหมด</string>
+    <string name="recycle_bin">ถังขยะ</string>
+    <string name="recently_added">เพิ่มล่าสุด</string>
+    <string name="restore">กู้คืน</string>
+    <string name="delete_permanently">ลบถาวร</string>
+    <string name="empty_recycle_bin">ล้างถังขยะ</string>
+    <string name="unsupported_title">ไม่รองรับไฟล์ประเภทนี้</string>
+    <string name="loading">กำลังโหลด…</string>
+    <string name="saved_successfully">บันทึกสำเร็จ</string>
+    <string name="pages">หน้า</string>
+    <string name="bookmark">บุ๊กมาร์ก</string>
+    <string name="mode_vertical">แนวตั้ง</string>
+    <string name="mode_horizontal">แนวนอน</string>
+    <string name="rotate">หมุน</string>
+    <string name="search">ค้นหา</string>
+    <string name="invert">กลับสี</string>
+    <string name="go_to_page">ไปที่หน้า</string>
+    <string name="jump_tip">แตะที่นี่เพื่อไปที่หน้าโดยตรง</string>
+    <string name="drag_hint">กดค้างแล้วลากเพื่อจัดเรียง</string>
+    <string name="insert">แทรก</string>
+    <string name="extract">แยกหน้า</string>
+    <string name="blank_pages">หน้าว่าง</string>
+    <string name="images">รูปภาพ</string>
+    <string name="delete_confirm">ยืนยันการลบ</string>
+    <string name="deleted_successfully">ลบสำเร็จ</string>
+    <string name="insert_blank_pages">แทรกหน้าว่าง</string>
+    <string name="page_size">ขนาดหน้า</string>
+    <string name="page_color">สีหน้า</string>
+    <string name="orientation">การวางแนว</string>
+    <string name="page_count">จำนวนหน้า</string>
+    <string name="follow_previous">ตามหน้าก่อน</string>
+    <string name="apply">ใช้</string>
+    <!-- /step3 -->
+    <!-- step4 -->
+    <string name="create_files">สร้างไฟล์</string>
+    <string name="import_files">นำเข้าไฟล์</string>
+    <string name="use_templates">ใช้เทมเพลต</string>
+    <string name="convert_format">แปลงรูปแบบ</string>
+    <string name="image_to_pdf">รูปภาพเป็น PDF</string>
+    <string name="scan_to_pdf">สแกนเป็น PDF</string>
+    <string name="word_to_pdf">Word เป็น PDF</string>
+    <string name="ppt_to_pdf">PPT เป็น PDF</string>
+    <string name="select_template">เลือกเทมเพลต</string>
+    <string name="file_name">ชื่อไฟล์</string>
+    <string name="create">สร้าง</string>
+    <string name="convert_to_pdf">แปลงเป็น PDF</string>
+    <string name="converting">กำลังแปลง…</string>
+    <string name="converted_successfully">แปลงสำเร็จ</string>
+    <string name="color_inversion_on">กลับสี: เปิด</string>
+    <string name="color_inversion_off">กลับสี: ปิด</string>
+    <!-- /step4 -->
+    <!-- step5 -->
+    <string name="page_by_page">ทีละหน้า</string>
+    <string name="continuous_pages">หน้าต่อเนื่อง</string>
+    <string name="view">ดู</string>
+    <string name="extracted_successfully">แยกหน้าสำเร็จ</string>
+    <string name="saved_as">บันทึกเป็น \"%s\" แล้ว</string>
+    <string name="page_setup">ตั้งค่าหน้า</string>
+    <string name="page_for_preview">หน้านี้ใช้สำหรับแสดงตัวอย่าง</string>
+    <string name="apply_to_selected">ใช้กับที่เลือก</string>
+    <string name="all_pages_title">ทุกหน้า (%1$d/%2$d)</string>
+    <string name="pen">ปากกา</string>
+    <string name="highlight">ไฮไลต์</string>
+    <string name="eraser">ยางลบ</string>
+    <!-- /step5 -->
+    <!-- step6 -->
+    <string name="take_a_photo">ถ่ายภาพ</string>
+    <string name="choose_from_gallery">เลือกจากแกลเลอรี</string>
+    <string name="choose_cropping_method">เลือกวิธีครอบตัด</string>
+    <string name="crop_method_hint">คุณเปลี่ยนได้ทุกเมื่อใน \"การตั้งค่าการสแกน\"</string>
+    <string name="auto_crop">ครอบตัดอัตโนมัติ</string>
+    <string name="no_crop">ไม่ครอบตัด</string>
+    <string name="dont_ask_again">ไม่ต้องถามอีก</string>
+    <string name="scan_settings">การตั้งค่าการสแกน</string>
+    <string name="camera_permission_needed">ต้องใช้สิทธิ์กล้องเพื่อถ่ายภาพ</string>
+    <string name="capture_failed">ถ่ายภาพไม่สำเร็จ โปรดลองอีกครั้ง</string>
+    <string name="retake">ถ่ายใหม่</string>
+    <string name="crop">ครอบตัด</string>
+    <string name="left">ซ้าย</string>
+    <string name="right">ขวา</string>
+    <string name="apply_to_all">ใช้กับทั้งหมด</string>
+    <string name="no_edges_found">ไม่พบขอบเอกสาร</string>
+    <string name="processing_progress">กำลังประมวลผล… (%d%%)</string>
+    <string name="add_pages">เพิ่มหน้า</string>
+    <string name="converted_successfully_excl">แปลงสำเร็จ!</string>
+    <string name="view_locally">ดูในเครื่อง</string>
+    <string name="tools">เครื่องมือ</string>
+    <string name="edit_text">แก้ไขข้อความ</string>
+    <string name="annotate">ใส่คำอธิบาย</string>
+    <string name="add_text">เพิ่มข้อความ</string>
+    <string name="print_pdf">พิมพ์ PDF</string>
+    <string name="sign">ลงชื่อ</string>
+    <string name="tap_to_add_text">แตะที่หน้าเพื่อพิมพ์ข้อความ</string>
+    <!-- /step6 -->
+    <!-- step8 -->
+    <string name="select_a_file">เลือกไฟล์</string>
+    <string name="convert_to_word">แปลงเป็น Word</string>
+    <!-- /step8 -->
+    <!-- step9 -->
+    <string name="section_convert_create">แปลงและสร้าง</string>
+    <string name="section_edit">แก้ไข</string>
+    <string name="section_others">อื่นๆ</string>
+    <string name="manage_pages">จัดการหน้า</string>
+    <string name="feature_request">ไม่มีฟีเจอร์ที่คุณต้องการ?</string>
+    <string name="tell_us">บอกเรา</string>
+    <string name="add_image">เพิ่มรูปภาพ</string>
+    <string name="tap_anywhere_add_text">แตะที่ใดก็ได้เพื่อเพิ่มข้อความ</string>
+    <string name="tap_text_to_edit">แตะข้อความที่ต้องการแก้ไข</string>
+    <string name="no_editable_text">PDF นี้ไม่มีข้อความที่แก้ไขได้ (หน้าสแกน) ใช้เพิ่มข้อความแทน</string>
+    <string name="enter_text">ป้อนข้อความ</string>
+    <string name="clear">ล้าง</string>
+    <string name="color">สี</string>
+    <string name="size">ขนาด</string>
+    <string name="add_signature">+  เพิ่มลายเซ็น</string>
+    <string name="sign_here">ลงชื่อที่นี่</string>
+    <string name="edit_pdf">แก้ไข PDF</string>
+    <string name="tut_edit_title">แก้ไข PDF ได้ง่ายๆ</string>
+    <string name="tut_sign_title">ลงนามเอกสารในไม่กี่วินาที</string>
+    <string name="try_now">ลองเลย</string>
+    <string name="later">ภายหลัง</string>
+    <!-- /step9 -->
+    <!-- step10 -->
+    <string name="theme_system">ตามระบบ</string>
+    <string name="theme_light">สว่าง</string>
+    <string name="theme_dark">มืด</string>
+    <string name="file_manager">ตัวจัดการไฟล์</string>
+    <string name="section_general">ทั่วไป</string>
+    <string name="app_theme">ธีมแอป</string>
+    <string name="feedback_or_suggestion">ความคิดเห็นหรือข้อเสนอแนะ</string>
+    <string name="add_widget">เพิ่มวิดเจ็ต</string>
+    <string name="explore_more_apps">สำรวจแอปอื่นๆ</string>
+    <string name="terms_of_use">ข้อกำหนดการใช้งาน</string>
+    <string name="privacy_policy">นโยบายความเป็นส่วนตัว</string>
+    <string name="manage_subscriptions">จัดการการสมัครสมาชิก</string>
+    <string name="go_to_google_play">ไปที่ Google Play</string>
+    <string name="ask_every_time">ถามทุกครั้ง</string>
+    <string name="remove_ads">ลบโฆษณา</string>
+    <string name="unlock_premium">ปลดล็อกฟีเจอร์พรีเมียมทั้งหมด</string>
+    <string name="faq_view_edit">ดูและแก้ไข</string>
+    <string name="faq_manage">จัดการไฟล์</string>
+    <string name="faq_about_app">เกี่ยวกับแอป</string>
+    <string name="faq_thanks">ขอบคุณสำหรับความคิดเห็น!</string>
+    <string name="rate_our_app">ให้คะแนนแอปของเรา</string>
+    <string name="what_problems">คุณพบปัญหาอะไรบ้าง?</string>
+    <string name="add_screenshot">เพิ่มภาพหน้าจอ</string>
+    <string name="submit">ส่ง</string>
+    <string name="fb_cant_open">เปิดไฟล์ไม่ได้</string>
+    <string name="fb_too_many_ads">โฆษณาเยอะเกินไป</string>
+    <string name="fb_slow">ช้า</string>
+    <string name="fb_crashes">แอปค้าง</string>
+    <string name="fb_others">อื่นๆ</string>
+    <!-- /step10 -->
+    <!-- step11 -->
+    <string name="loaded_successfully">โหลดสำเร็จ</string>
+    <string name="back">กลับ</string>
+    <string name="bin_info">ไฟล์จะถูกลบถาวรหลังจากย้ายมาที่นี่ 30 วัน</string>
+    <string name="bin_empty">ถังรีไซเคิลว่างเปล่า</string>
+    <!-- /step11 -->
+    <!-- step12 -->
+    <string name="welcome_back">ยินดีต้อนรับกลับ…</string>
+    <string name="subscribe_failed">สมัครสมาชิกไม่สำเร็จ</string>
+    <string name="premium_welcome">ยินดีต้อนรับสู่ Premium!</string>
+    <string name="premium_restored">กู้คืน Premium แล้ว</string>
+    <!-- /step12 -->
+    <!-- step14 -->
+    <string name="save_to_drive">บันทึกลง Google ไดรฟ์</string>
+    <string name="drive_off">ปิด</string>
+    <string name="drive_option_off">ปิด</string>
+    <!-- /step14 -->
+    <!-- step16 -->
+    <string name="tpl_save">บันทึก</string>
+    <string name="tpl_letter">จดหมาย</string>
+    <string name="tpl_briefing">สรุปการประชุม</string>
+    <string name="tpl_poster">โปสเตอร์</string>
+    <string name="tpl_need_more">ต้องการเทมเพลตเพิ่มไหม</string>
+    <string name="tpl_fonts">แบบอักษร</string>
+    <string name="tpl_current_font">แบบอักษรปัจจุบัน</string>
+    <string name="tpl_format">รูปแบบ</string>
+    <string name="tpl_size_color">ขนาดและสี</string>
+    <string name="tpl_replace">แทนที่</string>
+    <string name="tpl_select_format">เลือกรูปแบบไฟล์</string>
+    <string name="tpl_png_desc">เหมาะกับไฟล์ที่มีรูปภาพ</string>
+    <string name="tpl_jpg_desc">เหมาะกับไฟล์ขนาดเล็ก</string>
+    <string name="tpl_pdf_desc">เหมาะกับไฟล์ส่วนใหญ่</string>
+    <string name="tpl_quit_title">ออกตอนนี้ไหม</string>
+    <string name="tpl_quit_message">คุณยังไม่ได้บันทึกการเปลี่ยนแปลง ต้องการบันทึกตอนนี้ไหม</string>
+    <!-- /step16 -->
+</resources>

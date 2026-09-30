@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_subtitle">Tüm belgeleri tek bir yerde görüntüleyin</string>
+    <string name="language">Dil</string>
+    <string name="language_default">Varsayılan</string>
+    <string name="onb_title_1">Hepsi bir arada\nBelge Okuyucu</string>
+    <string name="onb_title_2">Profesyonel\nPDF Düzenleyici</string>
+    <string name="onb_title_3">Kolay ve Pratik\nŞablonlar</string>
+    <string name="next">İleri</string>
+    <string name="start">Başla</string>
+    <string name="nav_all_files">Tüm dosyalar</string>
+    <string name="nav_tools">Araçlar</string>
+    <string name="nav_settings">Ayarlar</string>
+    <string name="cat_all">Tümü</string>
+    <string name="cat_image">Resim</string>
+    <string name="cat_directories">Klasörler</string>
+    <string name="recent">Son</string>
+    <string name="bookmarks">Yer imleri</string>
+    <string name="empty">Boş</string>
+    <string name="loading_files">Dosyalar yükleniyor…</string>
+    <string name="coach_click_folders">Görüntülemek için yukarıdaki klasörlere dokunun</string>
+    <string name="discover_new_feature">Yeni özelliği keşfedin:</string>
+    <string name="create_pdf">PDF oluştur</string>
+    <string name="permission_title">Dosyalara erişime izin verin</string>
+    <string name="permission_message">PDF, Word, Excel, PPT ve TXT dosyalarınızı okumak için bu cihazdaki tüm dosyalara erişime izin verin.</string>
+    <string name="allow">İzin ver</string>
+    <string name="not_now">Şimdi değil</string>
+    <string name="permission_needed_hint">Belgelerinizi görmek için dosya erişimine izin verin</string>
+    <string name="grant_access">Erişim izni ver</string>
+    <string name="search_hint">Dosya ara</string>
+    <string name="no_files_found">Dosya bulunamadı</string>
+    <string name="coming_soon">Bir sonraki güncellemede gelecek</string>
+    <plurals name="files_count">
+        <item quantity="one">%d dosya</item>
+        <item quantity="other">%d dosya</item>
+    </plurals>
+    <!-- step2 -->
+    <string name="all_files_title">Tüm dosyalar</string>
+    <string name="selected_count">%d seçildi</string>
+    <string name="search_for_files">Dosya ara…</string>
+    <string name="cancel">İptal</string>
+    <string name="filter_by">Sıralama ölçütü</string>
+    <string name="sort_name">Ad</string>
+    <string name="sort_date_short">Tarih</string>
+    <string name="file_size">Dosya boyutu</string>
+    <string name="ascending">Artan</string>
+    <string name="descending">Azalan</string>
+    <string name="share">Paylaş</string>
+    <string name="rename">Yeniden adlandır</string>
+    <string name="to_home_screen">Ana ekrana\nekle</string>
+    <string name="delete">Sil</string>
+    <string name="storage_path">Depolama yolu</string>
+    <string name="last_modified">Son değişiklik</string>
+    <string name="recycle_title">Geri dönüşüm kutusuna taşınsın mı, silinsin mi?</string>
+    <string name="recycle_message">Geri dönüşüm kutusundaki dosyalar 30 gün içinde geri yüklenebilir.</string>
+    <string name="move_to_recycle_bin">Geri dönüşüm kutusuna taşı</string>
+    <string name="delete_directly">Doğrudan sil</string>
+    <string name="permission_required">İzin gerekli</string>
+    <string name="rate_subtitle">Puanınız bizim için çok değerli!</string>
+    <string name="rate_best">Alabileceğimiz en iyisi</string>
+    <string name="rate">Puan ver</string>
+    <!-- /step2 -->
+    <!-- step3 -->
+    <string name="storage">Depolama</string>
+    <string name="all_documents">Tüm belgeler</string>
+    <string name="recycle_bin">Geri dönüşüm kutusu</string>
+    <string name="recently_added">Son eklenenler</string>
+    <string name="restore">Geri yükle</string>
+    <string name="delete_permanently">Kalıcı olarak sil</string>
+    <string name="empty_recycle_bin">Kutuyu boşalt</string>
+    <string name="unsupported_title">Dosya türü desteklenmiyor</string>
+    <string name="loading">Yükleniyor…</string>
+    <string name="saved_successfully">Başarıyla kaydedildi</string>
+    <string name="pages">Sayfalar</string>
+    <string name="bookmark">Yer imi</string>
+    <string name="mode_vertical">Dikey</string>
+    <string name="mode_horizontal">Yatay</string>
+    <string name="rotate">Döndür</string>
+    <string name="search">Ara</string>
+    <string name="invert">Renkleri ters çevir</string>
+    <string name="go_to_page">Sayfaya git</string>
+    <string name="jump_tip">Doğrudan sayfaya gitmek için dokunun</string>
+    <string name="drag_hint">Sıralamak için basılı tutup sürükleyin</string>
+    <string name="insert">Ekle</string>
+    <string name="extract">Çıkar</string>
+    <string name="blank_pages">Boş sayfalar</string>
+    <string name="images">Resimler</string>
+    <string name="delete_confirm">Silmeyi onayla</string>
+    <string name="deleted_successfully">Başarıyla silindi</string>
+    <string name="insert_blank_pages">Boş sayfa ekle</string>
+    <string name="page_size">Sayfa boyutu</string>
+    <string name="page_color">Sayfa rengi</string>
+    <string name="orientation">Yön</string>
+    <string name="page_count">Sayfa sayısı</string>
+    <string name="follow_previous">Öncekiyle aynı</string>
+    <string name="apply">Uygula</string>
+    <!-- /step3 -->
+    <!-- step4 -->
+    <string name="create_files">Dosya oluştur</string>
+    <string name="import_files">Dosya içe aktar</string>
+    <string name="use_templates">Şablon kullan</string>
+    <string name="convert_format">Biçim dönüştür</string>
+    <string name="image_to_pdf">Resimden PDF</string>
+    <string name="scan_to_pdf">Taramadan PDF</string>
+    <string name="word_to_pdf">Word\'den PDF</string>
+    <string name="ppt_to_pdf">PPT\'den PDF</string>
+    <string name="select_template">Şablon seçin</string>
+    <string name="file_name">Dosya adı</string>
+    <string name="create">Oluştur</string>
+    <string name="convert_to_pdf">PDF\'ye dönüştür</string>
+    <string name="converting">Dönüştürülüyor…</string>
+    <string name="converted_successfully">Başarıyla dönüştürüldü</string>
+    <string name="color_inversion_on">Renk ters çevirme: Açık</string>
+    <string name="color_inversion_off">Renk ters çevirme: Kapalı</string>
+    <!-- /step4 -->
+    <!-- step5 -->
+    <string name="page_by_page">Sayfa sayfa</string>
+    <string name="continuous_pages">Sürekli sayfalar</string>
+    <string name="view">Görüntüle</string>
+    <string name="extracted_successfully">Başarıyla çıkarıldı</string>
+    <string name="saved_as">\"%s\" olarak kaydedildi.</string>
+    <string name="page_setup">Sayfa ayarı</string>
+    <string name="page_for_preview">Bu sayfa önizleme içindir</string>
+    <string name="apply_to_selected">Seçilenlere uygula</string>
+    <string name="all_pages_title">Tüm sayfalar (%1$d/%2$d)</string>
+    <string name="pen">Kalem</string>
+    <string name="highlight">Vurgula</string>
+    <string name="eraser">Silgi</string>
+    <!-- /step5 -->
+    <!-- step6 -->
+    <string name="take_a_photo">Fotoğraf çek</string>
+    <string name="choose_from_gallery">Galeriden seç</string>
+    <string name="choose_cropping_method">Kırpma yöntemini seçin</string>
+    <string name="crop_method_hint">Bunu istediğiniz zaman \"Tarama ayarları\"ndan değiştirebilirsiniz.</string>
+    <string name="auto_crop">Otomatik kırp</string>
+    <string name="no_crop">Kırpma yok</string>
+    <string name="dont_ask_again">Tekrar sorma</string>
+    <string name="scan_settings">Tarama ayarları</string>
+    <string name="camera_permission_needed">Fotoğraf çekmek için kamera izni gerekli</string>
+    <string name="capture_failed">Fotoğraf çekilemedi, tekrar deneyin</string>
+    <string name="retake">Yeniden çek</string>
+    <string name="crop">Kırp</string>
+    <string name="left">Sol</string>
+    <string name="right">Sağ</string>
+    <string name="apply_to_all">Tümüne uygula</string>
+    <string name="no_edges_found">Belge kenarları bulunamadı</string>
+    <string name="processing_progress">İşleniyor… (%d%%)</string>
+    <string name="add_pages">Sayfa ekle</string>
+    <string name="converted_successfully_excl">Başarıyla dönüştürüldü!</string>
+    <string name="view_locally">Cihazda görüntüle</string>
+    <string name="tools">Araçlar</string>
+    <string name="edit_text">Metni düzenle</string>
+    <string name="annotate">Not ekle</string>
+    <string name="add_text">Metin ekle</string>
+    <string name="print_pdf">PDF yazdır</string>
+    <string name="sign">İmzala</string>
+    <string name="tap_to_add_text">Metin yazmak için sayfaya dokunun</string>
+    <!-- /step6 -->
+    <!-- step8 -->
+    <string name="select_a_file">Bir dosya seçin</string>
+    <string name="convert_to_word">Word\'e dönüştür</string>
+    <!-- /step8 -->
+    <!-- step9 -->
+    <string name="section_convert_create">Dönüştür ve Oluştur</string>
+    <string name="section_edit">Düzenle</string>
+    <string name="section_others">Diğer</string>
+    <string name="manage_pages">Sayfaları yönet</string>
+    <string name="feature_request">İstediğiniz özellik yok mu?</string>
+    <string name="tell_us">Bize söyleyin</string>
+    <string name="add_image">Resim ekle</string>
+    <string name="tap_anywhere_add_text">Metin eklemek için herhangi bir yere dokunun</string>
+    <string name="tap_text_to_edit">Düzenlemek istediğiniz metne dokunun</string>
+    <string name="no_editable_text">Bu PDF\'de düzenlenebilir metin yok (taranmış sayfalar). Metin ekle\'yi kullanın.</string>
+    <string name="enter_text">Metin girin</string>
+    <string name="clear">Temizle</string>
+    <string name="color">Renk</string>
+    <string name="size">Boyut</string>
+    <string name="add_signature">+  İmza ekle</string>
+    <string name="sign_here">Buraya imzalayın</string>
+    <string name="edit_pdf">PDF\'yi düzenle</string>
+    <string name="tut_edit_title">PDF\'leri kolayca düzenleyin.</string>
+    <string name="tut_sign_title">Belgeleri saniyeler içinde imzalayın.</string>
+    <string name="try_now">Şimdi dene</string>
+    <string name="later">Sonra</string>
+    <!-- /step9 -->
+    <!-- step10 -->
+    <string name="theme_system">Sistem varsayılanı</string>
+    <string name="theme_light">Açık</string>
+    <string name="theme_dark">Koyu</string>
+    <string name="file_manager">Dosya yöneticisi</string>
+    <string name="section_general">Genel</string>
+    <string name="app_theme">Uygulama teması</string>
+    <string name="feedback_or_suggestion">Geri bildirim veya öneri</string>
+    <string name="add_widget">Widget ekle</string>
+    <string name="explore_more_apps">Diğer uygulamaları keşfet</string>
+    <string name="terms_of_use">Kullanım koşulları</string>
+    <string name="privacy_policy">Gizlilik politikası</string>
+    <string name="manage_subscriptions">Abonelikleri yönet</string>
+    <string name="go_to_google_play">Google Play\'e git</string>
+    <string name="ask_every_time">Her seferinde sor</string>
+    <string name="remove_ads">Reklamları kaldır</string>
+    <string name="unlock_premium">Tüm premium özelliklerin kilidini açın</string>
+    <string name="faq_view_edit">Görüntüle ve düzenle</string>
+    <string name="faq_manage">Dosyaları yönet</string>
+    <string name="faq_about_app">Uygulama hakkında</string>
+    <string name="faq_thanks">Geri bildiriminiz için teşekkürler!</string>
+    <string name="rate_our_app">Uygulamamızı puanlayın</string>
+    <string name="what_problems">Hangi sorunlarla karşılaştınız?</string>
+    <string name="add_screenshot">Ekran görüntüsü ekle</string>
+    <string name="submit">Gönder</string>
+    <string name="fb_cant_open">Dosya açılmıyor</string>
+    <string name="fb_too_many_ads">Çok fazla reklam</string>
+    <string name="fb_slow">Yavaş</string>
+    <string name="fb_crashes">Çöküyor</string>
+    <string name="fb_others">Diğer</string>
+    <!-- /step10 -->
+    <!-- step11 -->
+    <string name="loaded_successfully">Başarıyla yüklendi</string>
+    <string name="back">Geri</string>
+    <string name="bin_info">Dosyalar buraya taşındıktan 30 gün sonra kalıcı olarak silinir.</string>
+    <string name="bin_empty">Geri dönüşüm kutusu boş</string>
+    <!-- /step11 -->
+    <!-- step12 -->
+    <string name="welcome_back">Tekrar hoş geldiniz…</string>
+    <string name="subscribe_failed">Abonelik başarısız</string>
+    <string name="premium_welcome">Premium\'a hoş geldiniz!</string>
+    <string name="premium_restored">Premium geri yüklendi</string>
+    <!-- /step12 -->
+    <!-- step14 -->
+    <string name="save_to_drive">Google Drive\'a kaydet</string>
+    <string name="drive_off">Kapalı</string>
+    <string name="drive_option_off">Kapalı</string>
+    <!-- /step14 -->
+    <!-- step16 -->
+    <string name="tpl_save">Kaydet</string>
+    <string name="tpl_letter">Mektup</string>
+    <string name="tpl_briefing">Brifing</string>
+    <string name="tpl_poster">Poster</string>
+    <string name="tpl_need_more">Daha fazla şablon mu lazım?</string>
+    <string name="tpl_fonts">Yazı tipleri</string>
+    <string name="tpl_current_font">Geçerli yazı tipi</string>
+    <string name="tpl_format">Biçim</string>
+    <string name="tpl_size_color">Boyut ve Renk</string>
+    <string name="tpl_replace">Değiştir</string>
+    <string name="tpl_select_format">Bir biçim seçin</string>
+    <string name="tpl_png_desc">Resimli dosyalar için uygun</string>
+    <string name="tpl_jpg_desc">Daha küçük dosyalar için uygun</string>
+    <string name="tpl_pdf_desc">Çoğu dosya için uygun</string>
+    <string name="tpl_quit_title">Şimdi çıkılsın mı?</string>
+    <string name="tpl_quit_message">Değişikliklerinizi henüz kaydetmediniz. Şimdi kaydetmek ister misiniz?</string>
+    <!-- /step16 -->
+</resources>

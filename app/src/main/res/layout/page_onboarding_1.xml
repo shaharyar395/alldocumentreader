@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <FrameLayout
+        android:id="@+id/phone"
+        android:layout_width="236dp"
+        android:layout_height="460dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/bg_phone_frame"
+        android:padding="7dp"
+        android:rotation="-9">
+
+        <LinearLayout
+            android:id="@+id/screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_phone_screen"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingTop="7dp"
+                android:paddingEnd="16dp"
+                android:text="12:30"
+                android:textColor="@color/text_primary"
+                android:textSize="8sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:paddingStart="12dp">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_menu"
+                    app:tint="@color/text_primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/text_primary"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_search_field"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_search"
+                    app:tint="@color/text_secondary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Search…"
+                    android:textColor="@color/text_hint"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingStart="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recent"
+                    android:textColor="@color/primary"
+                    android:textSize="8.5sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:text="@string/bookmarks"
+                    android:textColor="@color/text_hint"
+                    android:textSize="8.5sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="18dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_progress_bar" />
+
+            <LinearLayout
+                android:id="@+id/mockRows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/tileWord"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="265dp"
+        android:importantForAccessibility="no"
+        android:rotation="-8"
+        android:src="@drawable/ic_tile_word" />
+
+    <ImageView
+        android:id="@+id/tilePdf"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="36dp"
+        android:importantForAccessibility="no"
+        android:rotation="6"
+        android:src="@drawable/ic_tile_pdf" />
+
+    <ImageView
+        android:id="@+id/tilePpt"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="420dp"
+        android:importantForAccessibility="no"
+        android:rotation="-6"
+        android:src="@drawable/ic_tile_ppt" />
+
+    <ImageView
+        android:id="@+id/tileExcel"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="30dp"
+        android:importantForAccessibility="no"
+        android:rotation="8"
+        android:src="@drawable/ic_tile_excel" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_onboarding_fade" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/OnboardTitle"
+        android:text="@string/onb_title_1" />
+</FrameLayout>

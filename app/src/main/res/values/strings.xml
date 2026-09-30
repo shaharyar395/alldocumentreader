@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name" translatable="false">All Document Reader</string>
+    <string name="splash_subtitle">View all documents in one place</string>
+
+    <!-- Language -->
+    <string name="language">Language</string>
+    <string name="language_default">Default</string>
+    <string name="done">Done</string>
+
+    <!-- Onboarding -->
+    <string name="onb_title_1">All-in-one\nDocument Reader</string>
+    <string name="onb_title_2">Professional\nPDF Editor</string>
+    <string name="onb_title_3">Easy &amp; Practical\nTemplates</string>
+    <string name="next">Next</string>
+    <string name="start">Start</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_all_files">All files</string>
+    <string name="nav_tools">Tools</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Categories -->
+    <string name="cat_all">All</string>
+    <string name="cat_pdf">PDF</string>
+    <string name="cat_word">Word</string>
+    <string name="cat_excel">Excel</string>
+    <string name="cat_ppt">PPT</string>
+    <string name="cat_txt">TXT</string>
+    <string name="cat_image">Image</string>
+    <string name="cat_directories">Directories</string>
+    <plurals name="files_count">
+        <item quantity="one">%d file</item>
+        <item quantity="other">%d files</item>
+    </plurals>
+
+    <!-- Home -->
+    <string name="recent">Recent</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="empty">Empty</string>
+    <string name="loading_files">Loading files…</string>
+    <string name="coach_click_folders">Click the folders above to view</string>
+    <string name="ok">OK</string>
+    <string name="discover_new_feature">Discover new feature:</string>
+    <string name="create_pdf">Create PDF</string>
+    <string name="premium">Premium</string>
+
+    <!-- Permission -->
+    <string name="permission_title">Allow access to files</string>
+    <string name="permission_message">To read your PDF, Word, Excel, PPT and TXT files, please allow access to all files on this device.</string>
+    <string name="allow">Allow</string>
+    <string name="not_now">Not now</string>
+    <string name="permission_needed_hint">Allow file access to see your documents</string>
+    <string name="grant_access">Grant access</string>
+
+    <!-- File list -->
+    <string name="search_hint">Search files</string>
+    <string name="no_files_found">No files found</string>
+    <string name="sort">Sort</string>
+    <string name="sort_by">Sort by</string>
+    <string name="sort_date">Date modified</string>
+    <string name="sort_name">Name</string>
+    <string name="sort_size">Size</string>
+    <string name="open">Open</string>
+    <string name="share">Share</string>
+    <string name="add_bookmark">Add to bookmarks</string>
+    <string name="remove_bookmark">Remove from bookmarks</string>
+    <string name="remove_from_recent">Remove from recent</string>
+    <string name="file_info">File info</string>
+    <string name="file_info_path">Path</string>
+    <string name="file_info_size">Size</string>
+    <string name="file_info_modified">Modified</string>
+    <string name="no_app_to_open">No app found to open this file</string>
+    <string name="file_not_found">File no longer exists</string>
+    <string name="bookmark_added">Added to bookmarks</string>
+    <string name="bookmark_removed">Removed from bookmarks</string>
+    <string name="storage_usage">%1$s/%2$s</string>
+    <string name="internal_storage">Internal storage</string>
+    <string name="empty_folder">This folder is empty</string>
+
+    <!-- Create sheet -->
+    <string name="create_new">Create new</string>
+    <string name="images_to_pdf">Images to PDF</string>
+    <string name="scan_document">Scan document</string>
+    <string name="new_text_file">New TXT file</string>
+    <string name="coming_soon">Coming in the next update</string>
+
+    <!-- Tools / Settings -->
+    <string name="tools_title">Tools</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_share_app">Share app</string>
+    <string name="settings_rate">Rate us</string>
+    <string name="settings_feedback">Feedback</string>
+    <string name="settings_privacy">Privacy policy</string>
+    <string name="settings_version">Version %1$s</string>
+    <string name="tool_merge_pdf">Merge PDF</string>
+    <string name="tool_split_pdf">Split PDF</string>
+    <string name="tool_image_to_pdf">Image to PDF</string>
+    <string name="tool_lock_pdf">Lock PDF</string>
+    <string name="tool_unlock_pdf">Unlock PDF</string>
+    <string name="tool_compress_pdf">Compress PDF</string>
+    <string name="tool_scan">Scanner</string>
+    <string name="tool_templates">Templates</string>
+    <string name="press_back_again">Press back again to exit</string>
+
+    <!-- Step 2: All files list -->
+    <string name="all_files_title">All files</string>
+    <string name="select">Select</string>
+    <string name="filter">Filter</string>
+    <string name="selected_count">%d selected</string>
+    <string name="select_all">Select all</string>
+    <string name="search_for_files">Search for files…</string>
+    <string name="cancel">Cancel</string>
+    <string name="filter_by">Filter by</string>
+    <string name="file_size">File size</string>
+    <string name="sort_date_short">Date</string>
+    <string name="ascending">Ascending</string>
+    <string name="descending">Descending</string>
+    <string name="rename">Rename</string>
+    <string name="to_home_screen">To home\nscreen</string>
+    <string name="delete">Delete</string>
+    <string name="storage_path">Storage path</string>
+    <string name="last_modified">Last modified</string>
+    <string name="recycle_title">Move to recycle bin or delete?</string>
+    <string name="recycle_message">Files in the recycle bin can be restored within 30 days.</string>
+    <string name="move_to_recycle_bin">Move to recycle bin</string>
+    <string name="delete_directly">Delete directly</string>
+    <plurals name="deleted_count">
+        <item quantity="one">%d file deleted</item>
+        <item quantity="other">%d files deleted</item>
+    </plurals>
+    <plurals name="moved_to_bin_count">
+        <item quantity="one">%d file moved to recycle bin</item>
+        <item quantity="other">%d files moved to recycle bin</item>
+    </plurals>
+    <string name="delete_failed">Some files could not be deleted</string>
+    <string name="rename_empty">Name cannot be empty</string>
+    <string name="rename_invalid">Name contains invalid characters</string>
+    <string name="rename_exists">A file with this name already exists</string>
+    <string name="rename_failed">Could not rename this file</string>
+    <string name="rename_done">Renamed</string>
+    <string name="select_files_first">Select files first</string>
+    <string name="permission_required">Permission required</string>
+    <string name="shortcut_permission_message"><![CDATA[To add files to home screen, we need the <font color=\"#0A5FD9\">\"Home screen shortcuts\"</font> permission.]]></string>
+    <string name="shortcut_added">Added to home screen</string>
+    <string name="shortcut_not_supported">Your launcher doesn\'t support home screen shortcuts</string>
+    <string name="rate_title"><![CDATA[Do you like <font color=\"#0A5FD9\">our app</font>?]]></string>
+    <string name="rate_subtitle">Your rating means a lot to us!</string>
+    <string name="rate_best">The best we can get</string>
+    <string name="rate">Rate</string>
+    <string name="rate_thanks">Thanks for your feedback!</string>
+
+    <!-- Step 3: Directories, viewer, pages -->
+    <string name="storage">Storage</string>
+    <string name="all_documents">All documents</string>
+    <string name="recycle_bin">Recycle bin</string>
+    <string name="recently_added">Recently added</string>
+    <string name="restore">Restore</string>
+    <string name="restored">Restored</string>
+    <string name="restore_failed">Could not restore (a file with the same name may already exist)</string>
+    <string name="delete_permanently">Delete permanently</string>
+    <string name="empty_recycle_bin">Empty bin</string>
+    <string name="empty_recycle_bin_confirm">Permanently delete all files in the recycle bin?</string>
+    <plurals name="days_left">
+        <item quantity="one">%d day left</item>
+        <item quantity="other">%d days left</item>
+    </plurals>
+    <string name="unsupported_title">File type not supported</string>
+    <string name="unsupported_message">Sorry, we currently do not support this file type.\nBut we are constantly working hard to optimize the app and will support more file types later.</string>
+    <string name="faq">FAQ</string>
+    <string name="faq_message">Opened in the app: PDF, Word (.docx) and TXT.\n\nExcel, PowerPoint and images open with another app on your phone.\n\nOther file types (APK, video, system files…) are not supported yet.</string>
+    <string name="loading">Loading…</string>
+    <string name="convert">Convert</string>
+    <string name="pdf_to_word">PDF to Word</string>
+    <string name="converting_progress">Converting… (%d%%)</string>
+    <string name="saved_successfully">Saved successfully</string>
+    <string name="convert_failed">Conversion failed</string>
+    <string name="pages">Pages</string>
+    <string name="print">Print</string>
+    <string name="edit">Edit</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="bookmarked">Bookmarked</string>
+    <string name="mode_vertical">Vertical</string>
+    <string name="mode_horizontal">Horizontal</string>
+    <string name="rotate">Rotate</string>
+    <string name="search">Search</string>
+    <string name="invert">Invert</string>
+    <string name="page_chip">%1$d / %2$d</string>
+    <string name="go_to_page">Go to page</string>
+    <string name="jump_tip">Tap here to jump to the page directly</string>
+    <string name="search_in_document">Search in document</string>
+    <string name="pdf_password_protected">This PDF is password protected or damaged</string>
+    <string name="drag_hint">Long press and drag to reorder</string>
+    <string name="undo">Undo</string>
+    <string name="redo">Redo</string>
+    <string name="insert">Insert</string>
+    <string name="extract">Extract</string>
+    <string name="setup">Setup</string>
+    <string name="blank_pages">Blank pages</string>
+    <string name="images">Images</string>
+    <string name="delete_confirm">Delete confirm</string>
+    <string name="delete_pages_message"><![CDATA[Are you sure you want to delete the <font color=\"#0A5FD9\">%d</font> selected page(s)?]]></string>
+    <string name="deleted_successfully">Deleted successfully</string>
+    <string name="pdf_needs_page">A PDF needs at least one page</string>
+    <string name="duplicate">Duplicate</string>
+    <string name="move_to_start">Move to start</string>
+    <string name="move_to_end">Move to end</string>
+    <string name="discard_title">Discard changes?</string>
+    <string name="discard_message">Your page changes have not been saved.</string>
+    <string name="discard">Discard</string>
+    <string name="saving">Saving…</string>
+    <string name="extracting">Extracting pages…</string>
+    <string name="save_failed">Could not save the PDF</string>
+    <string name="saved_to">Saved to %s</string>
+    <string name="insert_blank_pages">Insert blank pages</string>
+    <string name="page_size">Page size</string>
+    <string name="page_color">Page color</string>
+    <string name="orientation">Orientation</string>
+    <string name="portrait">Portrait</string>
+    <string name="landscape">Landscape</string>
+    <string name="page_count">Page count</string>
+    <string name="follow_previous">Follow previous</string>
+    <string name="apply">Apply</string>
+    <string name="size_a5" translatable="false">A5</string>
+    <string name="size_a4" translatable="false">A4</string>
+    <string name="size_a3" translatable="false">A3</string>
+    <string name="size_b5" translatable="false">B5</string>
+    <string name="size_b4" translatable="false">B4</string>
+    <string name="size_letter">Letter</string>
+    <string name="size_legal">Legal</string>
+    <string name="tpl_blank">Blank</string>
+    <string name="tpl_line1">Line 1</string>
+    <string name="tpl_line2">Line 2</string>
+    <string name="tpl_notebook">Notebook</string>
+    <string name="tpl_cornell">Cornell</string>
+    <string name="tpl_grid">Grid</string>
+    <string name="tpl_graph">Graph</string>
+
+    <!-- Step 4: Create files / Convert format -->
+    <string name="create_files">Create files</string>
+    <string name="import_files">Import files</string>
+    <string name="use_templates">Use templates</string>
+    <string name="convert_format">Convert format</string>
+    <string name="image_to_pdf">Image to PDF</string>
+    <string name="scan_to_pdf">Scan to PDF</string>
+    <string name="word_to_pdf">Word to PDF</string>
+    <string name="ppt_to_pdf">PPT to PDF</string>
+    <string name="import_failed">Could not import this file</string>
+    <string name="imported_to">Imported to %s</string>
+    <string name="select_template">Select a template</string>
+    <string name="tpl_resume">Resume</string>
+    <string name="tpl_cover_letter">Cover letter</string>
+    <string name="tpl_invoice">Invoice</string>
+    <string name="tpl_meeting_notes">Meeting notes</string>
+    <string name="tpl_todo">To-do list</string>
+    <string name="tpl_weekly_planner">Weekly planner</string>
+    <string name="file_name">File name</string>
+    <string name="create">Create</string>
+    <string name="add_images">Add images</string>
+    <string name="fit_image">Fit image</string>
+    <string name="filter_label">Filter</string>
+    <string name="filter_original">Original</string>
+    <string name="filter_document">Document</string>
+    <string name="convert_to_pdf">Convert to PDF</string>
+    <string name="convert_n_pages">Convert to PDF (%d)</string>
+    <string name="images_empty">Tap + to add images</string>
+    <string name="scan_empty">Tap the camera to scan a page</string>
+    <string name="no_camera">No camera app found</string>
+    <string name="browse">Browse</string>
+    <string name="pick_word_hint">Select a Word (.docx) or TXT file</string>
+    <string name="pick_pdf_hint">Select a PDF file</string>
+    <string name="pick_ppt_hint">Select a PowerPoint (.pptx) file</string>
+    <string name="convert_old_format">This older format (.doc / .ppt) is not supported yet. Please use .docx or .pptx.</string>
+    <string name="converting">Converting…</string>
+    <string name="converted_successfully">Converted successfully</string>
+    <string name="color_inversion_on">Color inversion: On</string>
+    <string name="color_inversion_off">Color inversion: Off</string>
+    <!-- step 5: import / viewer / pages -->
+    <string name="page_by_page">Page by page</string>
+    <string name="continuous_pages">Continuous pages</string>
+    <string name="view">View</string>
+    <string name="extracted_successfully">Extracted successfully</string>
+    <string name="saved_as">Saved as \"%s\".</string>
+    <string name="page_setup">Page setup</string>
+    <string name="page_for_preview">This page is for preview</string>
+    <string name="apply_to_selected">Apply to selected</string>
+    <string name="all_pages_title">All pages (%1$d/%2$d)</string>
+    <string name="dims_cm">%1$s cm x %2$s cm</string>
+    <string name="pen">Pen</string>
+    <string name="highlight">Highlight</string>
+    <string name="eraser">Eraser</string>
+    <plurals name="pages_selected">
+        <item quantity="one">%d page selected</item>
+        <item quantity="other">%d pages selected</item>
+    </plurals>
+    <!-- step 6: Image to PDF / Scan to PDF -->
+    <string name="take_a_photo">Take a photo</string>
+    <string name="choose_from_gallery">Choose from gallery</string>
+    <string name="choose_cropping_method">Choose cropping method</string>
+    <string name="crop_method_hint">You can adjust it at any time in \"Scan settings\".</string>
+    <string name="auto_crop">Auto crop</string>
+    <string name="no_crop">No crop</string>
+    <string name="dont_ask_again">Don\'t ask again</string>
+    <string name="scan_settings">Scan settings</string>
+    <string name="camera_permission_needed">Camera permission is needed to take photos</string>
+    <string name="capture_failed">Could not take the photo, please try again</string>
+    <string name="flash">Flash</string>
+    <string name="grid">Grid</string>
+    <string name="shutter_sound">Shutter sound</string>
+    <string name="zoom">Zoom</string>
+    <string name="center_guide">Centre guide</string>
+    <string name="retake">Retake</string>
+    <string name="crop">Crop</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="compare">Compare with original</string>
+    <string name="apply_to_all">Apply to all</string>
+    <string name="page_counter">%1$d/%2$d</string>
+    <string name="no_edges_found">No document edges found</string>
+    <string name="processing_progress">Processing… (%d%%)</string>
+    <string name="add_pages">Add pages</string>
+    <string name="converted_successfully_excl">Converted successfully!</string>
+    <string name="view_locally">View locally</string>
+    <string name="tools">Tools</string>
+    <string name="edit_text">Edit text</string>
+    <string name="annotate">Annotate</string>
+    <string name="add_text">Add text</string>
+    <string name="print_pdf">Print PDF</string>
+    <string name="sign">Sign</string>
+    <string name="tap_to_add_text">Tap on the page to type text</string>
+    <string name="filter_auto">Auto</string>
+    <string name="filter_docs">Docs</string>
+    <string name="filter_color">Color</string>
+    <string name="filter_image">Image</string>
+    <string name="filter_super">Super</string>
+    <string name="filter_enhance">Enhance</string>
+    <string name="filter_enhance2">Enhance2</string>
+    <string name="filter_bw">B&amp;W</string>
+    <string name="filter_bw2">B&amp;W2</string>
+    <string name="filter_gray">Gray</string>
+    <string name="filter_invert">Invert</string>
+    <!-- step 8: Word to PDF -->
+    <string name="select_a_file">Select a file</string>
+    <string name="convert_to_word">Convert to Word</string>
+    <!-- step 9: Tools tab + PDF editor -->
+    <string name="section_convert_create">Convert &amp; Create</string>
+    <string name="section_edit">Edit</string>
+    <string name="section_others">Others</string>
+    <string name="manage_pages">Manage pages</string>
+    <string name="feature_request">Don\'t have the feature you want?</string>
+    <string name="tell_us">Tell us</string>
+    <string name="add_image">Add image</string>
+    <string name="tap_anywhere_add_text">Tap anywhere to add text</string>
+    <string name="tap_text_to_edit">Tap the text you want to edit</string>
+    <string name="no_editable_text">This PDF has no editable text (scanned pages). Use Add text instead.</string>
+    <string name="enter_text">Enter text</string>
+    <string name="clear">Clear</string>
+    <string name="color">Color</string>
+    <string name="size">Size</string>
+    <string name="underline">Underline</string>
+    <string name="strikethrough">Strikethrough</string>
+    <string name="add_signature">+  Add signature</string>
+    <string name="add_short">+ Add</string>
+    <string name="sign_here">Sign here</string>
+    <string name="delete_signature">Delete signature</string>
+    <string name="delete_signature_message">Remove this saved signature?</string>
+    <string name="how_to_edit">How to edit</string>
+    <string name="edit_pdf">Edit PDF</string>
+    <string name="tut_edit_title">Edit PDFs with ease.</string>
+    <string name="tut_sign_title">Sign documents in seconds.</string>
+    <string name="try_now">Try now</string>
+    <string name="later">Later</string>
+
+    <!-- Step 10: settings -->
+    <string name="theme_system">System default</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="file_manager">File manager</string>
+    <string name="section_general">General</string>
+    <string name="app_theme">App theme</string>
+    <string name="feedback_or_suggestion">Feedback or suggestion</string>
+    <string name="add_widget">Add widget</string>
+    <string name="explore_more_apps">Explore more apps</string>
+    <string name="terms_of_use">Terms of use</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="manage_subscriptions">Manage subscriptions</string>
+    <string name="go_to_google_play">Go to Google Play</string>
+    <string name="ask_every_time">Ask every time</string>
+    <string name="share_app_text">I use %1$s to open and edit PDF, Word, Excel and PowerPoint files. Try it:</string>
+    <string name="remove_ads">Remove ads</string>
+    <string name="unlock_premium">Unlock all premium features</string>
+    <string name="faq_view_edit">View &amp; edit</string>
+    <string name="faq_manage">Manage files</string>
+    <string name="faq_about_app">About app</string>
+    <string name="faq_yes">🥳 Yes</string>
+    <string name="faq_no">😞 No</string>
+    <string name="faq_thanks">Thanks for your feedback!</string>
+    <string name="faq_q_edit">How can I edit a PDF?</string>
+    <string name="faq_q_display">How can I change how a document is displayed?</string>
+    <string name="faq_q_copy">How can I copy text?</string>
+    <string name="faq_q_search">How can I search for text in a file?</string>
+    <string name="faq_q_open">Why can\'t I find or open my file?</string>
+    <string name="faq_q_create">How can I create a new file?</string>
+    <string name="faq_q_print">How can I print a file?</string>
+    <string name="faq_q_subscription">How do I manage or cancel my subscription?</string>
+    <string name="faq_q_ads">Why are there ads in the app?</string>
+    <string name="faq_q_slow">Why does a file open slowly?</string>
+    <string name="faq_q_permissions">Why does the app need file access permission?</string>
+    <string name="rate_our_app">Rate our app</string>
+    <string name="what_problems">What problems did you meet?</string>
+    <string name="feedback_hint">Please describe the problem or your suggestion in detail…</string>
+    <string name="add_screenshot">Add screenshot</string>
+    <string name="submit">Submit</string>
+    <string name="fb_cant_open">Can\'t open file</string>
+    <string name="fb_too_many_ads">Too many ads</string>
+    <string name="fb_slow">Slow</string>
+    <string name="fb_crashes">Crashes</string>
+    <string name="fb_others">Others</string>
+    <string name="fb_rating_line">Rating: %1$d/5</string>
+    <string name="fb_max_shots">You can add up to 4 screenshots</string>
+    <string name="get_premium">Get Premium</string>
+    <string name="premium_tagline">Enjoy all features without ads</string>
+    <string name="premium_slide_sign">Edit &amp;\nsign PDFs</string>
+    <string name="premium_slide_convert">Convert\nformat</string>
+    <string name="premium_slide_templates">Templates</string>
+    <string name="premium_slide_pages">Manage pages</string>
+    <string name="feat_ad_free">Ad-free experience</string>
+    <string name="feat_edit_sign">Edit &amp; sign PDFs easily</string>
+    <string name="feat_convert">Convert files instantly</string>
+    <string name="feat_templates">Unlock premium templates</string>
+    <string name="feat_pages">Complete page management</string>
+    <string name="plan_trial">3-day free trial</string>
+    <string name="plan_then_yearly">Then billed yearly</string>
+    <string name="plan_yearly">Yearly</string>
+    <string name="plan_best_value">Best value</string>
+    <string name="plan_monthly">Monthly</string>
+    <string name="plan_price_on_play">Price shown on Google Play</string>
+    <string name="continue_label">Continue</string>
+    <string name="no_subscription_found">No subscription found</string>
+    <string name="billing_not_ready">Subscriptions are not available in this version yet</string>
+    <string name="w_home">Home</string>
+    <string name="w_recent">Recent</string>
+    <string name="w_tools_title">Quick tools</string>
+    <string name="w_tools_desc">Search, open recent files and bookmarks, or edit a PDF from your home screen</string>
+    <string name="w_reader_title">Document reader</string>
+    <string name="w_reader_desc">Open PDF, Word, Excel and PowerPoint files in one tap</string>
+    <string name="w_editor_title">PDF editor</string>
+    <string name="w_editor_desc">Jump straight into editing a PDF</string>
+    <string name="add_widget_button">Add to home screen</string>
+    <string name="widget_manual_hint">Long-press your home screen, tap Widgets and choose this app</string>
+    <string name="thanks_support">Thanks for your support!</string>
+    <string name="dont_miss_apps">Don\'t miss our other useful apps</string>
+    <string name="see_our_apps">See our apps on Google Play</string>
+    <string name="faq_a_edit">Open the &lt;b&gt;Tools&lt;/b&gt; tab and tap &lt;b&gt;Edit PDF&lt;/b&gt;, then pick a file. You can edit existing text, add new text, add images, annotate (highlight, underline, strike-through, draw) and add your signature. Tap the check mark to save a copy.</string>
+    <string name="faq_a_display">While reading, use the bottom bar to switch between &lt;b&gt;vertical&lt;/b&gt; and &lt;b&gt;horizontal&lt;/b&gt; scrolling, rotate the view or invert colors. Pinch to zoom, and tap the page number to jump to a page.</string>
+    <string name="faq_a_copy">Copying text isn\'t available yet. We\'re working on it! If this matters to you, &lt;a href=\"app://feedback\"&gt;send us feedback&lt;/a&gt; so we can prioritise it.</string>
+    <string name="faq_a_search">Open the document and tap &lt;b&gt;Search&lt;/b&gt; in the bottom bar, then type the word you\'re looking for. Use the arrows to move between results. To find a file by name, use the search icon at the top of the home screen.</string>
+    <string name="faq_a_open">Make sure the app has permission to access your files. If the file is in a cloud app or another folder, open it with your &lt;a href=\"app://filemanager\"&gt;file manager&lt;/a&gt; and choose this app. If a file still won\'t open it may be damaged or password-protected; please &lt;a href=\"app://feedback\"&gt;tell us&lt;/a&gt;.</string>
+    <string name="faq_a_create">On the &lt;b&gt;All files&lt;/b&gt; page tap the &lt;b&gt;+&lt;/b&gt; button. You can create a document from a template, import files, convert images to PDF or scan paper documents with your camera.</string>
+    <string name="faq_a_print">Open a PDF, tap the &lt;b&gt;⋮&lt;/b&gt; menu and choose &lt;b&gt;Print&lt;/b&gt;. Other formats can first be converted to PDF from the &lt;b&gt;Tools&lt;/b&gt; tab.</string>
+    <string name="faq_a_subscription">Subscriptions are managed by Google Play. Go to &lt;b&gt;Settings → Manage subscriptions&lt;/b&gt;, or open Google Play → Profile → Payments &amp;amp; subscriptions. See our &lt;a href=\"app://terms\"&gt;Terms of use&lt;/a&gt; for details.</string>
+    <string name="faq_a_ads">Ads help us keep the app free for everyone. You can remove them with &lt;a href=\"app://premium\"&gt;Premium&lt;/a&gt;.</string>
+    <string name="faq_a_slow">Very large files or files with many images take longer to load. Closing other apps and freeing storage space can help. If a file is always slow, please &lt;a href=\"app://feedback\"&gt;send us feedback&lt;/a&gt;.</string>
+    <string name="faq_a_permissions">The app needs file access only to find and open the documents on your device. Your files stay on your device and are never uploaded.</string>
+    <string name="premium_legal">Payment will be charged to your Google Play account when your trial ends. Your subscription will start automatically unless canceled at least 24 hours before the trial ends. See our &lt;a href=\"app://terms\"&gt;Terms of Use&lt;/a&gt; for more details.</string>
+    <string name="terms_html">&lt;p&gt;&lt;i&gt;Last updated: September 2026&lt;/i&gt;&lt;/p&gt;&lt;p&gt;These Terms of use govern your use of &lt;b&gt;%1$s&lt;/b&gt; (the \"App\"). By using the App you agree to these terms.&lt;/p&gt;&lt;h4&gt;1. Use of the App&lt;/h4&gt;&lt;p&gt;You may use the App to view, create, convert and edit documents for personal or business purposes. You are responsible for the documents you open and create, and for having the right to use them.&lt;/p&gt;&lt;h4&gt;2. Subscriptions&lt;/h4&gt;&lt;p&gt;Some features may require a paid subscription purchased through Google Play. Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. You can manage or cancel a subscription in your Google Play account settings. Refunds follow Google Play policies.&lt;/p&gt;&lt;h4&gt;3. Advertising&lt;/h4&gt;&lt;p&gt;The free version of the App may display ads provided by third parties.&lt;/p&gt;&lt;h4&gt;4. No warranty&lt;/h4&gt;&lt;p&gt;The App is provided \"as is\". We do our best to keep it reliable, but we do not guarantee that it will be error-free, and we are not liable for loss of data. Please keep backups of important files.&lt;/p&gt;&lt;h4&gt;5. Changes&lt;/h4&gt;&lt;p&gt;We may update these terms from time to time. Continued use of the App means you accept the updated terms.&lt;/p&gt;&lt;h4&gt;6. Contact&lt;/h4&gt;&lt;p&gt;Questions? Email us at %2$s.&lt;/p&gt;</string>
+    <string name="privacy_html">&lt;p&gt;&lt;i&gt;Last updated: September 2026&lt;/i&gt;&lt;/p&gt;&lt;p&gt;This policy explains how &lt;b&gt;%1$s&lt;/b&gt; (the \"App\") handles your information.&lt;/p&gt;&lt;h4&gt;1. Your documents&lt;/h4&gt;&lt;p&gt;Documents are opened, converted and edited on your device. We do not upload, read or store your files on our servers.&lt;/p&gt;&lt;h4&gt;2. Permissions&lt;/h4&gt;&lt;p&gt;File access is used only to list and open documents. Camera access is used only when you scan or photograph a document.&lt;/p&gt;&lt;h4&gt;3. Information collected by third parties&lt;/h4&gt;&lt;p&gt;If the App shows ads or uses Google Play services, those providers may collect device identifiers and usage data according to their own privacy policies.&lt;/p&gt;&lt;h4&gt;4. Feedback&lt;/h4&gt;&lt;p&gt;When you send feedback, we receive the email address you send from and the content you choose to include, and use them only to respond and improve the App.&lt;/p&gt;&lt;h4&gt;5. Children&lt;/h4&gt;&lt;p&gt;The App is not directed at children under 13.&lt;/p&gt;&lt;h4&gt;6. Contact&lt;/h4&gt;&lt;p&gt;For privacy questions, email %2$s.&lt;/p&gt;</string>
+    <string name="loaded_successfully">Loaded successfully</string>
+    <string name="back">Back</string>
+    <string name="bin_info">Files will be permanently deleted 30 days after being moved here.</string>
+    <string name="bin_empty">The recycle bin is empty</string>
+    <plurals name="days_count">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="delete_forever_message">
+        <item quantity="one">%d file will be deleted permanently. This can\'t be undone.</item>
+        <item quantity="other">%d files will be deleted permanently. This can\'t be undone.</item>
+    </plurals>
+    <plurals name="restored_count">
+        <item quantity="one">%d file restored</item>
+        <item quantity="other">%d files restored</item>
+    </plurals>
+    <string name="welcome_back">Welcome back…</string>
+    <string name="premium_trusted_top">Loved by</string>
+    <string name="premium_trusted_count">our users</string>
+    <string name="premium_trusted_bottom">worldwide</string>
+    <string name="plan_trial_days">%1$d-Day Free Trial</string>
+    <string name="plan_then_only_per_day">Then only %1$s/day</string>
+    <string name="plan_per_day">%1$s/day</string>
+    <string name="plan_price_year">%1$s/year</string>
+    <string name="plan_price_month">%1$s/month</string>
+    <string name="plan_save_percent">Save %1$d%%</string>
+    <string name="fallback_yearly_price">Rs 5,600.00</string>
+    <string name="fallback_yearly_per_day">Rs 15.34</string>
+    <string name="fallback_monthly_price">Rs 1,400.00</string>
+    <string name="fallback_monthly_per_day">Rs 46.67</string>
+    <string name="subscribe_failed">Subscribe failed</string>
+    <string name="premium_welcome">Welcome to Premium!</string>
+    <string name="premium_restored">Premium restored</string>
+    <string name="start_free_trial">Start Free Trial</string>
+    <string name="trial_today">Today</string>
+    <string name="trial_today_sub">Unlock all premium features</string>
+    <string name="trial_full_access">Get full access</string>
+    <string name="trial_full_access_sub">Remove all ads, read files in all formats, easily edit PDFs, etc.</string>
+    <string name="trial_day7">Day 7</string>
+    <string name="trial_day7_sub">No charges if you cancel at least 24 hours before the trial ends.</string>
+    <string name="hot">HOT</string>
+    <string name="try_days_free">Try %1$d Days for Free</string>
+    <string name="try_then">Then %1$s/year, only %2$s/day</string>
+    <string name="crop_not_found">Couldn\'t find the page edges — use Crop to adjust</string>
+    <string name="save_to_drive">Save to Google Drive</string>
+    <string name="drive_on">On · files are copied to the \"All Document Reader\" folder</string>
+    <string name="drive_off">Off</string>
+    <string name="drive_sign_in_again">Sign in again to keep saving</string>
+    <string name="drive_option_on">On – also save every file to my Google Drive</string>
+    <string name="drive_option_off">Off</string>
+    <string name="drive_turned_on">Saved and converted files will also go to Google Drive</string>
+    <string name="drive_failed">Couldn\'t connect to Google Drive: %1$s</string>
+    <!-- step 16: templates -->
+    <string name="tpl_save">Save</string>
+    <string name="tpl_reset">Reset</string>
+    <string name="tpl_close">Close</string>
+    <string name="tpl_download">Download</string>
+    <string name="tpl_letter">Letter</string>
+    <string name="tpl_briefing">Briefing</string>
+    <string name="tpl_poster">Poster</string>
+    <string name="tpl_need_more">Need more templates?</string>
+    <string name="tpl_fonts">Fonts</string>
+    <string name="tpl_current_font">Current font</string>
+    <string name="tpl_format">Format</string>
+    <string name="tpl_size_color">Size &amp; Color</string>
+    <string name="tpl_replace">Replace</string>
+    <string name="tpl_flip_h">H Flip</string>
+    <string name="tpl_flip_v">V Flip</string>
+    <string name="tpl_bold">Bold</string>
+    <string name="tpl_italic">Italic</string>
+    <string name="tpl_underline">Underline</string>
+    <string name="tpl_strike">Strikethrough</string>
+    <string name="tpl_bullets">Bulleted list</string>
+    <string name="tpl_numbers">Numbered list</string>
+    <string name="tpl_select_format">Select a format</string>
+    <string name="tpl_png">PNG</string>
+    <string name="tpl_png_desc">Suitable for files with images</string>
+    <string name="tpl_jpg">JPG</string>
+    <string name="tpl_jpg_desc">Suitable for smaller files</string>
+    <string name="tpl_pdf">PDF</string>
+    <string name="tpl_pdf_desc">Suitable for most files</string>
+    <string name="tpl_quit_title">Quit now?</string>
+    <string name="tpl_quit_message">You haven\'t saved your changes yet. Would you like to save them now?</string>
+    <string name="tpl_save_failed">Couldn\'t save the file</string>
+    <string name="tpl_image_failed">Couldn\'t open this picture</string>
+</resources>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_subtitle">Lihat semua dokumen di satu tempat</string>
+    <string name="language">Bahasa</string>
+    <string name="language_default">Lalai</string>
+    <string name="onb_title_1">Pembaca Dokumen\nSemua-dalam-satu</string>
+    <string name="onb_title_2">Editor PDF\nProfesional</string>
+    <string name="onb_title_3">Templat Mudah\n&amp; Praktikal</string>
+    <string name="next">Seterusnya</string>
+    <string name="start">Mula</string>
+    <string name="nav_all_files">Semua fail</string>
+    <string name="nav_tools">Alatan</string>
+    <string name="nav_settings">Tetapan</string>
+    <string name="cat_all">Semua</string>
+    <string name="cat_image">Imej</string>
+    <string name="cat_directories">Direktori</string>
+    <string name="recent">Terkini</string>
+    <string name="bookmarks">Penanda buku</string>
+    <string name="empty">Kosong</string>
+    <string name="loading_files">Memuatkan fail…</string>
+    <string name="coach_click_folders">Klik folder di atas untuk melihat</string>
+    <string name="discover_new_feature">Temui ciri baharu:</string>
+    <string name="create_pdf">Cipta PDF</string>
+    <string name="permission_title">Benarkan akses kepada fail</string>
+    <string name="permission_message">Untuk membaca fail PDF, Word, Excel, PPT dan TXT anda, sila benarkan akses kepada semua fail pada peranti ini.</string>
+    <string name="allow">Benarkan</string>
+    <string name="not_now">Bukan sekarang</string>
+    <string name="permission_needed_hint">Benarkan akses fail untuk melihat dokumen anda</string>
+    <string name="grant_access">Beri akses</string>
+    <string name="search_hint">Cari fail</string>
+    <string name="no_files_found">Tiada fail ditemui</string>
+    <string name="coming_soon">Akan datang dalam kemas kini seterusnya</string>
+    <plurals name="files_count">
+        <item quantity="other">%d fail</item>
+    </plurals>
+    <!-- step2 -->
+    <string name="all_files_title">Semua fail</string>
+    <string name="selected_count">%d dipilih</string>
+    <string name="search_for_files">Cari fail…</string>
+    <string name="cancel">Batal</string>
+    <string name="filter_by">Tapis mengikut</string>
+    <string name="sort_name">Nama</string>
+    <string name="sort_date_short">Tarikh</string>
+    <string name="file_size">Saiz fail</string>
+    <string name="ascending">Menaik</string>
+    <string name="descending">Menurun</string>
+    <string name="share">Kongsi</string>
+    <string name="rename">Namakan semula</string>
+    <string name="to_home_screen">Ke skrin\nutama</string>
+    <string name="delete">Padam</string>
+    <string name="storage_path">Laluan storan</string>
+    <string name="last_modified">Diubah suai terakhir</string>
+    <string name="recycle_title">Alih ke tong kitar semula atau padam?</string>
+    <string name="recycle_message">Fail dalam tong kitar semula boleh dipulihkan dalam 30 hari.</string>
+    <string name="move_to_recycle_bin">Alih ke tong kitar semula</string>
+    <string name="delete_directly">Padam terus</string>
+    <string name="permission_required">Kebenaran diperlukan</string>
+    <string name="rate_subtitle">Penilaian anda amat bermakna!</string>
+    <string name="rate_best">Yang terbaik untuk kami</string>
+    <string name="rate">Nilai</string>
+    <!-- /step2 -->
+    <!-- step3 -->
+    <string name="storage">Storan</string>
+    <string name="all_documents">Semua dokumen</string>
+    <string name="recycle_bin">Tong kitar semula</string>
+    <string name="recently_added">Baru ditambah</string>
+    <string name="restore">Pulihkan</string>
+    <string name="delete_permanently">Padam kekal</string>
+    <string name="empty_recycle_bin">Kosongkan tong</string>
+    <string name="unsupported_title">Jenis fail tidak disokong</string>
+    <string name="loading">Memuatkan…</string>
+    <string name="saved_successfully">Berjaya disimpan</string>
+    <string name="pages">Halaman</string>
+    <string name="bookmark">Penanda buku</string>
+    <string name="mode_vertical">Menegak</string>
+    <string name="mode_horizontal">Mendatar</string>
+    <string name="rotate">Putar</string>
+    <string name="search">Cari</string>
+    <string name="invert">Songsang</string>
+    <string name="go_to_page">Pergi ke halaman</string>
+    <string name="jump_tip">Ketik di sini untuk terus ke halaman</string>
+    <string name="drag_hint">Tekan lama dan seret untuk susun semula</string>
+    <string name="insert">Sisip</string>
+    <string name="extract">Ekstrak</string>
+    <string name="blank_pages">Halaman kosong</string>
+    <string name="images">Imej</string>
+    <string name="delete_confirm">Sahkan padam</string>
+    <string name="deleted_successfully">Berjaya dipadam</string>
+    <string name="insert_blank_pages">Sisip halaman kosong</string>
+    <string name="page_size">Saiz halaman</string>
+    <string name="page_color">Warna halaman</string>
+    <string name="orientation">Orientasi</string>
+    <string name="page_count">Bilangan halaman</string>
+    <string name="follow_previous">Ikut sebelumnya</string>
+    <string name="apply">Guna</string>
+    <!-- /step3 -->
+    <!-- step4 -->
+    <string name="create_files">Cipta fail</string>
+    <string name="import_files">Import fail</string>
+    <string name="use_templates">Guna templat</string>
+    <string name="convert_format">Tukar format</string>
+    <string name="image_to_pdf">Imej ke PDF</string>
+    <string name="scan_to_pdf">Imbas ke PDF</string>
+    <string name="word_to_pdf">Word ke PDF</string>
+    <string name="ppt_to_pdf">PPT ke PDF</string>
+    <string name="select_template">Pilih templat</string>
+    <string name="file_name">Nama fail</string>
+    <string name="create">Cipta</string>
+    <string name="convert_to_pdf">Tukar ke PDF</string>
+    <string name="converting">Menukar…</string>
+    <string name="converted_successfully">Berjaya ditukar</string>
+    <string name="color_inversion_on">Songsang warna: Hidup</string>
+    <string name="color_inversion_off">Songsang warna: Mati</string>
+    <!-- /step4 -->
+    <!-- step5 -->
+    <string name="page_by_page">Halaman demi halaman</string>
+    <string name="continuous_pages">Halaman berterusan</string>
+    <string name="view">Lihat</string>
+    <string name="extracted_successfully">Berjaya diekstrak</string>
+    <string name="saved_as">Disimpan sebagai \"%s\".</string>
+    <string name="page_setup">Persediaan halaman</string>
+    <string name="page_for_preview">Halaman ini untuk pratonton</string>
+    <string name="apply_to_selected">Guna pada yang dipilih</string>
+    <string name="all_pages_title">Semua halaman (%1$d/%2$d)</string>
+    <string name="pen">Pen</string>
+    <string name="highlight">Serlah</string>
+    <string name="eraser">Pemadam</string>
+    <!-- /step5 -->
+    <!-- step6 -->
+    <string name="take_a_photo">Ambil foto</string>
+    <string name="choose_from_gallery">Pilih daripada galeri</string>
+    <string name="choose_cropping_method">Pilih kaedah pemangkasan</string>
+    <string name="crop_method_hint">Anda boleh menukarnya bila-bila masa dalam \"Tetapan imbas\".</string>
+    <string name="auto_crop">Pangkas auto</string>
+    <string name="no_crop">Tiada pangkasan</string>
+    <string name="dont_ask_again">Jangan tanya lagi</string>
+    <string name="scan_settings">Tetapan imbas</string>
+    <string name="camera_permission_needed">Kebenaran kamera diperlukan untuk mengambil foto</string>
+    <string name="capture_failed">Tidak dapat mengambil foto, cuba lagi</string>
+    <string name="retake">Ambil semula</string>
+    <string name="crop">Pangkas</string>
+    <string name="left">Kiri</string>
+    <string name="right">Kanan</string>
+    <string name="apply_to_all">Guna pada semua</string>
+    <string name="no_edges_found">Tepi dokumen tidak ditemui</string>
+    <string name="processing_progress">Memproses… (%d%%)</string>
+    <string name="add_pages">Tambah halaman</string>
+    <string name="converted_successfully_excl">Berjaya ditukar!</string>
+    <string name="view_locally">Lihat pada peranti</string>
+    <string name="tools">Alatan</string>
+    <string name="edit_text">Edit teks</string>
+    <string name="annotate">Anotasi</string>
+    <string name="add_text">Tambah teks</string>
+    <string name="print_pdf">Cetak PDF</string>
+    <string name="sign">Tandatangan</string>
+    <string name="tap_to_add_text">Ketik halaman untuk menaip teks</string>
+    <!-- /step6 -->
+    <!-- step8 -->
+    <string name="select_a_file">Pilih fail</string>
+    <string name="convert_to_word">Tukar ke Word</string>
+    <!-- /step8 -->
+    <!-- step9 -->
+    <string name="section_convert_create">Tukar &amp; Cipta</string>
+    <string name="section_edit">Edit</string>
+    <string name="section_others">Lain-lain</string>
+    <string name="manage_pages">Urus halaman</string>
+    <string name="feature_request">Tiada ciri yang anda mahu?</string>
+    <string name="tell_us">Beritahu kami</string>
+    <string name="add_image">Tambah imej</string>
+    <string name="tap_anywhere_add_text">Ketik di mana-mana untuk menambah teks</string>
+    <string name="tap_text_to_edit">Ketik teks yang ingin diedit</string>
+    <string name="no_editable_text">PDF ini tiada teks boleh edit (halaman imbasan). Gunakan Tambah teks.</string>
+    <string name="enter_text">Masukkan teks</string>
+    <string name="clear">Kosongkan</string>
+    <string name="color">Warna</string>
+    <string name="size">Saiz</string>
+    <string name="add_signature">+  Tambah tandatangan</string>
+    <string name="sign_here">Tandatangan di sini</string>
+    <string name="edit_pdf">Edit PDF</string>
+    <string name="tut_edit_title">Edit PDF dengan mudah.</string>
+    <string name="tut_sign_title">Tandatangani dokumen dalam beberapa saat.</string>
+    <string name="try_now">Cuba sekarang</string>
+    <string name="later">Kemudian</string>
+    <!-- /step9 -->
+    <!-- step10 -->
+    <string name="theme_system">Lalai sistem</string>
+    <string name="theme_light">Cerah</string>
+    <string name="theme_dark">Gelap</string>
+    <string name="file_manager">Pengurus fail</string>
+    <string name="section_general">Umum</string>
+    <string name="app_theme">Tema apl</string>
+    <string name="feedback_or_suggestion">Maklum balas atau cadangan</string>
+    <string name="add_widget">Tambah widget</string>
+    <string name="explore_more_apps">Terokai lebih banyak apl</string>
+    <string name="terms_of_use">Terma penggunaan</string>
+    <string name="privacy_policy">Dasar privasi</string>
+    <string name="manage_subscriptions">Urus langganan</string>
+    <string name="go_to_google_play">Pergi ke Google Play</string>
+    <string name="ask_every_time">Tanya setiap kali</string>
+    <string name="remove_ads">Buang iklan</string>
+    <string name="unlock_premium">Buka semua ciri premium</string>
+    <string name="faq_view_edit">Lihat &amp; edit</string>
+    <string name="faq_manage">Urus fail</string>
+    <string name="faq_about_app">Perihal apl</string>
+    <string name="faq_thanks">Terima kasih atas maklum balas anda!</string>
+    <string name="rate_our_app">Nilai apl kami</string>
+    <string name="what_problems">Apakah masalah yang anda hadapi?</string>
+    <string name="add_screenshot">Tambah tangkapan skrin</string>
+    <string name="submit">Hantar</string>
+    <string name="fb_cant_open">Tidak dapat membuka fail</string>
+    <string name="fb_too_many_ads">Terlalu banyak iklan</string>
+    <string name="fb_slow">Perlahan</string>
+    <string name="fb_crashes">Ranap</string>
+    <string name="fb_others">Lain-lain</string>
+    <!-- /step10 -->
+    <!-- step11 -->
+    <string name="loaded_successfully">Berjaya dimuatkan</string>
+    <string name="back">Kembali</string>
+    <string name="bin_info">Fail akan dipadam kekal 30 hari selepas dipindahkan ke sini.</string>
+    <string name="bin_empty">Tong kitar semula kosong</string>
+    <!-- /step11 -->
+    <!-- step12 -->
+    <string name="welcome_back">Selamat kembali…</string>
+    <string name="subscribe_failed">Langganan gagal</string>
+    <string name="premium_welcome">Selamat datang ke Premium!</string>
+    <string name="premium_restored">Premium dipulihkan</string>
+    <!-- /step12 -->
+    <!-- step14 -->
+    <string name="save_to_drive">Simpan ke Google Drive</string>
+    <string name="drive_off">Mati</string>
+    <string name="drive_option_off">Mati</string>
+    <!-- /step14 -->
+    <!-- step16 -->
+    <string name="tpl_save">Simpan</string>
+    <string name="tpl_letter">Surat</string>
+    <string name="tpl_briefing">Taklimat</string>
+    <string name="tpl_poster">Poster</string>
+    <string name="tpl_need_more">Perlukan lebih banyak templat?</string>
+    <string name="tpl_fonts">Fon</string>
+    <string name="tpl_current_font">Fon semasa</string>
+    <string name="tpl_format">Format</string>
+    <string name="tpl_size_color">Saiz &amp; Warna</string>
+    <string name="tpl_replace">Ganti</string>
+    <string name="tpl_select_format">Pilih format</string>
+    <string name="tpl_png_desc">Sesuai untuk fail dengan imej</string>
+    <string name="tpl_jpg_desc">Sesuai untuk fail lebih kecil</string>
+    <string name="tpl_pdf_desc">Sesuai untuk kebanyakan fail</string>
+    <string name="tpl_quit_title">Keluar sekarang?</string>
+    <string name="tpl_quit_message">Anda belum menyimpan perubahan. Simpan sekarang?</string>
+    <!-- /step16 -->
+</resources>

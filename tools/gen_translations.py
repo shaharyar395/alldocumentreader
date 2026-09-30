@@ -1,0 +1,140 @@
+# -*- coding: utf-8 -*-
+"""Writes values-XX/strings.xml for the main UI strings. Run from project root."""
+import os
+KEYS = ["splash_subtitle","language","language_default","onb_title_1","onb_title_2","onb_title_3","next","start",
+        "nav_all_files","nav_tools","nav_settings","cat_all","cat_image","cat_directories","recent","bookmarks","empty",
+        "loading_files","coach_click_folders","discover_new_feature","create_pdf","permission_title","permission_message",
+        "allow","not_now","permission_needed_hint","grant_access","search_hint","no_files_found","coming_soon"]
+# plural: dict quantity->text with %d
+T = {
+"ar": (["عرض جميع المستندات في مكان واحد","اللغة","افتراضي","قارئ مستندات\\nشامل","محرر PDF\\nاحترافي","قوالب سهلة\\nوعملية","التالي","ابدأ",
+        "كل الملفات","الأدوات","الإعدادات","الكل","الصور","المجلدات","الأخيرة","الإشارات المرجعية","فارغ",
+        "جارٍ تحميل الملفات…","انقر على المجلدات أعلاه للعرض","اكتشف ميزة جديدة:","إنشاء PDF","السماح بالوصول إلى الملفات","لقراءة ملفات PDF وWord وExcel وPPT وTXT، يرجى السماح بالوصول إلى جميع الملفات على هذا الجهاز.",
+        "سماح","ليس الآن","اسمح بالوصول إلى الملفات لرؤية مستنداتك","منح الوصول","البحث في الملفات","لم يتم العثور على ملفات","متوفر في التحديث القادم"],
+       {"zero":"%d ملف","one":"ملف واحد","two":"ملفان","few":"%d ملفات","many":"%d ملفًا","other":"%d ملف"}),
+"de": (["Alle Dokumente an einem Ort ansehen","Sprache","Standard","All-in-one\\nDokumentleser","Professioneller\\nPDF-Editor","Einfache &amp; praktische\\nVorlagen","Weiter","Start",
+        "Alle Dateien","Werkzeuge","Einstellungen","Alle","Bilder","Verzeichnisse","Zuletzt","Lesezeichen","Leer",
+        "Dateien werden geladen…","Tippe oben auf die Ordner, um sie anzusehen","Neue Funktion entdecken:","PDF erstellen","Zugriff auf Dateien erlauben","Um deine PDF-, Word-, Excel-, PPT- und TXT-Dateien zu lesen, erlaube bitte den Zugriff auf alle Dateien auf diesem Gerät.",
+        "Erlauben","Nicht jetzt","Erlaube den Dateizugriff, um deine Dokumente zu sehen","Zugriff gewähren","Dateien suchen","Keine Dateien gefunden","Kommt mit dem nächsten Update"],
+       {"one":"%d Datei","other":"%d Dateien"}),
+"es": (["Ver todos los documentos en un solo lugar","Idioma","Predeterminado","Lector de documentos\\ntodo en uno","Editor de PDF\\nprofesional","Plantillas fáciles\\ny prácticas","Siguiente","Empezar",
+        "Todos los archivos","Herramientas","Ajustes","Todo","Imagen","Directorios","Recientes","Marcadores","Vacío",
+        "Cargando archivos…","Toca las carpetas de arriba para ver","Descubre una nueva función:","Crear PDF","Permitir acceso a archivos","Para leer tus archivos PDF, Word, Excel, PPT y TXT, permite el acceso a todos los archivos de este dispositivo.",
+        "Permitir","Ahora no","Permite el acceso a archivos para ver tus documentos","Conceder acceso","Buscar archivos","No se encontraron archivos","Disponible en la próxima actualización"],
+       {"one":"%d archivo","many":"%d archivos","other":"%d archivos"}),
+"fa": (["مشاهده همه اسناد در یک مکان","زبان","پیش‌فرض","سندخوان\\nهمه‌کاره","ویرایشگر PDF\\nحرفه‌ای","قالب‌های ساده\\nو کاربردی","بعدی","شروع",
+        "همه فایل‌ها","ابزارها","تنظیمات","همه","تصویر","پوشه‌ها","اخیر","نشانک‌ها","خالی",
+        "در حال بارگیری فایل‌ها…","برای مشاهده روی پوشه‌های بالا ضربه بزنید","یک ویژگی جدید را کشف کنید:","ایجاد PDF","اجازه دسترسی به فایل‌ها","برای خواندن فایل‌های PDF، Word، Excel، PPT و TXT، لطفاً اجازه دسترسی به همه فایل‌های این دستگاه را بدهید.",
+        "اجازه","اکنون نه","برای دیدن اسناد، اجازه دسترسی به فایل‌ها را بدهید","اعطای دسترسی","جستجوی فایل‌ها","فایلی یافت نشد","در به‌روزرسانی بعدی"],
+       {"one":"%d فایل","other":"%d فایل"}),
+"fr": (["Voir tous les documents au même endroit","Langue","Par défaut","Lecteur de documents\\ntout-en-un","Éditeur PDF\\nprofessionnel","Modèles simples\\net pratiques","Suivant","Commencer",
+        "Tous les fichiers","Outils","Paramètres","Tout","Image","Dossiers","Récents","Favoris","Vide",
+        "Chargement des fichiers…","Touchez les dossiers ci-dessus pour les afficher","Découvrez une nouvelle fonction :","Créer un PDF","Autoriser l'accès aux fichiers","Pour lire vos fichiers PDF, Word, Excel, PPT et TXT, veuillez autoriser l'accès à tous les fichiers de cet appareil.",
+        "Autoriser","Plus tard","Autorisez l'accès aux fichiers pour voir vos documents","Accorder l'accès","Rechercher des fichiers","Aucun fichier trouvé","Disponible dans la prochaine mise à jour"],
+       {"one":"%d fichier","many":"%d fichiers","other":"%d fichiers"}),
+"in": (["Lihat semua dokumen di satu tempat","Bahasa","Default","Pembaca Dokumen\\nSerba Bisa","Editor PDF\\nProfesional","Template Mudah\\n&amp; Praktis","Berikutnya","Mulai",
+        "Semua file","Alat","Setelan","Semua","Gambar","Direktori","Terbaru","Bookmark","Kosong",
+        "Memuat file…","Klik folder di atas untuk melihat","Temukan fitur baru:","Buat PDF","Izinkan akses ke file","Untuk membaca file PDF, Word, Excel, PPT, dan TXT, izinkan akses ke semua file di perangkat ini.",
+        "Izinkan","Nanti","Izinkan akses file untuk melihat dokumen Anda","Beri akses","Cari file","Tidak ada file","Hadir di pembaruan berikutnya"],
+       {"other":"%d file"}),
+"it": (["Visualizza tutti i documenti in un unico posto","Lingua","Predefinita","Lettore di documenti\\ntutto in uno","Editor PDF\\nprofessionale","Modelli semplici\\ne pratici","Avanti","Inizia",
+        "Tutti i file","Strumenti","Impostazioni","Tutti","Immagini","Cartelle","Recenti","Segnalibri","Vuoto",
+        "Caricamento file…","Tocca le cartelle qui sopra per visualizzarle","Scopri una nuova funzione:","Crea PDF","Consenti l'accesso ai file","Per leggere i file PDF, Word, Excel, PPT e TXT, consenti l'accesso a tutti i file di questo dispositivo.",
+        "Consenti","Non ora","Consenti l'accesso ai file per vedere i tuoi documenti","Concedi accesso","Cerca file","Nessun file trovato","In arrivo con il prossimo aggiornamento"],
+       {"one":"%d file","many":"%d file","other":"%d file"}),
+"ja": (["すべてのドキュメントを1か所で表示","言語","デフォルト","オールインワン\\nドキュメントリーダー","プロ仕様の\\nPDFエディター","簡単で便利な\\nテンプレート","次へ","開始",
+        "すべてのファイル","ツール","設定","すべて","画像","フォルダ","最近","ブックマーク","空です",
+        "ファイルを読み込み中…","上のフォルダをタップして表示","新機能:","PDFを作成","ファイルへのアクセスを許可","PDF、Word、Excel、PPT、TXT ファイルを読むには、このデバイスのすべてのファイルへのアクセスを許可してください。",
+        "許可","後で","ドキュメントを表示するにはファイルへのアクセスを許可してください","アクセスを許可","ファイルを検索","ファイルが見つかりません","次回のアップデートで対応予定"],
+       {"other":"%d 件のファイル"}),
+"ko": (["모든 문서를 한곳에서 보기","언어","기본값","올인원\\n문서 리더","전문가용\\nPDF 편집기","쉽고 실용적인\\n템플릿","다음","시작",
+        "모든 파일","도구","설정","전체","이미지","폴더","최근","북마크","비어 있음",
+        "파일 불러오는 중…","위의 폴더를 눌러 확인하세요","새 기능을 확인하세요:","PDF 만들기","파일 접근 허용","PDF, Word, Excel, PPT, TXT 파일을 읽으려면 이 기기의 모든 파일에 대한 접근을 허용해 주세요.",
+        "허용","나중에","문서를 보려면 파일 접근을 허용하세요","접근 허용","파일 검색","파일이 없습니다","다음 업데이트에서 제공됩니다"],
+       {"other":"파일 %d개"}),
+"ms": (["Lihat semua dokumen di satu tempat","Bahasa","Lalai","Pembaca Dokumen\\nSemua-dalam-satu","Editor PDF\\nProfesional","Templat Mudah\\n&amp; Praktikal","Seterusnya","Mula",
+        "Semua fail","Alatan","Tetapan","Semua","Imej","Direktori","Terkini","Penanda buku","Kosong",
+        "Memuatkan fail…","Klik folder di atas untuk melihat","Temui ciri baharu:","Cipta PDF","Benarkan akses kepada fail","Untuk membaca fail PDF, Word, Excel, PPT dan TXT anda, sila benarkan akses kepada semua fail pada peranti ini.",
+        "Benarkan","Bukan sekarang","Benarkan akses fail untuk melihat dokumen anda","Beri akses","Cari fail","Tiada fail ditemui","Akan datang dalam kemas kini seterusnya"],
+       {"other":"%d fail"}),
+"pt": (["Veja todos os documentos em um só lugar","Idioma","Padrão","Leitor de documentos\\ntudo em um","Editor de PDF\\nprofissional","Modelos fáceis\\ne práticos","Próximo","Começar",
+        "Todos os arquivos","Ferramentas","Configurações","Todos","Imagem","Diretórios","Recentes","Favoritos","Vazio",
+        "Carregando arquivos…","Toque nas pastas acima para ver","Descubra um novo recurso:","Criar PDF","Permitir acesso aos arquivos","Para ler seus arquivos PDF, Word, Excel, PPT e TXT, permita o acesso a todos os arquivos deste dispositivo.",
+        "Permitir","Agora não","Permita o acesso aos arquivos para ver seus documentos","Conceder acesso","Pesquisar arquivos","Nenhum arquivo encontrado","Disponível na próxima atualização"],
+       {"one":"%d arquivo","many":"%d arquivos","other":"%d arquivos"}),
+"ru": (["Все документы в одном месте","Язык","По умолчанию","Универсальный\\nпросмотрщик документов","Профессиональный\\nредактор PDF","Простые и удобные\\nшаблоны","Далее","Начать",
+        "Все файлы","Инструменты","Настройки","Все","Изображения","Папки","Недавние","Закладки","Пусто",
+        "Загрузка файлов…","Нажмите на папки выше для просмотра","Новая функция:","Создать PDF","Разрешите доступ к файлам","Чтобы читать файлы PDF, Word, Excel, PPT и TXT, разрешите доступ ко всем файлам на этом устройстве.",
+        "Разрешить","Не сейчас","Разрешите доступ к файлам, чтобы увидеть документы","Предоставить доступ","Поиск файлов","Файлы не найдены","Появится в следующем обновлении"],
+       {"one":"%d файл","few":"%d файла","many":"%d файлов","other":"%d файла"}),
+"tr": (["Tüm belgeleri tek bir yerde görüntüleyin","Dil","Varsayılan","Hepsi bir arada\\nBelge Okuyucu","Profesyonel\\nPDF Düzenleyici","Kolay ve Pratik\\nŞablonlar","İleri","Başla",
+        "Tüm dosyalar","Araçlar","Ayarlar","Tümü","Resim","Klasörler","Son","Yer imleri","Boş",
+        "Dosyalar yükleniyor…","Görüntülemek için yukarıdaki klasörlere dokunun","Yeni özelliği keşfedin:","PDF oluştur","Dosyalara erişime izin verin","PDF, Word, Excel, PPT ve TXT dosyalarınızı okumak için bu cihazdaki tüm dosyalara erişime izin verin.",
+        "İzin ver","Şimdi değil","Belgelerinizi görmek için dosya erişimine izin verin","Erişim izni ver","Dosya ara","Dosya bulunamadı","Bir sonraki güncellemede gelecek"],
+       {"one":"%d dosya","other":"%d dosya"}),
+"vi": (["Xem tất cả tài liệu ở một nơi","Ngôn ngữ","Mặc định","Trình đọc tài liệu\\ntất cả trong một","Trình sửa PDF\\nchuyên nghiệp","Mẫu dễ dùng\\nvà thiết thực","Tiếp","Bắt đầu",
+        "Tất cả tệp","Công cụ","Cài đặt","Tất cả","Hình ảnh","Thư mục","Gần đây","Dấu trang","Trống",
+        "Đang tải tệp…","Nhấn vào các thư mục ở trên để xem","Khám phá tính năng mới:","Tạo PDF","Cho phép truy cập tệp","Để đọc các tệp PDF, Word, Excel, PPT và TXT, vui lòng cho phép truy cập tất cả tệp trên thiết bị này.",
+        "Cho phép","Để sau","Cho phép truy cập tệp để xem tài liệu của bạn","Cấp quyền","Tìm kiếm tệp","Không tìm thấy tệp","Sẽ có trong bản cập nhật tới"],
+       {"other":"%d tệp"}),
+"uz": (["Barcha hujjatlarni bir joyda ko\\'ring","Til","Standart","Hammasi birda\\nhujjat o\\'quvchi","Professional\\nPDF muharriri","Oson va qulay\\nshablonlar","Keyingi","Boshlash",
+        "Barcha fayllar","Asboblar","Sozlamalar","Hammasi","Rasm","Jildlar","Oxirgilar","Xatcho\\'plar","Bo\\'sh",
+        "Fayllar yuklanmoqda…","Ko\\'rish uchun yuqoridagi jildlarni bosing","Yangi funksiya:","PDF yaratish","Fayllarga ruxsat bering","PDF, Word, Excel, PPT va TXT fayllarini o\\'qish uchun ushbu qurilmadagi barcha fayllarga ruxsat bering.",
+        "Ruxsat berish","Hozir emas","Hujjatlarni ko\\'rish uchun fayllarga ruxsat bering","Ruxsat berish","Fayllarni qidirish","Fayl topilmadi","Keyingi yangilanishda"],
+       {"one":"%d ta fayl","other":"%d ta fayl"}),
+"th": (["ดูเอกสารทั้งหมดในที่เดียว","ภาษา","ค่าเริ่มต้น","โปรแกรมอ่านเอกสาร\\nครบในแอปเดียว","โปรแกรมแก้ไข PDF\\nระดับมืออาชีพ","เทมเพลตที่ใช้ง่าย\\nและใช้งานได้จริง","ถัดไป","เริ่ม",
+        "ไฟล์ทั้งหมด","เครื่องมือ","การตั้งค่า","ทั้งหมด","รูปภาพ","โฟลเดอร์","ล่าสุด","บุ๊กมาร์ก","ว่างเปล่า",
+        "กำลังโหลดไฟล์…","แตะโฟลเดอร์ด้านบนเพื่อดู","ค้นพบฟีเจอร์ใหม่:","สร้าง PDF","อนุญาตให้เข้าถึงไฟล์","หากต้องการอ่านไฟล์ PDF, Word, Excel, PPT และ TXT โปรดอนุญาตให้เข้าถึงไฟล์ทั้งหมดในอุปกรณ์นี้",
+        "อนุญาต","ไว้ภายหลัง","อนุญาตการเข้าถึงไฟล์เพื่อดูเอกสารของคุณ","ให้สิทธิ์เข้าถึง","ค้นหาไฟล์","ไม่พบไฟล์","จะมาในการอัปเดตครั้งถัดไป"],
+       {"other":"%d ไฟล์"}),
+"uk": (["Усі документи в одному місці","Мова","За замовчуванням","Універсальний\\nпереглядач документів","Професійний\\nредактор PDF","Прості й зручні\\nшаблони","Далі","Почати",
+        "Усі файли","Інструменти","Налаштування","Усі","Зображення","Папки","Нещодавні","Закладки","Порожньо",
+        "Завантаження файлів…","Натисніть на папки вище, щоб переглянути","Нова функція:","Створити PDF","Дозвольте доступ до файлів","Щоб читати файли PDF, Word, Excel, PPT і TXT, дозвольте доступ до всіх файлів на цьому пристрої.",
+        "Дозволити","Не зараз","Дозвольте доступ до файлів, щоб бачити документи","Надати доступ","Пошук файлів","Файли не знайдено","З’явиться в наступному оновленні"],
+       {"one":"%d файл","few":"%d файли","many":"%d файлів","other":"%d файлу"}),
+"pl": (["Wszystkie dokumenty w jednym miejscu","Język","Domyślny","Czytnik dokumentów\\nwszystko w jednym","Profesjonalny\\nedytor PDF","Proste i praktyczne\\nszablony","Dalej","Start",
+        "Wszystkie pliki","Narzędzia","Ustawienia","Wszystkie","Obrazy","Katalogi","Ostatnie","Zakładki","Pusto",
+        "Wczytywanie plików…","Dotknij folderów powyżej, aby je wyświetlić","Poznaj nową funkcję:","Utwórz PDF","Zezwól na dostęp do plików","Aby czytać pliki PDF, Word, Excel, PPT i TXT, zezwól na dostęp do wszystkich plików na tym urządzeniu.",
+        "Zezwól","Nie teraz","Zezwól na dostęp do plików, aby zobaczyć dokumenty","Przyznaj dostęp","Szukaj plików","Nie znaleziono plików","Dostępne w następnej aktualizacji"],
+       {"one":"%d plik","few":"%d pliki","many":"%d plików","other":"%d pliku"}),
+"tl": (["Tingnan ang lahat ng dokumento sa iisang lugar","Wika","Default","All-in-one na\\nDocument Reader","Propesyonal na\\nPDF Editor","Madali at Praktikal\\nna Template","Susunod","Simulan",
+        "Lahat ng file","Mga tool","Mga setting","Lahat","Larawan","Mga direktoryo","Kamakailan","Mga bookmark","Walang laman",
+        "Nilo-load ang mga file…","I-click ang mga folder sa itaas para tingnan","Tuklasin ang bagong feature:","Gumawa ng PDF","Payagan ang access sa mga file","Para mabasa ang iyong PDF, Word, Excel, PPT at TXT file, payagan ang access sa lahat ng file sa device na ito.",
+        "Payagan","Hindi ngayon","Payagan ang access sa file para makita ang mga dokumento","Magbigay ng access","Maghanap ng file","Walang nahanap na file","Darating sa susunod na update"],
+       {"one":"%d file","other":"%d na file"}),
+"zh-rTW": (["在同一處檢視所有文件","語言","預設","多合一\\n文件閱讀器","專業\\nPDF 編輯器","簡單實用的\\n範本","下一步","開始",
+        "所有檔案","工具","設定","全部","圖片","資料夾","最近","書籤","空白",
+        "正在載入檔案…","點選上方資料夾即可檢視","探索新功能：","建立 PDF","允許存取檔案","若要閱讀 PDF、Word、Excel、PPT 和 TXT 檔案，請允許存取此裝置上的所有檔案。",
+        "允許","稍後再說","允許存取檔案以查看您的文件","授予存取權","搜尋檔案","找不到檔案","將於下次更新推出"],
+       {"other":"%d 個檔案"}),
+"ur": (["تمام دستاویزات ایک جگہ دیکھیں","زبان","ڈیفالٹ","آل اِن وَن\\nدستاویز ریڈر","پروفیشنل\\nPDF ایڈیٹر","آسان اور عملی\\nٹیمپلیٹس","اگلا","شروع کریں",
+        "تمام فائلیں","ٹولز","سیٹنگز","تمام","تصویر","فولڈرز","حالیہ","بُک مارکس","خالی",
+        "فائلیں لوڈ ہو رہی ہیں…","دیکھنے کے لیے اوپر فولڈرز پر ٹیپ کریں","نیا فیچر دیکھیں:","PDF بنائیں","فائلوں تک رسائی کی اجازت دیں","اپنی PDF، Word، Excel، PPT اور TXT فائلیں پڑھنے کے لیے، براہ کرم اس ڈیوائس کی تمام فائلوں تک رسائی کی اجازت دیں۔",
+        "اجازت دیں","ابھی نہیں","اپنی دستاویزات دیکھنے کے لیے فائل تک رسائی کی اجازت دیں","رسائی دیں","فائلیں تلاش کریں","کوئی فائل نہیں ملی","اگلی اپڈیٹ میں دستیاب ہوگا"],
+       {"one":"%d فائل","other":"%d فائلیں"}),
+"zh-rCN": (["在一处查看所有文档","语言","默认","多合一\\n文档阅读器","专业\\nPDF 编辑器","简单实用的\\n模板","下一步","开始",
+        "所有文件","工具","设置","全部","图片","目录","最近","书签","空",
+        "正在加载文件…","点击上方文件夹即可查看","发现新功能：","创建 PDF","允许访问文件","要阅读 PDF、Word、Excel、PPT 和 TXT 文件，请允许访问此设备上的所有文件。",
+        "允许","以后再说","允许访问文件以查看您的文档","授予访问权限","搜索文件","未找到文件","将在下次更新中推出"],
+       {"other":"%d 个文件"}),
+}
+def esc(s):
+    # apostrophes and quotes must be escaped for aapt; keep pre-escaped \' and \n
+    out = s.replace("\\'", "\u0000")
+    out = out.replace("'", "\\'").replace('"', '\\"')
+    return out.replace("\u0000", "\\'")
+base = "app/src/main/res"
+for loc, (vals, plural) in T.items():
+    assert len(vals) == len(KEYS), (loc, len(vals))
+    d = f"{base}/values-{loc}"
+    os.makedirs(d, exist_ok=True)
+    lines = ['<?xml version="1.0" encoding="utf-8"?>', "<resources>"]
+    for k, v in zip(KEYS, vals):
+        lines.append(f'    <string name="{k}">{esc(v)}</string>')
+    lines.append('    <plurals name="files_count">')
+    for q, v in plural.items():
+        lines.append(f'        <item quantity="{q}">{esc(v)}</item>')
+    lines.append("    </plurals>")
+    lines.append("</resources>")
+    open(f"{d}/strings.xml", "w", encoding="utf-8").write("\n".join(lines) + "\n")
+print("wrote", len(T))

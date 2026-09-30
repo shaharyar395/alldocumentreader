@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_subtitle">تمام دستاویزات ایک جگہ دیکھیں</string>
+    <string name="language">زبان</string>
+    <string name="language_default">ڈیفالٹ</string>
+    <string name="onb_title_1">آل اِن وَن\nدستاویز ریڈر</string>
+    <string name="onb_title_2">پروفیشنل\nPDF ایڈیٹر</string>
+    <string name="onb_title_3">آسان اور عملی\nٹیمپلیٹس</string>
+    <string name="next">اگلا</string>
+    <string name="start">شروع کریں</string>
+    <string name="nav_all_files">تمام فائلیں</string>
+    <string name="nav_tools">ٹولز</string>
+    <string name="nav_settings">سیٹنگز</string>
+    <string name="cat_all">تمام</string>
+    <string name="cat_image">تصویر</string>
+    <string name="cat_directories">فولڈرز</string>
+    <string name="recent">حالیہ</string>
+    <string name="bookmarks">بُک مارکس</string>
+    <string name="empty">خالی</string>
+    <string name="loading_files">فائلیں لوڈ ہو رہی ہیں…</string>
+    <string name="coach_click_folders">دیکھنے کے لیے اوپر فولڈرز پر ٹیپ کریں</string>
+    <string name="discover_new_feature">نیا فیچر دیکھیں:</string>
+    <string name="create_pdf">PDF بنائیں</string>
+    <string name="permission_title">فائلوں تک رسائی کی اجازت دیں</string>
+    <string name="permission_message">اپنی PDF، Word، Excel، PPT اور TXT فائلیں پڑھنے کے لیے، براہ کرم اس ڈیوائس کی تمام فائلوں تک رسائی کی اجازت دیں۔</string>
+    <string name="allow">اجازت دیں</string>
+    <string name="not_now">ابھی نہیں</string>
+    <string name="permission_needed_hint">اپنی دستاویزات دیکھنے کے لیے فائل تک رسائی کی اجازت دیں</string>
+    <string name="grant_access">رسائی دیں</string>
+    <string name="search_hint">فائلیں تلاش کریں</string>
+    <string name="no_files_found">کوئی فائل نہیں ملی</string>
+    <string name="coming_soon">اگلی اپڈیٹ میں دستیاب ہوگا</string>
+    <plurals name="files_count">
+        <item quantity="one">%d فائل</item>
+        <item quantity="other">%d فائلیں</item>
+    </plurals>
+    <!-- step2 -->
+    <string name="all_files_title">تمام فائلیں</string>
+    <string name="selected_count">%d منتخب</string>
+    <string name="search_for_files">فائلیں تلاش کریں…</string>
+    <string name="cancel">منسوخ کریں</string>
+    <string name="filter_by">فلٹر بلحاظ</string>
+    <string name="sort_name">نام</string>
+    <string name="sort_date_short">تاریخ</string>
+    <string name="file_size">فائل کا سائز</string>
+    <string name="ascending">صعودی</string>
+    <string name="descending">نزولی</string>
+    <string name="share">شیئر کریں</string>
+    <string name="rename">نام تبدیل کریں</string>
+    <string name="to_home_screen">ہوم اسکرین\nپر</string>
+    <string name="delete">حذف کریں</string>
+    <string name="storage_path">اسٹوریج پاتھ</string>
+    <string name="last_modified">آخری ترمیم</string>
+    <string name="recycle_title">ری سائیکل بن میں منتقل کریں یا حذف کریں؟</string>
+    <string name="recycle_message">ری سائیکل بن کی فائلیں 30 دن کے اندر بحال کی جا سکتی ہیں۔</string>
+    <string name="move_to_recycle_bin">ری سائیکل بن میں منتقل کریں</string>
+    <string name="delete_directly">براہ راست حذف کریں</string>
+    <string name="permission_required">اجازت درکار ہے</string>
+    <string name="rate_subtitle">آپ کی ریٹنگ ہمارے لیے بہت اہم ہے!</string>
+    <string name="rate_best">بہترین جو ہمیں مل سکتا ہے</string>
+    <string name="rate">ریٹ کریں</string>
+    <!-- /step2 -->
+    <!-- step3 -->
+    <string name="storage">اسٹوریج</string>
+    <string name="all_documents">تمام دستاویزات</string>
+    <string name="recycle_bin">ری سائیکل بن</string>
+    <string name="recently_added">حال ہی میں شامل</string>
+    <string name="restore">بحال کریں</string>
+    <string name="delete_permanently">مستقل حذف کریں</string>
+    <string name="empty_recycle_bin">بن خالی کریں</string>
+    <string name="unsupported_title">فائل کی قسم معاون نہیں</string>
+    <string name="loading">لوڈ ہو رہا ہے…</string>
+    <string name="saved_successfully">کامیابی سے محفوظ ہو گیا</string>
+    <string name="pages">صفحات</string>
+    <string name="bookmark">بُک مارک</string>
+    <string name="mode_vertical">عمودی</string>
+    <string name="mode_horizontal">افقی</string>
+    <string name="rotate">گھمائیں</string>
+    <string name="search">تلاش</string>
+    <string name="invert">رنگ الٹیں</string>
+    <string name="go_to_page">صفحے پر جائیں</string>
+    <string name="jump_tip">صفحے پر براہ راست جانے کے لیے یہاں ٹیپ کریں</string>
+    <string name="drag_hint">ترتیب بدلنے کے لیے دبا کر گھسیٹیں</string>
+    <string name="insert">شامل کریں</string>
+    <string name="extract">نکالیں</string>
+    <string name="blank_pages">خالی صفحات</string>
+    <string name="images">تصاویر</string>
+    <string name="delete_confirm">حذف کی تصدیق</string>
+    <string name="deleted_successfully">کامیابی سے حذف ہو گیا</string>
+    <string name="insert_blank_pages">خالی صفحات شامل کریں</string>
+    <string name="page_size">صفحے کا سائز</string>
+    <string name="page_color">صفحے کا رنگ</string>
+    <string name="orientation">سمت</string>
+    <string name="page_count">صفحات کی تعداد</string>
+    <string name="follow_previous">پچھلے جیسا</string>
+    <string name="apply">لاگو کریں</string>
+    <!-- /step3 -->
+    <!-- step4 -->
+    <string name="create_files">فائلیں بنائیں</string>
+    <string name="import_files">فائلیں درآمد کریں</string>
+    <string name="use_templates">ٹیمپلیٹس استعمال کریں</string>
+    <string name="convert_format">فارمیٹ تبدیل کریں</string>
+    <string name="image_to_pdf">تصویر سے PDF</string>
+    <string name="scan_to_pdf">اسکین سے PDF</string>
+    <string name="word_to_pdf">Word سے PDF</string>
+    <string name="ppt_to_pdf">PPT سے PDF</string>
+    <string name="select_template">ٹیمپلیٹ منتخب کریں</string>
+    <string name="file_name">فائل کا نام</string>
+    <string name="create">بنائیں</string>
+    <string name="convert_to_pdf">PDF میں تبدیل کریں</string>
+    <string name="converting">تبدیل ہو رہا ہے…</string>
+    <string name="converted_successfully">کامیابی سے تبدیل ہو گیا</string>
+    <string name="color_inversion_on">رنگ الٹنا: آن</string>
+    <string name="color_inversion_off">رنگ الٹنا: آف</string>
+    <!-- /step4 -->
+    <!-- step5 -->
+    <string name="page_by_page">صفحہ بہ صفحہ</string>
+    <string name="continuous_pages">مسلسل صفحات</string>
+    <string name="view">دیکھیں</string>
+    <string name="extracted_successfully">کامیابی سے نکالا گیا</string>
+    <string name="saved_as">\"%s\" کے نام سے محفوظ ہو گیا۔</string>
+    <string name="page_setup">صفحہ سیٹ اپ</string>
+    <string name="page_for_preview">یہ صفحہ پیش نظارہ کے لیے ہے</string>
+    <string name="apply_to_selected">منتخب پر لاگو کریں</string>
+    <string name="all_pages_title">تمام صفحات (%1$d/%2$d)</string>
+    <string name="pen">قلم</string>
+    <string name="highlight">نمایاں کریں</string>
+    <string name="eraser">مٹانے والا</string>
+    <!-- /step5 -->
+    <!-- step6 -->
+    <string name="take_a_photo">تصویر لیں</string>
+    <string name="choose_from_gallery">گیلری سے منتخب کریں</string>
+    <string name="choose_cropping_method">کاٹنے کا طریقہ منتخب کریں</string>
+    <string name="crop_method_hint">آپ اسے کسی بھی وقت \"اسکین سیٹنگز\" میں بدل سکتے ہیں۔</string>
+    <string name="auto_crop">خودکار کٹائی</string>
+    <string name="no_crop">کٹائی نہیں</string>
+    <string name="dont_ask_again">دوبارہ نہ پوچھیں</string>
+    <string name="scan_settings">اسکین سیٹنگز</string>
+    <string name="camera_permission_needed">تصویر لینے کے لیے کیمرے کی اجازت درکار ہے</string>
+    <string name="capture_failed">تصویر نہیں لی جا سکی، دوبارہ کوشش کریں</string>
+    <string name="retake">دوبارہ لیں</string>
+    <string name="crop">کاٹیں</string>
+    <string name="left">بائیں</string>
+    <string name="right">دائیں</string>
+    <string name="apply_to_all">سب پر لاگو کریں</string>
+    <string name="no_edges_found">دستاویز کے کنارے نہیں ملے</string>
+    <string name="processing_progress">پروسیسنگ… (%d%%)</string>
+    <string name="add_pages">صفحات شامل کریں</string>
+    <string name="converted_successfully_excl">کامیابی سے تبدیل ہو گیا!</string>
+    <string name="view_locally">ڈیوائس میں دیکھیں</string>
+    <string name="tools">ٹولز</string>
+    <string name="edit_text">متن میں ترمیم</string>
+    <string name="annotate">نشان لگائیں</string>
+    <string name="add_text">متن شامل کریں</string>
+    <string name="print_pdf">PDF پرنٹ کریں</string>
+    <string name="sign">دستخط</string>
+    <string name="tap_to_add_text">متن لکھنے کے لیے صفحے پر ٹیپ کریں</string>
+    <!-- /step6 -->
+    <!-- step8 -->
+    <string name="select_a_file">فائل منتخب کریں</string>
+    <string name="convert_to_word">Word میں تبدیل کریں</string>
+    <!-- /step8 -->
+    <!-- step9 -->
+    <string name="section_convert_create">تبدیل اور تخلیق</string>
+    <string name="section_edit">ترمیم</string>
+    <string name="section_others">دیگر</string>
+    <string name="manage_pages">صفحات کا انتظام</string>
+    <string name="feature_request">آپ کی مطلوبہ خصوصیت نہیں ہے؟</string>
+    <string name="tell_us">ہمیں بتائیں</string>
+    <string name="add_image">تصویر شامل کریں</string>
+    <string name="tap_anywhere_add_text">متن شامل کرنے کے لیے کہیں بھی ٹیپ کریں</string>
+    <string name="tap_text_to_edit">جس متن میں ترمیم کرنی ہے اس پر ٹیپ کریں</string>
+    <string name="no_editable_text">اس PDF میں قابلِ ترمیم متن نہیں (اسکین شدہ صفحات)۔ متن شامل کریں استعمال کریں۔</string>
+    <string name="enter_text">متن درج کریں</string>
+    <string name="clear">صاف کریں</string>
+    <string name="color">رنگ</string>
+    <string name="size">سائز</string>
+    <string name="add_signature">+  دستخط شامل کریں</string>
+    <string name="sign_here">یہاں دستخط کریں</string>
+    <string name="edit_pdf">PDF میں ترمیم</string>
+    <string name="tut_edit_title">PDF میں آسانی سے ترمیم کریں۔</string>
+    <string name="tut_sign_title">سیکنڈوں میں دستاویزات پر دستخط کریں۔</string>
+    <string name="try_now">ابھی آزمائیں</string>
+    <string name="later">بعد میں</string>
+    <!-- /step9 -->
+    <!-- step10 -->
+    <string name="theme_system">سسٹم ڈیفالٹ</string>
+    <string name="theme_light">ہلکا</string>
+    <string name="theme_dark">گہرا</string>
+    <string name="file_manager">فائل مینیجر</string>
+    <string name="section_general">عمومی</string>
+    <string name="app_theme">ایپ تھیم</string>
+    <string name="feedback_or_suggestion">رائے یا تجویز</string>
+    <string name="add_widget">ویجیٹ شامل کریں</string>
+    <string name="explore_more_apps">مزید ایپس دیکھیں</string>
+    <string name="terms_of_use">استعمال کی شرائط</string>
+    <string name="privacy_policy">رازداری کی پالیسی</string>
+    <string name="manage_subscriptions">سبسکرپشنز کا انتظام</string>
+    <string name="go_to_google_play">Google Play پر جائیں</string>
+    <string name="ask_every_time">ہر بار پوچھیں</string>
+    <string name="remove_ads">اشتہارات ہٹائیں</string>
+    <string name="unlock_premium">تمام پریمیم خصوصیات کھولیں</string>
+    <string name="faq_view_edit">دیکھیں اور ترمیم کریں</string>
+    <string name="faq_manage">فائلوں کا انتظام</string>
+    <string name="faq_about_app">ایپ کے بارے میں</string>
+    <string name="faq_thanks">آپ کی رائے کا شکریہ!</string>
+    <string name="rate_our_app">ہماری ایپ کو ریٹ کریں</string>
+    <string name="what_problems">آپ کو کن مسائل کا سامنا ہوا؟</string>
+    <string name="add_screenshot">اسکرین شاٹ شامل کریں</string>
+    <string name="submit">جمع کرائیں</string>
+    <string name="fb_cant_open">فائل نہیں کھلتی</string>
+    <string name="fb_too_many_ads">بہت زیادہ اشتہارات</string>
+    <string name="fb_slow">سست</string>
+    <string name="fb_crashes">کریش ہوتی ہے</string>
+    <string name="fb_others">دیگر</string>
+    <!-- /step10 -->
+    <!-- step11 -->
+    <string name="loaded_successfully">کامیابی سے لوڈ ہو گیا</string>
+    <string name="back">واپس</string>
+    <string name="bin_info">یہاں منتقل ہونے کے 30 دن بعد فائلیں مستقل طور پر حذف ہو جائیں گی۔</string>
+    <string name="bin_empty">ری سائیکل بن خالی ہے</string>
+    <!-- /step11 -->
+    <!-- step12 -->
+    <string name="welcome_back">خوش آمدید دوبارہ…</string>
+    <string name="subscribe_failed">سبسکرپشن ناکام ہو گئی</string>
+    <string name="premium_welcome">Premium میں خوش آمدید!</string>
+    <string name="premium_restored">Premium بحال ہو گیا</string>
+    <!-- /step12 -->
+    <!-- step14 -->
+    <string name="save_to_drive">Google Drive میں محفوظ کریں</string>
+    <string name="drive_off">بند</string>
+    <string name="drive_option_off">بند</string>
+    <!-- /step14 -->
+    <!-- step16 -->
+    <string name="tpl_save">محفوظ کریں</string>
+    <string name="tpl_letter">خط</string>
+    <string name="tpl_briefing">بریفنگ</string>
+    <string name="tpl_poster">پوسٹر</string>
+    <string name="tpl_need_more">مزید ٹیمپلیٹس چاہئیں؟</string>
+    <string name="tpl_fonts">فونٹس</string>
+    <string name="tpl_current_font">موجودہ فونٹ</string>
+    <string name="tpl_format">فارمیٹ</string>
+    <string name="tpl_size_color">سائز اور رنگ</string>
+    <string name="tpl_replace">تبدیل کریں</string>
+    <string name="tpl_select_format">فارمیٹ منتخب کریں</string>
+    <string name="tpl_png_desc">تصاویر والی فائلوں کے لیے موزوں</string>
+    <string name="tpl_jpg_desc">چھوٹی فائلوں کے لیے موزوں</string>
+    <string name="tpl_pdf_desc">زیادہ تر فائلوں کے لیے موزوں</string>
+    <string name="tpl_quit_title">ابھی باہر نکلیں؟</string>
+    <string name="tpl_quit_message">آپ نے ابھی تک اپنی تبدیلیاں محفوظ نہیں کیں۔ کیا انہیں ابھی محفوظ کرنا چاہتے ہیں؟</string>
+    <!-- /step16 -->
+</resources>

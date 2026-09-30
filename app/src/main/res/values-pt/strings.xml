@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_subtitle">Veja todos os documentos em um só lugar</string>
+    <string name="language">Idioma</string>
+    <string name="language_default">Padrão</string>
+    <string name="onb_title_1">Leitor de documentos\ntudo em um</string>
+    <string name="onb_title_2">Editor de PDF\nprofissional</string>
+    <string name="onb_title_3">Modelos fáceis\ne práticos</string>
+    <string name="next">Próximo</string>
+    <string name="start">Começar</string>
+    <string name="nav_all_files">Todos os arquivos</string>
+    <string name="nav_tools">Ferramentas</string>
+    <string name="nav_settings">Configurações</string>
+    <string name="cat_all">Todos</string>
+    <string name="cat_image">Imagem</string>
+    <string name="cat_directories">Diretórios</string>
+    <string name="recent">Recentes</string>
+    <string name="bookmarks">Favoritos</string>
+    <string name="empty">Vazio</string>
+    <string name="loading_files">Carregando arquivos…</string>
+    <string name="coach_click_folders">Toque nas pastas acima para ver</string>
+    <string name="discover_new_feature">Descubra um novo recurso:</string>
+    <string name="create_pdf">Criar PDF</string>
+    <string name="permission_title">Permitir acesso aos arquivos</string>
+    <string name="permission_message">Para ler seus arquivos PDF, Word, Excel, PPT e TXT, permita o acesso a todos os arquivos deste dispositivo.</string>
+    <string name="allow">Permitir</string>
+    <string name="not_now">Agora não</string>
+    <string name="permission_needed_hint">Permita o acesso aos arquivos para ver seus documentos</string>
+    <string name="grant_access">Conceder acesso</string>
+    <string name="search_hint">Pesquisar arquivos</string>
+    <string name="no_files_found">Nenhum arquivo encontrado</string>
+    <string name="coming_soon">Disponível na próxima atualização</string>
+    <plurals name="files_count">
+        <item quantity="one">%d arquivo</item>
+        <item quantity="many">%d arquivos</item>
+        <item quantity="other">%d arquivos</item>
+    </plurals>
+    <!-- step2 -->
+    <string name="all_files_title">Todos os arquivos</string>
+    <string name="selected_count">%d selecionados</string>
+    <string name="search_for_files">Pesquisar arquivos…</string>
+    <string name="cancel">Cancelar</string>
+    <string name="filter_by">Filtrar por</string>
+    <string name="sort_name">Nome</string>
+    <string name="sort_date_short">Data</string>
+    <string name="file_size">Tamanho</string>
+    <string name="ascending">Crescente</string>
+    <string name="descending">Decrescente</string>
+    <string name="share">Compartilhar</string>
+    <string name="rename">Renomear</string>
+    <string name="to_home_screen">Para a tela\ninicial</string>
+    <string name="delete">Excluir</string>
+    <string name="storage_path">Local de armazenamento</string>
+    <string name="last_modified">Última modificação</string>
+    <string name="recycle_title">Mover para a lixeira ou excluir?</string>
+    <string name="recycle_message">Os arquivos da lixeira podem ser restaurados em até 30 dias.</string>
+    <string name="move_to_recycle_bin">Mover para a lixeira</string>
+    <string name="delete_directly">Excluir diretamente</string>
+    <string name="permission_required">Permissão necessária</string>
+    <string name="rate_subtitle">Sua avaliação significa muito para nós!</string>
+    <string name="rate_best">O melhor que podemos receber</string>
+    <string name="rate">Avaliar</string>
+    <!-- /step2 -->
+    <!-- step3 -->
+    <string name="storage">Armazenamento</string>
+    <string name="all_documents">Todos os documentos</string>
+    <string name="recycle_bin">Lixeira</string>
+    <string name="recently_added">Adicionados recentemente</string>
+    <string name="restore">Restaurar</string>
+    <string name="delete_permanently">Excluir permanentemente</string>
+    <string name="empty_recycle_bin">Esvaziar lixeira</string>
+    <string name="unsupported_title">Tipo de arquivo não suportado</string>
+    <string name="loading">Carregando…</string>
+    <string name="saved_successfully">Salvo com sucesso</string>
+    <string name="pages">Páginas</string>
+    <string name="bookmark">Favorito</string>
+    <string name="mode_vertical">Vertical</string>
+    <string name="mode_horizontal">Horizontal</string>
+    <string name="rotate">Girar</string>
+    <string name="search">Pesquisar</string>
+    <string name="invert">Inverter</string>
+    <string name="go_to_page">Ir para a página</string>
+    <string name="jump_tip">Toque aqui para ir direto à página</string>
+    <string name="drag_hint">Toque e segure e arraste para reordenar</string>
+    <string name="insert">Inserir</string>
+    <string name="extract">Extrair</string>
+    <string name="blank_pages">Páginas em branco</string>
+    <string name="images">Imagens</string>
+    <string name="delete_confirm">Confirmar exclusão</string>
+    <string name="deleted_successfully">Excluído com sucesso</string>
+    <string name="insert_blank_pages">Inserir páginas em branco</string>
+    <string name="page_size">Tamanho da página</string>
+    <string name="page_color">Cor da página</string>
+    <string name="orientation">Orientação</string>
+    <string name="page_count">Número de páginas</string>
+    <string name="follow_previous">Igual à anterior</string>
+    <string name="apply">Aplicar</string>
+    <!-- /step3 -->
+    <!-- step4 -->
+    <string name="create_files">Criar arquivos</string>
+    <string name="import_files">Importar arquivos</string>
+    <string name="use_templates">Usar modelos</string>
+    <string name="convert_format">Converter formato</string>
+    <string name="image_to_pdf">Imagem para PDF</string>
+    <string name="scan_to_pdf">Digitalizar para PDF</string>
+    <string name="word_to_pdf">Word para PDF</string>
+    <string name="ppt_to_pdf">PPT para PDF</string>
+    <string name="select_template">Selecione um modelo</string>
+    <string name="file_name">Nome do arquivo</string>
+    <string name="create">Criar</string>
+    <string name="convert_to_pdf">Converter para PDF</string>
+    <string name="converting">Convertendo…</string>
+    <string name="converted_successfully">Convertido com sucesso</string>
+    <string name="color_inversion_on">Inversão de cores: ativada</string>
+    <string name="color_inversion_off">Inversão de cores: desativada</string>
+    <!-- /step4 -->
+    <!-- step5 -->
+    <string name="page_by_page">Página por página</string>
+    <string name="continuous_pages">Páginas contínuas</string>
+    <string name="view">Ver</string>
+    <string name="extracted_successfully">Extraído com sucesso</string>
+    <string name="saved_as">Salvo como \"%s\".</string>
+    <string name="page_setup">Configurar página</string>
+    <string name="page_for_preview">Esta página é uma prévia</string>
+    <string name="apply_to_selected">Aplicar à seleção</string>
+    <string name="all_pages_title">Todas as páginas (%1$d/%2$d)</string>
+    <string name="pen">Caneta</string>
+    <string name="highlight">Destacar</string>
+    <string name="eraser">Borracha</string>
+    <!-- /step5 -->
+    <!-- step6 -->
+    <string name="take_a_photo">Tirar uma foto</string>
+    <string name="choose_from_gallery">Escolher da galeria</string>
+    <string name="choose_cropping_method">Escolha o método de corte</string>
+    <string name="crop_method_hint">Você pode alterar a qualquer momento em \"Configurações de digitalização\".</string>
+    <string name="auto_crop">Corte automático</string>
+    <string name="no_crop">Sem corte</string>
+    <string name="dont_ask_again">Não perguntar novamente</string>
+    <string name="scan_settings">Configurações de digitalização</string>
+    <string name="camera_permission_needed">É necessária permissão da câmera para tirar fotos</string>
+    <string name="capture_failed">Não foi possível tirar a foto, tente novamente</string>
+    <string name="retake">Refazer</string>
+    <string name="crop">Cortar</string>
+    <string name="left">Esquerda</string>
+    <string name="right">Direita</string>
+    <string name="apply_to_all">Aplicar a todas</string>
+    <string name="no_edges_found">Bordas do documento não encontradas</string>
+    <string name="processing_progress">Processando… (%d%%)</string>
+    <string name="add_pages">Adicionar páginas</string>
+    <string name="converted_successfully_excl">Convertido com sucesso!</string>
+    <string name="view_locally">Ver no dispositivo</string>
+    <string name="tools">Ferramentas</string>
+    <string name="edit_text">Editar texto</string>
+    <string name="annotate">Anotar</string>
+    <string name="add_text">Adicionar texto</string>
+    <string name="print_pdf">Imprimir PDF</string>
+    <string name="sign">Assinar</string>
+    <string name="tap_to_add_text">Toque na página para digitar</string>
+    <!-- /step6 -->
+    <!-- step8 -->
+    <string name="select_a_file">Selecione um arquivo</string>
+    <string name="convert_to_word">Converter para Word</string>
+    <!-- /step8 -->
+    <!-- step9 -->
+    <string name="section_convert_create">Converter e criar</string>
+    <string name="section_edit">Editar</string>
+    <string name="section_others">Outros</string>
+    <string name="manage_pages">Gerenciar páginas</string>
+    <string name="feature_request">Não encontrou o recurso que quer?</string>
+    <string name="tell_us">Conte para nós</string>
+    <string name="add_image">Adicionar imagem</string>
+    <string name="tap_anywhere_add_text">Toque em qualquer lugar para adicionar texto</string>
+    <string name="tap_text_to_edit">Toque no texto que quer editar</string>
+    <string name="no_editable_text">Este PDF não tem texto editável (páginas digitalizadas). Use Adicionar texto.</string>
+    <string name="enter_text">Digite o texto</string>
+    <string name="clear">Limpar</string>
+    <string name="color">Cor</string>
+    <string name="size">Tamanho</string>
+    <string name="add_signature">+  Adicionar assinatura</string>
+    <string name="sign_here">Assine aqui</string>
+    <string name="edit_pdf">Editar PDF</string>
+    <string name="tut_edit_title">Edite PDFs com facilidade.</string>
+    <string name="tut_sign_title">Assine documentos em segundos.</string>
+    <string name="try_now">Experimentar</string>
+    <string name="later">Depois</string>
+    <!-- /step9 -->
+    <!-- step10 -->
+    <string name="theme_system">Padrão do sistema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Escuro</string>
+    <string name="file_manager">Gerenciador de arquivos</string>
+    <string name="section_general">Geral</string>
+    <string name="app_theme">Tema do app</string>
+    <string name="feedback_or_suggestion">Feedback ou sugestão</string>
+    <string name="add_widget">Adicionar widget</string>
+    <string name="explore_more_apps">Conheça mais apps</string>
+    <string name="terms_of_use">Termos de uso</string>
+    <string name="privacy_policy">Política de privacidade</string>
+    <string name="manage_subscriptions">Gerenciar assinaturas</string>
+    <string name="go_to_google_play">Ir para o Google Play</string>
+    <string name="ask_every_time">Perguntar sempre</string>
+    <string name="remove_ads">Remover anúncios</string>
+    <string name="unlock_premium">Desbloqueie todos os recursos premium</string>
+    <string name="faq_view_edit">Ver e editar</string>
+    <string name="faq_manage">Gerenciar arquivos</string>
+    <string name="faq_about_app">Sobre o app</string>
+    <string name="faq_thanks">Obrigado pelo feedback!</string>
+    <string name="rate_our_app">Avalie nosso app</string>
+    <string name="what_problems">Quais problemas você encontrou?</string>
+    <string name="add_screenshot">Adicionar captura de tela</string>
+    <string name="submit">Enviar</string>
+    <string name="fb_cant_open">Não abre o arquivo</string>
+    <string name="fb_too_many_ads">Muitos anúncios</string>
+    <string name="fb_slow">Lento</string>
+    <string name="fb_crashes">Travamentos</string>
+    <string name="fb_others">Outros</string>
+    <!-- /step10 -->
+    <!-- step11 -->
+    <string name="loaded_successfully">Carregado com sucesso</string>
+    <string name="back">Voltar</string>
+    <string name="bin_info">Os arquivos serão excluídos permanentemente 30 dias após serem movidos para cá.</string>
+    <string name="bin_empty">A lixeira está vazia</string>
+    <!-- /step11 -->
+    <!-- step12 -->
+    <string name="welcome_back">Bem-vindo de volta…</string>
+    <string name="subscribe_failed">Falha na assinatura</string>
+    <string name="premium_welcome">Bem-vindo ao Premium!</string>
+    <string name="premium_restored">Premium restaurado</string>
+    <!-- /step12 -->
+    <!-- step14 -->
+    <string name="save_to_drive">Salvar no Google Drive</string>
+    <string name="drive_off">Desativado</string>
+    <string name="drive_option_off">Desativado</string>
+    <!-- /step14 -->
+    <!-- step16 -->
+    <string name="tpl_save">Salvar</string>
+    <string name="tpl_letter">Carta</string>
+    <string name="tpl_briefing">Resumo</string>
+    <string name="tpl_poster">Pôster</string>
+    <string name="tpl_need_more">Precisa de mais modelos?</string>
+    <string name="tpl_fonts">Fontes</string>
+    <string name="tpl_current_font">Fonte atual</string>
+    <string name="tpl_format">Formato</string>
+    <string name="tpl_size_color">Tamanho e cor</string>
+    <string name="tpl_replace">Substituir</string>
+    <string name="tpl_select_format">Selecione um formato</string>
+    <string name="tpl_png_desc">Ideal para arquivos com imagens</string>
+    <string name="tpl_jpg_desc">Ideal para arquivos menores</string>
+    <string name="tpl_pdf_desc">Ideal para a maioria dos arquivos</string>
+    <string name="tpl_quit_title">Sair agora?</string>
+    <string name="tpl_quit_message">Você ainda não salvou as alterações. Deseja salvá-las agora?</string>
+    <!-- /step16 -->
+</resources>

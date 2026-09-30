@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_subtitle">Все документы в одном месте</string>
+    <string name="language">Язык</string>
+    <string name="language_default">По умолчанию</string>
+    <string name="onb_title_1">Универсальный\nпросмотрщик документов</string>
+    <string name="onb_title_2">Профессиональный\nредактор PDF</string>
+    <string name="onb_title_3">Простые и удобные\nшаблоны</string>
+    <string name="next">Далее</string>
+    <string name="start">Начать</string>
+    <string name="nav_all_files">Все файлы</string>
+    <string name="nav_tools">Инструменты</string>
+    <string name="nav_settings">Настройки</string>
+    <string name="cat_all">Все</string>
+    <string name="cat_image">Изображения</string>
+    <string name="cat_directories">Папки</string>
+    <string name="recent">Недавние</string>
+    <string name="bookmarks">Закладки</string>
+    <string name="empty">Пусто</string>
+    <string name="loading_files">Загрузка файлов…</string>
+    <string name="coach_click_folders">Нажмите на папки выше для просмотра</string>
+    <string name="discover_new_feature">Новая функция:</string>
+    <string name="create_pdf">Создать PDF</string>
+    <string name="permission_title">Разрешите доступ к файлам</string>
+    <string name="permission_message">Чтобы читать файлы PDF, Word, Excel, PPT и TXT, разрешите доступ ко всем файлам на этом устройстве.</string>
+    <string name="allow">Разрешить</string>
+    <string name="not_now">Не сейчас</string>
+    <string name="permission_needed_hint">Разрешите доступ к файлам, чтобы увидеть документы</string>
+    <string name="grant_access">Предоставить доступ</string>
+    <string name="search_hint">Поиск файлов</string>
+    <string name="no_files_found">Файлы не найдены</string>
+    <string name="coming_soon">Появится в следующем обновлении</string>
+    <plurals name="files_count">
+        <item quantity="one">%d файл</item>
+        <item quantity="few">%d файла</item>
+        <item quantity="many">%d файлов</item>
+        <item quantity="other">%d файла</item>
+    </plurals>
+    <!-- step2 -->
+    <string name="all_files_title">Все файлы</string>
+    <string name="selected_count">Выбрано: %d</string>
+    <string name="search_for_files">Поиск файлов…</string>
+    <string name="cancel">Отмена</string>
+    <string name="filter_by">Сортировать по</string>
+    <string name="sort_name">Имя</string>
+    <string name="sort_date_short">Дата</string>
+    <string name="file_size">Размер</string>
+    <string name="ascending">По возрастанию</string>
+    <string name="descending">По убыванию</string>
+    <string name="share">Поделиться</string>
+    <string name="rename">Переименовать</string>
+    <string name="to_home_screen">На главный\nэкран</string>
+    <string name="delete">Удалить</string>
+    <string name="storage_path">Путь</string>
+    <string name="last_modified">Изменён</string>
+    <string name="recycle_title">Переместить в корзину или удалить?</string>
+    <string name="recycle_message">Файлы в корзине можно восстановить в течение 30 дней.</string>
+    <string name="move_to_recycle_bin">В корзину</string>
+    <string name="delete_directly">Удалить сразу</string>
+    <string name="permission_required">Требуется разрешение</string>
+    <string name="rate_subtitle">Ваша оценка очень важна для нас!</string>
+    <string name="rate_best">Лучшая оценка</string>
+    <string name="rate">Оценить</string>
+    <!-- /step2 -->
+    <!-- step3 -->
+    <string name="storage">Хранилище</string>
+    <string name="all_documents">Все документы</string>
+    <string name="recycle_bin">Корзина</string>
+    <string name="recently_added">Недавно добавленные</string>
+    <string name="restore">Восстановить</string>
+    <string name="delete_permanently">Удалить навсегда</string>
+    <string name="empty_recycle_bin">Очистить корзину</string>
+    <string name="unsupported_title">Тип файла не поддерживается</string>
+    <string name="loading">Загрузка…</string>
+    <string name="saved_successfully">Успешно сохранено</string>
+    <string name="pages">Страницы</string>
+    <string name="bookmark">Закладка</string>
+    <string name="mode_vertical">Вертикально</string>
+    <string name="mode_horizontal">Горизонтально</string>
+    <string name="rotate">Повернуть</string>
+    <string name="search">Поиск</string>
+    <string name="invert">Инверсия</string>
+    <string name="go_to_page">Перейти к странице</string>
+    <string name="jump_tip">Нажмите, чтобы сразу перейти к странице</string>
+    <string name="drag_hint">Удерживайте и перетаскивайте для сортировки</string>
+    <string name="insert">Вставить</string>
+    <string name="extract">Извлечь</string>
+    <string name="blank_pages">Пустые страницы</string>
+    <string name="images">Изображения</string>
+    <string name="delete_confirm">Подтвердите удаление</string>
+    <string name="deleted_successfully">Успешно удалено</string>
+    <string name="insert_blank_pages">Вставить пустые страницы</string>
+    <string name="page_size">Размер страницы</string>
+    <string name="page_color">Цвет страницы</string>
+    <string name="orientation">Ориентация</string>
+    <string name="page_count">Количество страниц</string>
+    <string name="follow_previous">Как предыдущая</string>
+    <string name="apply">Применить</string>
+    <!-- /step3 -->
+    <!-- step4 -->
+    <string name="create_files">Создать файлы</string>
+    <string name="import_files">Импорт файлов</string>
+    <string name="use_templates">Шаблоны</string>
+    <string name="convert_format">Конвертировать</string>
+    <string name="image_to_pdf">Изображение в PDF</string>
+    <string name="scan_to_pdf">Скан в PDF</string>
+    <string name="word_to_pdf">Word в PDF</string>
+    <string name="ppt_to_pdf">PPT в PDF</string>
+    <string name="select_template">Выберите шаблон</string>
+    <string name="file_name">Имя файла</string>
+    <string name="create">Создать</string>
+    <string name="convert_to_pdf">Конвертировать в PDF</string>
+    <string name="converting">Конвертация…</string>
+    <string name="converted_successfully">Успешно конвертировано</string>
+    <string name="color_inversion_on">Инверсия цветов: вкл.</string>
+    <string name="color_inversion_off">Инверсия цветов: выкл.</string>
+    <!-- /step4 -->
+    <!-- step5 -->
+    <string name="page_by_page">Постранично</string>
+    <string name="continuous_pages">Непрерывные страницы</string>
+    <string name="view">Открыть</string>
+    <string name="extracted_successfully">Успешно извлечено</string>
+    <string name="saved_as">Сохранено как \"%s\".</string>
+    <string name="page_setup">Параметры страницы</string>
+    <string name="page_for_preview">Эта страница для предпросмотра</string>
+    <string name="apply_to_selected">Применить к выбранным</string>
+    <string name="all_pages_title">Все страницы (%1$d/%2$d)</string>
+    <string name="pen">Ручка</string>
+    <string name="highlight">Выделение</string>
+    <string name="eraser">Ластик</string>
+    <!-- /step5 -->
+    <!-- step6 -->
+    <string name="take_a_photo">Сделать фото</string>
+    <string name="choose_from_gallery">Выбрать из галереи</string>
+    <string name="choose_cropping_method">Выберите способ обрезки</string>
+    <string name="crop_method_hint">Изменить можно в любое время в \"Настройках сканирования\".</string>
+    <string name="auto_crop">Автообрезка</string>
+    <string name="no_crop">Без обрезки</string>
+    <string name="dont_ask_again">Больше не спрашивать</string>
+    <string name="scan_settings">Настройки сканирования</string>
+    <string name="camera_permission_needed">Для съёмки нужно разрешение на камеру</string>
+    <string name="capture_failed">Не удалось сделать фото, попробуйте ещё раз</string>
+    <string name="retake">Переснять</string>
+    <string name="crop">Обрезать</string>
+    <string name="left">Влево</string>
+    <string name="right">Вправо</string>
+    <string name="apply_to_all">Применить ко всем</string>
+    <string name="no_edges_found">Края документа не найдены</string>
+    <string name="processing_progress">Обработка… (%d%%)</string>
+    <string name="add_pages">Добавить страницы</string>
+    <string name="converted_successfully_excl">Успешно конвертировано!</string>
+    <string name="view_locally">Открыть на устройстве</string>
+    <string name="tools">Инструменты</string>
+    <string name="edit_text">Редактировать текст</string>
+    <string name="annotate">Пометки</string>
+    <string name="add_text">Добавить текст</string>
+    <string name="print_pdf">Печать PDF</string>
+    <string name="sign">Подписать</string>
+    <string name="tap_to_add_text">Нажмите на страницу, чтобы ввести текст</string>
+    <!-- /step6 -->
+    <!-- step8 -->
+    <string name="select_a_file">Выберите файл</string>
+    <string name="convert_to_word">Конвертировать в Word</string>
+    <!-- /step8 -->
+    <!-- step9 -->
+    <string name="section_convert_create">Конвертация и создание</string>
+    <string name="section_edit">Редактирование</string>
+    <string name="section_others">Другое</string>
+    <string name="manage_pages">Управление страницами</string>
+    <string name="feature_request">Не нашли нужную функцию?</string>
+    <string name="tell_us">Сообщите нам</string>
+    <string name="add_image">Добавить изображение</string>
+    <string name="tap_anywhere_add_text">Нажмите в любом месте, чтобы добавить текст</string>
+    <string name="tap_text_to_edit">Нажмите на текст, который хотите изменить</string>
+    <string name="no_editable_text">В этом PDF нет редактируемого текста (сканы). Используйте «Добавить текст».</string>
+    <string name="enter_text">Введите текст</string>
+    <string name="clear">Очистить</string>
+    <string name="color">Цвет</string>
+    <string name="size">Размер</string>
+    <string name="add_signature">+  Добавить подпись</string>
+    <string name="sign_here">Подпишите здесь</string>
+    <string name="edit_pdf">Редактировать PDF</string>
+    <string name="tut_edit_title">Редактируйте PDF легко.</string>
+    <string name="tut_sign_title">Подписывайте документы за секунды.</string>
+    <string name="try_now">Попробовать</string>
+    <string name="later">Позже</string>
+    <!-- /step9 -->
+    <!-- step10 -->
+    <string name="theme_system">Как в системе</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Тёмная</string>
+    <string name="file_manager">Файловый менеджер</string>
+    <string name="section_general">Общие</string>
+    <string name="app_theme">Тема приложения</string>
+    <string name="feedback_or_suggestion">Отзыв или предложение</string>
+    <string name="add_widget">Добавить виджет</string>
+    <string name="explore_more_apps">Другие наши приложения</string>
+    <string name="terms_of_use">Условия использования</string>
+    <string name="privacy_policy">Политика конфиденциальности</string>
+    <string name="manage_subscriptions">Управление подписками</string>
+    <string name="go_to_google_play">Перейти в Google Play</string>
+    <string name="ask_every_time">Спрашивать каждый раз</string>
+    <string name="remove_ads">Убрать рекламу</string>
+    <string name="unlock_premium">Откройте все премиум-функции</string>
+    <string name="faq_view_edit">Просмотр и редактирование</string>
+    <string name="faq_manage">Управление файлами</string>
+    <string name="faq_about_app">О приложении</string>
+    <string name="faq_thanks">Спасибо за отзыв!</string>
+    <string name="rate_our_app">Оцените приложение</string>
+    <string name="what_problems">С какими проблемами вы столкнулись?</string>
+    <string name="add_screenshot">Добавить скриншот</string>
+    <string name="submit">Отправить</string>
+    <string name="fb_cant_open">Не открывается файл</string>
+    <string name="fb_too_many_ads">Слишком много рекламы</string>
+    <string name="fb_slow">Медленно</string>
+    <string name="fb_crashes">Вылетает</string>
+    <string name="fb_others">Другое</string>
+    <!-- /step10 -->
+    <!-- step11 -->
+    <string name="loaded_successfully">Загружено</string>
+    <string name="back">Назад</string>
+    <string name="bin_info">Файлы будут безвозвратно удалены через 30 дней после перемещения сюда.</string>
+    <string name="bin_empty">Корзина пуста</string>
+    <!-- /step11 -->
+    <!-- step12 -->
+    <string name="welcome_back">С возвращением…</string>
+    <string name="subscribe_failed">Не удалось оформить подписку</string>
+    <string name="premium_welcome">Добро пожаловать в Premium!</string>
+    <string name="premium_restored">Premium восстановлен</string>
+    <!-- /step12 -->
+    <!-- step14 -->
+    <string name="save_to_drive">Сохранять в Google Диск</string>
+    <string name="drive_off">Выкл.</string>
+    <string name="drive_option_off">Выкл.</string>
+    <!-- /step14 -->
+    <!-- step16 -->
+    <string name="tpl_save">Сохранить</string>
+    <string name="tpl_letter">Письмо</string>
+    <string name="tpl_briefing">Брифинг</string>
+    <string name="tpl_poster">Постер</string>
+    <string name="tpl_need_more">Нужно больше шаблонов?</string>
+    <string name="tpl_fonts">Шрифты</string>
+    <string name="tpl_current_font">Текущий шрифт</string>
+    <string name="tpl_format">Формат</string>
+    <string name="tpl_size_color">Размер и цвет</string>
+    <string name="tpl_replace">Заменить</string>
+    <string name="tpl_select_format">Выберите формат</string>
+    <string name="tpl_png_desc">Подходит для файлов с изображениями</string>
+    <string name="tpl_jpg_desc">Подходит для файлов меньшего размера</string>
+    <string name="tpl_pdf_desc">Подходит для большинства файлов</string>
+    <string name="tpl_quit_title">Выйти сейчас?</string>
+    <string name="tpl_quit_message">Вы ещё не сохранили изменения. Сохранить их сейчас?</string>
+    <!-- /step16 -->
+</resources>

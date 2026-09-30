@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_subtitle">Barcha hujjatlarni bir joyda ko\'ring</string>
+    <string name="language">Til</string>
+    <string name="language_default">Standart</string>
+    <string name="onb_title_1">Hammasi birda\nhujjat o\'quvchi</string>
+    <string name="onb_title_2">Professional\nPDF muharriri</string>
+    <string name="onb_title_3">Oson va qulay\nshablonlar</string>
+    <string name="next">Keyingi</string>
+    <string name="start">Boshlash</string>
+    <string name="nav_all_files">Barcha fayllar</string>
+    <string name="nav_tools">Asboblar</string>
+    <string name="nav_settings">Sozlamalar</string>
+    <string name="cat_all">Hammasi</string>
+    <string name="cat_image">Rasm</string>
+    <string name="cat_directories">Jildlar</string>
+    <string name="recent">Oxirgilar</string>
+    <string name="bookmarks">Xatcho\'plar</string>
+    <string name="empty">Bo\'sh</string>
+    <string name="loading_files">Fayllar yuklanmoqda…</string>
+    <string name="coach_click_folders">Ko\'rish uchun yuqoridagi jildlarni bosing</string>
+    <string name="discover_new_feature">Yangi funksiya:</string>
+    <string name="create_pdf">PDF yaratish</string>
+    <string name="permission_title">Fayllarga ruxsat bering</string>
+    <string name="permission_message">PDF, Word, Excel, PPT va TXT fayllarini o\'qish uchun ushbu qurilmadagi barcha fayllarga ruxsat bering.</string>
+    <string name="allow">Ruxsat berish</string>
+    <string name="not_now">Hozir emas</string>
+    <string name="permission_needed_hint">Hujjatlarni ko\'rish uchun fayllarga ruxsat bering</string>
+    <string name="grant_access">Ruxsat berish</string>
+    <string name="search_hint">Fayllarni qidirish</string>
+    <string name="no_files_found">Fayl topilmadi</string>
+    <string name="coming_soon">Keyingi yangilanishda</string>
+    <plurals name="files_count">
+        <item quantity="one">%d ta fayl</item>
+        <item quantity="other">%d ta fayl</item>
+    </plurals>
+    <!-- step2 -->
+    <string name="all_files_title">Barcha fayllar</string>
+    <string name="selected_count">%d ta tanlandi</string>
+    <string name="search_for_files">Fayllarni qidirish…</string>
+    <string name="cancel">Bekor qilish</string>
+    <string name="filter_by">Saralash</string>
+    <string name="sort_name">Nomi</string>
+    <string name="sort_date_short">Sana</string>
+    <string name="file_size">Fayl hajmi</string>
+    <string name="ascending">O\'sish bo\'yicha</string>
+    <string name="descending">Kamayish bo\'yicha</string>
+    <string name="share">Ulashish</string>
+    <string name="rename">Nomini o\'zgartirish</string>
+    <string name="to_home_screen">Bosh\nekranga</string>
+    <string name="delete">O\'chirish</string>
+    <string name="storage_path">Saqlash yo\'li</string>
+    <string name="last_modified">Oxirgi o\'zgarish</string>
+    <string name="recycle_title">Savatga o\'tkazilsinmi yoki o\'chirilsinmi?</string>
+    <string name="recycle_message">Savatdagi fayllarni 30 kun ichida tiklash mumkin.</string>
+    <string name="move_to_recycle_bin">Savatga o\'tkazish</string>
+    <string name="delete_directly">To\'g\'ridan-to\'g\'ri o\'chirish</string>
+    <string name="permission_required">Ruxsat kerak</string>
+    <string name="rate_subtitle">Bahoyingiz biz uchun muhim!</string>
+    <string name="rate_best">Eng yaxshi baho</string>
+    <string name="rate">Baholash</string>
+    <!-- /step2 -->
+    <!-- step3 -->
+    <string name="storage">Xotira</string>
+    <string name="all_documents">Barcha hujjatlar</string>
+    <string name="recycle_bin">Savat</string>
+    <string name="recently_added">Yaqinda qo\'shilgan</string>
+    <string name="restore">Tiklash</string>
+    <string name="delete_permanently">Butunlay o\'chirish</string>
+    <string name="empty_recycle_bin">Savatni tozalash</string>
+    <string name="unsupported_title">Fayl turi qo\'llab-quvvatlanmaydi</string>
+    <string name="loading">Yuklanmoqda…</string>
+    <string name="saved_successfully">Muvaffaqiyatli saqlandi</string>
+    <string name="pages">Sahifalar</string>
+    <string name="bookmark">Xatcho\'p</string>
+    <string name="mode_vertical">Vertikal</string>
+    <string name="mode_horizontal">Gorizontal</string>
+    <string name="rotate">Aylantirish</string>
+    <string name="search">Qidirish</string>
+    <string name="invert">Ranglarni teskari</string>
+    <string name="go_to_page">Sahifaga o\'tish</string>
+    <string name="jump_tip">Sahifaga to\'g\'ridan-to\'g\'ri o\'tish uchun bosing</string>
+    <string name="drag_hint">Tartiblash uchun bosib turib suring</string>
+    <string name="insert">Qo\'shish</string>
+    <string name="extract">Ajratib olish</string>
+    <string name="blank_pages">Bo\'sh sahifalar</string>
+    <string name="images">Rasmlar</string>
+    <string name="delete_confirm">O\'chirishni tasdiqlang</string>
+    <string name="deleted_successfully">Muvaffaqiyatli o\'chirildi</string>
+    <string name="insert_blank_pages">Bo\'sh sahifa qo\'shish</string>
+    <string name="page_size">Sahifa o\'lchami</string>
+    <string name="page_color">Sahifa rangi</string>
+    <string name="orientation">Yo\'nalish</string>
+    <string name="page_count">Sahifalar soni</string>
+    <string name="follow_previous">Oldingidek</string>
+    <string name="apply">Qo\'llash</string>
+    <!-- /step3 -->
+    <!-- step4 -->
+    <string name="create_files">Fayl yaratish</string>
+    <string name="import_files">Fayl import qilish</string>
+    <string name="use_templates">Shablonlardan foydalanish</string>
+    <string name="convert_format">Formatni o\'zgartirish</string>
+    <string name="image_to_pdf">Rasmdan PDF</string>
+    <string name="scan_to_pdf">Skanerdan PDF</string>
+    <string name="word_to_pdf">Word-dan PDF</string>
+    <string name="ppt_to_pdf">PPT-dan PDF</string>
+    <string name="select_template">Shablonni tanlang</string>
+    <string name="file_name">Fayl nomi</string>
+    <string name="create">Yaratish</string>
+    <string name="convert_to_pdf">PDF-ga aylantirish</string>
+    <string name="converting">Aylantirilmoqda…</string>
+    <string name="converted_successfully">Muvaffaqiyatli aylantirildi</string>
+    <string name="color_inversion_on">Rang inversiyasi: yoqilgan</string>
+    <string name="color_inversion_off">Rang inversiyasi: o\'chirilgan</string>
+    <!-- /step4 -->
+    <!-- step5 -->
+    <string name="page_by_page">Sahifama-sahifa</string>
+    <string name="continuous_pages">Uzluksiz sahifalar</string>
+    <string name="view">Ko\'rish</string>
+    <string name="extracted_successfully">Muvaffaqiyatli ajratildi</string>
+    <string name="saved_as">\"%s\" sifatida saqlandi.</string>
+    <string name="page_setup">Sahifa sozlamasi</string>
+    <string name="page_for_preview">Bu sahifa oldindan ko\'rish uchun</string>
+    <string name="apply_to_selected">Tanlanganlarga qo\'llash</string>
+    <string name="all_pages_title">Barcha sahifalar (%1$d/%2$d)</string>
+    <string name="pen">Qalam</string>
+    <string name="highlight">Belgilash</string>
+    <string name="eraser">O\'chirg\'ich</string>
+    <!-- /step5 -->
+    <!-- step6 -->
+    <string name="take_a_photo">Suratga olish</string>
+    <string name="choose_from_gallery">Galereyadan tanlash</string>
+    <string name="choose_cropping_method">Kesish usulini tanlang</string>
+    <string name="crop_method_hint">Buni istalgan vaqtda \"Skanerlash sozlamalari\"da o\'zgartirishingiz mumkin.</string>
+    <string name="auto_crop">Avto kesish</string>
+    <string name="no_crop">Kesmaslik</string>
+    <string name="dont_ask_again">Boshqa so\'ramaslik</string>
+    <string name="scan_settings">Skanerlash sozlamalari</string>
+    <string name="camera_permission_needed">Suratga olish uchun kamera ruxsati kerak</string>
+    <string name="capture_failed">Surat olinmadi, qayta urinib ko\'ring</string>
+    <string name="retake">Qayta olish</string>
+    <string name="crop">Kesish</string>
+    <string name="left">Chap</string>
+    <string name="right">O\'ng</string>
+    <string name="apply_to_all">Hammasiga qo\'llash</string>
+    <string name="no_edges_found">Hujjat chetlari topilmadi</string>
+    <string name="processing_progress">Ishlanmoqda… (%d%%)</string>
+    <string name="add_pages">Sahifa qo\'shish</string>
+    <string name="converted_successfully_excl">Muvaffaqiyatli aylantirildi!</string>
+    <string name="view_locally">Qurilmada ko\'rish</string>
+    <string name="tools">Asboblar</string>
+    <string name="edit_text">Matnni tahrirlash</string>
+    <string name="annotate">Izoh qo\'shish</string>
+    <string name="add_text">Matn qo\'shish</string>
+    <string name="print_pdf">PDF chop etish</string>
+    <string name="sign">Imzo</string>
+    <string name="tap_to_add_text">Matn yozish uchun sahifaga bosing</string>
+    <!-- /step6 -->
+    <!-- step8 -->
+    <string name="select_a_file">Faylni tanlang</string>
+    <string name="convert_to_word">Word-ga aylantirish</string>
+    <!-- /step8 -->
+    <!-- step9 -->
+    <string name="section_convert_create">Aylantirish va yaratish</string>
+    <string name="section_edit">Tahrirlash</string>
+    <string name="section_others">Boshqalar</string>
+    <string name="manage_pages">Sahifalarni boshqarish</string>
+    <string name="feature_request">Kerakli funksiya yo\'qmi?</string>
+    <string name="tell_us">Bizga ayting</string>
+    <string name="add_image">Rasm qo\'shish</string>
+    <string name="tap_anywhere_add_text">Matn qo\'shish uchun istalgan joyga bosing</string>
+    <string name="tap_text_to_edit">Tahrirlamoqchi bo\'lgan matnga bosing</string>
+    <string name="no_editable_text">Bu PDF-da tahrirlanadigan matn yo\'q (skaner sahifalar). Matn qo\'shishdan foydalaning.</string>
+    <string name="enter_text">Matn kiriting</string>
+    <string name="clear">Tozalash</string>
+    <string name="color">Rang</string>
+    <string name="size">O\'lcham</string>
+    <string name="add_signature">+  Imzo qo\'shish</string>
+    <string name="sign_here">Shu yerga imzo qo\'ying</string>
+    <string name="edit_pdf">PDF tahrirlash</string>
+    <string name="tut_edit_title">PDF-larni oson tahrirlang.</string>
+    <string name="tut_sign_title">Hujjatlarni soniyalarda imzolang.</string>
+    <string name="try_now">Hozir sinash</string>
+    <string name="later">Keyinroq</string>
+    <!-- /step9 -->
+    <!-- step10 -->
+    <string name="theme_system">Tizim bo\'yicha</string>
+    <string name="theme_light">Yorug\'</string>
+    <string name="theme_dark">Qorong\'i</string>
+    <string name="file_manager">Fayl menejeri</string>
+    <string name="section_general">Umumiy</string>
+    <string name="app_theme">Ilova mavzusi</string>
+    <string name="feedback_or_suggestion">Fikr yoki taklif</string>
+    <string name="add_widget">Vidjet qo\'shish</string>
+    <string name="explore_more_apps">Boshqa ilovalar</string>
+    <string name="terms_of_use">Foydalanish shartlari</string>
+    <string name="privacy_policy">Maxfiylik siyosati</string>
+    <string name="manage_subscriptions">Obunalarni boshqarish</string>
+    <string name="go_to_google_play">Google Play\'ga o\'tish</string>
+    <string name="ask_every_time">Har safar so\'rash</string>
+    <string name="remove_ads">Reklamani olib tashlash</string>
+    <string name="unlock_premium">Barcha premium funksiyalarni oching</string>
+    <string name="faq_view_edit">Ko\'rish va tahrirlash</string>
+    <string name="faq_manage">Fayllarni boshqarish</string>
+    <string name="faq_about_app">Ilova haqida</string>
+    <string name="faq_thanks">Fikringiz uchun rahmat!</string>
+    <string name="rate_our_app">Ilovani baholang</string>
+    <string name="what_problems">Qanday muammolarga duch keldingiz?</string>
+    <string name="add_screenshot">Skrinshot qo\'shish</string>
+    <string name="submit">Yuborish</string>
+    <string name="fb_cant_open">Fayl ochilmayapti</string>
+    <string name="fb_too_many_ads">Reklama juda ko\'p</string>
+    <string name="fb_slow">Sekin</string>
+    <string name="fb_crashes">Ishdan chiqadi</string>
+    <string name="fb_others">Boshqalar</string>
+    <!-- /step10 -->
+    <!-- step11 -->
+    <string name="loaded_successfully">Muvaffaqiyatli yuklandi</string>
+    <string name="back">Orqaga</string>
+    <string name="bin_info">Fayllar bu yerga ko\'chirilgandan 30 kun o\'tib butunlay o\'chiriladi.</string>
+    <string name="bin_empty">Savat bo\'sh</string>
+    <!-- /step11 -->
+    <!-- step12 -->
+    <string name="welcome_back">Qaytganingiz bilan…</string>
+    <string name="subscribe_failed">Obuna amalga oshmadi</string>
+    <string name="premium_welcome">Premium\'ga xush kelibsiz!</string>
+    <string name="premium_restored">Premium tiklandi</string>
+    <!-- /step12 -->
+    <!-- step14 -->
+    <string name="save_to_drive">Google Drive\'ga saqlash</string>
+    <string name="drive_off">O\'chiq</string>
+    <string name="drive_option_off">O\'chiq</string>
+    <!-- /step14 -->
+    <!-- step16 -->
+    <string name="tpl_save">Saqlash</string>
+    <string name="tpl_letter">Xat</string>
+    <string name="tpl_briefing">Brifing</string>
+    <string name="tpl_poster">Poster</string>
+    <string name="tpl_need_more">Ko\'proq shablon kerakmi?</string>
+    <string name="tpl_fonts">Shriftlar</string>
+    <string name="tpl_current_font">Joriy shrift</string>
+    <string name="tpl_format">Format</string>
+    <string name="tpl_size_color">O\'lcham va rang</string>
+    <string name="tpl_replace">Almashtirish</string>
+    <string name="tpl_select_format">Formatni tanlang</string>
+    <string name="tpl_png_desc">Rasmli fayllar uchun mos</string>
+    <string name="tpl_jpg_desc">Kichikroq fayllar uchun mos</string>
+    <string name="tpl_pdf_desc">Ko\'pchilik fayllar uchun mos</string>
+    <string name="tpl_quit_title">Hozir chiqasizmi?</string>
+    <string name="tpl_quit_message">O\'zgarishlar hali saqlanmagan. Hozir saqlaysizmi?</string>
+    <!-- /step16 -->
+</resources>

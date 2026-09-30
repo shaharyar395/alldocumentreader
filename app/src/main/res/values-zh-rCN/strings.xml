@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_subtitle">在一处查看所有文档</string>
+    <string name="language">语言</string>
+    <string name="language_default">默认</string>
+    <string name="onb_title_1">多合一\n文档阅读器</string>
+    <string name="onb_title_2">专业\nPDF 编辑器</string>
+    <string name="onb_title_3">简单实用的\n模板</string>
+    <string name="next">下一步</string>
+    <string name="start">开始</string>
+    <string name="nav_all_files">所有文件</string>
+    <string name="nav_tools">工具</string>
+    <string name="nav_settings">设置</string>
+    <string name="cat_all">全部</string>
+    <string name="cat_image">图片</string>
+    <string name="cat_directories">目录</string>
+    <string name="recent">最近</string>
+    <string name="bookmarks">书签</string>
+    <string name="empty">空</string>
+    <string name="loading_files">正在加载文件…</string>
+    <string name="coach_click_folders">点击上方文件夹即可查看</string>
+    <string name="discover_new_feature">发现新功能：</string>
+    <string name="create_pdf">创建 PDF</string>
+    <string name="permission_title">允许访问文件</string>
+    <string name="permission_message">要阅读 PDF、Word、Excel、PPT 和 TXT 文件，请允许访问此设备上的所有文件。</string>
+    <string name="allow">允许</string>
+    <string name="not_now">以后再说</string>
+    <string name="permission_needed_hint">允许访问文件以查看您的文档</string>
+    <string name="grant_access">授予访问权限</string>
+    <string name="search_hint">搜索文件</string>
+    <string name="no_files_found">未找到文件</string>
+    <string name="coming_soon">将在下次更新中推出</string>
+    <plurals name="files_count">
+        <item quantity="other">%d 个文件</item>
+    </plurals>
+    <!-- step2 -->
+    <string name="all_files_title">所有文件</string>
+    <string name="selected_count">已选择 %d 项</string>
+    <string name="search_for_files">搜索文件…</string>
+    <string name="cancel">取消</string>
+    <string name="filter_by">排序方式</string>
+    <string name="sort_name">名称</string>
+    <string name="sort_date_short">日期</string>
+    <string name="file_size">文件大小</string>
+    <string name="ascending">升序</string>
+    <string name="descending">降序</string>
+    <string name="share">分享</string>
+    <string name="rename">重命名</string>
+    <string name="to_home_screen">添加到\n主屏幕</string>
+    <string name="delete">删除</string>
+    <string name="storage_path">存储路径</string>
+    <string name="last_modified">最后修改</string>
+    <string name="recycle_title">移至回收站还是直接删除？</string>
+    <string name="recycle_message">回收站中的文件可在 30 天内恢复。</string>
+    <string name="move_to_recycle_bin">移至回收站</string>
+    <string name="delete_directly">直接删除</string>
+    <string name="permission_required">需要权限</string>
+    <string name="rate_subtitle">您的评分对我们意义重大！</string>
+    <string name="rate_best">我们能得到的最好评价</string>
+    <string name="rate">评分</string>
+    <!-- /step2 -->
+    <!-- step3 -->
+    <string name="storage">存储</string>
+    <string name="all_documents">所有文档</string>
+    <string name="recycle_bin">回收站</string>
+    <string name="recently_added">最近添加</string>
+    <string name="restore">恢复</string>
+    <string name="delete_permanently">永久删除</string>
+    <string name="empty_recycle_bin">清空回收站</string>
+    <string name="unsupported_title">不支持此文件类型</string>
+    <string name="loading">加载中…</string>
+    <string name="saved_successfully">保存成功</string>
+    <string name="pages">页面</string>
+    <string name="bookmark">书签</string>
+    <string name="mode_vertical">纵向</string>
+    <string name="mode_horizontal">横向</string>
+    <string name="rotate">旋转</string>
+    <string name="search">搜索</string>
+    <string name="invert">反色</string>
+    <string name="go_to_page">跳转到页面</string>
+    <string name="jump_tip">点击这里可直接跳转到页面</string>
+    <string name="drag_hint">长按并拖动以重新排序</string>
+    <string name="insert">插入</string>
+    <string name="extract">提取</string>
+    <string name="blank_pages">空白页</string>
+    <string name="images">图片</string>
+    <string name="delete_confirm">确认删除</string>
+    <string name="deleted_successfully">删除成功</string>
+    <string name="insert_blank_pages">插入空白页</string>
+    <string name="page_size">页面大小</string>
+    <string name="page_color">页面颜色</string>
+    <string name="orientation">方向</string>
+    <string name="page_count">页数</string>
+    <string name="follow_previous">与上一页相同</string>
+    <string name="apply">应用</string>
+    <!-- /step3 -->
+    <!-- step4 -->
+    <string name="create_files">创建文件</string>
+    <string name="import_files">导入文件</string>
+    <string name="use_templates">使用模板</string>
+    <string name="convert_format">格式转换</string>
+    <string name="image_to_pdf">图片转 PDF</string>
+    <string name="scan_to_pdf">扫描转 PDF</string>
+    <string name="word_to_pdf">Word 转 PDF</string>
+    <string name="ppt_to_pdf">PPT 转 PDF</string>
+    <string name="select_template">选择模板</string>
+    <string name="file_name">文件名</string>
+    <string name="create">创建</string>
+    <string name="convert_to_pdf">转换为 PDF</string>
+    <string name="converting">转换中…</string>
+    <string name="converted_successfully">转换成功</string>
+    <string name="color_inversion_on">反色：开</string>
+    <string name="color_inversion_off">反色：关</string>
+    <!-- /step4 -->
+    <!-- step5 -->
+    <string name="page_by_page">逐页</string>
+    <string name="continuous_pages">连续页面</string>
+    <string name="view">查看</string>
+    <string name="extracted_successfully">提取成功</string>
+    <string name="saved_as">已保存为“%s”。</string>
+    <string name="page_setup">页面设置</string>
+    <string name="page_for_preview">此页仅供预览</string>
+    <string name="apply_to_selected">应用到所选页面</string>
+    <string name="all_pages_title">所有页面 (%1$d/%2$d)</string>
+    <string name="pen">画笔</string>
+    <string name="highlight">荧光笔</string>
+    <string name="eraser">橡皮擦</string>
+    <!-- /step5 -->
+    <!-- step6 -->
+    <string name="take_a_photo">拍照</string>
+    <string name="choose_from_gallery">从相册选择</string>
+    <string name="choose_cropping_method">选择裁剪方式</string>
+    <string name="crop_method_hint">你可以随时在“扫描设置”中调整。</string>
+    <string name="auto_crop">自动裁剪</string>
+    <string name="no_crop">不裁剪</string>
+    <string name="dont_ask_again">不再询问</string>
+    <string name="scan_settings">扫描设置</string>
+    <string name="camera_permission_needed">拍照需要相机权限</string>
+    <string name="capture_failed">无法拍照，请重试</string>
+    <string name="retake">重拍</string>
+    <string name="crop">裁剪</string>
+    <string name="left">向左</string>
+    <string name="right">向右</string>
+    <string name="apply_to_all">全部应用</string>
+    <string name="no_edges_found">未找到文档边缘</string>
+    <string name="processing_progress">处理中… (%d%%)</string>
+    <string name="add_pages">添加页面</string>
+    <string name="converted_successfully_excl">转换成功！</string>
+    <string name="view_locally">在本地查看</string>
+    <string name="tools">工具</string>
+    <string name="edit_text">编辑文字</string>
+    <string name="annotate">批注</string>
+    <string name="add_text">添加文字</string>
+    <string name="print_pdf">打印 PDF</string>
+    <string name="sign">签名</string>
+    <string name="tap_to_add_text">点按页面以输入文字</string>
+    <!-- /step6 -->
+    <!-- step8 -->
+    <string name="select_a_file">选择文件</string>
+    <string name="convert_to_word">转换为 Word</string>
+    <!-- /step8 -->
+    <!-- step9 -->
+    <string name="section_convert_create">转换与创建</string>
+    <string name="section_edit">编辑</string>
+    <string name="section_others">其他</string>
+    <string name="manage_pages">管理页面</string>
+    <string name="feature_request">没有你想要的功能？</string>
+    <string name="tell_us">告诉我们</string>
+    <string name="add_image">添加图片</string>
+    <string name="tap_anywhere_add_text">点按任意位置添加文字</string>
+    <string name="tap_text_to_edit">点按要编辑的文字</string>
+    <string name="no_editable_text">此 PDF 没有可编辑的文字（扫描页面），请使用添加文字。</string>
+    <string name="enter_text">输入文字</string>
+    <string name="clear">清除</string>
+    <string name="color">颜色</string>
+    <string name="size">大小</string>
+    <string name="add_signature">+  添加签名</string>
+    <string name="sign_here">在此签名</string>
+    <string name="edit_pdf">编辑 PDF</string>
+    <string name="tut_edit_title">轻松编辑 PDF。</string>
+    <string name="tut_sign_title">几秒内签署文件。</string>
+    <string name="try_now">立即试用</string>
+    <string name="later">稍后</string>
+    <!-- /step9 -->
+    <!-- step10 -->
+    <string name="theme_system">跟随系统</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
+    <string name="file_manager">文件管理器</string>
+    <string name="section_general">通用</string>
+    <string name="app_theme">应用主题</string>
+    <string name="feedback_or_suggestion">反馈或建议</string>
+    <string name="add_widget">添加小部件</string>
+    <string name="explore_more_apps">探索更多应用</string>
+    <string name="terms_of_use">使用条款</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="manage_subscriptions">管理订阅</string>
+    <string name="go_to_google_play">前往 Google Play</string>
+    <string name="ask_every_time">每次都询问</string>
+    <string name="remove_ads">移除广告</string>
+    <string name="unlock_premium">解锁全部高级功能</string>
+    <string name="faq_view_edit">查看与编辑</string>
+    <string name="faq_manage">管理文件</string>
+    <string name="faq_about_app">关于应用</string>
+    <string name="faq_thanks">感谢你的反馈！</string>
+    <string name="rate_our_app">为我们的应用评分</string>
+    <string name="what_problems">你遇到了什么问题？</string>
+    <string name="add_screenshot">添加截图</string>
+    <string name="submit">提交</string>
+    <string name="fb_cant_open">无法打开文件</string>
+    <string name="fb_too_many_ads">广告太多</string>
+    <string name="fb_slow">速度慢</string>
+    <string name="fb_crashes">闪退</string>
+    <string name="fb_others">其他</string>
+    <!-- /step10 -->
+    <!-- step11 -->
+    <string name="loaded_successfully">加载成功</string>
+    <string name="back">返回</string>
+    <string name="bin_info">文件移至此处 30 天后将被永久删除。</string>
+    <string name="bin_empty">回收站是空的</string>
+    <!-- /step11 -->
+    <!-- step12 -->
+    <string name="welcome_back">欢迎回来…</string>
+    <string name="subscribe_failed">订阅失败</string>
+    <string name="premium_welcome">欢迎使用 Premium！</string>
+    <string name="premium_restored">已恢复 Premium</string>
+    <!-- /step12 -->
+    <!-- step14 -->
+    <string name="save_to_drive">保存到 Google 云端硬盘</string>
+    <string name="drive_off">关闭</string>
+    <string name="drive_option_off">关闭</string>
+    <!-- /step14 -->
+    <!-- step16 -->
+    <string name="tpl_save">保存</string>
+    <string name="tpl_letter">信函</string>
+    <string name="tpl_briefing">简报</string>
+    <string name="tpl_poster">海报</string>
+    <string name="tpl_need_more">需要更多模板？</string>
+    <string name="tpl_fonts">字体</string>
+    <string name="tpl_current_font">当前字体</string>
+    <string name="tpl_format">格式</string>
+    <string name="tpl_size_color">大小和颜色</string>
+    <string name="tpl_replace">替换</string>
+    <string name="tpl_select_format">选择格式</string>
+    <string name="tpl_png_desc">适合含图片的文件</string>
+    <string name="tpl_jpg_desc">适合较小的文件</string>
+    <string name="tpl_pdf_desc">适合大多数文件</string>
+    <string name="tpl_quit_title">现在退出？</string>
+    <string name="tpl_quit_message">你还没有保存更改，要现在保存吗？</string>
+    <!-- /step16 -->
+</resources>

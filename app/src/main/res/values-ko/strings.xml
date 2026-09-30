@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_subtitle">모든 문서를 한곳에서 보기</string>
+    <string name="language">언어</string>
+    <string name="language_default">기본값</string>
+    <string name="onb_title_1">올인원\n문서 리더</string>
+    <string name="onb_title_2">전문가용\nPDF 편집기</string>
+    <string name="onb_title_3">쉽고 실용적인\n템플릿</string>
+    <string name="next">다음</string>
+    <string name="start">시작</string>
+    <string name="nav_all_files">모든 파일</string>
+    <string name="nav_tools">도구</string>
+    <string name="nav_settings">설정</string>
+    <string name="cat_all">전체</string>
+    <string name="cat_image">이미지</string>
+    <string name="cat_directories">폴더</string>
+    <string name="recent">최근</string>
+    <string name="bookmarks">북마크</string>
+    <string name="empty">비어 있음</string>
+    <string name="loading_files">파일 불러오는 중…</string>
+    <string name="coach_click_folders">위의 폴더를 눌러 확인하세요</string>
+    <string name="discover_new_feature">새 기능을 확인하세요:</string>
+    <string name="create_pdf">PDF 만들기</string>
+    <string name="permission_title">파일 접근 허용</string>
+    <string name="permission_message">PDF, Word, Excel, PPT, TXT 파일을 읽으려면 이 기기의 모든 파일에 대한 접근을 허용해 주세요.</string>
+    <string name="allow">허용</string>
+    <string name="not_now">나중에</string>
+    <string name="permission_needed_hint">문서를 보려면 파일 접근을 허용하세요</string>
+    <string name="grant_access">접근 허용</string>
+    <string name="search_hint">파일 검색</string>
+    <string name="no_files_found">파일이 없습니다</string>
+    <string name="coming_soon">다음 업데이트에서 제공됩니다</string>
+    <plurals name="files_count">
+        <item quantity="other">파일 %d개</item>
+    </plurals>
+    <!-- step2 -->
+    <string name="all_files_title">모든 파일</string>
+    <string name="selected_count">%d개 선택됨</string>
+    <string name="search_for_files">파일 검색…</string>
+    <string name="cancel">취소</string>
+    <string name="filter_by">정렬 기준</string>
+    <string name="sort_name">이름</string>
+    <string name="sort_date_short">날짜</string>
+    <string name="file_size">파일 크기</string>
+    <string name="ascending">오름차순</string>
+    <string name="descending">내림차순</string>
+    <string name="share">공유</string>
+    <string name="rename">이름 변경</string>
+    <string name="to_home_screen">홈 화면에\n추가</string>
+    <string name="delete">삭제</string>
+    <string name="storage_path">저장 경로</string>
+    <string name="last_modified">마지막 수정</string>
+    <string name="recycle_title">휴지통으로 이동하거나 삭제할까요?</string>
+    <string name="recycle_message">휴지통의 파일은 30일 이내에 복원할 수 있습니다.</string>
+    <string name="move_to_recycle_bin">휴지통으로 이동</string>
+    <string name="delete_directly">바로 삭제</string>
+    <string name="permission_required">권한 필요</string>
+    <string name="rate_subtitle">여러분의 평가는 큰 힘이 됩니다!</string>
+    <string name="rate_best">최고의 평가</string>
+    <string name="rate">평가하기</string>
+    <!-- /step2 -->
+    <!-- step3 -->
+    <string name="storage">저장공간</string>
+    <string name="all_documents">모든 문서</string>
+    <string name="recycle_bin">휴지통</string>
+    <string name="recently_added">최근 추가됨</string>
+    <string name="restore">복원</string>
+    <string name="delete_permanently">영구 삭제</string>
+    <string name="empty_recycle_bin">휴지통 비우기</string>
+    <string name="unsupported_title">지원되지 않는 파일 형식</string>
+    <string name="loading">불러오는 중…</string>
+    <string name="saved_successfully">저장되었습니다</string>
+    <string name="pages">페이지</string>
+    <string name="bookmark">북마크</string>
+    <string name="mode_vertical">세로</string>
+    <string name="mode_horizontal">가로</string>
+    <string name="rotate">회전</string>
+    <string name="search">검색</string>
+    <string name="invert">색상 반전</string>
+    <string name="go_to_page">페이지로 이동</string>
+    <string name="jump_tip">여기를 눌러 페이지로 바로 이동</string>
+    <string name="drag_hint">길게 눌러 끌어서 순서 변경</string>
+    <string name="insert">삽입</string>
+    <string name="extract">추출</string>
+    <string name="blank_pages">빈 페이지</string>
+    <string name="images">이미지</string>
+    <string name="delete_confirm">삭제 확인</string>
+    <string name="deleted_successfully">삭제되었습니다</string>
+    <string name="insert_blank_pages">빈 페이지 삽입</string>
+    <string name="page_size">페이지 크기</string>
+    <string name="page_color">페이지 색상</string>
+    <string name="orientation">방향</string>
+    <string name="page_count">페이지 수</string>
+    <string name="follow_previous">이전과 동일</string>
+    <string name="apply">적용</string>
+    <!-- /step3 -->
+    <!-- step4 -->
+    <string name="create_files">파일 만들기</string>
+    <string name="import_files">파일 가져오기</string>
+    <string name="use_templates">템플릿 사용</string>
+    <string name="convert_format">형식 변환</string>
+    <string name="image_to_pdf">이미지를 PDF로</string>
+    <string name="scan_to_pdf">스캔하여 PDF로</string>
+    <string name="word_to_pdf">Word를 PDF로</string>
+    <string name="ppt_to_pdf">PPT를 PDF로</string>
+    <string name="select_template">템플릿 선택</string>
+    <string name="file_name">파일 이름</string>
+    <string name="create">만들기</string>
+    <string name="convert_to_pdf">PDF로 변환</string>
+    <string name="converting">변환 중…</string>
+    <string name="converted_successfully">변환되었습니다</string>
+    <string name="color_inversion_on">색상 반전: 켜짐</string>
+    <string name="color_inversion_off">색상 반전: 꺼짐</string>
+    <!-- /step4 -->
+    <!-- step5 -->
+    <string name="page_by_page">한 페이지씩</string>
+    <string name="continuous_pages">연속 페이지</string>
+    <string name="view">보기</string>
+    <string name="extracted_successfully">추출되었습니다</string>
+    <string name="saved_as">\"%s\"(으)로 저장했습니다.</string>
+    <string name="page_setup">페이지 설정</string>
+    <string name="page_for_preview">이 페이지는 미리보기입니다</string>
+    <string name="apply_to_selected">선택 항목에 적용</string>
+    <string name="all_pages_title">모든 페이지 (%1$d/%2$d)</string>
+    <string name="pen">펜</string>
+    <string name="highlight">형광펜</string>
+    <string name="eraser">지우개</string>
+    <!-- /step5 -->
+    <!-- step6 -->
+    <string name="take_a_photo">사진 촬영</string>
+    <string name="choose_from_gallery">갤러리에서 선택</string>
+    <string name="choose_cropping_method">자르기 방법 선택</string>
+    <string name="crop_method_hint">\"스캔 설정\"에서 언제든지 변경할 수 있습니다.</string>
+    <string name="auto_crop">자동 자르기</string>
+    <string name="no_crop">자르지 않음</string>
+    <string name="dont_ask_again">다시 묻지 않기</string>
+    <string name="scan_settings">스캔 설정</string>
+    <string name="camera_permission_needed">사진을 찍으려면 카메라 권한이 필요합니다</string>
+    <string name="capture_failed">사진을 찍지 못했습니다. 다시 시도하세요</string>
+    <string name="retake">다시 촬영</string>
+    <string name="crop">자르기</string>
+    <string name="left">왼쪽</string>
+    <string name="right">오른쪽</string>
+    <string name="apply_to_all">모두 적용</string>
+    <string name="no_edges_found">문서 가장자리를 찾지 못했습니다</string>
+    <string name="processing_progress">처리 중… (%d%%)</string>
+    <string name="add_pages">페이지 추가</string>
+    <string name="converted_successfully_excl">변환되었습니다!</string>
+    <string name="view_locally">기기에서 보기</string>
+    <string name="tools">도구</string>
+    <string name="edit_text">텍스트 편집</string>
+    <string name="annotate">주석</string>
+    <string name="add_text">텍스트 추가</string>
+    <string name="print_pdf">PDF 인쇄</string>
+    <string name="sign">서명</string>
+    <string name="tap_to_add_text">페이지를 탭하여 텍스트 입력</string>
+    <!-- /step6 -->
+    <!-- step8 -->
+    <string name="select_a_file">파일 선택</string>
+    <string name="convert_to_word">Word로 변환</string>
+    <!-- /step8 -->
+    <!-- step9 -->
+    <string name="section_convert_create">변환 및 만들기</string>
+    <string name="section_edit">편집</string>
+    <string name="section_others">기타</string>
+    <string name="manage_pages">페이지 관리</string>
+    <string name="feature_request">원하는 기능이 없나요?</string>
+    <string name="tell_us">알려 주세요</string>
+    <string name="add_image">이미지 추가</string>
+    <string name="tap_anywhere_add_text">아무 곳이나 탭하여 텍스트 추가</string>
+    <string name="tap_text_to_edit">편집할 텍스트를 탭하세요</string>
+    <string name="no_editable_text">이 PDF에는 편집 가능한 텍스트가 없습니다(스캔한 페이지). 텍스트 추가를 사용하세요.</string>
+    <string name="enter_text">텍스트 입력</string>
+    <string name="clear">지우기</string>
+    <string name="color">색상</string>
+    <string name="size">크기</string>
+    <string name="add_signature">+  서명 추가</string>
+    <string name="sign_here">여기에 서명</string>
+    <string name="edit_pdf">PDF 편집</string>
+    <string name="tut_edit_title">PDF를 쉽게 편집하세요.</string>
+    <string name="tut_sign_title">몇 초 만에 문서에 서명하세요.</string>
+    <string name="try_now">지금 사용해 보기</string>
+    <string name="later">나중에</string>
+    <!-- /step9 -->
+    <!-- step10 -->
+    <string name="theme_system">시스템 기본값</string>
+    <string name="theme_light">라이트</string>
+    <string name="theme_dark">다크</string>
+    <string name="file_manager">파일 관리자</string>
+    <string name="section_general">일반</string>
+    <string name="app_theme">앱 테마</string>
+    <string name="feedback_or_suggestion">의견 또는 제안</string>
+    <string name="add_widget">위젯 추가</string>
+    <string name="explore_more_apps">다른 앱 둘러보기</string>
+    <string name="terms_of_use">이용약관</string>
+    <string name="privacy_policy">개인정보처리방침</string>
+    <string name="manage_subscriptions">구독 관리</string>
+    <string name="go_to_google_play">Google Play로 이동</string>
+    <string name="ask_every_time">매번 묻기</string>
+    <string name="remove_ads">광고 제거</string>
+    <string name="unlock_premium">모든 프리미엄 기능 잠금 해제</string>
+    <string name="faq_view_edit">보기 및 편집</string>
+    <string name="faq_manage">파일 관리</string>
+    <string name="faq_about_app">앱 정보</string>
+    <string name="faq_thanks">의견 감사합니다!</string>
+    <string name="rate_our_app">앱 평가하기</string>
+    <string name="what_problems">어떤 문제가 있었나요?</string>
+    <string name="add_screenshot">스크린샷 추가</string>
+    <string name="submit">제출</string>
+    <string name="fb_cant_open">파일을 열 수 없음</string>
+    <string name="fb_too_many_ads">광고가 너무 많음</string>
+    <string name="fb_slow">느림</string>
+    <string name="fb_crashes">비정상 종료</string>
+    <string name="fb_others">기타</string>
+    <!-- /step10 -->
+    <!-- step11 -->
+    <string name="loaded_successfully">불러오기 완료</string>
+    <string name="back">뒤로</string>
+    <string name="bin_info">이곳으로 이동한 파일은 30일 후 영구 삭제됩니다.</string>
+    <string name="bin_empty">휴지통이 비어 있습니다</string>
+    <!-- /step11 -->
+    <!-- step12 -->
+    <string name="welcome_back">다시 오신 것을 환영합니다…</string>
+    <string name="subscribe_failed">구독 실패</string>
+    <string name="premium_welcome">Premium에 오신 것을 환영합니다!</string>
+    <string name="premium_restored">Premium이 복원되었습니다</string>
+    <!-- /step12 -->
+    <!-- step14 -->
+    <string name="save_to_drive">Google 드라이브에 저장</string>
+    <string name="drive_off">끄기</string>
+    <string name="drive_option_off">끄기</string>
+    <!-- /step14 -->
+    <!-- step16 -->
+    <string name="tpl_save">저장</string>
+    <string name="tpl_letter">편지</string>
+    <string name="tpl_briefing">브리핑</string>
+    <string name="tpl_poster">포스터</string>
+    <string name="tpl_need_more">더 많은 템플릿이 필요하신가요?</string>
+    <string name="tpl_fonts">글꼴</string>
+    <string name="tpl_current_font">현재 글꼴</string>
+    <string name="tpl_format">서식</string>
+    <string name="tpl_size_color">크기 및 색상</string>
+    <string name="tpl_replace">바꾸기</string>
+    <string name="tpl_select_format">형식 선택</string>
+    <string name="tpl_png_desc">이미지가 있는 파일에 적합</string>
+    <string name="tpl_jpg_desc">작은 파일에 적합</string>
+    <string name="tpl_pdf_desc">대부분의 파일에 적합</string>
+    <string name="tpl_quit_title">지금 나가시겠어요?</string>
+    <string name="tpl_quit_message">변경 사항을 아직 저장하지 않았습니다. 지금 저장하시겠어요?</string>
+    <!-- /step16 -->
+</resources>

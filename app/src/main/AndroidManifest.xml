@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29"
+        tools:ignore="ScopedStorage" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera.any" android:required="false" />
+    <!-- Needed by ShortcutManagerCompat to pin shortcuts on API 24-25 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+
+    <!-- Lets us check whether another app can open Excel / PPT / image files (Android 11+) -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:mimeType="*/*" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:localeConfig="@xml/locales_config"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/Theme.DocReader"
+        tools:targetApi="34">
+
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DocReader.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.language.LanguageActivity"
+            android:theme="@style/Theme.DocReader.BlueBar"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.onboarding.OnboardingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DocReader.Onboarding"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.files.FileListActivity"
+            android:theme="@style/Theme.DocReader.WhiteBar"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.directories.RecycleBinActivity"
+            android:theme="@style/Theme.DocReader.WhiteBar"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".ui.directories.DirectoriesActivity"
+            android:theme="@style/Theme.DocReader.WhiteBar"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.directories.StorageBrowserActivity"
+            android:theme="@style/Theme.DocReader.WhiteBar"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.viewer.ViewerActivity"
+            android:theme="@style/Theme.DocReader.WhiteBar"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.pages.PageOrganizerActivity"
+            android:theme="@style/Theme.DocReader.WhiteBar"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.pages.InsertBlankPagesActivity"
+            android:theme="@style/Theme.DocReader.WhiteBar"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <!-- Step 4: Create files / Convert format -->
+        <activity
+            android:name=".ui.create.ImportActivity"
+            android:theme="@style/Theme.DocReader.Transparent"
+            android:exported="false" />
+
+        <!-- Splash → viewer for imported files and for "Open with" / "Share" from other apps -->
+        <activity
+            android:name=".ui.viewer.OpenDocumentActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DocReader.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="content" />
+                <data android:scheme="file" />
+                <data android:mimeType="application/pdf" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.presentation" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="image/jpeg" />
+                <data android:mimeType="image/png" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/pdf" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.presentation" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.edit.PdfEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DocReader.WhiteBar"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.edit.SignaturePadActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.DocReader.WhiteBar"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.create.TemplatesActivity"
+            android:theme="@style/Theme.DocReader.WhiteBar"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".ui.viewer.ImageViewerActivity"
+            android:theme="@style/Theme.DocReader.WhiteBar"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false" />
+        <activity
+            android:name=".ui.templates.TemplateEditorActivity"
+            android:theme="@style/Theme.DocReader.WhiteBar"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false" />
+        <activity
+            android:name=".ui.scan.ScanStartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DocReader.WhiteBar"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.scan.CameraActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DocReader.Camera"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.scan.ScanEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DocReader.WhiteBar"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.scan.ImageToPdfActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DocReader.WhiteBar"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.scan.ConvertResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DocReader.WhiteBar"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.create.PickFileActivity"
+            android:theme="@style/Theme.DocReader.WhiteBar"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.create.ConvertActivity"
+            android:theme="@style/Theme.DocReader.WhiteBar"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <!-- Opened by "To home screen" shortcuts -->
+        <activity
+            android:name=".ui.files.OpenFileActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:noHistory="true"
+            android:taskAffinity=""
+            android:theme="@style/Theme.DocReader.Transparent" />
+
+        <activity
+            android:name=".ui.search.SearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:exported="false" />
+
+        <!-- Lets AppCompat persist the per-app language on Android 12 and below -->
+        <service
+            android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+            <meta-data
+                android:name="autoStoreLocales"
+                android:value="true" />
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".ui.settings.FaqActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DocReader.FaqBar"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.settings.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DocReader.FaqBar"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.settings.PolicyActivity"
+            android:theme="@style/Theme.DocReader.BlueBar"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.settings.PremiumActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DocReader.Premium"
+            android:exported="false" />
+        <activity
+            android:name=".ui.settings.StartTrialActivity"
+            android:theme="@style/Theme.DocReader.Trial"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".ui.splash.WelcomeBackActivity"
+            android:theme="@style/Theme.DocReader.Splash"
+            android:screenOrientation="portrait"
+            android:excludeFromRecents="true"
+            android:exported="false" />
+
+        <receiver
+            android:name=".widget.ToolsWidget"
+            android:exported="false"
+            android:label="@string/w_tools_title">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_tools_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.ReaderWidget"
+            android:exported="false"
+            android:label="@string/w_reader_title">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_reader_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.EditPdfWidget"
+            android:exported="false"
+            android:label="@string/w_editor_title">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_edit_big_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.EditPdfSmallWidget"
+            android:exported="false"
+            android:label="@string/w_editor_title">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_edit_small_info" />
+        </receiver>
+    </application>
+</manifest>

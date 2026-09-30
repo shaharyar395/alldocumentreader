@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="surface">#17191E</color>
+    <color name="surface_variant">#23262D</color>
+    <color name="bg_faq">#101216</color>
+    <color name="bg_screen">#101216</color>
+    <color name="bg_header_top">#1A2233</color>
+    <color name="divider">#2A2E36</color>
+    <color name="row_pressed">#262A31</color>
+    <color name="text_primary">#E6E8EC</color>
+    <color name="text_secondary">#9AA0AA</color>
+    <color name="text_hint">#6E747E</color>
+    <color name="radio_off">#8A909A</color>
+    <color name="nav_off">#7C828C</color>
+    <color name="progress_track">#2A2F38</color>
+    <color name="skeleton">#262A31</color>
+    <color name="btn_gray">#2A2E35</color>
+    <color name="primary_light">#1D3354</color>
+    <color name="choice_selected_bg">#1B2A42</color>
+    <color name="icon_main">#E6E8EC</color>
+    <color name="tools_section">#BCC1CA</color>
+</resources>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_subtitle">すべてのドキュメントを1か所で表示</string>
+    <string name="language">言語</string>
+    <string name="language_default">デフォルト</string>
+    <string name="onb_title_1">オールインワン\nドキュメントリーダー</string>
+    <string name="onb_title_2">プロ仕様の\nPDFエディター</string>
+    <string name="onb_title_3">簡単で便利な\nテンプレート</string>
+    <string name="next">次へ</string>
+    <string name="start">開始</string>
+    <string name="nav_all_files">すべてのファイル</string>
+    <string name="nav_tools">ツール</string>
+    <string name="nav_settings">設定</string>
+    <string name="cat_all">すべて</string>
+    <string name="cat_image">画像</string>
+    <string name="cat_directories">フォルダ</string>
+    <string name="recent">最近</string>
+    <string name="bookmarks">ブックマーク</string>
+    <string name="empty">空です</string>
+    <string name="loading_files">ファイルを読み込み中…</string>
+    <string name="coach_click_folders">上のフォルダをタップして表示</string>
+    <string name="discover_new_feature">新機能:</string>
+    <string name="create_pdf">PDFを作成</string>
+    <string name="permission_title">ファイルへのアクセスを許可</string>
+    <string name="permission_message">PDF、Word、Excel、PPT、TXT ファイルを読むには、このデバイスのすべてのファイルへのアクセスを許可してください。</string>
+    <string name="allow">許可</string>
+    <string name="not_now">後で</string>
+    <string name="permission_needed_hint">ドキュメントを表示するにはファイルへのアクセスを許可してください</string>
+    <string name="grant_access">アクセスを許可</string>
+    <string name="search_hint">ファイルを検索</string>
+    <string name="no_files_found">ファイルが見つかりません</string>
+    <string name="coming_soon">次回のアップデートで対応予定</string>
+    <plurals name="files_count">
+        <item quantity="other">%d 件のファイル</item>
+    </plurals>
+    <!-- step2 -->
+    <string name="all_files_title">すべてのファイル</string>
+    <string name="selected_count">%d 件選択中</string>
+    <string name="search_for_files">ファイルを検索…</string>
+    <string name="cancel">キャンセル</string>
+    <string name="filter_by">並べ替え</string>
+    <string name="sort_name">名前</string>
+    <string name="sort_date_short">日付</string>
+    <string name="file_size">ファイルサイズ</string>
+    <string name="ascending">昇順</string>
+    <string name="descending">降順</string>
+    <string name="share">共有</string>
+    <string name="rename">名前を変更</string>
+    <string name="to_home_screen">ホーム画面\nに追加</string>
+    <string name="delete">削除</string>
+    <string name="storage_path">保存場所</string>
+    <string name="last_modified">最終更新</string>
+    <string name="recycle_title">ごみ箱に移動しますか、削除しますか？</string>
+    <string name="recycle_message">ごみ箱のファイルは30日以内であれば復元できます。</string>
+    <string name="move_to_recycle_bin">ごみ箱に移動</string>
+    <string name="delete_directly">完全に削除</string>
+    <string name="permission_required">権限が必要です</string>
+    <string name="rate_subtitle">あなたの評価は私たちの励みです！</string>
+    <string name="rate_best">最高の評価</string>
+    <string name="rate">評価する</string>
+    <!-- /step2 -->
+    <!-- step3 -->
+    <string name="storage">ストレージ</string>
+    <string name="all_documents">すべてのドキュメント</string>
+    <string name="recycle_bin">ごみ箱</string>
+    <string name="recently_added">最近追加</string>
+    <string name="restore">復元</string>
+    <string name="delete_permanently">完全に削除</string>
+    <string name="empty_recycle_bin">ごみ箱を空にする</string>
+    <string name="unsupported_title">このファイル形式には対応していません</string>
+    <string name="loading">読み込み中…</string>
+    <string name="saved_successfully">保存しました</string>
+    <string name="pages">ページ</string>
+    <string name="bookmark">ブックマーク</string>
+    <string name="mode_vertical">縦</string>
+    <string name="mode_horizontal">横</string>
+    <string name="rotate">回転</string>
+    <string name="search">検索</string>
+    <string name="invert">反転</string>
+    <string name="go_to_page">ページへ移動</string>
+    <string name="jump_tip">ここをタップしてページに直接移動</string>
+    <string name="drag_hint">長押ししてドラッグで並べ替え</string>
+    <string name="insert">挿入</string>
+    <string name="extract">抽出</string>
+    <string name="blank_pages">白紙ページ</string>
+    <string name="images">画像</string>
+    <string name="delete_confirm">削除の確認</string>
+    <string name="deleted_successfully">削除しました</string>
+    <string name="insert_blank_pages">白紙ページを挿入</string>
+    <string name="page_size">ページサイズ</string>
+    <string name="page_color">ページの色</string>
+    <string name="orientation">向き</string>
+    <string name="page_count">ページ数</string>
+    <string name="follow_previous">前のページと同じ</string>
+    <string name="apply">適用</string>
+    <!-- /step3 -->
+    <!-- step4 -->
+    <string name="create_files">ファイルを作成</string>
+    <string name="import_files">ファイルをインポート</string>
+    <string name="use_templates">テンプレートを使用</string>
+    <string name="convert_format">形式を変換</string>
+    <string name="image_to_pdf">画像をPDFに</string>
+    <string name="scan_to_pdf">スキャンしてPDFに</string>
+    <string name="word_to_pdf">WordをPDFに</string>
+    <string name="ppt_to_pdf">PPTをPDFに</string>
+    <string name="select_template">テンプレートを選択</string>
+    <string name="file_name">ファイル名</string>
+    <string name="create">作成</string>
+    <string name="convert_to_pdf">PDFに変換</string>
+    <string name="converting">変換中…</string>
+    <string name="converted_successfully">変換しました</string>
+    <string name="color_inversion_on">色反転：オン</string>
+    <string name="color_inversion_off">色反転：オフ</string>
+    <!-- /step4 -->
+    <!-- step5 -->
+    <string name="page_by_page">1ページずつ</string>
+    <string name="continuous_pages">連続ページ</string>
+    <string name="view">表示</string>
+    <string name="extracted_successfully">抽出しました</string>
+    <string name="saved_as">\"%s\" として保存しました。</string>
+    <string name="page_setup">ページ設定</string>
+    <string name="page_for_preview">このページはプレビューです</string>
+    <string name="apply_to_selected">選択したページに適用</string>
+    <string name="all_pages_title">すべてのページ (%1$d/%2$d)</string>
+    <string name="pen">ペン</string>
+    <string name="highlight">ハイライト</string>
+    <string name="eraser">消しゴム</string>
+    <!-- /step5 -->
+    <!-- step6 -->
+    <string name="take_a_photo">写真を撮る</string>
+    <string name="choose_from_gallery">ギャラリーから選択</string>
+    <string name="choose_cropping_method">トリミング方法を選択</string>
+    <string name="crop_method_hint">「スキャン設定」でいつでも変更できます。</string>
+    <string name="auto_crop">自動トリミング</string>
+    <string name="no_crop">トリミングなし</string>
+    <string name="dont_ask_again">今後表示しない</string>
+    <string name="scan_settings">スキャン設定</string>
+    <string name="camera_permission_needed">写真を撮るにはカメラの許可が必要です</string>
+    <string name="capture_failed">写真を撮れませんでした。もう一度お試しください</string>
+    <string name="retake">撮り直す</string>
+    <string name="crop">トリミング</string>
+    <string name="left">左</string>
+    <string name="right">右</string>
+    <string name="apply_to_all">すべてに適用</string>
+    <string name="no_edges_found">文書の端が見つかりません</string>
+    <string name="processing_progress">処理中… (%d%%)</string>
+    <string name="add_pages">ページを追加</string>
+    <string name="converted_successfully_excl">変換しました！</string>
+    <string name="view_locally">端末で表示</string>
+    <string name="tools">ツール</string>
+    <string name="edit_text">テキストを編集</string>
+    <string name="annotate">注釈</string>
+    <string name="add_text">テキストを追加</string>
+    <string name="print_pdf">PDFを印刷</string>
+    <string name="sign">署名</string>
+    <string name="tap_to_add_text">ページをタップしてテキストを入力</string>
+    <!-- /step6 -->
+    <!-- step8 -->
+    <string name="select_a_file">ファイルを選択</string>
+    <string name="convert_to_word">Wordに変換</string>
+    <!-- /step8 -->
+    <!-- step9 -->
+    <string name="section_convert_create">変換と作成</string>
+    <string name="section_edit">編集</string>
+    <string name="section_others">その他</string>
+    <string name="manage_pages">ページ管理</string>
+    <string name="feature_request">欲しい機能がありませんか？</string>
+    <string name="tell_us">お知らせください</string>
+    <string name="add_image">画像を追加</string>
+    <string name="tap_anywhere_add_text">タップしてテキストを追加</string>
+    <string name="tap_text_to_edit">編集したいテキストをタップ</string>
+    <string name="no_editable_text">このPDFには編集できるテキストがありません（スキャンしたページ）。テキストを追加をご利用ください。</string>
+    <string name="enter_text">テキストを入力</string>
+    <string name="clear">クリア</string>
+    <string name="color">色</string>
+    <string name="size">サイズ</string>
+    <string name="add_signature">+  署名を追加</string>
+    <string name="sign_here">ここに署名</string>
+    <string name="edit_pdf">PDFを編集</string>
+    <string name="tut_edit_title">PDFをかんたんに編集。</string>
+    <string name="tut_sign_title">数秒で文書に署名。</string>
+    <string name="try_now">今すぐ試す</string>
+    <string name="later">あとで</string>
+    <!-- /step9 -->
+    <!-- step10 -->
+    <string name="theme_system">システムのデフォルト</string>
+    <string name="theme_light">ライト</string>
+    <string name="theme_dark">ダーク</string>
+    <string name="file_manager">ファイルマネージャー</string>
+    <string name="section_general">一般</string>
+    <string name="app_theme">アプリのテーマ</string>
+    <string name="feedback_or_suggestion">フィードバック・ご提案</string>
+    <string name="add_widget">ウィジェットを追加</string>
+    <string name="explore_more_apps">ほかのアプリを見る</string>
+    <string name="terms_of_use">利用規約</string>
+    <string name="privacy_policy">プライバシーポリシー</string>
+    <string name="manage_subscriptions">定期購入の管理</string>
+    <string name="go_to_google_play">Google Play へ移動</string>
+    <string name="ask_every_time">毎回確認する</string>
+    <string name="remove_ads">広告を削除</string>
+    <string name="unlock_premium">すべてのプレミアム機能を解放</string>
+    <string name="faq_view_edit">表示と編集</string>
+    <string name="faq_manage">ファイル管理</string>
+    <string name="faq_about_app">アプリについて</string>
+    <string name="faq_thanks">フィードバックありがとうございます！</string>
+    <string name="rate_our_app">アプリを評価</string>
+    <string name="what_problems">どんな問題がありましたか？</string>
+    <string name="add_screenshot">スクリーンショットを追加</string>
+    <string name="submit">送信</string>
+    <string name="fb_cant_open">ファイルを開けない</string>
+    <string name="fb_too_many_ads">広告が多すぎる</string>
+    <string name="fb_slow">動作が遅い</string>
+    <string name="fb_crashes">クラッシュする</string>
+    <string name="fb_others">その他</string>
+    <!-- /step10 -->
+    <!-- step11 -->
+    <string name="loaded_successfully">読み込みました</string>
+    <string name="back">戻る</string>
+    <string name="bin_info">ここに移動したファイルは30日後に完全に削除されます。</string>
+    <string name="bin_empty">ごみ箱は空です</string>
+    <!-- /step11 -->
+    <!-- step12 -->
+    <string name="welcome_back">おかえりなさい…</string>
+    <string name="subscribe_failed">購読に失敗しました</string>
+    <string name="premium_welcome">Premium へようこそ！</string>
+    <string name="premium_restored">Premium を復元しました</string>
+    <!-- /step12 -->
+    <!-- step14 -->
+    <string name="save_to_drive">Google ドライブに保存</string>
+    <string name="drive_off">オフ</string>
+    <string name="drive_option_off">オフ</string>
+    <!-- /step14 -->
+    <!-- step16 -->
+    <string name="tpl_save">保存</string>
+    <string name="tpl_letter">レター</string>
+    <string name="tpl_briefing">ブリーフィング</string>
+    <string name="tpl_poster">ポスター</string>
+    <string name="tpl_need_more">もっとテンプレートが必要ですか？</string>
+    <string name="tpl_fonts">フォント</string>
+    <string name="tpl_current_font">現在のフォント</string>
+    <string name="tpl_format">書式</string>
+    <string name="tpl_size_color">サイズと色</string>
+    <string name="tpl_replace">置き換え</string>
+    <string name="tpl_select_format">形式を選択</string>
+    <string name="tpl_png_desc">画像を含むファイルに最適</string>
+    <string name="tpl_jpg_desc">小さいファイルに最適</string>
+    <string name="tpl_pdf_desc">ほとんどのファイルに最適</string>
+    <string name="tpl_quit_title">終了しますか？</string>
+    <string name="tpl_quit_message">変更がまだ保存されていません。今すぐ保存しますか？</string>
+    <!-- /step16 -->
+</resources>

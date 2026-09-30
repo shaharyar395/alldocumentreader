@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_subtitle">عرض جميع المستندات في مكان واحد</string>
+    <string name="language">اللغة</string>
+    <string name="language_default">افتراضي</string>
+    <string name="onb_title_1">قارئ مستندات\nشامل</string>
+    <string name="onb_title_2">محرر PDF\nاحترافي</string>
+    <string name="onb_title_3">قوالب سهلة\nوعملية</string>
+    <string name="next">التالي</string>
+    <string name="start">ابدأ</string>
+    <string name="nav_all_files">كل الملفات</string>
+    <string name="nav_tools">الأدوات</string>
+    <string name="nav_settings">الإعدادات</string>
+    <string name="cat_all">الكل</string>
+    <string name="cat_image">الصور</string>
+    <string name="cat_directories">المجلدات</string>
+    <string name="recent">الأخيرة</string>
+    <string name="bookmarks">الإشارات المرجعية</string>
+    <string name="empty">فارغ</string>
+    <string name="loading_files">جارٍ تحميل الملفات…</string>
+    <string name="coach_click_folders">انقر على المجلدات أعلاه للعرض</string>
+    <string name="discover_new_feature">اكتشف ميزة جديدة:</string>
+    <string name="create_pdf">إنشاء PDF</string>
+    <string name="permission_title">السماح بالوصول إلى الملفات</string>
+    <string name="permission_message">لقراءة ملفات PDF وWord وExcel وPPT وTXT، يرجى السماح بالوصول إلى جميع الملفات على هذا الجهاز.</string>
+    <string name="allow">سماح</string>
+    <string name="not_now">ليس الآن</string>
+    <string name="permission_needed_hint">اسمح بالوصول إلى الملفات لرؤية مستنداتك</string>
+    <string name="grant_access">منح الوصول</string>
+    <string name="search_hint">البحث في الملفات</string>
+    <string name="no_files_found">لم يتم العثور على ملفات</string>
+    <string name="coming_soon">متوفر في التحديث القادم</string>
+    <plurals name="files_count">
+        <item quantity="zero">%d ملف</item>
+        <item quantity="one">ملف واحد</item>
+        <item quantity="two">ملفان</item>
+        <item quantity="few">%d ملفات</item>
+        <item quantity="many">%d ملفًا</item>
+        <item quantity="other">%d ملف</item>
+    </plurals>
+    <!-- step2 -->
+    <string name="all_files_title">كل الملفات</string>
+    <string name="selected_count">تم تحديد %d</string>
+    <string name="search_for_files">البحث عن ملفات…</string>
+    <string name="cancel">إلغاء</string>
+    <string name="filter_by">تصفية حسب</string>
+    <string name="sort_name">الاسم</string>
+    <string name="sort_date_short">التاريخ</string>
+    <string name="file_size">حجم الملف</string>
+    <string name="ascending">تصاعدي</string>
+    <string name="descending">تنازلي</string>
+    <string name="share">مشاركة</string>
+    <string name="rename">إعادة تسمية</string>
+    <string name="to_home_screen">إلى الشاشة\nالرئيسية</string>
+    <string name="delete">حذف</string>
+    <string name="storage_path">مسار التخزين</string>
+    <string name="last_modified">آخر تعديل</string>
+    <string name="recycle_title">نقل إلى سلة المحذوفات أم حذف؟</string>
+    <string name="recycle_message">يمكن استعادة الملفات في سلة المحذوفات خلال 30 يومًا.</string>
+    <string name="move_to_recycle_bin">نقل إلى سلة المحذوفات</string>
+    <string name="delete_directly">حذف مباشرة</string>
+    <string name="permission_required">الإذن مطلوب</string>
+    <string name="rate_subtitle">تقييمك يعني لنا الكثير!</string>
+    <string name="rate_best">أفضل ما نطمح إليه</string>
+    <string name="rate">تقييم</string>
+    <!-- /step2 -->
+    <!-- step3 -->
+    <string name="storage">التخزين</string>
+    <string name="all_documents">كل المستندات</string>
+    <string name="recycle_bin">سلة المحذوفات</string>
+    <string name="recently_added">المضافة حديثًا</string>
+    <string name="restore">استعادة</string>
+    <string name="delete_permanently">حذف نهائي</string>
+    <string name="empty_recycle_bin">إفراغ السلة</string>
+    <string name="unsupported_title">نوع الملف غير مدعوم</string>
+    <string name="loading">جارٍ التحميل…</string>
+    <string name="saved_successfully">تم الحفظ بنجاح</string>
+    <string name="pages">الصفحات</string>
+    <string name="bookmark">إشارة مرجعية</string>
+    <string name="mode_vertical">عمودي</string>
+    <string name="mode_horizontal">أفقي</string>
+    <string name="rotate">تدوير</string>
+    <string name="search">بحث</string>
+    <string name="invert">عكس الألوان</string>
+    <string name="go_to_page">الانتقال إلى صفحة</string>
+    <string name="jump_tip">اضغط هنا للانتقال إلى الصفحة مباشرة</string>
+    <string name="drag_hint">اضغط مطولًا واسحب لإعادة الترتيب</string>
+    <string name="insert">إدراج</string>
+    <string name="extract">استخراج</string>
+    <string name="blank_pages">صفحات فارغة</string>
+    <string name="images">صور</string>
+    <string name="delete_confirm">تأكيد الحذف</string>
+    <string name="deleted_successfully">تم الحذف بنجاح</string>
+    <string name="insert_blank_pages">إدراج صفحات فارغة</string>
+    <string name="page_size">حجم الصفحة</string>
+    <string name="page_color">لون الصفحة</string>
+    <string name="orientation">الاتجاه</string>
+    <string name="page_count">عدد الصفحات</string>
+    <string name="follow_previous">مثل السابقة</string>
+    <string name="apply">تطبيق</string>
+    <!-- /step3 -->
+    <!-- step4 -->
+    <string name="create_files">إنشاء ملفات</string>
+    <string name="import_files">استيراد ملفات</string>
+    <string name="use_templates">استخدام القوالب</string>
+    <string name="convert_format">تحويل الصيغة</string>
+    <string name="image_to_pdf">صورة إلى PDF</string>
+    <string name="scan_to_pdf">مسح إلى PDF</string>
+    <string name="word_to_pdf">Word إلى PDF</string>
+    <string name="ppt_to_pdf">PPT إلى PDF</string>
+    <string name="select_template">اختر قالبًا</string>
+    <string name="file_name">اسم الملف</string>
+    <string name="create">إنشاء</string>
+    <string name="convert_to_pdf">تحويل إلى PDF</string>
+    <string name="converting">جارٍ التحويل…</string>
+    <string name="converted_successfully">تم التحويل بنجاح</string>
+    <string name="color_inversion_on">عكس الألوان: تشغيل</string>
+    <string name="color_inversion_off">عكس الألوان: إيقاف</string>
+    <!-- /step4 -->
+    <!-- step5 -->
+    <string name="page_by_page">صفحة بصفحة</string>
+    <string name="continuous_pages">صفحات متصلة</string>
+    <string name="view">عرض</string>
+    <string name="extracted_successfully">تم الاستخراج بنجاح</string>
+    <string name="saved_as">تم الحفظ باسم \"%s\".</string>
+    <string name="page_setup">إعداد الصفحة</string>
+    <string name="page_for_preview">هذه الصفحة للمعاينة</string>
+    <string name="apply_to_selected">تطبيق على المحدد</string>
+    <string name="all_pages_title">كل الصفحات (%1$d/%2$d)</string>
+    <string name="pen">قلم</string>
+    <string name="highlight">تمييز</string>
+    <string name="eraser">ممحاة</string>
+    <!-- /step5 -->
+    <!-- step6 -->
+    <string name="take_a_photo">التقاط صورة</string>
+    <string name="choose_from_gallery">اختيار من المعرض</string>
+    <string name="choose_cropping_method">اختر طريقة القص</string>
+    <string name="crop_method_hint">يمكنك تغييرها في أي وقت من \"إعدادات المسح\".</string>
+    <string name="auto_crop">قص تلقائي</string>
+    <string name="no_crop">بدون قص</string>
+    <string name="dont_ask_again">لا تسأل مرة أخرى</string>
+    <string name="scan_settings">إعدادات المسح</string>
+    <string name="camera_permission_needed">يلزم إذن الكاميرا لالتقاط الصور</string>
+    <string name="capture_failed">تعذر التقاط الصورة، حاول مرة أخرى</string>
+    <string name="retake">إعادة الالتقاط</string>
+    <string name="crop">قص</string>
+    <string name="left">يسار</string>
+    <string name="right">يمين</string>
+    <string name="apply_to_all">تطبيق على الكل</string>
+    <string name="no_edges_found">لم يتم العثور على حواف المستند</string>
+    <string name="processing_progress">جارٍ المعالجة… (%d%%)</string>
+    <string name="add_pages">إضافة صفحات</string>
+    <string name="converted_successfully_excl">تم التحويل بنجاح!</string>
+    <string name="view_locally">عرض محليًا</string>
+    <string name="tools">الأدوات</string>
+    <string name="edit_text">تعديل النص</string>
+    <string name="annotate">تعليق توضيحي</string>
+    <string name="add_text">إضافة نص</string>
+    <string name="print_pdf">طباعة PDF</string>
+    <string name="sign">توقيع</string>
+    <string name="tap_to_add_text">اضغط على الصفحة لكتابة نص</string>
+    <!-- /step6 -->
+    <!-- step8 -->
+    <string name="select_a_file">اختر ملفًا</string>
+    <string name="convert_to_word">تحويل إلى Word</string>
+    <!-- /step8 -->
+    <!-- step9 -->
+    <string name="section_convert_create">تحويل وإنشاء</string>
+    <string name="section_edit">تعديل</string>
+    <string name="section_others">أخرى</string>
+    <string name="manage_pages">إدارة الصفحات</string>
+    <string name="feature_request">لا تجد الميزة التي تريدها؟</string>
+    <string name="tell_us">أخبرنا</string>
+    <string name="add_image">إضافة صورة</string>
+    <string name="tap_anywhere_add_text">اضغط في أي مكان لإضافة نص</string>
+    <string name="tap_text_to_edit">اضغط على النص الذي تريد تعديله</string>
+    <string name="no_editable_text">لا يحتوي ملف PDF هذا على نص قابل للتعديل (صفحات ممسوحة). استخدم إضافة نص.</string>
+    <string name="enter_text">أدخل النص</string>
+    <string name="clear">مسح</string>
+    <string name="color">اللون</string>
+    <string name="size">الحجم</string>
+    <string name="add_signature">+  إضافة توقيع</string>
+    <string name="sign_here">وقّع هنا</string>
+    <string name="edit_pdf">تعديل PDF</string>
+    <string name="tut_edit_title">عدّل ملفات PDF بسهولة.</string>
+    <string name="tut_sign_title">وقّع المستندات في ثوانٍ.</string>
+    <string name="try_now">جرّب الآن</string>
+    <string name="later">لاحقًا</string>
+    <!-- /step9 -->
+    <!-- step10 -->
+    <string name="theme_system">افتراضي النظام</string>
+    <string name="theme_light">فاتح</string>
+    <string name="theme_dark">داكن</string>
+    <string name="file_manager">مدير الملفات</string>
+    <string name="section_general">عام</string>
+    <string name="app_theme">مظهر التطبيق</string>
+    <string name="feedback_or_suggestion">ملاحظات أو اقتراحات</string>
+    <string name="add_widget">إضافة أداة</string>
+    <string name="explore_more_apps">استكشف المزيد من التطبيقات</string>
+    <string name="terms_of_use">شروط الاستخدام</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="manage_subscriptions">إدارة الاشتراكات</string>
+    <string name="go_to_google_play">الانتقال إلى Google Play</string>
+    <string name="ask_every_time">اسأل في كل مرة</string>
+    <string name="remove_ads">إزالة الإعلانات</string>
+    <string name="unlock_premium">افتح جميع الميزات المميزة</string>
+    <string name="faq_view_edit">العرض والتعديل</string>
+    <string name="faq_manage">إدارة الملفات</string>
+    <string name="faq_about_app">حول التطبيق</string>
+    <string name="faq_thanks">شكرًا على ملاحظاتك!</string>
+    <string name="rate_our_app">قيّم تطبيقنا</string>
+    <string name="what_problems">ما المشكلات التي واجهتها؟</string>
+    <string name="add_screenshot">إضافة لقطة شاشة</string>
+    <string name="submit">إرسال</string>
+    <string name="fb_cant_open">لا يمكن فتح الملف</string>
+    <string name="fb_too_many_ads">إعلانات كثيرة جدًا</string>
+    <string name="fb_slow">بطيء</string>
+    <string name="fb_crashes">يتعطل</string>
+    <string name="fb_others">أخرى</string>
+    <!-- /step10 -->
+    <!-- step11 -->
+    <string name="loaded_successfully">تم التحميل بنجاح</string>
+    <string name="back">رجوع</string>
+    <string name="bin_info">سيتم حذف الملفات نهائيًا بعد 30 يومًا من نقلها إلى هنا.</string>
+    <string name="bin_empty">سلة المحذوفات فارغة</string>
+    <!-- /step11 -->
+    <!-- step12 -->
+    <string name="welcome_back">مرحبًا بعودتك…</string>
+    <string name="subscribe_failed">فشل الاشتراك</string>
+    <string name="premium_welcome">مرحبًا بك في Premium!</string>
+    <string name="premium_restored">تمت استعادة Premium</string>
+    <!-- /step12 -->
+    <!-- step14 -->
+    <string name="save_to_drive">الحفظ في Google Drive</string>
+    <string name="drive_off">إيقاف</string>
+    <string name="drive_option_off">إيقاف</string>
+    <!-- /step14 -->
+    <!-- step16 -->
+    <string name="tpl_save">حفظ</string>
+    <string name="tpl_letter">رسالة</string>
+    <string name="tpl_briefing">موجز</string>
+    <string name="tpl_poster">ملصق</string>
+    <string name="tpl_need_more">هل تحتاج إلى المزيد من القوالب؟</string>
+    <string name="tpl_fonts">الخطوط</string>
+    <string name="tpl_current_font">الخط الحالي</string>
+    <string name="tpl_format">التنسيق</string>
+    <string name="tpl_size_color">الحجم واللون</string>
+    <string name="tpl_replace">استبدال</string>
+    <string name="tpl_select_format">اختر تنسيقًا</string>
+    <string name="tpl_png_desc">مناسب للملفات التي تحتوي على صور</string>
+    <string name="tpl_jpg_desc">مناسب للملفات الأصغر</string>
+    <string name="tpl_pdf_desc">مناسب لمعظم الملفات</string>
+    <string name="tpl_quit_title">الخروج الآن؟</string>
+    <string name="tpl_quit_message">لم تحفظ تغييراتك بعد. هل تريد حفظها الآن؟</string>
+    <!-- /step16 -->
+</resources>

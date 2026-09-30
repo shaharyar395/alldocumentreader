@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#0A5FD9</color>
+    <color name="primary_dark">#0850B8</color>
+    <color name="primary_light">#CCE4FF</color>
+    <color name="fab_blue">#1873F2</color>
+
+    <color name="bg_screen">#F6F7FD</color>
+    <color name="bg_header_top">#E8F2FC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="divider">#F0F2F8</color>
+    <color name="row_pressed">#EEF0F5</color>
+
+    <color name="text_primary">#1B1F2A</color>
+    <color name="text_secondary">#8E949E</color>
+    <color name="text_hint">#B3B8C2</color>
+    <color name="radio_off">#888D97</color>
+    <color name="nav_off">#9DA3AD</color>
+
+    <color name="type_all">#1A6FE0</color>
+    <color name="type_pdf">#D10000</color>
+    <color name="type_word">#1560D6</color>
+    <color name="type_excel">#008A3B</color>
+    <color name="type_ppt">#F26201</color>
+    <color name="type_txt">#5F6B90</color>
+    <color name="type_image">#FDA800</color>
+    <color name="type_dir">#1A6FE0</color>
+
+    <color name="onboard_bg_top">#3A3A3C</color>
+    <color name="onboard_bg_bottom">#0E0E10</color>
+    <color name="dot_off">#4A4F58</color>
+    <color name="scrim">#99000000</color>
+    <color name="progress_track">#E8EDF6</color>
+    <color name="skeleton">#EDF1F6</color>
+    <color name="crown">#FFB300</color>
+    <color name="bookmark_yellow">#FFC107</color>
+    <color name="btn_gray">#EEF0F4</color>
+    <color name="danger">#E53935</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F3F5F9</color>
+    <color name="bg_faq">#F3F4F8</color>
+    <color name="choice_selected_bg">#EEF4FF</color>
+    <color name="paper_text">#1B1F2A</color>
+    <color name="icon_main">#000000</color>
+    <color name="tools_section">#4F5562</color>
+</resources>
