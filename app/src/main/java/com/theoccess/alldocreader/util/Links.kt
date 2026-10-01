@@ -12,7 +12,9 @@ import com.theoccess.alldocreader.R
 object Links {
     /** Developer name on Google Play, used by "Explore more apps". Change it to yours. */
     const val DEVELOPER = "The Occess"
-    const val SUPPORT_EMAIL = "app@theoccess.com"
+    const val SUPPORT_EMAIL = "Mobappsinc@gmail.com"
+    /** Contact address shown in Terms of use → "6. Contact". */
+    const val TERMS_CONTACT_EMAIL = "Mobappsinc@gmail.com"
     const val PRIVACY_POLICY = "https://sites.google.com/view/mob-apps-inc/privacy-policy"
 
     fun open(context: Context, url: String): Boolean = try {

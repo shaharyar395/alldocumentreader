@@ -11,7 +11,7 @@
     <color name="text_secondary">#9AA0AA</color>
     <color name="text_hint">#6E747E</color>
     <color name="radio_off">#8A909A</color>
-    <color name="nav_off">#7C828C</color>
+    <color name="nav_off">#C4C8CF</color>
     <color name="progress_track">#2A2F38</color>
     <color name="skeleton">#262A31</color>
     <color name="btn_gray">#2A2E35</color>

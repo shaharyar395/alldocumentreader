@@ -24,7 +24,7 @@ class PolicyActivity : AppCompatActivity() {
         val b = ActivityPolicyBinding.inflate(layoutInflater)
         setContentView(b.root)
         b.tvTitle.setText(R.string.terms_of_use)
-        val html = getString(R.string.terms_html, getString(R.string.app_name), Links.SUPPORT_EMAIL)
+        val html = getString(R.string.terms_html, getString(R.string.app_name), Links.TERMS_CONTACT_EMAIL)
         b.tvBody.text = Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY)
         b.tvBody.movementMethod = LinkMovementMethod.getInstance()
         b.btnBack.setOnClickListener { finish() }
