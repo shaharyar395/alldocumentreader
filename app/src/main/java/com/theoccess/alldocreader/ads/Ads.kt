@@ -39,6 +39,9 @@ object Ads {
     @Volatile
     private var ready = false
     private var interstitial: InterstitialAd? = null
+    private var interstitialLoadedAt = 0L
+    /** Full-screen ads older than this are thrown away (old ads can show up black). */
+    private const val INTERSTITIAL_MAX_AGE_MS = 50 * 60_000L
     private var loading = false
     private var lastShownAt = 0L
     private var premiumOfferedThisRun = false
@@ -97,7 +100,7 @@ object Ads {
         if (!enabled || loading || interstitial != null) return
         loading = true
         InterstitialAd.load(context, AdIds.INTERSTITIAL, request(), object : InterstitialAdLoadCallback() {
-            override fun onAdLoaded(ad: InterstitialAd) { interstitial = ad; loading = false }
+            override fun onAdLoaded(ad: InterstitialAd) { interstitial = ad; interstitialLoadedAt = SystemClock.elapsedRealtime(); loading = false }
             override fun onAdFailedToLoad(e: LoadAdError) { interstitial = null; loading = false; Log.w(TAG, "interstitial: ${e.message}") }
         })
     }
@@ -107,7 +110,7 @@ object Ads {
      * runs when it is closed — or right away when no ad is shown. Returns true if an ad was shown.
      */
     fun showInterstitial(activity: Activity, force: Boolean = false, then: () -> Unit = {}): Boolean {
-        val ad = interstitial
+        val ad = if (hasInterstitial) interstitial else null
         val now = SystemClock.elapsedRealtime()
         if (!enabled || ad == null || activity.isFinishing || activity.isDestroyed ||
             (!force && lastShownAt > 0 && now - lastShownAt < GAP_MS)
@@ -134,7 +137,10 @@ object Ads {
     }
 
     /** True while a full-screen ad is loaded and waiting. */
-    val hasInterstitial: Boolean get() = interstitial != null
+    val hasInterstitial: Boolean get() {
+        if (interstitial != null && SystemClock.elapsedRealtime() - interstitialLoadedAt > INTERSTITIAL_MAX_AGE_MS) interstitial = null
+        return interstitial != null
+    }
 
     // ------------------------------------------------------------------ "Continue to app" ads
 
@@ -179,6 +185,24 @@ object Ads {
     private val launchAdComing: Boolean
         get() = !Billing.isPremium && (!ready || loading || appOpenLoading || interstitial != null || hasAppOpen)
 
+    private fun isInFront(activity: Activity): Boolean {
+        val resumed = (activity as? androidx.lifecycle.LifecycleOwner)?.lifecycle?.currentState
+            ?.isAtLeast(androidx.lifecycle.Lifecycle.State.RESUMED) ?: true
+        return resumed && activity.hasWindowFocus()
+    }
+
+    /**
+     * Starts the ads SDK straight away when the user's consent is already known from an earlier
+     * run (called from App.onCreate), so the first full-screen ad has more time to load.
+     */
+    fun warmUp(context: Context) {
+        try {
+            if (UserMessagingPlatform.getConsentInformation(context).canRequestAds()) start(context.applicationContext)
+        } catch (e: Exception) {
+            Log.w(TAG, "warm up: ${e.message}")
+        }
+    }
+
     /**
      * App start (after the "All Document Reader" splash) and "Welcome back": waits up to
      * [maxWaitMs] for an ad, then shows — taking turns, like the original — either the
@@ -194,6 +218,9 @@ object Ads {
         val check = object : Runnable {
             override fun run() {
                 if (activity.isFinishing || activity.isDestroyed) return
+                // never open the ad window while this screen is still appearing / not in front:
+                // that is what makes a full-screen ad come up black with only "Test Ad" on it
+                if (!isInFront(activity)) { handler.postDelayed(this, 150); return }
                 val wanted = if (preferAppOpen) hasAppOpen else hasInterstitial
                 val timeUp = SystemClock.elapsedRealtime() >= until
                 when {

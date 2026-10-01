@@ -202,6 +202,7 @@ Converted files go to `Documents/AllDocumentReader/convert`.
 * `ImageOps.detectDocument` rewritten. It assumes the page covers the middle of the photo and, on a 360-px copy, builds four "paper" measures (brightness, whiteness, coolness — white paper is less warm than wood/tables — and a mix), wipes out text with a closing filter, grows the region like the middle at several tolerances, fills its holes and takes the largest 4-corner shape inside it. Candidates are scored by how well their sides sit on real edges and how much they stand out; the winner's sides are then snapped onto the page's edges.
 * Works for white paper on light wood (previously it cropped the table), on dark tables, under warm light, rotated pages and pages running off the photo; if no page is found the photo is kept whole ("Couldn't find the page edges").
 * Verified by compiling the same Kotlin code on the JVM against frames from the recordings (~0.1 s per photo).
+* Pages that run off the photo on several sides (close-up shots on a busy table) are accepted when the page clearly stands out from what is around it, instead of keeping the whole photo.
 
 ## Step 19 – Small UI fixes
 * Feedback ("Rate our app"): the text box fills the page and the screenshot (camera) button sits just above Submit, like the original.
@@ -218,6 +219,7 @@ Converted files go to `Documents/AllDocumentReader/convert`.
   * after saving: edited PDF (Edit text / Annotate / Add text / Sign), Manage pages, the reader's "Convert to PDF / Word", templates (Download and Quit → Save).
   * **on app start** (after the "All Document Reader" splash – not on the very first start with language / onboarding) and **after "Welcome back…"** – the splash waits up to 4 s (Welcome back 2.5 s) for the ad, otherwise the app just opens. These two places take turns between the full-screen ad and Google's **app open ad** ("Continue to app ›", unit `AdIds.APP_OPEN`);
   * when opening a file category from the home screen; when that ad closes the list opens and the **Get Premium** page slides over it (once per app run, X appears after a few seconds) – like the original.
+* Launch ads are only opened once the screen is fully in front (resumed + focused) and full-screen ads older than 50 min are thrown away – both cause black "Test Ad" screens otherwise. The SDK starts in `App.onCreate` when consent is already known, so ads load during the splash.
 * **Premium users see no ads** (bars disappear as soon as the purchase is active).
 * **Consent:** Google's UMP consent form is shown automatically to users in the EEA / UK before ads are requested.
 * **Before publishing:** replace the TEST IDs – the app ID in `AndroidManifest.xml` (`com.google.android.gms.ads.APPLICATION_ID`) and the unit IDs in `ads/AdIds.kt` – with your own from the AdMob console, and set up the consent message (Privacy & messaging) there. Test IDs show "Test Ad" and never pay. The close (X) timing on full-screen ads is decided by the ad network (Google), not by the app.

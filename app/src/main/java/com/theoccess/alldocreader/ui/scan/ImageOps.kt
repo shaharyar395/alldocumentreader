@@ -185,6 +185,7 @@ object ImageOps {
         var best: FloatArray? = null
         var bestScore = -1f
         var bestSupport = 0f
+        var bestContrast = 0f
         for (f in feats) {
             val centre = IntArray((cy1 - cy0) * (cx1 - cx0))
             var k = 0
@@ -208,11 +209,13 @@ object ImageOps {
                 val support = sideSupport(q, grad, w, h, gThr, border)
                 val contrast = contrast(f, filled, w, h)
                 val score = support + kotlin.math.min(contrast, 40f) / 80f + 0.2f * area - 0.15f * border[0]
-                if (score > bestScore) { bestScore = score; best = q; bestSupport = support }
+                if (score > bestScore) { bestScore = score; best = q; bestSupport = support; bestContrast = contrast }
             }
         }
         val q = best ?: return null
-        if (bestSupport < 0.45f) return null
+        // sure enough: its sides sit on real edges, or (page running off the photo / busy
+        // background) it clearly stands out from what is around it
+        if (bestSupport < 0.45f && !(bestContrast >= 40f && bestSupport >= 0.33f)) return null
         val r = refineSides(q, grad, w, h)
         return FloatArray(8) { i -> if (i % 2 == 0) ((r[i] + 0.5f) / w).coerceIn(0f, 1f) else ((r[i] + 0.5f) / h).coerceIn(0f, 1f) }
     }

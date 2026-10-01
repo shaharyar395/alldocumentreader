@@ -21,6 +21,7 @@ class App : Application() {
         LibraryStore.init(this)
         PDFBoxResourceLoader.init(applicationContext)
         Billing.init(this)
+        com.theoccess.alldocreader.ads.Ads.warmUp(this)   // ads start loading while the splash shows
         com.theoccess.alldocreader.data.DriveBackup.flush(this)   // retry Drive uploads that were waiting
         Thread { RecycleBin.purgeExpired(this) }.start()
         registerActivityLifecycleCallbacks(WelcomeBackTracker)
