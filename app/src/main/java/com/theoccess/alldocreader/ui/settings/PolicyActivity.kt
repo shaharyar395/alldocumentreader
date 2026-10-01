@@ -15,11 +15,16 @@ class PolicyActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val terms = intent.getIntExtra(EXTRA_WHICH, TERMS) == TERMS
+        if (!terms) {
+            Links.open(this, Links.PRIVACY_POLICY)
+            finish()
+            return
+        }
         val b = ActivityPolicyBinding.inflate(layoutInflater)
         setContentView(b.root)
-        val terms = intent.getIntExtra(EXTRA_WHICH, TERMS) == TERMS
-        b.tvTitle.setText(if (terms) R.string.terms_of_use else R.string.privacy_policy)
-        val html = getString(if (terms) R.string.terms_html else R.string.privacy_html, getString(R.string.app_name), Links.SUPPORT_EMAIL)
+        b.tvTitle.setText(R.string.terms_of_use)
+        val html = getString(R.string.terms_html, getString(R.string.app_name), Links.SUPPORT_EMAIL)
         b.tvBody.text = Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY)
         b.tvBody.movementMethod = LinkMovementMethod.getInstance()
         b.btnBack.setOnClickListener { finish() }

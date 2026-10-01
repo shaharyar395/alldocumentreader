@@ -13,6 +13,7 @@ object Links {
     /** Developer name on Google Play, used by "Explore more apps". Change it to yours. */
     const val DEVELOPER = "The Occess"
     const val SUPPORT_EMAIL = "app@theoccess.com"
+    const val PRIVACY_POLICY = "https://sites.google.com/view/mob-apps-inc/privacy-policy"
 
     fun open(context: Context, url: String): Boolean = try {
         context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))

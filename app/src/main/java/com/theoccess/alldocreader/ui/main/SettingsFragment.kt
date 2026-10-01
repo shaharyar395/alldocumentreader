@@ -143,7 +143,7 @@ class SettingsFragment : Fragment() {
         row(R.drawable.ic_st_widget, R.string.add_widget) { WidgetSheet.show(ctx) }
         row(R.drawable.ic_st_more_apps, R.string.explore_more_apps) { ExploreAppsSheet.show(ctx) }
         row(R.drawable.ic_st_terms, R.string.terms_of_use) { startActivity(PolicyActivity.intent(ctx, PolicyActivity.TERMS)) }
-        row(R.drawable.ic_shield, R.string.privacy_policy) { startActivity(PolicyActivity.intent(ctx, PolicyActivity.PRIVACY)) }
+        row(R.drawable.ic_shield, R.string.privacy_policy) { Links.open(ctx, Links.PRIVACY_POLICY) }
         row(R.drawable.ic_st_subscriptions, R.string.manage_subscriptions, getString(R.string.go_to_google_play)) {
             Links.manageSubscriptions(ctx)
         }
