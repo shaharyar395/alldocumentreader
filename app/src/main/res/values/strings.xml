@@ -448,8 +448,8 @@
     <string name="w_editor_desc">Jump straight into editing a PDF</string>
     <string name="add_widget_button">Add to home screen</string>
     <string name="widget_manual_hint">Long-press your home screen, tap Widgets and choose this app</string>
-    <string name="thanks_support">Thanks for your support!</string>
-    <string name="dont_miss_apps">Don\'t miss our other useful apps</string>
+    <string name="thanks_support">Thank you for your support!</string>
+    <string name="dont_miss_apps">Don\'t miss out on our top-rated apps 👇</string>
     <string name="see_our_apps">See our apps on Google Play</string>
     <string name="faq_a_edit">Open the &lt;b&gt;Tools&lt;/b&gt; tab and tap &lt;b&gt;Edit PDF&lt;/b&gt;, then pick a file. You can edit existing text, add new text, add images, annotate (highlight, underline, strike-through, draw) and add your signature. Tap the check mark to save a copy.</string>
     <string name="faq_a_display">While reading, use the bottom bar to switch between &lt;b&gt;vertical&lt;/b&gt; and &lt;b&gt;horizontal&lt;/b&gt; scrolling, rotate the view or invert colors. Pinch to zoom, and tap the page number to jump to a page.</string>
@@ -552,4 +552,6 @@
     <string name="tpl_image_failed">Couldn\'t open this picture</string>
     <string name="bm_pill_added">Bookmarked</string>
     <string name="bm_pill_removed">Bookmark removed</string>
+    <string name="ad_badge">AD</string>
+    <string name="explore_nothing">Nothing to show right now. Please check your internet connection.</string>
 </resources>

@@ -47,6 +47,10 @@ class MainActivity : AppCompatActivity() {
                     binding.bottomNav.selectedItemId != R.id.nav_files ->
                         binding.bottomNav.selectedItemId = R.id.nav_files
                     SystemClock.elapsedRealtime() - lastBackPress < 2000 -> finish()
+                    // sometimes, like the original: "Thank you for your support!" before leaving;
+                    // closing it closes the app
+                    com.theoccess.alldocreader.ui.settings.ExploreAppsSheet.shouldShowOnExit(this@MainActivity) ->
+                        com.theoccess.alldocreader.ui.settings.ExploreAppsSheet.show(this@MainActivity) { finish() }
                     else -> {
                         lastBackPress = SystemClock.elapsedRealtime()
                         toast(R.string.press_back_again)

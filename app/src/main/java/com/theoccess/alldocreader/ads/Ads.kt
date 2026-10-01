@@ -11,6 +11,9 @@ import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.appopen.AppOpenAd
+import com.google.android.gms.ads.AdLoader
+import com.google.android.gms.ads.nativead.NativeAd
+import com.google.android.gms.ads.nativead.NativeAdOptions
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.android.ump.ConsentRequestParameters
@@ -73,6 +76,7 @@ object Ads {
                 android.os.Handler(android.os.Looper.getMainLooper()).post {
                     loadInterstitial(context)
                     loadAppOpen(context)
+                    loadNative(context)
                     val l = ArrayList(readyListeners); readyListeners.clear()
                     l.forEach { it() }
                 }
@@ -221,5 +225,71 @@ object Ads {
                 activity.startActivity(PremiumActivity.intent(activity))
             }
         }
+    }
+
+    // ------------------------------------------------------------------ native ads ("Explore more apps")
+
+    private const val NATIVE_MAX_AGE_MS = 50 * 60_000L
+    private val natives = ArrayList<NativeAd>()
+    private var nativeLoadedAt = 0L
+    private var nativeLoading = false
+    private val nativeWaiters = ArrayList<(List<NativeAd>) -> Unit>()
+
+    /** Loads up to 5 native ads in the background, for the rows of the thank-you / explore sheet. */
+    fun loadNative(context: Context) {
+        if (!enabled || nativeLoading) return
+        if (natives.isNotEmpty() && SystemClock.elapsedRealtime() - nativeLoadedAt < NATIVE_MAX_AGE_MS) return
+        nativeLoading = true
+        val fresh = ArrayList<NativeAd>()
+        lateinit var loader: AdLoader
+        loader = AdLoader.Builder(context, AdIds.NATIVE)
+            .forNativeAd { ad ->
+                fresh += ad
+                if (!loader.isLoading) finishNative(fresh)
+            }
+            .withAdListener(object : com.google.android.gms.ads.AdListener() {
+                override fun onAdFailedToLoad(e: LoadAdError) {
+                    Log.w(TAG, "native: ${e.message}")
+                    if (!loader.isLoading) finishNative(fresh)
+                }
+            })
+            .withNativeAdOptions(NativeAdOptions.Builder().setAdChoicesPlacement(NativeAdOptions.ADCHOICES_TOP_LEFT).build())
+            .build()
+        loader.loadAds(request(), 5)
+    }
+
+    private fun finishNative(fresh: List<NativeAd>) {
+        nativeLoading = false
+        if (fresh.isNotEmpty()) {
+            natives.forEach { it.destroy() }
+            natives.clear(); natives += fresh
+            nativeLoadedAt = SystemClock.elapsedRealtime()
+        }
+        val w = ArrayList(nativeWaiters); nativeWaiters.clear()
+        w.forEach { it(natives.toList()) }
+    }
+
+    /**
+     * Gives the native ads to [done]: right away when they are loaded, otherwise once they have
+     * loaded (or failed). Empty for premium users. Must be called on the main thread.
+     */
+    fun withNativeAds(context: Context, done: (List<NativeAd>) -> Unit) {
+        if (Billing.isPremium) return done(emptyList())
+        if (natives.isNotEmpty()) { loadNative(context); return done(natives.toList()) }
+        nativeWaiters += done
+        if (ready) {
+            loadNative(context)
+            if (!nativeLoading) finishNative(emptyList())   // nothing could be requested
+        } else if (!started.get()) {
+            finishNative(emptyList())   // ads never started (no consent): nothing will come
+        }
+        // not ready yet but starting: loadNative() runs when the SDK is ready and answers the waiters
+    }
+
+    /** Native ads ready to show (empty for premium users or when none loaded). */
+    fun nativeAds(context: Context): List<NativeAd> {
+        if (!enabled) return emptyList()
+        loadNative(context)   // refreshes old ones for next time
+        return natives.toList()
     }
 }

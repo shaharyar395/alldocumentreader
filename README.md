@@ -222,6 +222,14 @@ Converted files go to `Documents/AllDocumentReader/convert`.
 * **Consent:** Google's UMP consent form is shown automatically to users in the EEA / UK before ads are requested.
 * **Before publishing:** replace the TEST IDs – the app ID in `AndroidManifest.xml` (`com.google.android.gms.ads.APPLICATION_ID`) and the unit IDs in `ads/AdIds.kt` – with your own from the AdMob console, and set up the consent message (Privacy & messaging) there. Test IDs show "Test Ad" and never pay. The close (X) timing on full-screen ads is decided by the ad network (Google), not by the app.
 
+## Step 22 – "Thank you for your support!" (Explore more apps)
+* Same look as the original: gift box, "Thank you for your support!", "Don't miss out on our top-rated apps 👇", rows of apps **3 per page** in a swiping pager that turns by itself every 3.5 s, page dots, an **AD** tag and **Open** on every row.
+* In the original these rows are the developer's **own apps** (cross-promotion to Google Play). Put yours in `ExploreAppsSheet.APPS` (name, description, package, icon). The rest of the rows are filled with **Google native ads** (`AdIds.NATIVE`, not for premium users). While the ads load a small spinner shows, then the rows appear (up to 5 ads = 2 pages, plus your own apps). Offline with no own apps listed: "Nothing to show right now".
+* Opened from Settings → "Explore more apps", and **on every 3rd time the user leaves the app with Back** from the home screen; closing the sheet then closes the app.
+
+## Privacy policy
+* Settings → Privacy policy opens the online policy `Links.PRIVACY_POLICY` (https://sites.google.com/view/mob-apps-inc/privacy-policy) in the browser. Use the same link in Play Console → App content → Privacy policy.
+
 ## Project layout
 ```
 app/src/main/java/com/theoccess/alldocreader/
