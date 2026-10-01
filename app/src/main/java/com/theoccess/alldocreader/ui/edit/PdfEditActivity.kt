@@ -162,7 +162,7 @@ class PdfEditActivity : AppCompatActivity(), EditHost {
         binding.rvPages.layoutManager = LinearLayoutManager(this)
         binding.rvPages.adapter = adapter
         binding.pbLoading.visibility = View.GONE
-        loadLines(initial = Mode.entries.getOrElse(intent.getIntExtra(EXTRA_MODE, 0)) { Mode.NONE })
+        loadLines(initial = if (savedInstanceState != null) Mode.NONE else Mode.entries.getOrElse(intent.getIntExtra(EXTRA_MODE, 0)) { Mode.NONE })
         binding.rvPages.post { scrollToPage(intent.getIntExtra(EXTRA_PAGE, 0)) }
         updateBars()
     }
@@ -203,10 +203,8 @@ class PdfEditActivity : AppCompatActivity(), EditHost {
             linesLoaded = true
             binding.toolEditText.root.alpha = if (textLines.isEmpty()) 0.4f else 1f
             when (initial) {
-                Mode.EDIT_TEXT -> if (textLines.isEmpty()) {
-                    toast(R.string.no_editable_text)
-                    openPanel(Mode.ADD_TEXT)
-                } else openPanel(Mode.EDIT_TEXT)
+                // scanned pages have no text to edit: go quietly to Add text (no message, like the original)
+                Mode.EDIT_TEXT -> openPanel(if (textLines.isEmpty()) Mode.ADD_TEXT else Mode.EDIT_TEXT)
                 Mode.NONE -> Unit
                 else -> openPanel(initial)
             }
@@ -300,6 +298,45 @@ class PdfEditActivity : AppCompatActivity(), EditHost {
     override fun onDelete(page: Int, item: EditItem) {
         items(page).remove(item)
         if (selected === item) selected = null
+        commit()
+    }
+
+    override fun onMovedOffPage(page: Int, item: EditItem, rawX: Float, rawY: Float) {
+        // find the page under the drop point (or the nearest one when dropped in the gap)
+        val lm = binding.rvPages.layoutManager as LinearLayoutManager
+        val first = lm.findFirstVisibleItemPosition().coerceAtLeast(0)
+        val last = lm.findLastVisibleItemPosition().coerceAtLeast(first)
+        var best = -1
+        var bestDist = Float.MAX_VALUE
+        var bestLayer: EditLayerView? = null
+        for (i in first..last) {
+            val vh = binding.rvPages.findViewHolderForAdapterPosition(i) as? PageVH ?: continue
+            val loc = IntArray(2)
+            vh.b.layer.getLocationOnScreen(loc)
+            val top = loc[1].toFloat()
+            val bottom = top + vh.b.layer.height
+            val dist = when { rawY < top -> top - rawY; rawY > bottom -> rawY - bottom; else -> 0f }
+            if (dist < bestDist) { bestDist = dist; best = i; bestLayer = vh.b.layer }
+        }
+        val layer = bestLayer
+        if (best < 0 || layer == null || layer.width <= 0) { commit(); return }
+        val loc = IntArray(2)
+        layer.getLocationOnScreen(loc)
+        val lw = layer.width.toFloat()
+        val maxY = layer.height / lw
+        val nx = ((rawX - loc[0]) / lw).coerceIn(0f, 1f)
+        val ny = ((rawY - loc[1]) / lw).coerceIn(0.02f, maxY - 0.02f)
+        when (item) {
+            is TextItem -> { item.cx = nx; item.cy = ny }
+            is ImageItem -> { item.cx = nx; item.cy = ny }
+            else -> Unit
+        }
+        if (best != page) {
+            items(page).remove(item)
+            items(best).add(item)
+        }
+        selected = item
+        onSelectionChanged()
         commit()
     }
 
@@ -581,15 +618,24 @@ class PdfEditActivity : AppCompatActivity(), EditHost {
         commit()
     }
 
+    /**
+     * The page the person is looking at: the one that shows the most on screen; when two pages
+     * show about the same amount, the upper one (signatures / pictures / text go there).
+     */
     private fun currentPage(): Int {
         val lm = binding.rvPages.layoutManager as LinearLayoutManager
         val first = lm.findFirstVisibleItemPosition().coerceAtLeast(0)
         val last = lm.findLastVisibleItemPosition().coerceAtLeast(first)
-        val mid = binding.rvPages.height / 2
-        return (first..last).minByOrNull { i ->
-            val v = lm.findViewByPosition(i) ?: return@minByOrNull Int.MAX_VALUE
-            kotlin.math.abs((v.top + v.bottom) / 2 - mid)
-        } ?: first
+        val h = binding.rvPages.height
+        var best = first
+        var bestShown = -1
+        for (i in first..last) {
+            val v = lm.findViewByPosition(i) ?: continue
+            val shown = (minOf(v.bottom, h) - maxOf(v.top, 0)).coerceAtLeast(0)
+            // a lower page must show clearly more (10 % of the screen) to win over the upper one
+            if (bestShown < 0 || shown > bestShown + h / 10) { best = i; bestShown = shown }
+        }
+        return best
     }
 
     private fun scrollToPage(page: Int) {

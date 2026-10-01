@@ -241,6 +241,12 @@ Converted files go to `Documents/AllDocumentReader/convert`.
 * Its pages come back already cropped, so "Choose cropping method" is skipped for them; they then open in the app's editor (Auto filter, Rotate, Crop, Pages, Done) as before.
 * **Fallback:** the scanner needs Google Play services and at least 1.7 GB RAM, and downloads its module the first time it is used (needs internet once). If it can't start, the app's own camera + auto-crop opens instead, so scanning always works. "Choose from gallery" is unchanged.
 
+## Step 25 – Edit screen fixes (scanned PDFs, signatures)
+* The edit screen no longer restarts when the phone rotates back from the landscape signature pad (`configChanges` on PdfEditActivity) – before, the restart threw away the signature just placed and showed "This PDF has no editable text" again.
+* Opening Edit text on a scanned PDF goes quietly to Add text (no message). The message only shows when the greyed-out Edit text button is tapped.
+* Texts, pictures and signatures can be dragged from one page onto another: while dragged the page is lifted above its neighbours (no clipping), and on release `onMovedOffPage` moves the item to the page under the finger (or keeps it at the edge of its page when dropped in the gap).
+* Signatures, pictures and text from the bar go on the page that fills most of the screen (the upper one when two pages show about equally), not on the page that happens to be nearest the middle.
+
 ## Project layout
 ```
 app/src/main/java/com/theoccess/alldocreader/

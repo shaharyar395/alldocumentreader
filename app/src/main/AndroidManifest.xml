@@ -155,6 +155,7 @@
         </activity>
         <activity
             android:name=".ui.edit.PdfEditActivity"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DocReader.WhiteBar"
             android:windowSoftInputMode="adjustNothing"

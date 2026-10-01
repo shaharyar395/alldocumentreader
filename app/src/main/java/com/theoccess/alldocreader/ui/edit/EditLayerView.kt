@@ -36,6 +36,8 @@ interface EditHost {
     fun onEditImage(page: Int, item: ImageItem)
     fun onSelectionChanged()
     fun commit()
+    /** A text / picture was dropped outside its page: move it to the page under (rawX, rawY). */
+    fun onMovedOffPage(page: Int, item: EditItem, rawX: Float, rawY: Float)
 }
 
 /**
@@ -140,7 +142,7 @@ class EditLayerView @JvmOverloads constructor(context: Context, attrs: Attribute
                     Op.DRAW -> { drawing.add(x / w); drawing.add(y / w) }
                     Op.MARK -> markRect = markAt(downX, x, downY)
                     Op.ERASE -> eraseAt(x, y)
-                    Op.MOVE -> target?.let { t -> if (moved) { moveBy(t, (x - lastX) / w, (y - lastY) / w); changed = true } }
+                    Op.MOVE -> target?.let { t -> if (moved) { lift(true); moveBy(t, (x - lastX) / w, (y - lastY) / w); changed = true } }
                     Op.ROTATE -> target?.let { t ->
                         val (cx, cy) = EditRenderer.center(t, w)
                         val a = Math.toDegrees(atan2((y - cy).toDouble(), (x - cx).toDouble())).toFloat()
@@ -195,8 +197,18 @@ class EditLayerView @JvmOverloads constructor(context: Context, attrs: Attribute
                     Op.TAP -> if (!moved) onTap(h, x, y)
                     Op.MOVE -> {
                         val t = target
+                        lift(false)
                         if (!moved && wasSelected && t is TextItem) h.onEditTextItem(page, t)
-                        else if (changed) h.commit()
+                        else if (changed && t != null) {
+                            val (_, cy) = EditRenderer.center(t, w)
+                            if (cy < 0f || cy > height) {
+                                // dragged onto another page (or into the gap): let the editor move it there
+                                val loc = IntArray(2)
+                                getLocationOnScreen(loc)
+                                val (cx, _) = EditRenderer.center(t, w)
+                                h.onMovedOffPage(page, t, loc[0] + cx, loc[1] + cy)
+                            } else h.commit()
+                        }
                     }
                     else -> if (changed) h.commit()
                 }
@@ -206,6 +218,7 @@ class EditLayerView @JvmOverloads constructor(context: Context, attrs: Attribute
                 return true
             }
             MotionEvent.ACTION_CANCEL -> {
+                lift(false)
                 if (changed) h.commit()
                 op = Op.NONE; target = null; drawing = ArrayList(); markRect = null
                 invalidate()
@@ -284,6 +297,15 @@ class EditLayerView @JvmOverloads constructor(context: Context, attrs: Attribute
         val (lx, ly) = EditRenderer.toLocal(item, w, x, y)
         val pad = 8 * d
         return abs(lx) <= bw / 2 + pad && abs(ly) <= bh / 2 + pad
+    }
+
+    /**
+     * While a text / picture is dragged, its page is drawn above the neighbouring pages (and is
+     * not clipped), so the item stays visible when it is pulled across the gap onto another page.
+     */
+    private fun lift(on: Boolean) {
+        val pageRoot = (parent as? View)?.parent as? View ?: return
+        pageRoot.translationZ = if (on) 8f * d else 0f
     }
 
     private fun moveBy(item: EditItem, dx: Float, dy: Float) {
