@@ -307,9 +307,12 @@ class HomeFragment : Fragment() {
     }
 
     private fun openCategory(category: Category) {
-        val ctx = requireContext()
-        if (category == Category.DIRECTORIES) startActivity(Intent(ctx, DirectoriesActivity::class.java))
-        else startActivity(FileListActivity.intent(ctx, category))
+        val act = activity ?: return
+        // like the original: full-screen ad → the list → "Get Premium" page on top
+        com.theoccess.alldocreader.ads.Ads.beforeCategory(act) {
+            if (category == Category.DIRECTORIES) act.startActivity(Intent(act, DirectoriesActivity::class.java))
+            else act.startActivity(FileListActivity.intent(act, category))
+        }
     }
 
     private fun showCreateSheet() = CreateFilesSheet.show(requireContext())

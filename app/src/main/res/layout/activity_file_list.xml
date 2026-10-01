@@ -291,4 +291,10 @@
                 android:textSize="12sp" />
         </LinearLayout>
     </LinearLayout>
+
+    <com.theoccess.alldocreader.ads.AdBar
+        android:id="@+id/adBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface" />
 </LinearLayout>

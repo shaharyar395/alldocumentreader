@@ -248,4 +248,8 @@
     <string name="tpl_quit_title">Keluar sekarang?</string>
     <string name="tpl_quit_message">Anda belum menyimpan perubahan. Simpan sekarang?</string>
     <!-- /step16 -->
+    <!-- step20 -->
+    <string name="bm_pill_added">Ditandai</string>
+    <string name="bm_pill_removed">Penanda dihapus</string>
+    <!-- /step20 -->
 </resources>

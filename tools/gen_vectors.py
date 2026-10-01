@@ -732,3 +732,9 @@ line("ic_tpl_add_image", [p(rr(3.5, 4.5, 17, 15, 2), stroke=LC, sw="1.7"), p(cir
 vec("tpl_handle_rotate", 26, 26, [p(circ(13, 13, 12), fill="#FFFFFFFF"), p(circ(13, 13, 12), stroke="#FFD5DAE2", sw="1"),
     p("M18.2,11 A5.5,5.5 0 0 0 8.4,10.2 M7.8,15 A5.5,5.5 0 0 0 17.6,15.8", stroke="#FF1B1F2A", sw="1.6"), p("M8.2,7.2 V10.4 H11.4 M17.8,18.8 V15.6 H14.6", stroke="#FF1B1F2A", sw="1.6")])
 print("step16b ok")
+
+# ---- step 20: bookmark message pill icons (white, not tinted) ----
+BM = "M7,3.5 H17 A1.5,1.5 0 0 1 18.5,5 V20.5 L12,16.5 L5.5,20.5 V5 A1.5,1.5 0 0 1 7,3.5 Z"
+vec("ic_bm_pill_on", 20, 24, [p(BM, fill="#FFFFFFFF")])
+vec("ic_bm_pill_off", 20, 24, [p(BM, stroke="#FFFFFFFF", sw="1.8"), p("M3.5,3.5 L20.5,20.5", stroke="#FFFFFFFF", sw="1.8")])
+print("step20 ok")

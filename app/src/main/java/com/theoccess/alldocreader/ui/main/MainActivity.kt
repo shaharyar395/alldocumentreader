@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        com.theoccess.alldocreader.ads.Ads.init(this)   // consent (EEA / UK) + ads SDK
 
         binding.bottomNav.setOnItemSelectedListener { item ->
             showTab(item.itemId)

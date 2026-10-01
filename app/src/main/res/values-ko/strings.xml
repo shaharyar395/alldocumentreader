@@ -248,4 +248,8 @@
     <string name="tpl_quit_title">지금 나가시겠어요?</string>
     <string name="tpl_quit_message">변경 사항을 아직 저장하지 않았습니다. 지금 저장하시겠어요?</string>
     <!-- /step16 -->
+    <!-- step20 -->
+    <string name="bm_pill_added">북마크됨</string>
+    <string name="bm_pill_removed">북마크 삭제됨</string>
+    <!-- /step20 -->
 </resources>

@@ -33,9 +33,12 @@ class WelcomeBackActivity : AppCompatActivity() {
         startSlidingBar(binding.progressTrack, binding.progressThumb) { anim = it }
         lifecycleScope.launch {
             delay(DURATION_MS)
-            finish()
-            @Suppress("DEPRECATION")
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            // like the original: "Welcome back…" → full-screen ad → the tab the user was on
+            com.theoccess.alldocreader.ads.Ads.showOnLaunch(this@WelcomeBackActivity, AD_WAIT_MS) {
+                finish()
+                @Suppress("DEPRECATION")
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            }
         }
     }
 
@@ -46,6 +49,7 @@ class WelcomeBackActivity : AppCompatActivity() {
 
     companion object {
         const val DURATION_MS = 1800L
+        private const val AD_WAIT_MS = 2500L
 
         fun intent(context: Context) = Intent(context, WelcomeBackActivity::class.java)
 

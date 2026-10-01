@@ -550,4 +550,6 @@
     <string name="tpl_quit_message">You haven\'t saved your changes yet. Would you like to save them now?</string>
     <string name="tpl_save_failed">Couldn\'t save the file</string>
     <string name="tpl_image_failed">Couldn\'t open this picture</string>
+    <string name="bm_pill_added">Bookmarked</string>
+    <string name="bm_pill_removed">Bookmark removed</string>
 </resources>

@@ -249,4 +249,8 @@
     <string name="tpl_quit_title">Jetzt beenden?</string>
     <string name="tpl_quit_message">Du hast deine Änderungen noch nicht gespeichert. Möchtest du sie jetzt speichern?</string>
     <!-- /step16 -->
+    <!-- step20 -->
+    <string name="bm_pill_added">Lesezeichen gesetzt</string>
+    <string name="bm_pill_removed">Lesezeichen entfernt</string>
+    <!-- /step20 -->
 </resources>

@@ -249,4 +249,8 @@
     <string name="tpl_quit_title">ابھی باہر نکلیں؟</string>
     <string name="tpl_quit_message">آپ نے ابھی تک اپنی تبدیلیاں محفوظ نہیں کیں۔ کیا انہیں ابھی محفوظ کرنا چاہتے ہیں؟</string>
     <!-- /step16 -->
+    <!-- step20 -->
+    <string name="bm_pill_added">بک مارک کر دیا گیا</string>
+    <string name="bm_pill_removed">بک مارک ہٹا دیا گیا</string>
+    <!-- /step20 -->
 </resources>

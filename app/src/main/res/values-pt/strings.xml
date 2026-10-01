@@ -250,4 +250,8 @@
     <string name="tpl_quit_title">Sair agora?</string>
     <string name="tpl_quit_message">Você ainda não salvou as alterações. Deseja salvá-las agora?</string>
     <!-- /step16 -->
+    <!-- step20 -->
+    <string name="bm_pill_added">Adicionado aos favoritos</string>
+    <string name="bm_pill_removed">Favorito removido</string>
+    <!-- /step20 -->
 </resources>

@@ -518,10 +518,14 @@ class TemplateEditorActivity : AppCompatActivity(), TemplateCanvasView.Listener 
             if (out == null) { toast(R.string.tpl_save_failed); return@launch }
             lastSaved = out
             savedIndex = index
-            if (afterSave != null) { afterSave(); return@launch }
+            if (afterSave != null) {
+                com.theoccess.alldocreader.ads.Ads.showInterstitial(this@TemplateEditorActivity) { afterSave() }
+                return@launch
+            }
             b.bannerSaved.removeCallbacks(hideBanner)
             b.bannerSaved.visibility = View.VISIBLE
             b.bannerSaved.postDelayed(hideBanner, 5000)
+            com.theoccess.alldocreader.ads.Ads.showInterstitial(this@TemplateEditorActivity)
         }
     }
 

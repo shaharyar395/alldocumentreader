@@ -249,4 +249,8 @@
     <string name="tpl_quit_title">اکنون خارج می‌شوید؟</string>
     <string name="tpl_quit_message">هنوز تغییرات خود را ذخیره نکرده‌اید. می‌خواهید اکنون ذخیره کنید؟</string>
     <!-- /step16 -->
+    <!-- step20 -->
+    <string name="bm_pill_added">نشانک‌گذاری شد</string>
+    <string name="bm_pill_removed">نشانک حذف شد</string>
+    <!-- /step20 -->
 </resources>

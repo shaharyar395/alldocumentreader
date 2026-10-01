@@ -248,4 +248,8 @@
     <string name="tpl_quit_title">現在離開？</string>
     <string name="tpl_quit_message">你還沒有儲存變更，要現在儲存嗎？</string>
     <!-- /step16 -->
+    <!-- step20 -->
+    <string name="bm_pill_added">已加入書籤</string>
+    <string name="bm_pill_removed">已移除書籤</string>
+    <!-- /step20 -->
 </resources>

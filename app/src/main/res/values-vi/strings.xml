@@ -248,4 +248,8 @@
     <string name="tpl_quit_title">Thoát ngay?</string>
     <string name="tpl_quit_message">Bạn chưa lưu thay đổi. Bạn có muốn lưu ngay không?</string>
     <!-- /step16 -->
+    <!-- step20 -->
+    <string name="bm_pill_added">Đã đánh dấu</string>
+    <string name="bm_pill_removed">Đã xóa dấu trang</string>
+    <!-- /step20 -->
 </resources>

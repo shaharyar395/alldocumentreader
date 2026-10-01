@@ -41,6 +41,13 @@
         android:theme="@style/Theme.DocReader"
         tools:targetApi="34">
 
+        <!-- AdMob app ID. This is Google's TEST app ID: replace it with your own from the AdMob console
+             (Apps → App settings) before publishing. See ads/AdIds.kt for the ad unit IDs. -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+
+
         <activity
             android:name=".ui.splash.SplashActivity"
             android:exported="true"

@@ -490,6 +490,7 @@ class ViewerActivity : AppCompatActivity() {
             binding.tvBanner.setText(R.string.saved_successfully)
             binding.btnBannerOpen.visibility = View.VISIBLE
             binding.btnBannerClose.visibility = View.VISIBLE
+            com.theoccess.alldocreader.ads.Ads.showInterstitial(this@ViewerActivity)
         }
     }
 

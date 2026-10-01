@@ -92,7 +92,7 @@ object FileActions {
 
     fun toggleBookmark(context: Context, file: DocFile) {
         val added = LibraryStore.toggleBookmark(file.path)
-        context.toast(if (added) R.string.bookmark_added else R.string.bookmark_removed)
+        BookmarkPill.show(context, added)
     }
 
     fun showInfo(context: Context, file: DocFile) {

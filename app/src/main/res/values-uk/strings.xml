@@ -251,4 +251,8 @@
     <string name="tpl_quit_title">Вийти зараз?</string>
     <string name="tpl_quit_message">Ви ще не зберегли зміни. Зберегти їх зараз?</string>
     <!-- /step16 -->
+    <!-- step20 -->
+    <string name="bm_pill_added">Додано в закладки</string>
+    <string name="bm_pill_removed">Закладку видалено</string>
+    <!-- /step20 -->
 </resources>

@@ -112,7 +112,7 @@ class FileAdapter(
                 true
             }
             b.btnMore.setOnClickListener { onMore(item) }
-            b.btnBookmark.setOnClickListener { LibraryStore.toggleBookmark(item.path) }
+            b.btnBookmark.setOnClickListener { com.theoccess.alldocreader.util.FileActions.toggleBookmark(it.context, item) }
             bindState(item)
         }
 

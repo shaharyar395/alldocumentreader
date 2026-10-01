@@ -644,6 +644,7 @@ class PdfEditActivity : AppCompatActivity(), EditHost {
             openPanel(Mode.NONE)
             loadLines(Mode.NONE)
             TopPill.show(this@PdfEditActivity, getString(R.string.saved_successfully), R.drawable.ic_check_circle_outline, 60)
+            com.theoccess.alldocreader.ads.Ads.showInterstitial(this@PdfEditActivity)
         }
     }
 

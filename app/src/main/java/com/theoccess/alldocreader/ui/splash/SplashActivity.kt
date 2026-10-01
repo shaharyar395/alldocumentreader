@@ -39,9 +39,15 @@ class SplashActivity : AppCompatActivity() {
         animateIn()
         startProgress()
 
+        // returning users: start the ads SDK now so the full-screen ad is ready when loading ends
+        val firstRun = !Prefs.languageDone || !Prefs.onboardingDone
+        if (!firstRun) com.theoccess.alldocreader.ads.Ads.init(this)
+
         lifecycleScope.launch {
             delay(SPLASH_DURATION_MS)
-            route()
+            if (firstRun) route()
+            // like the original: splash → full-screen ad → home (no ad on the very first start)
+            else com.theoccess.alldocreader.ads.Ads.showOnLaunch(this@SplashActivity, LAUNCH_AD_WAIT_MS) { route() }
         }
     }
 
@@ -85,5 +91,7 @@ class SplashActivity : AppCompatActivity() {
 
     companion object {
         private const val SPLASH_DURATION_MS = 2600L
+        /** How long the splash may keep loading while the full-screen ad arrives. */
+        private const val LAUNCH_AD_WAIT_MS = 4000L
     }
 }

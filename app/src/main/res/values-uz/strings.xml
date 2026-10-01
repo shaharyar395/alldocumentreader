@@ -249,4 +249,8 @@
     <string name="tpl_quit_title">Hozir chiqasizmi?</string>
     <string name="tpl_quit_message">O\'zgarishlar hali saqlanmagan. Hozir saqlaysizmi?</string>
     <!-- /step16 -->
+    <!-- step20 -->
+    <string name="bm_pill_added">Xatcho\'pga qo\'shildi</string>
+    <string name="bm_pill_removed">Xatcho\'p olib tashlandi</string>
+    <!-- /step20 -->
 </resources>

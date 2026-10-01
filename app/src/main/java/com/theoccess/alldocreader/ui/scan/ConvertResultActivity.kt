@@ -56,6 +56,8 @@ class ConvertResultActivity : AppCompatActivity() {
         val file = File(intent.getStringExtra(EXTRA_PATH) ?: run { finish(); return })
         if (!file.exists()) { toast(R.string.file_not_found); finish(); return }
         doc = DocFile.from(file)
+        // full-screen ad after converting / saving, like the original (closing it shows this page)
+        if (savedInstanceState == null) binding.root.post { com.theoccess.alldocreader.ads.Ads.showInterstitial(this) }
 
         binding.btnBack.setOnClickListener { finish() }
         binding.tvName.text = doc.name

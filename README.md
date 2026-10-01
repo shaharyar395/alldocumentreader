@@ -208,6 +208,20 @@ Converted files go to `Documents/AllDocumentReader/convert`.
 * Bottom tabs (All files / Tools / Settings): the selected tab's icon is filled, the others are outlined (`ic_nav_*` selectors → `_on` / `_off`).
 * Tools tab: section headings (Convert & Create, Edit, Others) are darker, bold and slightly larger (`@color/tools_section`).
 
+## Step 20 – Bookmark message
+* Tapping the bookmark icon (file lists on Recent / Bookmarks / All files / categories / search, the reader's menu and the picture viewer) shows a dark rounded pill near the bottom, like the original app: filled bookmark + "Bookmarked", or crossed-out bookmark + "Bookmark removed" (`util/BookmarkPill`). Translated into all 22 languages.
+
+## Step 21 – Ads (Google AdMob), placed like the original app
+* **Ad bar** (`ads/AdBar`, anchored adaptive banner): above the bottom tabs on All files / Tools / Settings, at the bottom of file lists, and under the reader's bottom toolbar. Hidden until an ad loads.
+* **Full-screen ads** (`ads/Ads.showInterstitial`), at most one every 45 s:
+  * after converting (before the "Converted successfully" page – Image to PDF, Scan, Word/PPT/PDF converters),
+  * after saving: edited PDF (Edit text / Annotate / Add text / Sign), Manage pages, the reader's "Convert to PDF / Word", templates (Download and Quit → Save).
+  * **on app start** (after the "All Document Reader" splash – not on the very first start with language / onboarding) and **after "Welcome back…"** – the splash waits up to 4 s (Welcome back 2.5 s) for the ad, otherwise the app just opens. These two places take turns between the full-screen ad and Google's **app open ad** ("Continue to app ›", unit `AdIds.APP_OPEN`);
+  * when opening a file category from the home screen; when that ad closes the list opens and the **Get Premium** page slides over it (once per app run, X appears after a few seconds) – like the original.
+* **Premium users see no ads** (bars disappear as soon as the purchase is active).
+* **Consent:** Google's UMP consent form is shown automatically to users in the EEA / UK before ads are requested.
+* **Before publishing:** replace the TEST IDs – the app ID in `AndroidManifest.xml` (`com.google.android.gms.ads.APPLICATION_ID`) and the unit IDs in `ads/AdIds.kt` – with your own from the AdMob console, and set up the consent message (Privacy & messaging) there. Test IDs show "Test Ad" and never pay. The close (X) timing on full-screen ads is decided by the ad network (Google), not by the app.
+
 ## Project layout
 ```
 app/src/main/java/com/theoccess/alldocreader/

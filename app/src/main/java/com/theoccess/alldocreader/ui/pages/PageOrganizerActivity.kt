@@ -560,6 +560,7 @@ class PageOrganizerActivity : AppCompatActivity() {
             selected.clear()
             open()
             TopPill.show(this@PageOrganizerActivity, getString(R.string.saved_successfully), topMarginDp = 60)
+            com.theoccess.alldocreader.ads.Ads.showInterstitial(this@PageOrganizerActivity)
         }
     }
 

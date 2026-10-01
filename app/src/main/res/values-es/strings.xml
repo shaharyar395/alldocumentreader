@@ -250,4 +250,8 @@
     <string name="tpl_quit_title">¿Salir ahora?</string>
     <string name="tpl_quit_message">Aún no has guardado los cambios. ¿Quieres guardarlos ahora?</string>
     <!-- /step16 -->
+    <!-- step20 -->
+    <string name="bm_pill_added">Añadido a marcadores</string>
+    <string name="bm_pill_removed">Marcador eliminado</string>
+    <!-- /step20 -->
 </resources>

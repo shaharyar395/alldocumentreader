@@ -248,4 +248,8 @@
     <string name="tpl_quit_title">終了しますか？</string>
     <string name="tpl_quit_message">変更がまだ保存されていません。今すぐ保存しますか？</string>
     <!-- /step16 -->
+    <!-- step20 -->
+    <string name="bm_pill_added">ブックマークしました</string>
+    <string name="bm_pill_removed">ブックマークを解除しました</string>
+    <!-- /step20 -->
 </resources>

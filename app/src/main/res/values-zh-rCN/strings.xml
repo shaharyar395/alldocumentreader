@@ -248,4 +248,8 @@
     <string name="tpl_quit_title">现在退出？</string>
     <string name="tpl_quit_message">你还没有保存更改，要现在保存吗？</string>
     <!-- /step16 -->
+    <!-- step20 -->
+    <string name="bm_pill_added">已添加书签</string>
+    <string name="bm_pill_removed">已移除书签</string>
+    <!-- /step20 -->
 </resources>

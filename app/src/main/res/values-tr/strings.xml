@@ -249,4 +249,8 @@
     <string name="tpl_quit_title">Şimdi çıkılsın mı?</string>
     <string name="tpl_quit_message">Değişikliklerinizi henüz kaydetmediniz. Şimdi kaydetmek ister misiniz?</string>
     <!-- /step16 -->
+    <!-- step20 -->
+    <string name="bm_pill_added">Yer işaretlendi</string>
+    <string name="bm_pill_removed">Yer işareti kaldırıldı</string>
+    <!-- /step20 -->
 </resources>

@@ -248,4 +248,8 @@
     <string name="tpl_quit_title">ออกตอนนี้ไหม</string>
     <string name="tpl_quit_message">คุณยังไม่ได้บันทึกการเปลี่ยนแปลง ต้องการบันทึกตอนนี้ไหม</string>
     <!-- /step16 -->
+    <!-- step20 -->
+    <string name="bm_pill_added">บุ๊กมาร์กแล้ว</string>
+    <string name="bm_pill_removed">นำบุ๊กมาร์กออกแล้ว</string>
+    <!-- /step20 -->
 </resources>

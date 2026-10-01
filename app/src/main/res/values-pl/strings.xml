@@ -251,4 +251,8 @@
     <string name="tpl_quit_title">Wyjść teraz?</string>
     <string name="tpl_quit_message">Nie zapisano jeszcze zmian. Zapisać je teraz?</string>
     <!-- /step16 -->
+    <!-- step20 -->
+    <string name="bm_pill_added">Dodano zakładkę</string>
+    <string name="bm_pill_removed">Usunięto zakładkę</string>
+    <!-- /step20 -->
 </resources>

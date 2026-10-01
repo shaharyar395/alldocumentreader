@@ -249,4 +249,8 @@
     <string name="tpl_quit_title">Umalis na ngayon?</string>
     <string name="tpl_quit_message">Hindi mo pa nase-save ang mga pagbabago. Gusto mo bang i-save ngayon?</string>
     <!-- /step16 -->
+    <!-- step20 -->
+    <string name="bm_pill_added">Na-bookmark</string>
+    <string name="bm_pill_removed">Inalis ang bookmark</string>
+    <!-- /step20 -->
 </resources>
