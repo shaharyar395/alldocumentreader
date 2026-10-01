@@ -80,6 +80,22 @@ class ScanEditActivity : AppCompatActivity() {
         }
     }
 
+    /** Retake with Google's document scanner (already cropped); the app's camera when unavailable. */
+    private val retakeScanner = DocScanner(
+        this,
+        onPages = { files ->
+            val page = current()
+            if (page != null) {
+                page.source = files.first()
+                page.quad = null
+                page.rotation = 0
+                refreshCurrent()
+            }
+        },
+        onCancelled = {},
+        onUnavailable = { retake.launch(CameraActivity.intent(this, single = true)) }
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityScanEditBinding.inflate(layoutInflater)
@@ -116,9 +132,7 @@ class ScanEditActivity : AppCompatActivity() {
             if (checked) current()?.let { cur -> setFilter(cur.filter, all = true) }
         }
 
-        tool(binding.toolRetake, R.drawable.ic_camera, R.string.retake) {
-            retake.launch(CameraActivity.intent(this, single = true))
-        }
+        tool(binding.toolRetake, R.drawable.ic_camera, R.string.retake) { retakeScanner.start(maxPages = 1) }
         tool(binding.toolPages, R.drawable.ic_insert_page, R.string.pages) { flow.chooseSource() }
         tool(binding.toolRotate, R.drawable.ic_rotate, R.string.rotate) {
             current()?.let { it.rotation = (it.rotation + 270) % 360; refreshCurrent() }

@@ -37,7 +37,8 @@ object CropMethodSheet {
     fun show(context: Context, fromSettings: Boolean = false, onChosen: (autoCrop: Boolean) -> Unit) {
         val dialog = BottomSheetDialog(context, R.style.Theme_DocReader_BottomSheet)
         val b = SheetCropMethodBinding.inflate(LayoutInflater.from(context))
-        var auto = ScanPrefs.autoCrop
+        // after taking photos the sheet always starts on "No crop"; in Settings it shows the saved choice
+        var auto = if (fromSettings) ScanPrefs.autoCrop else false
         var dontAsk = ScanPrefs.dontAsk
         var chosen = false
         fun refresh() {

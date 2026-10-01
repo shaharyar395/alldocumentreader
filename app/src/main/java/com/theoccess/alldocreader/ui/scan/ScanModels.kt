@@ -79,7 +79,7 @@ object ScanPrefs {
     private const val KEY_ASKED = "scan_crop_dont_ask"
 
     var autoCrop: Boolean
-        get() = Prefs.raw.getBoolean(KEY_AUTO, true)
+        get() = Prefs.raw.getBoolean(KEY_AUTO, false)   // "No crop" unless the user picked Auto crop
         set(v) = Prefs.raw.edit().putBoolean(KEY_AUTO, v).apply()
 
     var dontAsk: Boolean

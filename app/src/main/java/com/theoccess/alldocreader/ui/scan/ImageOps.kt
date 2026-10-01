@@ -552,28 +552,118 @@ object ImageOps {
      * white, the ink is darkened and the text sharpened, while colours stay natural. Pictures
      * that are not paper (little white background) only get a gentle level + sharpness boost.
      */
+    /**
+     * "Auto": clean scan look like the original app — paper turns pure white (shadows, creases
+     * and colour cast gone), text deep black, coloured ink kept. Works on a cropped page and on a
+     * whole photo (No crop): only areas that look like paper are cleaned that strongly, the rest
+     * (table, laptop…) just gets brighter, even levels.
+     *
+     * 1. paper colour + lighting estimated on a 1/6 copy (wide max filter wipes out the text,
+     *    min + mean filters smooth it), 2. each pixel divided by it, 3. weighted by how
+     *    paper-like the area is, 4. whites clipped / ink deepened, colour a bit richer, sharpened.
+     */
     private fun autoScan(src: Bitmap, px: IntArray, w: Int, h: Int) {
-        // how much of the picture is light, low-saturation "paper"?
-        var paper = 0
-        val step = max(1, px.size / 20000)
-        var n = 0
-        var i = 0
-        while (i < px.size) {
-            val c = px[i]
-            val r = (c shr 16) and 0xFF; val g = (c shr 8) and 0xFF; val b = c and 0xFF
-            val mx = max(r, max(g, b)); val mn = minOf(r, g, b)
-            if (mx > 110 && mx - mn < 45) paper++
-            n++
-            i += step
+        val sw = max(8, w / 6)
+        val sh = max(8, h / 6)
+        val small = Bitmap.createScaledBitmap(src, sw, sh, true)
+        val sp = IntArray(sw * sh)
+        small.getPixels(sp, 0, sw, 0, 0, sw, sh)
+        if (small !== src) small.recycle()
+        val r = max(3, (minOf(sw, sh) * 0.035f).toInt())
+        val bgCh = Array(3) { ch ->
+            val shift = 16 - ch * 8
+            var a = IntArray(sp.size) { (sp[it] shr shift) and 0xFF }
+            a = slide(a, sw, sh, r, MODE_MAX)
+            a = slide(a, sw, sh, max(1, r / 2), MODE_MIN)
+            slide(a, sw, sh, max(1, r / 2), MODE_MEAN)
         }
-        if (paper.toFloat() / n > 0.35f) {
-            flatten(src, px, w, h)       // paper → white, shadows gone
-            curve(px, 35, 248)           // deeper ink, clean white
-            saturate(px, 1.1f)
-        } else {
-            autoLevels(px, 1.1f)
+        // brightest paper level (92nd percentile of the background brightness)
+        val bgLum = IntArray(sp.size) { (bgCh[0][it] * 299 + bgCh[1][it] * 587 + bgCh[2][it] * 114) / 1000 }
+        val lp = max(60, bgLum.copyOf().also { it.sort() }[(bgLum.size * 0.92f).toInt().coerceIn(0, bgLum.size - 1)])
+        // gentle levels for non-paper areas (1st – 99.5th brightness percentiles)
+        val hist = IntArray(256)
+        for (c in px) hist[(((c shr 16) and 0xFF) * 299 + ((c shr 8) and 0xFF) * 587 + (c and 0xFF) * 114) / 1000]++
+        var lo = 0; var acc = 0
+        while (lo < 254 && acc + hist[lo] <= px.size / 100) { acc += hist[lo]; lo++ }
+        var hi = 255; acc = 0
+        while (hi > lo + 1 && acc + hist[hi] <= px.size / 200) { acc += hist[hi]; hi-- }
+        val span = max(1, hi - lo)
+
+        val fx = (sw - 1).toFloat() / max(1, w - 1)
+        val fy = (sh - 1).toFloat() / max(1, h - 1)
+        val bg = FloatArray(3)
+        val out = FloatArray(3)
+        for (y in 0 until h) {
+            val gy = y * fy
+            val y0 = gy.toInt().coerceAtMost(sh - 1); val y1 = (y0 + 1).coerceAtMost(sh - 1); val ty = gy - y0
+            for (x in 0 until w) {
+                val gx = x * fx
+                val x0 = gx.toInt().coerceAtMost(sw - 1); val x1 = (x0 + 1).coerceAtMost(sw - 1); val tx = gx - x0
+                val i00 = y0 * sw + x0; val i01 = y0 * sw + x1; val i10 = y1 * sw + x0; val i11 = y1 * sw + x1
+                for (ch in 0..2) {
+                    val c = bgCh[ch]
+                    val top = c[i00] + (c[i01] - c[i00]) * tx
+                    val bot = c[i10] + (c[i11] - c[i10]) * tx
+                    bg[ch] = top + (bot - top) * ty
+                }
+                val lb = bg[0] * 0.299f + bg[1] * 0.587f + bg[2] * 0.114f
+                val sat = maxOf(bg[0], bg[1], bg[2]) - minOf(bg[0], bg[1], bg[2])
+                val wgt = ((lb - 0.76f * lp) / (0.16f * lp)).coerceIn(0f, 1f) * ((70f - sat) / 40f).coerceIn(0f, 1f)
+                val i = y * w + x
+                val c = px[i]
+                for (ch in 0..2) {
+                    val v = ((c shr (16 - ch * 8)) and 0xFF).toFloat()
+                    val norm = (v * 255f / max(25f, bg[ch])).coerceAtMost(255f)
+                    val base = ((v - lo) * 255f / span).coerceIn(0f, 255f)
+                    val mixed = base * (1 - wgt) + norm * wgt
+                    val clean = ((mixed - 70f) * 255f / 162f).coerceIn(0f, 255f)   // white paper, deep ink
+                    out[ch] = mixed * (1 - wgt) + clean * wgt
+                }
+                // colour: on paper, greyish pixels (black ink, camera colour noise around letters)
+                // become neutral, really coloured ink (blue / red pen) stays and gets a bit richer
+                val g = out[0] * 0.299f + out[1] * 0.587f + out[2] * 0.114f
+                val chroma = maxOf(out[0], out[1], out[2]) - minOf(out[0], out[1], out[2])
+                val paperK = ((chroma - 30f) / 45f).coerceIn(0f, 1f) * 1.25f
+                val k = 1.1f * (1 - wgt) + paperK * wgt
+                px[i] = rgb(
+                    (g + (out[0] - g) * k).roundToInt(),
+                    (g + (out[1] - g) * k).roundToInt(),
+                    (g + (out[2] - g) * k).roundToInt()
+                )
+            }
         }
         sharpenMild(px, w, h)
+    }
+
+    private const val MODE_MAX = 0
+    private const val MODE_MIN = 1
+    private const val MODE_MEAN = 2
+
+    /** Separable (2·rad+1)² max / min / mean filter on one channel. */
+    private fun slide(a: IntArray, w: Int, h: Int, rad: Int, mode: Int): IntArray {
+        fun pass(src: IntArray, horizontal: Boolean): IntArray {
+            val out = IntArray(src.size)
+            val n = if (horizontal) w else h
+            val lines = if (horizontal) h else w
+            for (l in 0 until lines) {
+                for (k in 0 until n) {
+                    var v = if (mode == MODE_MAX) 0 else if (mode == MODE_MIN) 255 else 0
+                    var cnt = 0
+                    for (d in -rad..rad) {
+                        val kk = (k + d).coerceIn(0, n - 1)
+                        val p = src[if (horizontal) l * w + kk else kk * w + l]
+                        when (mode) {
+                            MODE_MAX -> if (p > v) v = p
+                            MODE_MIN -> if (p < v) v = p
+                            else -> { v += p; cnt++ }
+                        }
+                    }
+                    out[if (horizontal) l * w + k else k * w + l] = if (mode == MODE_MEAN) v / cnt else v
+                }
+            }
+            return out
+        }
+        return pass(pass(a, true), false)
     }
 
     /** Light unsharp mask (text edges crisper without halos). */

@@ -232,6 +232,15 @@ Converted files go to `Documents/AllDocumentReader/convert`.
 ## Privacy policy
 * Settings → Privacy policy opens the online policy `Links.PRIVACY_POLICY` (https://sites.google.com/view/mob-apps-inc/privacy-policy) in the browser. Use the same link in Play Console → App content → Privacy policy.
 
+## Step 23 – Cleaner "Auto" scans + "No crop" by default
+* New **Auto** filter (`ImageOps.autoScan`), like the original's clean scan look: the paper's colour and lighting are estimated on a 1/6 copy (wide max filter removes the text, then min + mean smoothing), every pixel is divided by it → paper pure white, shadows / creases / yellow cast gone; whites clipped and ink deepened; grey pixels made neutral (no colour fringes around letters) while real coloured ink (blue / red pen) is kept. Only areas that look like paper are cleaned that hard, so with **No crop** the table, laptop, mat… just get brighter, even levels instead of turning into strange colours.
+* "Choose cropping method" now starts on **No crop** every time after taking photos (Settings → Scan settings still shows the saved choice); the default choice is No crop.
+
+## Step 24 – Google ML Kit Document Scanner for "Take a photo"
+* "Take a photo" (Scan to PDF, Image to PDF, Add pages, Retake) now opens **Google's ML Kit Document Scanner** (`ui/scan/DocScanner.kt`, dependency `play-services-mlkit-document-scanner:16.0.0`) – the scanner Google Drive uses: live page-edge detection, auto-capture, automatic crop + straightening, shadow / finger / stain clean-up and its own filters, all on the phone (no data leaves it).
+* Its pages come back already cropped, so "Choose cropping method" is skipped for them; they then open in the app's editor (Auto filter, Rotate, Crop, Pages, Done) as before.
+* **Fallback:** the scanner needs Google Play services and at least 1.7 GB RAM, and downloads its module the first time it is used (needs internet once). If it can't start, the app's own camera + auto-crop opens instead, so scanning always works. "Choose from gallery" is unchanged.
+
 ## Project layout
 ```
 app/src/main/java/com/theoccess/alldocreader/

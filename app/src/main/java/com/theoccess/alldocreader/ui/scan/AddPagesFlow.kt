@@ -14,8 +14,8 @@ import kotlinx.coroutines.withContext
 import java.io.File
 
 /**
- * Adding pages: Take a photo (in-app camera) or Choose from gallery → "Choose cropping method"
- * → new [ScanPage]s (auto-cropped when chosen). Create it as a field of the activity so the
+ * Adding pages: Take a photo (Google's ML Kit document scanner, or the in-app camera when it is
+ * not available) or Choose from gallery → "Choose cropping method" → new [ScanPage]s. Create it as a field of the activity so the
  * result launchers are registered before the activity starts.
  */
 class AddPagesFlow(
@@ -38,9 +38,18 @@ class AddPagesFlow(
     /** Shows "Take a photo / Choose from gallery / Cancel". */
     fun chooseSource() = SourceSheet.show(activity, ::openCamera, ::openGallery, onCancel = { onCancelled() })
 
-    fun openCamera() {
-        camera.launch(CameraActivity.intent(activity, single = false))
-    }
+    /**
+     * Google's document scanner finds, crops and straightens the pages itself, so its photos go
+     * straight in (no "Choose cropping method"); when it is not available, the app's own camera.
+     */
+    private val scanner = DocScanner(
+        activity,
+        onPages = { files -> build(files, fromCamera = true, autoCrop = false) },
+        onCancelled = { onCancelled() },
+        onUnavailable = { camera.launch(CameraActivity.intent(activity, single = false)) }
+    )
+
+    fun openCamera() = scanner.start()
 
     fun openGallery() {
         try {
