@@ -253,4 +253,9 @@
     <string name="bm_pill_added">Na-bookmark</string>
     <string name="bm_pill_removed">Inalis ang bookmark</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">Sa tingin mo ba ay nakakatulong ang %s?</string>
+    <string name="helpful_no">😞 Hindi masyado</string>
+    <string name="helpful_yes">🥰 Nakakatulong</string>
+    <!-- /step26 -->
 </resources>

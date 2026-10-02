@@ -252,4 +252,9 @@
     <string name="bm_pill_added">已添加书签</string>
     <string name="bm_pill_removed">已移除书签</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">你觉得 %s 有帮助吗？</string>
+    <string name="helpful_no">😞 不太有</string>
+    <string name="helpful_yes">🥰 有帮助</string>
+    <!-- /step26 -->
 </resources>

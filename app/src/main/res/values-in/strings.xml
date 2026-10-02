@@ -252,4 +252,9 @@
     <string name="bm_pill_added">Ditandai</string>
     <string name="bm_pill_removed">Penanda dihapus</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">Apakah menurut Anda %s bermanfaat?</string>
+    <string name="helpful_no">😞 Tidak juga</string>
+    <string name="helpful_yes">🥰 Bermanfaat</string>
+    <!-- /step26 -->
 </resources>

@@ -255,4 +255,9 @@
     <string name="bm_pill_added">Додано в закладки</string>
     <string name="bm_pill_removed">Закладку видалено</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">Чи вважаєте ви %s корисним?</string>
+    <string name="helpful_no">😞 Не дуже</string>
+    <string name="helpful_yes">🥰 Корисно</string>
+    <!-- /step26 -->
 </resources>

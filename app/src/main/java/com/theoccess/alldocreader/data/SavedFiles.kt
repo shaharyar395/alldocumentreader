@@ -23,6 +23,7 @@ object SavedFiles {
         Converters.scan(context.applicationContext, file)
         DriveBackup.onSaved(context.applicationContext, file)   // also copy to Google Drive when switched on
         pendingReload = true
+        Prefs.savesSinceHelpful = Prefs.savesSinceHelpful + 1   // "Is it helpful?" shows sometimes after saving
         val update = {
             LibraryStore.addRecent(file.absolutePath)
             if (file.exists()) FileRepository.replace(file.absolutePath, DocFile.from(file))

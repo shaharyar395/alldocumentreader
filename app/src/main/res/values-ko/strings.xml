@@ -252,4 +252,9 @@
     <string name="bm_pill_added">북마크됨</string>
     <string name="bm_pill_removed">북마크 삭제됨</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">%s이(가) 도움이 되었나요?</string>
+    <string name="helpful_no">😞 별로요</string>
+    <string name="helpful_yes">🥰 도움이 돼요</string>
+    <!-- /step26 -->
 </resources>

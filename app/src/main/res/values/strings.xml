@@ -554,4 +554,7 @@
     <string name="bm_pill_removed">Bookmark removed</string>
     <string name="ad_badge">AD</string>
     <string name="explore_nothing">Nothing to show right now. Please check your internet connection.</string>
+    <string name="helpful_title">Do you think %s is helpful?</string>
+    <string name="helpful_no">😞 Not really</string>
+    <string name="helpful_yes">🥰 Helpful</string>
 </resources>

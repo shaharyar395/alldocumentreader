@@ -253,4 +253,9 @@
     <string name="bm_pill_added">بک مارک کر دیا گیا</string>
     <string name="bm_pill_removed">بک مارک ہٹا دیا گیا</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">کیا آپ کے خیال میں %s مددگار ہے؟</string>
+    <string name="helpful_no">😞 زیادہ نہیں</string>
+    <string name="helpful_yes">🥰 مددگار</string>
+    <!-- /step26 -->
 </resources>

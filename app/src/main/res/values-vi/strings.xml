@@ -252,4 +252,9 @@
     <string name="bm_pill_added">Đã đánh dấu</string>
     <string name="bm_pill_removed">Đã xóa dấu trang</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">Bạn thấy %s có hữu ích không?</string>
+    <string name="helpful_no">😞 Không hẳn</string>
+    <string name="helpful_yes">🥰 Hữu ích</string>
+    <!-- /step26 -->
 </resources>

@@ -255,4 +255,9 @@
     <string name="bm_pill_added">Dodano zakładkę</string>
     <string name="bm_pill_removed">Usunięto zakładkę</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">Czy uważasz, że %s jest pomocny?</string>
+    <string name="helpful_no">😞 Nie bardzo</string>
+    <string name="helpful_yes">🥰 Pomocny</string>
+    <!-- /step26 -->
 </resources>

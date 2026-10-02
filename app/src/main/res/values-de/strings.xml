@@ -253,4 +253,9 @@
     <string name="bm_pill_added">Lesezeichen gesetzt</string>
     <string name="bm_pill_removed">Lesezeichen entfernt</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">Findest du %s hilfreich?</string>
+    <string name="helpful_no">😞 Nicht wirklich</string>
+    <string name="helpful_yes">🥰 Hilfreich</string>
+    <!-- /step26 -->
 </resources>

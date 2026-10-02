@@ -252,4 +252,9 @@
     <string name="bm_pill_added">บุ๊กมาร์กแล้ว</string>
     <string name="bm_pill_removed">นำบุ๊กมาร์กออกแล้ว</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">คุณคิดว่า %s มีประโยชน์ไหม</string>
+    <string name="helpful_no">😞 ไม่ค่อย</string>
+    <string name="helpful_yes">🥰 มีประโยชน์</string>
+    <!-- /step26 -->
 </resources>

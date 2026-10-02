@@ -247,6 +247,10 @@ Converted files go to `Documents/AllDocumentReader/convert`.
 * Texts, pictures and signatures can be dragged from one page onto another: while dragged the page is lifted above its neighbours (no clipping), and on release `onMovedOffPage` moves the item to the page under the finger (or keeps it at the edge of its page when dropped in the gap).
 * Signatures, pictures and text from the bar go on the page that fills most of the screen (the upper one when two pages show about equally), not on the page that happens to be nearest the middle.
 
+## Step 26 – "Do you think All Document Reader is helpful?"
+* `ui/main/HelpfulSheet`: mascot with a beating heart, "Do you think All Document Reader is helpful?", **Not really** (→ Feedback screen) / **Helpful** (→ the 5-star rating sheet → Google Play), X to close.
+* Shown sometimes when the user comes back to the main screen (any tab) after saving / converting files: after the 1st saved file, then after every 3 more, at most once a day; never again once answered. Every save goes through `SavedFiles.onSaved`, which counts them (`Prefs.savesSinceHelpful`). The 5-star rating sheet still shows once after coming back from a file list (never at the same moment).
+
 ## Project layout
 ```
 app/src/main/java/com/theoccess/alldocreader/

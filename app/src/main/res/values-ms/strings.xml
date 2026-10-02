@@ -252,4 +252,9 @@
     <string name="bm_pill_added">Ditanda buku</string>
     <string name="bm_pill_removed">Penanda buku dialih keluar</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">Adakah anda rasa %s berguna?</string>
+    <string name="helpful_no">😞 Tidak juga</string>
+    <string name="helpful_yes">🥰 Berguna</string>
+    <!-- /step26 -->
 </resources>

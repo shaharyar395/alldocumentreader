@@ -114,11 +114,14 @@ class HomeFragment : Fragment() {
         maybeShowRating()
     }
 
-    /** Like the original, ask for a rating after the user comes back from a file list. */
+    /**
+     * Like the original: the 5-star rating sheet once, after the user comes back from a file list
+     * (not at the same moment as the "Is it helpful?" sheet).
+     */
     private fun maybeShowRating() {
-        if (!Prefs.visitedFileList || Prefs.rateShown || !Prefs.coachShown) return
+        if (!Prefs.visitedFileList || Prefs.rateShown || !Prefs.coachShown || HelpfulSheet.shouldShow()) return
         binding.root.postDelayed({
-            if (_binding != null && isResumed && isVisible && !Prefs.rateShown) RateSheet.show(requireContext())
+            if (_binding != null && isResumed && isVisible && !Prefs.rateShown && !HelpfulSheet.isShowing) RateSheet.show(requireContext())
         }, 350)
     }
 

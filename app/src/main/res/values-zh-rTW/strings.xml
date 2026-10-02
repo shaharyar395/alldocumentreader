@@ -252,4 +252,9 @@
     <string name="bm_pill_added">已加入書籤</string>
     <string name="bm_pill_removed">已移除書籤</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">你覺得 %s 有幫助嗎？</string>
+    <string name="helpful_no">😞 不太有</string>
+    <string name="helpful_yes">🥰 有幫助</string>
+    <!-- /step26 -->
 </resources>

@@ -57,6 +57,21 @@ object Prefs {
         get() = sp.getBoolean("rate_shown", false)
         set(v) = sp.edit().putBoolean("rate_shown", v).apply()
 
+    /** "Is it helpful?" sheet: answered (Helpful / Not really) → never shown again. */
+    var helpfulAnswered: Boolean
+        get() = sp.getBoolean("helpful_answered", false)
+        set(v) = sp.edit().putBoolean("helpful_answered", v).apply()
+
+    /** When the "Is it helpful?" sheet was last shown (0 = never). */
+    var helpfulShownAt: Long
+        get() = sp.getLong("helpful_shown_at", 0L)
+        set(v) = sp.edit().putLong("helpful_shown_at", v).apply()
+
+    /** Files saved / converted since the "Is it helpful?" sheet was last shown. */
+    var savesSinceHelpful: Int
+        get() = sp.getInt("saves_since_helpful", 0)
+        set(v) = sp.edit().putInt("saves_since_helpful", v).apply()
+
     /** Set when the user opened a file list; the rating sheet appears after coming back home. */
     var visitedFileList: Boolean
         get() = sp.getBoolean("visited_file_list", false)

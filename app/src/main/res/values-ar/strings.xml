@@ -257,4 +257,9 @@
     <string name="bm_pill_added">تمت الإضافة إلى الإشارات المرجعية</string>
     <string name="bm_pill_removed">تمت إزالة الإشارة المرجعية</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">هل تعتقد أن %s مفيد؟</string>
+    <string name="helpful_no">😞 ليس حقًا</string>
+    <string name="helpful_yes">🥰 مفيد</string>
+    <!-- /step26 -->
 </resources>

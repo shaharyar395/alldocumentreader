@@ -254,4 +254,9 @@
     <string name="bm_pill_added">Aggiunto ai segnalibri</string>
     <string name="bm_pill_removed">Segnalibro rimosso</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">Pensi che %s sia utile?</string>
+    <string name="helpful_no">😞 Non proprio</string>
+    <string name="helpful_yes">🥰 Utile</string>
+    <!-- /step26 -->
 </resources>

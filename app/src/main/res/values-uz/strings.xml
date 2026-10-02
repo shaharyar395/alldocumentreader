@@ -253,4 +253,9 @@
     <string name="bm_pill_added">Xatcho\'pga qo\'shildi</string>
     <string name="bm_pill_removed">Xatcho\'p olib tashlandi</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">%s sizga foydali deb o\'ylaysizmi?</string>
+    <string name="helpful_no">😞 Unchalik emas</string>
+    <string name="helpful_yes">🥰 Foydali</string>
+    <!-- /step26 -->
 </resources>

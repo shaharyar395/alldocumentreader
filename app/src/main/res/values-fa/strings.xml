@@ -253,4 +253,9 @@
     <string name="bm_pill_added">نشانک‌گذاری شد</string>
     <string name="bm_pill_removed">نشانک حذف شد</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">آیا %s را مفید می‌دانید؟</string>
+    <string name="helpful_no">😞 نه واقعاً</string>
+    <string name="helpful_yes">🥰 مفید</string>
+    <!-- /step26 -->
 </resources>

@@ -254,4 +254,9 @@
     <string name="bm_pill_added">Añadido a marcadores</string>
     <string name="bm_pill_removed">Marcador eliminado</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">¿Crees que %s es útil?</string>
+    <string name="helpful_no">😞 No mucho</string>
+    <string name="helpful_yes">🥰 Útil</string>
+    <!-- /step26 -->
 </resources>

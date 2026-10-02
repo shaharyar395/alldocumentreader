@@ -253,4 +253,9 @@
     <string name="bm_pill_added">Yer işaretlendi</string>
     <string name="bm_pill_removed">Yer işareti kaldırıldı</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">%s sizce faydalı mı?</string>
+    <string name="helpful_no">😞 Pek değil</string>
+    <string name="helpful_yes">🥰 Faydalı</string>
+    <!-- /step26 -->
 </resources>

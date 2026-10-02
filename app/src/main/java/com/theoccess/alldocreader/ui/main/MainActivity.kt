@@ -128,4 +128,16 @@ class MainActivity : AppCompatActivity() {
         private const val TAG_TOOLS = "tools"
         private const val TAG_SETTINGS = "settings"
     }
+
+    /**
+     * Like the original: sometimes, when the user comes back to the main screen (any tab) after
+     * saving / converting files, "Do you think All Document Reader is helpful?".
+     */
+    override fun onResume() {
+        super.onResume()
+        if (!com.theoccess.alldocreader.data.Prefs.coachShown || !HelpfulSheet.shouldShow()) return
+        binding.root.postDelayed({
+            if (!isFinishing && coachMark == null && hasWindowFocus() && HelpfulSheet.shouldShow()) HelpfulSheet.show(this)
+        }, 700)
+    }
 }

@@ -738,3 +738,8 @@ BM = "M7,3.5 H17 A1.5,1.5 0 0 1 18.5,5 V20.5 L12,16.5 L5.5,20.5 V5 A1.5,1.5 0 0 
 vec("ic_bm_pill_on", 20, 24, [p(BM, fill="#FFFFFFFF")])
 vec("ic_bm_pill_off", 20, 24, [p(BM, stroke="#FFFFFFFF", sw="1.8"), p("M3.5,3.5 L20.5,20.5", stroke="#FFFFFFFF", sw="1.8")])
 print("step20 ok")
+
+# ---- step 26: heart for the "Is it helpful?" sheet ----
+vec("ic_helpful_heart", 44, 24, [p("M12,21 C11.6,21 11.2,20.85 10.9,20.6 C5.5,15.9 2.5,13.1 2.5,9.2 C2.5,6.2 4.8,4 7.6,4 C9.3,4 10.9,4.8 12,6.1 C13.1,4.8 14.7,4 16.4,4 C19.2,4 21.5,6.2 21.5,9.2 C21.5,13.1 18.5,15.9 13.1,20.6 C12.8,20.85 12.4,21 12,21 Z", fill="#FFE53935"),
+    p("M7,7.5 C6,8 5.4,9 5.5,10", stroke="#FFFFFFFF", sw="1.4", alpha="0.6")])
+print("step26 ok")

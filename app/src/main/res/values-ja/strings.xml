@@ -252,4 +252,9 @@
     <string name="bm_pill_added">ブックマークしました</string>
     <string name="bm_pill_removed">ブックマークを解除しました</string>
     <!-- /step20 -->
+    <!-- step26 -->
+    <string name="helpful_title">%s は役に立ちましたか？</string>
+    <string name="helpful_no">😞 あまり</string>
+    <string name="helpful_yes">🥰 役に立った</string>
+    <!-- /step26 -->
 </resources>
