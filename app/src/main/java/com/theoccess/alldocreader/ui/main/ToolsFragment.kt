@@ -39,7 +39,7 @@ class ToolsFragment : Fragment() {
 
     private fun sections(): List<Pair<Int, List<Tool>>> = listOf(
         R.string.section_convert_create to listOf(
-            Tool(R.drawable.ic_cv_image2pdf, R.string.image_to_pdf) { ScanStartActivity.intent(it, scan = false) },
+            Tool(R.drawable.ic_cv_image2pdf, R.string.image_to_pdf) { PickFileActivity.intent(it, ConvertKind.IMAGE_TO_PDF) },
             Tool(R.drawable.ic_cv_scan, R.string.scan_to_pdf) { ScanStartActivity.intent(it, scan = true) },
             Tool(R.drawable.ic_cv_word2pdf, R.string.word_to_pdf) { PickFileActivity.intent(it, ConvertKind.WORD_TO_PDF) },
             Tool(R.drawable.ic_cv_pdf2word, R.string.pdf_to_word) { PickFileActivity.intent(it, ConvertKind.PDF_TO_WORD) },

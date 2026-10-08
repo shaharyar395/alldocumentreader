@@ -59,6 +59,7 @@ class HomeFragment : Fragment() {
         if (!hidden) {
             maybeReloadAfterSave()
             renderList()
+            updateRecentBadge(FileRepository.current)
         }
     }
 
@@ -111,6 +112,7 @@ class HomeFragment : Fragment() {
         super.onResume()
         if (!isHidden) maybeReloadAfterSave()
         onAccessMaybeChanged()
+        updateRecentBadge(FileRepository.current)
         maybeShowRating()
     }
 
@@ -135,7 +137,11 @@ class HomeFragment : Fragment() {
     private fun setupHeader() {
         binding.rowRecentlyAdded.setOnClickListener {
             if (!StorageAccess.has(requireContext())) showPermissionDialog()
-            else startActivity(FileListActivity.intent(requireContext(), Category.ALL, recentlyAdded = true))
+            else {
+                Prefs.recentSeenAt = System.currentTimeMillis()
+                updateRecentBadge(FileRepository.current)
+                startActivity(FileListActivity.intent(requireContext(), Category.ALL, recentlyAdded = true))
+            }
         }
         binding.btnSearch.setOnClickListener {
             startActivity(Intent(requireContext(), SearchActivity::class.java))
@@ -269,7 +275,7 @@ class HomeFragment : Fragment() {
         val since = Prefs.recentSeenAt
         val n = if (state.loaded) state.all().count { it.modified > since } else 0
         b.tvRecentBadge.visibility = if (n > 0) View.VISIBLE else View.GONE
-        b.tvRecentBadge.text = if (n > 99) "+99" else "+$n"
+        if (n > 0) b.tvRecentBadge.text = if (n > 99) "+99" else "+$n"
     }
 
     private fun countText(n: Int) = resources.getQuantityString(R.plurals.files_count, n, n)

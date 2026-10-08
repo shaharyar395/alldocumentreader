@@ -36,8 +36,8 @@ object FileActions {
     }
 
     /**
-     * Opens a document: PDF, Word (.docx) and TXT open in the in-app viewer;
-     * Excel / PowerPoint / images go to an installed app; anything else shows "File type not supported".
+     * Opens a document: PDF, Word (.docx), TXT, PowerPoint (.pptx) and images open in-app;
+     * Excel and other Office types use an installed app; anything else shows "File type not supported".
      */
     fun open(context: Context, file: DocFile) {
         if (!ensureExists(context, file)) return
@@ -79,6 +79,7 @@ object FileActions {
 
     fun share(context: Context, file: DocFile) {
         if (!ensureExists(context, file)) return
+        LibraryStore.addRecent(file.path)
         val intent = Intent(Intent.ACTION_SEND)
             .setType(mimeFor(file))
             .putExtra(Intent.EXTRA_STREAM, uriFor(context, file))

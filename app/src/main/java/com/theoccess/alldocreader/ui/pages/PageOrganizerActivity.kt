@@ -117,6 +117,7 @@ class PageOrganizerActivity : AppCompatActivity() {
         binding = ActivityPageOrganizerBinding.inflate(layoutInflater)
         setContentView(binding.root)
         file = File(intent.getStringExtra(EXTRA_PATH) ?: run { finish(); return })
+        com.theoccess.alldocreader.data.LibraryStore.addRecent(file.absolutePath)
         preselectPage = if (savedInstanceState == null) intent.getIntExtra(EXTRA_PAGE, -1) else -1
         thumbWidth = (resources.displayMetrics.widthPixels / 2).coerceAtMost(540)
 

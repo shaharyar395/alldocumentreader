@@ -16,7 +16,8 @@ enum class ConvertKind(
 ) {
     WORD_TO_PDF(R.string.word_to_pdf, R.string.pick_word_hint, R.drawable.ic_cv_word2pdf, FileType.WORD, "pdf"),
     PDF_TO_WORD(R.string.pdf_to_word, R.string.pick_pdf_hint, R.drawable.ic_cv_pdf2word, FileType.PDF, "docx"),
-    PPT_TO_PDF(R.string.ppt_to_pdf, R.string.pick_ppt_hint, R.drawable.ic_cv_ppt2pdf, FileType.PPT, "pdf");
+    PPT_TO_PDF(R.string.ppt_to_pdf, R.string.pick_ppt_hint, R.drawable.ic_cv_ppt2pdf, FileType.PPT, "pdf"),
+    IMAGE_TO_PDF(R.string.image_to_pdf, R.string.pick_image_hint, R.drawable.ic_cv_image2pdf, FileType.IMAGE, "pdf");
 
     /** Formats our converters can actually read (old binary .doc / .ppt are not supported). */
     fun canConvert(doc: DocFile): Boolean {
@@ -25,6 +26,7 @@ enum class ConvertKind(
             WORD_TO_PDF -> ext in setOf("docx", "docm", "dotx", "txt")
             PDF_TO_WORD -> ext == "pdf"
             PPT_TO_PDF -> ext in setOf("pptx", "ppsx", "potx")
+            IMAGE_TO_PDF -> ext in setOf("jpg", "jpeg", "png", "webp", "bmp", "gif", "heic", "heif")
         }
     }
 

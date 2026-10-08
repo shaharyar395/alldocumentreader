@@ -133,6 +133,7 @@ class PdfEditActivity : AppCompatActivity(), EditHost {
         setContentView(binding.root)
         file = File(intent.getStringExtra(EXTRA_PATH) ?: run { finish(); return })
         if (!openRenderer()) { toast(R.string.pdf_password_protected); finish(); return }
+        com.theoccess.alldocreader.data.LibraryStore.addRecent(file.absolutePath)
 
         binding.btnClose.setOnClickListener { close() }
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {

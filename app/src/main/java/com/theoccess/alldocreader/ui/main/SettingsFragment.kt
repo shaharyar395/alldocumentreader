@@ -26,7 +26,6 @@ import com.theoccess.alldocreader.ui.settings.PolicyActivity
 import com.theoccess.alldocreader.ui.settings.PremiumActivity
 import com.theoccess.alldocreader.ui.settings.WidgetSheet
 import com.theoccess.alldocreader.util.Links
-import com.theoccess.alldocreader.util.toast
 
 /**
  * Settings tab: Remove ads banner, File manager, FAQ, Share; General (Scan settings,
@@ -36,12 +35,6 @@ import com.theoccess.alldocreader.util.toast
 class SettingsFragment : Fragment() {
 
     private var binding: FragmentSettingsBinding? = null
-
-    /** Google's account / permission screen for "Save to Google Drive". */
-    private val driveSignIn = registerForActivityResult(androidx.activity.result.contract.ActivityResultContracts.StartIntentSenderForResult()) { r ->
-        val act = activity ?: return@registerForActivityResult
-        com.theoccess.alldocreader.data.DriveBackup.onSignInResult(act, r.resultCode, r.data)
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -72,34 +65,6 @@ class SettingsFragment : Fragment() {
     override fun onDestroyView() {
         binding = null
         super.onDestroyView()
-    }
-
-    private fun driveLabel(): Int {
-        val d = com.theoccess.alldocreader.data.DriveBackup
-        return when {
-            !d.enabled -> R.string.drive_off
-            d.needsSignIn -> R.string.drive_sign_in_again
-            else -> R.string.drive_on
-        }
-    }
-
-    /** "Save to Google Drive": On (sign in with Google, allow Drive) / Off. */
-    private fun chooseDrive() {
-        val ctx = requireContext()
-        val d = com.theoccess.alldocreader.data.DriveBackup
-        ChoiceSheet.show(ctx, getString(R.string.save_to_drive),
-            listOf(getString(R.string.drive_option_on), getString(R.string.drive_option_off)),
-            if (d.enabled) 0 else 1
-        ) { which ->
-            if (which == 1) { d.turnOff(); build(); return@show }
-            val act = activity ?: return@show
-            d.turnOn(act, driveSignIn) { ok, error ->
-                if (!isAdded) return@turnOn
-                if (ok) ctx.toast(R.string.drive_turned_on)
-                else if (error != null) ctx.toast(getString(R.string.drive_failed, error))
-                build()
-            }
-        }
     }
 
     private fun build() {
@@ -133,7 +98,6 @@ class SettingsFragment : Fragment() {
         section(R.string.section_general)
         row(R.drawable.ic_st_scan, R.string.scan_settings, getString(scanLabel())) { chooseScan() }
         row(R.drawable.ic_st_theme, R.string.app_theme, getString(AppTheme.current.label)) { chooseTheme() }
-        row(R.drawable.ic_st_drive, R.string.save_to_drive, getString(driveLabel())) { chooseDrive() }
         row(R.drawable.ic_language, R.string.language, languageName()) {
             startActivity(LanguageActivity.intent(ctx, fromSettings = true))
         }

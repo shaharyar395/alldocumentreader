@@ -55,6 +55,7 @@ class ConvertActivity : AppCompatActivity() {
         kind = ConvertKind.entries.getOrElse(intent.getIntExtra(EXTRA_KIND, 0)) { ConvertKind.WORD_TO_PDF }
         source = File(intent.getStringExtra(EXTRA_PATH) ?: run { finish(); return })
         if (!source.exists()) { toast(R.string.file_not_found); finish(); return }
+        LibraryStore.addRecent(source.absolutePath)
 
         binding.tvTitle.text = source.name
         binding.btnConvert.setText(if (kind.targetExt == "docx") R.string.convert_to_word else R.string.convert_to_pdf)

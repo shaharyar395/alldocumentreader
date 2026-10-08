@@ -50,7 +50,7 @@ object CreateFilesSheet {
         card(b.cardTemplates, R.drawable.ic_create_templates, R.string.use_templates) { Intent(context, TemplatesActivity::class.java) }
         card(b.cardCreatePdf, R.drawable.ic_create_pdf_badge, R.string.create_pdf) { InsertBlankPagesActivity.createIntent(context) }
 
-        tile(b.tileImage, R.drawable.ic_cv_image2pdf, R.string.image_to_pdf) { ScanStartActivity.intent(context, scan = false) }
+        tile(b.tileImage, R.drawable.ic_cv_image2pdf, R.string.image_to_pdf) { PickFileActivity.intent(context, ConvertKind.IMAGE_TO_PDF) }
         tile(b.tileScan, R.drawable.ic_cv_scan, R.string.scan_to_pdf) { ScanStartActivity.intent(context, scan = true) }
         tile(b.tileWord, R.drawable.ic_cv_word2pdf, R.string.word_to_pdf) { PickFileActivity.intent(context, ConvertKind.WORD_TO_PDF) }
         tile(b.tilePdfWord, R.drawable.ic_cv_pdf2word, R.string.pdf_to_word) { PickFileActivity.intent(context, ConvertKind.PDF_TO_WORD) }

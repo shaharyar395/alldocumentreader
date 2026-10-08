@@ -1,18 +1,22 @@
 package com.theoccess.alldocreader.ui.viewer
 
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.Color
+import android.graphics.Matrix
 import android.graphics.pdf.PdfDocument
+import android.graphics.pdf.PdfRenderer
+import android.media.ExifInterface
 import android.media.MediaScannerConnection
 import android.os.Environment
-import android.graphics.Bitmap
-import android.graphics.Color
-import android.graphics.pdf.PdfRenderer
 import android.os.ParcelFileDescriptor
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
 import java.util.zip.ZipEntry
 import java.util.zip.ZipOutputStream
+import kotlin.math.max
 
 /** Word/TXT → PDF and PDF → Word conversions that keep the look. Call from a background thread. */
 object Converters {
@@ -186,6 +190,64 @@ object Converters {
             "<pic:blipFill><a:blip r:embed=\"$rid\"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill>" +
             "<pic:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"$cx\" cy=\"$cy\"/></a:xfrm><a:prstGeom prst=\"rect\"><a:avLst/></a:prstGeom></pic:spPr>" +
             "</pic:pic></a:graphicData></a:graphic></wp:anchor></w:drawing></w:r></w:p>"
+    }
+
+    /**
+     * JPG/PNG/… → one PDF page per picture (EXIF orientation applied).
+     * Call from a background thread.
+     */
+    fun imagesToPdf(context: Context, images: List<File>, baseName: String, progress: (Int) -> Unit): File {
+        require(images.isNotEmpty()) { "no images" }
+        val out = uniqueFile(outputDir(), baseName, "pdf")
+        val pdf = PdfDocument()
+        try {
+            images.forEachIndexed { i, img ->
+                val bmp = decodeImageForPdf(img) ?: throw IllegalStateException("bad image: ${img.name}")
+                try {
+                    val info = PdfDocument.PageInfo.Builder(bmp.width, bmp.height, i + 1).create()
+                    val page = pdf.startPage(info)
+                    page.canvas.drawBitmap(bmp, 0f, 0f, null)
+                    pdf.finishPage(page)
+                } finally {
+                    bmp.recycle()
+                }
+                progress(((i + 1) * 100) / images.size)
+            }
+            FileOutputStream(out).use { pdf.writeTo(it) }
+            scan(context, out)
+            return out
+        } finally {
+            pdf.close()
+        }
+    }
+
+    fun imageToPdf(context: Context, image: File, baseName: String = image.nameWithoutExtension, progress: (Int) -> Unit = {}): File =
+        imagesToPdf(context, listOf(image), baseName, progress)
+
+    private fun decodeImageForPdf(file: File, maxSide: Int = 2200): Bitmap? {
+        val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
+        BitmapFactory.decodeFile(file.absolutePath, bounds)
+        if (bounds.outWidth <= 0 || bounds.outHeight <= 0) return null
+        var sample = 1
+        while (max(bounds.outWidth, bounds.outHeight) / sample > maxSide) sample *= 2
+        val bmp = BitmapFactory.decodeFile(
+            file.absolutePath,
+            BitmapFactory.Options().apply { inSampleSize = sample }
+        ) ?: return null
+        val deg = try {
+            when (ExifInterface(file.absolutePath).getAttributeInt(ExifInterface.TAG_ORIENTATION, 1)) {
+                ExifInterface.ORIENTATION_ROTATE_90 -> 90f
+                ExifInterface.ORIENTATION_ROTATE_180 -> 180f
+                ExifInterface.ORIENTATION_ROTATE_270 -> 270f
+                else -> 0f
+            }
+        } catch (_: Exception) {
+            0f
+        }
+        if (deg == 0f) return bmp
+        val rotated = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, Matrix().apply { postRotate(deg) }, true)
+        if (rotated !== bmp) bmp.recycle()
+        return rotated
     }
 
     fun scan(context: Context, file: File) {

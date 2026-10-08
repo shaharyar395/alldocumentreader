@@ -16,6 +16,7 @@ import java.io.FileOutputStream
 /** Sends a PDF file to Android's print dialog (printers or "Save as PDF"). */
 object PdfPrint {
     fun print(context: Context, file: File, name: String = file.name) {
+        com.theoccess.alldocreader.data.LibraryStore.addRecent(file.absolutePath)
         val pm = context.getSystemService(Context.PRINT_SERVICE) as PrintManager
         pm.print(name, object : PrintDocumentAdapter() {
             override fun onLayout(

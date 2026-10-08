@@ -270,6 +270,8 @@
     <string name="pick_word_hint">Select a Word (.docx) or TXT file</string>
     <string name="pick_pdf_hint">Select a PDF file</string>
     <string name="pick_ppt_hint">Select a PowerPoint (.pptx) file</string>
+    <string name="pick_image_hint">Select a JPG, PNG or other image</string>
+    <string name="pick_pdf_or_image_hint">Select a PDF or image file</string>
     <string name="convert_old_format">This older format (.doc / .ppt) is not supported yet. Please use .docx or .pptx.</string>
     <string name="converting">Converting…</string>
     <string name="converted_successfully">Converted successfully</string>
@@ -510,13 +512,22 @@
     <string name="try_then">Then %1$s/year, only %2$s/day</string>
     <string name="crop_not_found">Couldn\'t find the page edges — use Crop to adjust</string>
     <string name="save_to_drive">Save to Google Drive</string>
-    <string name="drive_on">On · files are copied to the \"All Document Reader\" folder</string>
+    <string name="drive_on">On · files go to Google Drive \"Myfiles\"</string>
+    <string name="drive_on_account">On · %1$s</string>
+    <string name="drive_on_account_folder">On · %1$s · %2$s</string>
     <string name="drive_off">Off</string>
     <string name="drive_sign_in_again">Sign in again to keep saving</string>
     <string name="drive_option_on">On – also save every file to my Google Drive</string>
     <string name="drive_option_off">Off</string>
     <string name="drive_turned_on">Saved and converted files will also go to Google Drive</string>
+    <string name="drive_turned_on_account">Connected as %1$s — files will upload to Google Drive \"Myfiles\"</string>
+    <string name="drive_not_allowed">Google Drive access was cancelled or not granted.</string>
     <string name="drive_failed">Couldn\'t connect to Google Drive: %1$s</string>
+    <string name="drive_pick_account">Choose the Google account for Drive saves</string>
+    <string name="drive_upload_ok">Saved to Google Drive folder \"%1$s\"</string>
+    <string name="drive_upload_partial">Copied %1$d file(s) to Drive; %2$d still waiting</string>
+    <string name="drive_upload_failed">Couldn\'t copy to Google Drive: %1$s</string>
+    <string name="drive_uploading">Saving copy to Google Drive…</string>
     <!-- step 16: templates -->
     <string name="tpl_save">Save</string>
     <string name="tpl_reset">Reset</string>
