@@ -4,6 +4,7 @@ import android.graphics.Bitmap
 import android.graphics.ColorMatrix
 import android.graphics.ColorMatrixColorFilter
 import android.graphics.Matrix
+import android.graphics.RectF
 import android.util.LruCache
 import android.view.LayoutInflater
 import android.view.View
@@ -42,16 +43,63 @@ class PageAdapter(
         ))
     )
 
-    override fun getItemCount() = source.pageCount
+    /** Pages in the list; grows while a long document is still being laid out ([setPageCount]). */
+    private var count = source.pageCount
+
+    override fun getItemCount() = count
+
+    /** More pages are ready (main thread). */
+    fun setPageCount(n: Int) {
+        if (n > count) {
+            val old = count
+            count = n
+            notifyItemRangeInserted(old, n - old)
+        }
+    }
+
+    /** These pages turned out to have another size than assumed: measure their rows again. */
+    fun pagesResized(pages: List<Int>) {
+        pages.filter { it in 0 until count }.forEach { cache.remove(it); notifyItemChanged(it) }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         VH(ItemPageBinding.inflate(LayoutInflater.from(parent.context), parent, false))
 
     override fun onBindViewHolder(holder: VH, position: Int) = holder.bind(position)
 
+    override fun onBindViewHolder(holder: VH, position: Int, payloads: MutableList<Any>) {
+        if (payloads.contains(PAYLOAD_HIGHLIGHT)) holder.bindHighlights(position) else holder.bind(position)
+    }
+
+    // ------------------------------------------------------------------ search highlights
+
+    /** page → every match box on it; and the boxes of the current match. */
+    private var highlights: Map<Int, List<RectF>> = emptyMap()
+    private var currentPage = -1
+    private var currentBoxes: List<RectF> = emptyList()
+
+    fun setHighlights(all: Map<Int, List<RectF>>, page: Int, current: List<RectF>) {
+        val changed = (highlights.keys + all.keys + setOf(currentPage, page)).filter { it in 0 until itemCount }
+        highlights = all
+        currentPage = page
+        currentBoxes = current
+        changed.forEach { notifyItemChanged(it, PAYLOAD_HIGHLIGHT) }
+    }
+
+    fun clearHighlights() = setHighlights(emptyMap(), -1, emptyList())
+
+    /** Distance in pixels from the top of the page view to [yPt] (page points), for scrolling to a match. */
+    fun offsetInPage(index: Int, yPt: Float, listWidth: Int, density: Float): Int {
+        val padH = (16 * density)
+        val padTop = (4 * density)
+        val shownW = listWidth - padH
+        return (padTop + yPt * shownW / source.pageWidth(index)).toInt()
+    }
+
     override fun onViewRecycled(holder: VH) {
         holder.job?.cancel()
         holder.b.ivPage.setImageDrawable(null)
+        holder.b.highlights.set(emptyList(), emptyList())
     }
 
     /** Page aspect (height / width) after the current rotation. */
@@ -63,6 +111,14 @@ class PageAdapter(
 
     inner class VH(val b: ItemPageBinding) : RecyclerView.ViewHolder(b.root) {
         var job: Job? = null
+
+        fun bindHighlights(index: Int) {
+            b.highlights.target = b.ivPage
+            b.highlights.pageWidth = source.pageWidth(index)
+            b.highlights.pageHeight = source.pageHeight(index)
+            b.highlights.rotation90 = rotation / 90
+            b.highlights.set(highlights[index].orEmpty(), if (index == currentPage) currentBoxes else emptyList())
+        }
 
         fun bind(index: Int) {
             val parent = b.root.parent as? View
@@ -95,6 +151,7 @@ class PageAdapter(
                 b.ivPage.layoutParams = ivLp
             }
             b.ivPage.colorFilter = if (inverted) invertFilter else null
+            bindHighlights(index)
 
             job?.cancel()
             val cached = cache.get(index)
@@ -132,4 +189,8 @@ class PageAdapter(
     }
 
     fun clear() = cache.evictAll()
+
+    companion object {
+        private const val PAYLOAD_HIGHLIGHT = "highlight"
+    }
 }

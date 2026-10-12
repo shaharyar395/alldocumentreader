@@ -89,6 +89,11 @@ class ImageViewerActivity : AppCompatActivity() {
 
     private fun convertToPdf() {
         if (converting) return
+        val ext = doc.name.substringAfterLast('.', "").lowercase()
+        if (ext !in setOf("jpg", "jpeg", "png", "webp", "bmp", "gif")) {
+            toast(R.string.convert_old_format)
+            return
+        }
         converting = true
         val pill = ProgressPill(this)
         pill.show(getString(R.string.converting_progress, 0))

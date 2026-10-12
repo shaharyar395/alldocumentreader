@@ -49,9 +49,14 @@ object TplFonts {
         val key = "$name|$bold|$italic"
         return cache.getOrPut(key) {
             val f = ALL.firstOrNull { it.name == name } ?: ALL.first { it.name == DEFAULT }
-            var style = f.style
-            if (bold) style = style or Typeface.BOLD
-            if (italic) style = style or Typeface.ITALIC
+            val wantBold = bold || f.style == Typeface.BOLD || f.style == Typeface.BOLD_ITALIC
+            val wantItalic = italic || f.style == Typeface.ITALIC || f.style == Typeface.BOLD_ITALIC
+            val style = when {
+                wantBold && wantItalic -> Typeface.BOLD_ITALIC
+                wantBold -> Typeface.BOLD
+                wantItalic -> Typeface.ITALIC
+                else -> Typeface.NORMAL
+            }
             Typeface.create(f.family, style)
         }
     }

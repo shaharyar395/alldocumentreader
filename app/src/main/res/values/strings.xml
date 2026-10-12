@@ -189,6 +189,11 @@
     <string name="go_to_page">Go to page</string>
     <string name="jump_tip">Tap here to jump to the page directly</string>
     <string name="search_in_document">Search in document</string>
+    <string name="search_in_pdf">Search in PDF</string>
+    <string name="search_in_ppt">Search in PPT</string>
+    <string name="search_in_excel">Search in Excel</string>
+    <string name="search_in_txt">Search in TXT</string>
+    <string name="search_no_results">No results found</string>
     <string name="pdf_password_protected">This PDF is password protected or damaged</string>
     <string name="drag_hint">Long press and drag to reorder</string>
     <string name="undo">Undo</string>

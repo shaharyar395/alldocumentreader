@@ -68,8 +68,11 @@ class ViewerActivity : AppCompatActivity() {
     // search
     private var searching = false
     private var searchJob: Job? = null
-    private var hits: List<Int> = emptyList()
+    /** One search hit: its page and its boxes (empty when the position on the page is unknown). */
+    private class Hit(val page: Int, val boxes: List<android.graphics.RectF>)
+    private var hits: List<Hit> = emptyList()
     private var hitIndex = 0
+    private var searchPrepared: PageSource? = null
 
     private val isPdf get() = doc.type == FileType.PDF
 
@@ -303,6 +306,15 @@ class ViewerActivity : AppCompatActivity() {
     // ------------------------------------------------------------------ search
 
     private fun setupSearch() {
+        binding.etSearch.setHint(
+            when (doc.type) {
+                FileType.PDF -> R.string.search_in_pdf
+                FileType.PPT -> R.string.search_in_ppt
+                FileType.EXCEL -> R.string.search_in_excel
+                FileType.TXT -> R.string.search_in_txt
+                else -> R.string.search_in_document
+            }
+        )
         binding.btnCloseSearch.setOnClickListener { closeSearch() }
         binding.etSearch.doAfterTextChanged { scheduleSearch() }
         binding.etSearch.setOnEditorActionListener { _, id, _ ->
@@ -313,7 +325,12 @@ class ViewerActivity : AppCompatActivity() {
     }
 
     private fun openSearch() {
-        if (source == null) return
+        val src = source ?: return
+        // read text inside pictures (picture-only Word pages, scanned PDFs) while the user types
+        if (searchPrepared !== src) {
+            searchPrepared = src
+            lifecycleScope.launch(Dispatchers.IO) { try { src.prepareSearch() } catch (_: Throwable) {} }
+        }
         searching = true
         backCallback.isEnabled = true
         binding.normalBar.visibility = View.GONE
@@ -330,6 +347,8 @@ class ViewerActivity : AppCompatActivity() {
         hideKeyboard()
         binding.etSearch.setText("")
         binding.tvSearchCount.text = ""
+        hits = emptyList()
+        adapter?.clearHighlights()
         binding.searchBar.visibility = View.GONE
         binding.normalBar.visibility = View.VISIBLE
     }
@@ -352,26 +371,32 @@ class ViewerActivity : AppCompatActivity() {
         searchJob = lifecycleScope.launch { runSearchNow() }
     }
 
-    /** Finds every occurrence; the arrows jump between the pages that contain them. */
+    /**
+     * Finds every occurrence (PDF, Word, TXT, Excel, PowerPoint): all of them are highlighted in
+     * yellow, the current one in orange, and the page scrolls so that it is in view. The arrows
+     * go to the previous / next occurrence.
+     */
     private suspend fun runSearchNow() {
         val src = source ?: return
         val q = binding.etSearch.text.toString().trim()
         if (q.isEmpty()) {
             hits = emptyList()
             binding.tvSearchCount.text = ""
+            adapter?.clearHighlights()
             return
         }
         binding.tvSearchCount.text = "…"
+        while (!src.isComplete && source === src) delay(80)
+        adapter?.setPageCount(src.pageCount)
         val found = withContext(renderDispatcher) {
-            val list = ArrayList<Int>()
+            val list = ArrayList<Hit>()
             for (i in 0 until src.pageCount) {
-                val text = src.pageText(i)
-                var from = 0
-                while (true) {
-                    val at = text.indexOf(q, from, ignoreCase = true)
-                    if (at < 0) break
-                    list += i
-                    from = at + q.length
+                val boxes = try { src.findMatches(i, q) } catch (_: Exception) { emptyList() }
+                if (boxes.isNotEmpty()) {
+                    boxes.forEach { list += Hit(i, it) }
+                } else {
+                    val n = try { SearchText.find(src.pageText(i), q).size } catch (_: Exception) { 0 }
+                    repeat(n) { list += Hit(i, emptyList()) }
                 }
             }
             list
@@ -380,6 +405,8 @@ class ViewerActivity : AppCompatActivity() {
         hitIndex = 0
         if (found.isEmpty()) {
             binding.tvSearchCount.text = "0/0"
+            adapter?.clearHighlights()
+            toast(R.string.search_no_results)
         } else {
             showHit()
         }
@@ -387,13 +414,25 @@ class ViewerActivity : AppCompatActivity() {
 
     private fun stepHit(delta: Int) {
         if (hits.isEmpty()) return
+        hideKeyboard()
         hitIndex = (hitIndex + delta + hits.size) % hits.size
         showHit()
     }
 
     private fun showHit() {
+        val hit = hits[hitIndex]
         binding.tvSearchCount.text = "${hitIndex + 1}/${hits.size}"
-        (binding.rvPages.layoutManager as? LinearLayoutManager)?.scrollToPositionWithOffset(hits[hitIndex], 0)
+        val byPage = hits.groupBy { it.page }.mapValues { e -> e.value.flatMap { it.boxes } }
+        adapter?.setHighlights(byPage, hit.page, hit.boxes)
+        val lm = binding.rvPages.layoutManager as? LinearLayoutManager ?: return
+        val box = hit.boxes.firstOrNull()
+        if (horizontal || box == null) {
+            lm.scrollToPositionWithOffset(hit.page, 0)
+        } else {
+            val a = adapter ?: return
+            val inPage = a.offsetInPage(hit.page, box.top, binding.rvPages.width, resources.displayMetrics.density)
+            lm.scrollToPositionWithOffset(hit.page, binding.rvPages.height / 3 - inPage)
+        }
         binding.rvPages.post { updateChip() }
     }
 

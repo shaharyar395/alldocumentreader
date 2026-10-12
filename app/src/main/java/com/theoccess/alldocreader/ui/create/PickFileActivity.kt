@@ -151,7 +151,12 @@ class PickFileActivity : AppCompatActivity() {
                 if (kind == ConvertKind.IMAGE_TO_PDF) {
                     ScanSession.clear(this)
                     ScanSession.scanMode = false
-                    ScanSession.pages.add(ScanSession.newPage(doc.file, fromCamera = false))
+                    // Library photos: keep original look (AUTO is for camera scans)
+                    ScanSession.pages.add(
+                        ScanSession.newPage(doc.file, fromCamera = false).also {
+                            it.filter = com.theoccess.alldocreader.ui.scan.ScanFilter.ORIGINAL
+                        }
+                    )
                     convert.launch(Intent(this, ImageToPdfActivity::class.java))
                 } else {
                     convert.launch(ConvertActivity.intent(this, kind, doc.path))
@@ -161,7 +166,9 @@ class PickFileActivity : AppCompatActivity() {
                 if (doc.type == FileType.PDF) {
                     usePdf(doc.file)
                 } else if (isImage(doc)) {
-                    convertImageThen(doc) { pdf -> usePdf(pdf) }
+                    // Print: don't register as a new saved file until the user actually prints a kept PDF
+                    val persist = target != TARGET_PRINT
+                    convertImageThen(doc, persist = persist) { pdf -> usePdf(pdf) }
                 } else {
                     toast(R.string.convert_old_format)
                 }
@@ -191,7 +198,7 @@ class PickFileActivity : AppCompatActivity() {
     }
 
     /** Image → PDF, then run edit / pages / print on the new file. */
-    private fun convertImageThen(doc: DocFile, onReady: (File) -> Unit) {
+    private fun convertImageThen(doc: DocFile, persist: Boolean = true, onReady: (File) -> Unit) {
         busy = true
         val pill = ProgressPill(this)
         pill.show(getString(R.string.converting_progress, 0))
@@ -201,7 +208,11 @@ class PickFileActivity : AppCompatActivity() {
                     Converters.imageToPdf(applicationContext, doc.file, doc.file.nameWithoutExtension) { p ->
                         runOnUiThread { pill.show(getString(R.string.converting_progress, p)) }
                     }.also {
-                        com.theoccess.alldocreader.data.SavedFiles.onSaved(applicationContext, it)
+                        if (persist) {
+                            com.theoccess.alldocreader.data.SavedFiles.onSaved(applicationContext, it)
+                        } else {
+                            com.theoccess.alldocreader.data.LibraryStore.addRecent(it.absolutePath)
+                        }
                     }
                 } catch (_: Throwable) {
                     null

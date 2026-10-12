@@ -16,6 +16,12 @@
         android:importantForAccessibility="no"
         android:scaleType="fitCenter" />
 
+    <com.theoccess.alldocreader.ui.viewer.HighlightView
+        android:id="@+id/highlights"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="1.5dp" />
+
     <ProgressBar
         android:id="@+id/pbPage"
         android:layout_width="28dp"

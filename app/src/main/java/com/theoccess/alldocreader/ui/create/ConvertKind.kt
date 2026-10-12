@@ -26,7 +26,8 @@ enum class ConvertKind(
             WORD_TO_PDF -> ext in setOf("docx", "docm", "dotx", "txt")
             PDF_TO_WORD -> ext == "pdf"
             PPT_TO_PDF -> ext in setOf("pptx", "ppsx", "potx")
-            IMAGE_TO_PDF -> ext in setOf("jpg", "jpeg", "png", "webp", "bmp", "gif", "heic", "heif")
+            // HEIC/HEIF often fail BitmapFactory decode on Android — keep viewable, not convertible here
+            IMAGE_TO_PDF -> ext in setOf("jpg", "jpeg", "png", "webp", "bmp", "gif")
         }
     }
 

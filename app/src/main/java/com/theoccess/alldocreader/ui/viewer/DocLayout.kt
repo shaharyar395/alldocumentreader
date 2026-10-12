@@ -9,6 +9,8 @@ import android.os.Build
 import android.text.Layout
 import android.text.StaticLayout
 import android.text.TextPaint
+import kotlin.math.max
+import kotlin.math.min
 
 /**
  * Lays [DocBlock]s out on pages of the document's own size and margins (units = PDF points)
@@ -170,6 +172,60 @@ class DocLayout(blocks: List<DocBlock>, val geometry: PageGeometry = PageGeometr
         y += 6f
     }
 
+    /** Pictures on page [index] big enough to hold text (for OCR search). */
+    @Synchronized
+    fun pictures(index: Int): List<Item.Picture> =
+        pages[index].items.filterIsInstance<Item.Picture>().filter { it.rect.width() > 60f && it.rect.height() > 40f }
+
+    /** Search: every occurrence of [query] on page [index] as line boxes in page points. */
+    @Synchronized
+    fun matches(index: Int, query: String): List<List<RectF>> {
+        val out = ArrayList<List<RectF>>()
+        for (item in pages[index].items) when (item) {
+            is Item.Text -> {
+                val l = item.layout
+                val segStart = l.getLineStart(item.startLine)
+                val segEnd = l.getLineEnd(item.endLine - 1)
+                val seg = l.text.subSequence(segStart, segEnd)
+                val dy = item.y - l.getLineTop(item.startLine)
+                for (at in SearchText.find(seg, query)) {
+                    val len = SearchText.matchLength(seg, at, query)
+                    out += boxes(l, segStart + at, segStart + at + len, item.startLine, item.endLine, item.x, dy)
+                }
+            }
+            is Item.Row -> {
+                var cx = item.x
+                item.cells.forEachIndexed { i, cell ->
+                    for (at in SearchText.find(cell.text, query)) {
+                        val len = SearchText.matchLength(cell.text, at, query)
+                        val r = boxes(cell, at, at + len, 0, cell.lineCount, cx + CELL_PAD, item.y + CELL_PAD)
+                            .filter { it.top < item.y + item.height }
+                        if (r.isNotEmpty()) out += r
+                    }
+                    cx += item.colWidths[i]
+                }
+            }
+            else -> Unit
+        }
+        return out
+    }
+
+    private fun boxes(l: StaticLayout, a: Int, b: Int, firstLine: Int, endLine: Int, ox: Float, oy: Float): List<RectF> {
+        val r = ArrayList<RectF>()
+        for (line in firstLine until endLine) {
+            val ls = max(a, l.getLineStart(line))
+            val le = min(b, l.getLineEnd(line))
+            if (ls >= le) continue
+            val x1 = l.getPrimaryHorizontal(ls)
+            val x2 = if (le >= l.getLineEnd(line)) l.getLineRight(line) else l.getPrimaryHorizontal(le)
+            val base = l.getLineBaseline(line).toFloat()
+            val ascent = -l.getLineAscent(line).toFloat()
+            val descent = min(l.getLineDescent(line).toFloat(), ascent * 0.3f)
+            r += RectF(ox + min(x1, x2), oy + base - ascent, ox + max(x1, x2), oy + base + descent)
+        }
+        return r
+    }
+
     /** Draws page [index] on a canvas whose units are points (caller scales). */
     @Synchronized // viewer render thread and PDF conversion (IO) share the same StaticLayouts/paints
     fun draw(canvas: Canvas, index: Int) {
@@ -230,9 +286,47 @@ class DocPageSource(private val doc: DocLayout) : PageSource {
         return bmp
     }
 
-    override fun pageText(index: Int): String = doc.pages[index].text.toString()
+    override fun pageText(index: Int): String {
+        val text = synchronized(doc) { doc.pages[index].text.toString() }
+        val ocr = ocrPage(index)
+        return if (ocr.isEmpty()) text else text + "\n" + PictureOcr.text(ocr)
+    }
+
+    private val ocr = HashMap<Int, List<PictureOcr.Line>>()
+
+    private fun ocrPage(index: Int): List<PictureOcr.Line> {
+        synchronized(ocr) { ocr[index]?.let { return it } }
+        val pics = doc.pictures(index)
+        if (pics.isEmpty()) {
+            synchronized(ocr) { ocr[index] = emptyList() }
+            return emptyList()
+        }
+        val lines = ArrayList<PictureOcr.Line>()
+        try {
+            for (p in pics) lines += PictureOcr.read(p.bitmap, p.rect)
+        } catch (_: Exception) {
+            return lines
+        }
+        synchronized(ocr) { ocr[index] = lines }
+        return lines
+    }
+
+    override fun prepareSearch() {
+        for (i in 0 until pageCount) {
+            if (closed) return
+            ocrPage(i)
+        }
+    }
+
+    override fun findMatches(index: Int, query: String): List<List<RectF>> {
+        val inText = doc.matches(index, query)
+        val lines = ocrPage(index)
+        return if (lines.isEmpty()) inText else inText + PictureOcr.matches(lines, query)
+    }
+
+    @Volatile private var closed = false
 
     val layout: DocLayout get() = doc
 
-    override fun close() = Unit
+    override fun close() { closed = true }
 }

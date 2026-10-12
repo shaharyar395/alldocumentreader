@@ -3,6 +3,7 @@ package com.theoccess.alldocreader.ui.viewer
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Matrix
 import android.graphics.pdf.PdfDocument
@@ -204,10 +205,15 @@ object Converters {
             images.forEachIndexed { i, img ->
                 val bmp = decodeImageForPdf(img) ?: throw IllegalStateException("bad image: ${img.name}")
                 try {
-                    val info = PdfDocument.PageInfo.Builder(bmp.width, bmp.height, i + 1).create()
-                    val page = pdf.startPage(info)
-                    page.canvas.drawBitmap(bmp, 0f, 0f, null)
-                    pdf.finishPage(page)
+                    val flat = flattenOnWhite(bmp)
+                    try {
+                        val info = PdfDocument.PageInfo.Builder(flat.width, flat.height, i + 1).create()
+                        val page = pdf.startPage(info)
+                        page.canvas.drawBitmap(flat, 0f, 0f, null)
+                        pdf.finishPage(page)
+                    } finally {
+                        if (flat !== bmp) flat.recycle()
+                    }
                 } finally {
                     bmp.recycle()
                 }
@@ -248,6 +254,17 @@ object Converters {
         val rotated = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, Matrix().apply { postRotate(deg) }, true)
         if (rotated !== bmp) bmp.recycle()
         return rotated
+    }
+
+    /** Transparent PNG/WebP/GIF otherwise draw as black on PDF canvas. */
+    private fun flattenOnWhite(src: Bitmap): Bitmap {
+        if (!src.hasAlpha()) return src
+        val out = Bitmap.createBitmap(src.width, src.height, Bitmap.Config.ARGB_8888)
+        Canvas(out).apply {
+            drawColor(Color.WHITE)
+            drawBitmap(src, 0f, 0f, null)
+        }
+        return out
     }
 
     fun scan(context: Context, file: File) {

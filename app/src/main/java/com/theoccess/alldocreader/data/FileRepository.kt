@@ -1,6 +1,7 @@
 package com.theoccess.alldocreader.data
 
 import android.content.Context
+import android.media.MediaScannerConnection
 import android.os.Environment
 import android.os.StatFs
 import android.provider.MediaStore
@@ -75,22 +76,48 @@ object FileRepository {
         _state.value = s.copy(files = map)
     }
 
+    /**
+     * MediaStore first (fast), then a folder walk for files the index missed — Excel / Office
+     * docs often sit under Downloads or Android/media (WhatsApp, Telegram) and never show up
+     * if we only trust the index when it already returned some PDFs/images.
+     */
     private fun scan(context: Context): ScanState {
-        val found = LinkedHashMap<String, DocFile>()
+        val indexed = LinkedHashMap<String, DocFile>()
         try {
-            queryMediaStore(context, found)
+            queryMediaStore(context, indexed)
         } catch (e: Exception) {
             Log.w(TAG, "MediaStore query failed, falling back to a file walk", e)
         }
-        if (found.isEmpty()) {
-            walk(Environment.getExternalStorageDirectory(), found, depth = 0)
-        }
+        val found = addUnindexed(context, indexed)
         val grouped = found.values
             .groupBy { it.type }
             .mapValues { (_, list) -> list.sortedByDescending { it.modified } }
         val (used, total) = storageStats()
         return ScanState(loading = false, loaded = true, files = grouped, storageUsed = used, storageTotal = total)
     }
+
+    /** Walks storage for files MediaStore doesn't list yet; asks the scanner to index them. */
+    private fun addUnindexed(context: Context, indexed: Map<String, DocFile>): Map<String, DocFile> {
+        val walked = LinkedHashMap<String, DocFile>()
+        try {
+            walk(Environment.getExternalStorageDirectory(), walked, depth = 0)
+        } catch (e: Exception) {
+            Log.w(TAG, "File walk failed", e)
+        }
+        val missing = walked.keys.filter { it !in indexed }
+        if (missing.isEmpty()) return indexed
+        val toScan = synchronized(handedToScanner) { missing.filter { handedToScanner.add(it) }.take(500) }
+        if (toScan.isNotEmpty()) try {
+            MediaScannerConnection.scanFile(context, toScan.toTypedArray(), null, null)
+        } catch (e: Exception) {
+            Log.w(TAG, "Media scan failed", e)
+        }
+        val all = LinkedHashMap(indexed)
+        missing.forEach { all[it] = walked.getValue(it) }
+        return all
+    }
+
+    private val handedToScanner = HashSet<String>()
 
     private fun queryMediaStore(context: Context, out: MutableMap<String, DocFile>) {
         val uri = MediaStore.Files.getContentUri("external")
@@ -127,14 +154,18 @@ object FileRepository {
         }
     }
 
-    /** Fallback when MediaStore gives nothing (e.g. very old devices). */
+    /** Folder walk (files the media index hasn't picked up yet, or devices without one). */
     private fun walk(dir: File, out: MutableMap<String, DocFile>, depth: Int) {
         if (depth > 8) return
         val children = dir.listFiles() ?: return
         for (f in children) {
             if (f.name.startsWith(".")) continue
             if (f.isDirectory) {
-                if (depth == 0 && f.name == "Android") continue
+                // Android/ holds app data, except Android/media (WhatsApp / Telegram documents)
+                if (depth == 0 && f.name == "Android") {
+                    File(f, "media").takeIf { it.isDirectory }?.let { walk(it, out, depth + 2) }
+                    continue
+                }
                 walk(f, out, depth + 1)
             } else {
                 val type = FileType.fromName(f.name)

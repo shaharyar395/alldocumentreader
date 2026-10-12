@@ -60,6 +60,8 @@ dependencies {
     implementation("com.android.billingclient:billing-ktx:7.1.1")
     // document scanning with Google ML Kit (page detection, crop, clean-up)
     implementation("com.google.android.gms:play-services-mlkit-document-scanner:16.0.0")
+    // text inside pictures / scanned pages for in-document search
+    implementation("com.google.android.gms:play-services-mlkit-text-recognition:19.0.1")
     // ads (Google AdMob) + consent form for EEA / UK users
     implementation("com.google.android.gms:play-services-ads:23.3.0")
     implementation("com.google.android.ump:user-messaging-platform:3.0.0")
