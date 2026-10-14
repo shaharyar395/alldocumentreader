@@ -258,4 +258,324 @@
     <string name="helpful_no">😞 نه واقعاً</string>
     <string name="helpful_yes">🥰 مفید</string>
     <!-- /step26 -->
+    <!-- step27 -->
+    <string name="search_no_results">نتیجه‌ای یافت نشد</string>
+    <!-- /step27 -->
+    <!-- step28 -->
+    <string name="search_in_document">جستجو در سند</string>
+    <string name="search_in_pdf">جستجو در PDF</string>
+    <string name="search_in_ppt">جستجو در PPT</string>
+    <string name="search_in_excel">جستجو در Excel</string>
+    <string name="refresh">بازخوانی</string>
+    <string name="files_refreshed">فایل‌ها به‌روز شدند</string>
+    <!-- /step28 -->
+    <!-- step29 -->
+    <string name="new_badge">جدید</string>
+    <string name="save_to_drive_short">ذخیره در Drive</string>
+    <string name="drive_saving">در حال ذخیره در Google Drive…</string>
+    <string name="drive_saved">%1$s در Google Drive ذخیره شد (پوشه All Document Reader)</string>
+    <string name="drive_save_failed_title">ذخیره در Google Drive ممکن نشد</string>
+    <string name="drive_not_allowed">Google اجازه دسترسی به Google Drive را نداد. حساب خود را انتخاب کنید و اجازه دادن را بزنید.</string>
+    <!-- /step29 -->
+    <!-- step30 -->
+    <string name="search_in_txt">جستجو در TXT</string>
+    <!-- /step30 -->
+    <!-- step31 -->
+    <string name="drive_app_missing">برای ذخیره فایل‌ها در Drive به برنامه Google Drive نیاز است. آن را از Google Play نصب کنید و دوباره امتحان کنید.</string>
+    <string name="drive_install">نصب</string>
+    <!-- /step31 -->
+    <!-- step32 -->
+    <string name="ready_top">آماده شوید برای</string>
+    <string name="ready_bottom">۷ روز آزمایش رایگان</string>
+    <string name="premium_slide_merge">ادغام و\nتقسیم PDF</string>
+    <string name="feat_merge">ادغام و تقسیم آسان PDF</string>
+    <string name="user_reviews">نظرات کاربران</string>
+    <string name="cancel_anytime">لغو در هر زمان</string>
+    <!-- /step32 -->
+    <!-- step33 -->
+    <string name="tool_merge_pdf">ادغام PDF</string>
+    <string name="tool_split_pdf">تقسیم PDF</string>
+    <string name="premium_free_uses_left">آزمایش رایگان · %1$d مورد امروز باقی مانده. برای استفاده نامحدود Premium بگیرید</string>
+    <string name="premium_last_free_use">آخرین آزمایش رایگان امروز. برای استفاده نامحدود Premium بگیرید</string>
+    <string name="premium_limit_reached">آزمایش‌های رایگان امروز برای «%1$s» تمام شد. برای استفاده نامحدود Premium بگیرید.</string>
+    <string name="select_pdfs_to_merge">PDFها را برای ادغام انتخاب کنید</string>
+    <string name="select_pdf_to_split">یک PDF برای تقسیم انتخاب کنید</string>
+    <string name="merge_n">ادغام (%1$d)</string>
+    <string name="merge_pick_two">حداقل ۲ PDF انتخاب کنید</string>
+    <string name="merging_progress">در حال ادغام… (%1$d%%)</string>
+    <string name="merge_failed">ادغام این PDFها ممکن نشد (رمزدار یا خراب؟)</string>
+    <string name="split_one_page">این PDF فقط یک صفحه دارد</string>
+    <string name="split_info">%1$s · %2$d صفحه</string>
+    <string name="split_ranges_hint">مثلاً 1-3، 5، 6-%1$d</string>
+    <string name="split_action">تقسیم</string>
+    <string name="split_each_page">هر صفحه به‌صورت PDF جداگانه</string>
+    <string name="split_every_n">هر چند صفحه</string>
+    <string name="split_every_hint">تعداد صفحه در هر فایل، مثلاً 2</string>
+    <string name="split_custom">بازه‌های صفحه دلخواه</string>
+    <string name="split_invalid">لطفاً شماره صفحه معتبر وارد کنید</string>
+    <string name="splitting_progress">در حال تقسیم… (%1$d%%)</string>
+    <string name="split_failed">تقسیم این PDF ممکن نشد</string>
+    <plurals name="split_done">
+        <item quantity="one">به %1$d فایل تقسیم شد</item>
+        <item quantity="other">به %1$d فایل تقسیم شد</item>
+    </plurals>
+    <!-- /step33 -->
+    <!-- step35 -->
+    <string name="section_edit_manage">ویرایش و مدیریت</string>
+    <string name="add_files">افزودن فایل</string>
+    <string name="add_part">افزودن صفحه</string>
+    <string name="continue_n">ادامه (%1$d)</string>
+    <string name="quit">خروج</string>
+    <string name="quit_merging_title">از ادغام خارج می‌شوید؟</string>
+    <string name="quit_splitting_title">از تقسیم خارج می‌شوید؟</string>
+    <string name="quit_changes_message">تغییرات ذخیره نمی‌شود. مطمئنید می‌خواهید خارج شوید؟</string>
+    <string name="merged_successfully_excl">با موفقیت ادغام شد!</string>
+    <string name="split_successfully_excl">با موفقیت تقسیم شد!</string>
+    <string name="satisfied_question">از قابلیت «%1$s» راضی هستید؟</string>
+    <string name="satisfied_not_good">😞\nخوب نیست</string>
+    <string name="satisfied_good">🥰\nخوب</string>
+    <string name="thanks_feedback">از بازخورد شما متشکریم!</string>
+    <string name="select_pages">انتخاب صفحات</string>
+    <string name="split_method">روش تقسیم</string>
+    <string name="split_custom_range">بازه دلخواه</string>
+    <string name="split_custom_range_sub">تقسیم با بازه دلخواه</string>
+    <string name="split_fixed_range">بازه ثابت</string>
+    <string name="split_fixed_range_sub">تقسیم با فاصله ثابت صفحات</string>
+    <string name="interval_settings">تنظیم فاصله</string>
+    <string name="split_n">تقسیم (%1$d)</string>
+    <string name="part_pages">صفحه: %1$s</string>
+    <plurals name="pages_and_size">
+        <item quantity="one">%1$d صفحه · %2$s</item>
+        <item quantity="other">%1$d صفحه · %2$s</item>
+    </plurals>
+    <!-- /step35 -->
+    <!-- step39 -->
+    <string name="ad_loading">در حال بارگیری تبلیغ…</string>
+    <!-- /step39 -->
+    <!-- step40 -->
+    <string name="swipe_pages_tip">برای ورق زدن صفحات به چپ/راست بکشید</string>
+    <!-- /step40 -->
+    <!-- step59 -->
+    <string name="done">انجام شد</string>
+    <string name="ok">تأیید</string>
+    <string name="premium">Premium</string>
+    <string name="open">باز کردن</string>
+    <string name="add_bookmark">افزودن به نشانک‌ها</string>
+    <string name="remove_bookmark">حذف از نشانک‌ها</string>
+    <string name="file_info_path">مسیر</string>
+    <string name="file_info_size">اندازه</string>
+    <string name="file_info_modified">تاریخ تغییر</string>
+    <string name="no_app_to_open">برنامه‌ای برای باز کردن این فایل پیدا نشد</string>
+    <string name="file_not_found">این فایل دیگر وجود ندارد</string>
+    <string name="empty_folder">این پوشه خالی است</string>
+    <string name="create_new">ایجاد جدید</string>
+    <string name="settings_version">نسخه %1$s</string>
+    <string name="tool_templates">الگوها</string>
+    <string name="press_back_again">برای خروج دوباره دکمه بازگشت را بزنید</string>
+    <string name="select">انتخاب</string>
+    <string name="select_all">انتخاب همه</string>
+    <string name="delete_failed">برخی از فایل‌ها حذف نشدند</string>
+    <string name="rename_empty">نام نمی‌تواند خالی باشد</string>
+    <string name="rename_invalid">نام شامل نویسه‌های نامعتبر است</string>
+    <string name="rename_exists">فایلی با این نام از قبل وجود دارد</string>
+    <string name="rename_failed">تغییر نام این فایل ممکن نشد</string>
+    <string name="rename_done">نام تغییر کرد</string>
+    <string name="select_files_first">ابتدا فایل‌ها را انتخاب کنید</string>
+    <string name="shortcut_permission_message"><![CDATA[برای افزودن فایل‌ها به صفحه اصلی، به مجوز <font color=\"#0A5FD9\">\"میان‌برهای صفحه اصلی\"</font> نیاز داریم.]]></string>
+    <string name="shortcut_added">به صفحه اصلی اضافه شد</string>
+    <string name="shortcut_not_supported">لانچر شما از میان‌برهای صفحه اصلی پشتیبانی نمی‌کند</string>
+    <string name="rate_title"><![CDATA[آیا <font color=\"#0A5FD9\">برنامه ما</font> را دوست دارید؟]]></string>
+    <string name="rate_thanks">از بازخورد شما سپاسگزاریم!</string>
+    <string name="restored">بازیابی شد</string>
+    <string name="restore_failed">بازیابی ممکن نشد (ممکن است فایلی با همین نام از قبل وجود داشته باشد)</string>
+    <string name="empty_recycle_bin_confirm">همه فایل‌های سطل بازیافت برای همیشه حذف شوند؟</string>
+    <string name="unsupported_message">متأسفیم، در حال حاضر از این نوع فایل پشتیبانی نمی‌کنیم.\nاما پیوسته در حال بهبود برنامه هستیم و بعداً از انواع بیشتری از فایل‌ها پشتیبانی خواهیم کرد.</string>
+    <string name="faq">سؤالات متداول</string>
+    <string name="faq_message">در خود برنامه باز می‌شوند: PDF، Word (.docx) و TXT.\n\nفایل‌های Excel، PowerPoint و تصاویر با برنامه دیگری روی گوشی شما باز می‌شوند.\n\nسایر انواع فایل (APK، ویدیو، فایل‌های سیستمی…) هنوز پشتیبانی نمی‌شوند.</string>
+    <string name="convert">تبدیل</string>
+    <string name="pdf_to_word">PDF به Word</string>
+    <string name="converting_progress">در حال تبدیل… (%d%%)</string>
+    <string name="convert_failed">تبدیل ناموفق بود</string>
+    <string name="print">چاپ</string>
+    <string name="edit">ویرایش</string>
+    <string name="bookmarked">نشانک‌گذاری شد</string>
+    <string name="pdf_password_protected">این PDF رمزدار یا آسیب‌دیده است</string>
+    <string name="undo">واگرد</string>
+    <string name="redo">ازنو</string>
+    <string name="setup">راه‌اندازی</string>
+    <string name="delete_pages_message"><![CDATA[آیا مطمئنید که می‌خواهید <font color=\"#0A5FD9\">%d</font> صفحه انتخاب‌شده را حذف کنید؟]]></string>
+    <string name="pdf_needs_page">PDF باید دست‌کم یک صفحه داشته باشد</string>
+    <string name="discard_title">تغییرات کنار گذاشته شود؟</string>
+    <string name="discard_message">تغییرات صفحه‌های شما ذخیره نشده است.</string>
+    <string name="discard">کنار گذاشتن</string>
+    <string name="saving">در حال ذخیره…</string>
+    <string name="extracting">در حال استخراج صفحه‌ها…</string>
+    <string name="save_failed">ذخیره PDF ممکن نشد</string>
+    <string name="portrait">عمودی</string>
+    <string name="landscape">افقی</string>
+    <string name="size_letter">Letter</string>
+    <string name="size_legal">Legal</string>
+    <string name="tpl_blank">خالی</string>
+    <string name="tpl_line1">خط‌دار ۱</string>
+    <string name="tpl_line2">خط‌دار ۲</string>
+    <string name="tpl_notebook">دفترچه</string>
+    <string name="tpl_cornell">کرنل</string>
+    <string name="tpl_grid">شطرنجی</string>
+    <string name="tpl_graph">کاغذ نمودار</string>
+    <string name="pick_image_hint">یک تصویر JPG، PNG یا دیگر قالب‌ها انتخاب کنید</string>
+    <string name="import_failed">وارد کردن این فایل ممکن نشد</string>
+    <string name="tpl_resume">رزومه</string>
+    <string name="filter_original">اصلی</string>
+    <string name="no_camera">برنامه دوربین پیدا نشد</string>
+    <string name="pick_word_hint">یک فایل Word (.docx) یا TXT انتخاب کنید</string>
+    <string name="pick_pdf_hint">یک فایل PDF انتخاب کنید</string>
+    <string name="pick_ppt_hint">یک فایل PowerPoint (.pptx) انتخاب کنید</string>
+    <string name="convert_old_format">این قالب قدیمی (.doc / .ppt) هنوز پشتیبانی نمی‌شود. لطفاً از .docx یا .pptx استفاده کنید.</string>
+    <string name="dims_cm">%1$s × %2$s سانتی‌متر</string>
+    <string name="flash">فلاش</string>
+    <string name="grid">شبکه</string>
+    <string name="shutter_sound">صدای شاتر</string>
+    <string name="center_guide">راهنمای مرکز</string>
+    <string name="compare">مقایسه با اصلی</string>
+    <string name="filter_auto">خودکار</string>
+    <string name="filter_docs">اسناد</string>
+    <string name="filter_color">رنگی</string>
+    <string name="filter_image">تصویر</string>
+    <string name="filter_super">فوق‌العاده</string>
+    <string name="filter_enhance">بهبود</string>
+    <string name="filter_enhance2">بهبود ۲</string>
+    <string name="filter_gray">خاکستری</string>
+    <string name="filter_invert">معکوس</string>
+    <string name="underline">زیرخط</string>
+    <string name="strikethrough">خط‌خورده</string>
+    <string name="add_short">+ افزودن</string>
+    <string name="delete_signature">حذف امضا</string>
+    <string name="delete_signature_message">این امضای ذخیره‌شده حذف شود؟</string>
+    <string name="how_to_edit">نحوه ویرایش</string>
+    <string name="share_app_text">من از %1$s برای باز کردن و ویرایش فایل‌های PDF، Word، Excel و PowerPoint استفاده می‌کنم. امتحانش کنید:</string>
+    <string name="faq_yes">🥳 بله</string>
+    <string name="faq_no">😞 خیر</string>
+    <string name="faq_q_edit">چگونه یک PDF را ویرایش کنم؟</string>
+    <string name="faq_q_display">چگونه نحوه نمایش سند را تغییر دهم؟</string>
+    <string name="faq_q_copy">چگونه متن را کپی کنم؟</string>
+    <string name="faq_q_search">چگونه در یک فایل متن جستجو کنم؟</string>
+    <string name="faq_q_open">چرا نمی‌توانم فایلم را پیدا کنم یا باز کنم؟</string>
+    <string name="faq_q_create">چگونه یک فایل جدید ایجاد کنم؟</string>
+    <string name="faq_q_print">چگونه یک فایل را چاپ کنم؟</string>
+    <string name="faq_q_subscription">چگونه اشتراکم را مدیریت یا لغو کنم؟</string>
+    <string name="faq_q_ads">چرا در برنامه تبلیغات وجود دارد؟</string>
+    <string name="faq_q_slow">چرا یک فایل کند باز می‌شود؟</string>
+    <string name="faq_q_permissions">چرا برنامه به مجوز دسترسی به فایل‌ها نیاز دارد؟</string>
+    <string name="feedback_hint">لطفاً مشکل یا پیشنهاد خود را با جزئیات شرح دهید…</string>
+    <string name="fb_rating_line">امتیاز: %1$d/5</string>
+    <string name="fb_max_shots">می‌توانید حداکثر ۴ اسکرین‌شات اضافه کنید</string>
+    <string name="get_premium">دریافت Premium</string>
+    <string name="premium_slide_sign">ویرایش و امضای\nPDF</string>
+    <string name="premium_slide_convert">تبدیل\nقالب</string>
+    <string name="premium_slide_templates">الگوها</string>
+    <string name="premium_slide_pages">مدیریت صفحه‌ها</string>
+    <string name="feat_ad_free">تجربه بدون تبلیغات</string>
+    <string name="feat_edit_sign">ویرایش و امضای آسان PDF</string>
+    <string name="feat_convert">تبدیل فوری فایل‌ها</string>
+    <string name="feat_templates">باز کردن الگوهای ویژه</string>
+    <string name="feat_pages">مدیریت کامل صفحه‌ها</string>
+    <string name="plan_yearly">سالانه</string>
+    <string name="plan_monthly">ماهانه</string>
+    <string name="continue_label">ادامه</string>
+    <string name="no_subscription_found">اشتراک معتبری پیدا نشد.</string>
+    <string name="w_home">خانه</string>
+    <string name="w_recent">اخیر</string>
+    <string name="w_tools_title">ابزارهای سریع</string>
+    <string name="w_tools_desc">از صفحه اصلی جستجو کنید، فایل‌های اخیر و نشانک‌ها را باز کنید یا یک PDF را ویرایش کنید</string>
+    <string name="w_reader_title">نمایشگر اسناد</string>
+    <string name="w_reader_desc">باز کردن فایل‌های PDF، Word، Excel و PowerPoint با یک لمس</string>
+    <string name="w_editor_title">ویرایشگر PDF</string>
+    <string name="w_editor_desc">مستقیم به ویرایش PDF بروید</string>
+    <string name="add_widget_button">افزودن به صفحه اصلی</string>
+    <string name="widget_manual_hint">صفحه اصلی را لمس طولانی کنید، روی ابزارک‌ها بزنید و این برنامه را انتخاب کنید</string>
+    <string name="thanks_support">از حمایت شما سپاسگزاریم!</string>
+    <string name="dont_miss_apps">برنامه‌های پرامتیاز ما را از دست ندهید 👇</string>
+    <string name="see_our_apps">برنامه‌های ما را در Google Play ببینید</string>
+    <string name="faq_a_edit">زبانه &lt;b&gt;ابزارها&lt;/b&gt; را باز کنید و روی &lt;b&gt;ویرایش PDF&lt;/b&gt; بزنید، سپس یک فایل انتخاب کنید. می‌توانید متن موجود را ویرایش کنید، متن جدید و تصویر اضافه کنید، حاشیه‌نویسی کنید (برجسته‌سازی، زیرخط، خط‌خورده، طراحی) و امضای خود را اضافه کنید. برای ذخیره یک نسخه روی علامت تیک بزنید.</string>
+    <string name="faq_a_display">هنگام خواندن، با نوار پایین بین پیمایش &lt;b&gt;عمودی&lt;/b&gt; و &lt;b&gt;افقی&lt;/b&gt; جابه‌جا شوید، نما را بچرخانید یا رنگ‌ها را معکوس کنید. برای بزرگ‌نمایی دو انگشت را باز کنید و برای رفتن به یک صفحه روی شماره صفحه بزنید.</string>
+    <string name="faq_a_copy">کپی کردن متن هنوز در دسترس نیست. در حال کار روی آن هستیم! اگر این قابلیت برایتان مهم است، &lt;a href=\"app://feedback\"&gt;بازخورد بفرستید&lt;/a&gt; تا در اولویت قرارش دهیم.</string>
+    <string name="faq_a_search">سند را باز کنید و در نوار پایین روی &lt;b&gt;جستجو&lt;/b&gt; بزنید، سپس واژه مورد نظر را تایپ کنید. با پیکان‌ها بین نتایج جابه‌جا شوید. برای یافتن فایل بر اساس نام، از نماد جستجو در بالای صفحه اصلی استفاده کنید.</string>
+    <string name="faq_a_open">مطمئن شوید که برنامه مجوز دسترسی به فایل‌های شما را دارد. اگر فایل در یک برنامه ابری یا پوشه دیگری است، آن را با &lt;a href=\"app://filemanager\"&gt;مدیر فایل&lt;/a&gt; باز کنید و این برنامه را انتخاب کنید. اگر فایل همچنان باز نمی‌شود، ممکن است آسیب‌دیده یا رمزدار باشد؛ لطفاً &lt;a href=\"app://feedback\"&gt;به ما اطلاع دهید&lt;/a&gt;.</string>
+    <string name="faq_a_create">در صفحه &lt;b&gt;همه فایل‌ها&lt;/b&gt; روی دکمه &lt;b&gt;+&lt;/b&gt; بزنید. می‌توانید از روی الگو سند بسازید، فایل وارد کنید، تصاویر را به PDF تبدیل کنید یا اسناد کاغذی را با دوربین اسکن کنید.</string>
+    <string name="faq_a_print">یک PDF را باز کنید، روی منوی &lt;b&gt;⋮&lt;/b&gt; بزنید و &lt;b&gt;چاپ&lt;/b&gt; را انتخاب کنید. قالب‌های دیگر را می‌توانید ابتدا از زبانه &lt;b&gt;ابزارها&lt;/b&gt; به PDF تبدیل کنید.</string>
+    <string name="faq_a_subscription">اشتراک‌ها توسط Google Play مدیریت می‌شوند. به &lt;b&gt;تنظیمات ← مدیریت اشتراک‌ها&lt;/b&gt; بروید، یا Google Play ← نمایه ← پرداخت‌ها و اشتراک‌ها را باز کنید. برای جزئیات، &lt;a href=\"app://terms\"&gt;شرایط استفاده&lt;/a&gt; را ببینید.</string>
+    <string name="faq_a_ads">تبلیغات به ما کمک می‌کند برنامه را برای همه رایگان نگه داریم. می‌توانید با &lt;a href=\"app://premium\"&gt;Premium&lt;/a&gt; آن‌ها را حذف کنید.</string>
+    <string name="faq_a_slow">بارگیری فایل‌های بسیار بزرگ یا دارای تصاویر زیاد بیشتر طول می‌کشد. بستن برنامه‌های دیگر و آزاد کردن فضای ذخیره‌سازی می‌تواند کمک کند. اگر فایلی همیشه کند است، لطفاً &lt;a href=\"app://feedback\"&gt;برای ما بازخورد بفرستید&lt;/a&gt;.</string>
+    <string name="faq_a_permissions">برنامه فقط برای یافتن و باز کردن اسناد روی دستگاه شما به دسترسی فایل نیاز دارد. فایل‌های شما روی دستگاهتان می‌مانند و هرگز بارگذاری نمی‌شوند.</string>
+    <string name="terms_html">&lt;p&gt;&lt;i&gt;آخرین به‌روزرسانی: سپتامبر 2026&lt;/i&gt;&lt;/p&gt;&lt;p&gt;این شرایط استفاده بر استفاده شما از &lt;b&gt;%1$s&lt;/b&gt; (\"برنامه\") حاکم است. با استفاده از برنامه، این شرایط را می‌پذیرید.&lt;/p&gt;&lt;h4&gt;1. استفاده از برنامه&lt;/h4&gt;&lt;p&gt;می‌توانید از برنامه برای مشاهده، ایجاد، تبدیل و ویرایش اسناد برای مقاصد شخصی یا تجاری استفاده کنید. مسئولیت اسنادی که باز یا ایجاد می‌کنید و داشتن حق استفاده از آن‌ها بر عهده شماست.&lt;/p&gt;&lt;h4&gt;2. اشتراک‌ها&lt;/h4&gt;&lt;p&gt;برخی از ویژگی‌ها ممکن است به اشتراک پولی نیاز داشته باشند که از طریق Google Play خریداری می‌شود. اشتراک‌ها به‌طور خودکار تمدید می‌شوند، مگر اینکه دست‌کم ۲۴ ساعت پیش از پایان دوره جاری لغو شوند. می‌توانید اشتراک را در تنظیمات حساب Google Play خود مدیریت یا لغو کنید. بازپرداخت‌ها تابع خط‌مشی‌های Google Play است.&lt;/p&gt;&lt;h4&gt;3. تبلیغات&lt;/h4&gt;&lt;p&gt;نسخه رایگان برنامه ممکن است تبلیغاتی را نمایش دهد که توسط اشخاص ثالث ارائه می‌شود.&lt;/p&gt;&lt;h4&gt;4. عدم ضمانت&lt;/h4&gt;&lt;p&gt;برنامه \"همان‌گونه که هست\" ارائه می‌شود. ما تمام تلاش خود را برای پایدار نگه داشتن آن می‌کنیم، اما تضمین نمی‌کنیم که بدون خطا باشد و مسئولیتی در قبال از دست رفتن داده‌ها نداریم. لطفاً از فایل‌های مهم نسخه پشتیبان نگه دارید.&lt;/p&gt;&lt;h4&gt;5. تغییرات&lt;/h4&gt;&lt;p&gt;ممکن است هر از گاهی این شرایط را به‌روزرسانی کنیم. ادامه استفاده از برنامه به معنای پذیرش شرایط به‌روزشده است.&lt;/p&gt;&lt;h4&gt;6. تماس&lt;/h4&gt;&lt;p&gt;سؤالی دارید؟ به نشانی %2$s به ما ایمیل بزنید.&lt;/p&gt;</string>
+    <string name="premium_trusted_top">محبوب</string>
+    <string name="premium_trusted_count">کاربران ما</string>
+    <string name="premium_trusted_bottom">در سراسر جهان</string>
+    <string name="plan_trial_days">%1$d روز آزمایش رایگان</string>
+    <string name="plan_then_only_per_day">سپس فقط %1$s در روز</string>
+    <string name="plan_per_day">%1$s/روز</string>
+    <string name="plan_price_year">%1$s/سال</string>
+    <string name="plan_price_month">%1$s/ماه</string>
+    <string name="plan_save_percent">%1$d%% صرفه‌جویی</string>
+    <string name="start_free_trial">شروع آزمایش رایگان</string>
+    <string name="trial_today">امروز</string>
+    <string name="trial_today_sub">همه ویژگی‌های ویژه را باز کنید</string>
+    <string name="trial_full_access">دسترسی کامل بگیرید</string>
+    <string name="trial_full_access_sub">حذف همه تبلیغات، خواندن فایل‌ها در همه قالب‌ها، ویرایش آسان PDF و موارد دیگر.</string>
+    <string name="trial_day7">روز ۷</string>
+    <string name="trial_day7_sub">اگر دست‌کم ۲۴ ساعت پیش از پایان دوره آزمایشی لغو کنید، هزینه‌ای دریافت نمی‌شود.</string>
+    <string name="hot">داغ</string>
+    <string name="try_days_free">%1$d روز رایگان امتحان کنید</string>
+    <string name="try_then">سپس %1$s در سال، فقط %2$s در روز</string>
+    <string name="crop_not_found">لبه‌های صفحه پیدا نشد — برای تنظیم از برش استفاده کنید</string>
+    <string name="tpl_reset">بازنشانی</string>
+    <string name="tpl_close">بستن</string>
+    <string name="tpl_download">دانلود</string>
+    <string name="tpl_flip_h">قرینه افقی</string>
+    <string name="tpl_flip_v">قرینه عمودی</string>
+    <string name="tpl_bold">پررنگ</string>
+    <string name="tpl_italic">مورب</string>
+    <string name="tpl_underline">زیرخط</string>
+    <string name="tpl_strike">خط‌خورده</string>
+    <string name="tpl_bullets">فهرست نقطه‌ای</string>
+    <string name="tpl_numbers">فهرست شماره‌دار</string>
+    <string name="tpl_save_failed">ذخیره فایل ممکن نشد</string>
+    <string name="tpl_image_failed">باز کردن این تصویر ممکن نشد</string>
+    <string name="ad_badge">تبلیغ</string>
+    <string name="explore_nothing">فعلاً چیزی برای نمایش نیست. لطفاً اتصال اینترنت خود را بررسی کنید.</string>
+    <string name="review1_title">خواننده همه‌کاره فایل</string>
+    <string name="review1_text">کاملاً ارزش اشتراک را دارد!! فایل‌های همه قالب‌ها را سریع باز می‌کند، پیشرفت خواندن را دنبال می‌کند، آفلاین کار می‌کند و حتی فایل‌های حذف‌شده را بازیابی می‌کند!</string>
+    <string name="review2_title">بدون تبلیغ، بدون هزینه پنهان</string>
+    <string name="review2_text">بعد از اشتراک، می‌توانم از ویژگی‌های بیشتری استفاده کنم. هیچ تبلیغی خواندن و ویرایشم را قطع نمی‌کند و رابط کاربری تمیزتر است. از همه بهتر، هیچ هزینه پنهانی ندارد!</string>
+    <string name="review3_title">تمرکز بیشتر، کار سریع‌تر</string>
+    <string name="review3_text">خب، اشتراکش ارزان است و حالا می‌توانم بدون تبلیغات آزاردهنده فایل‌ها را پیش‌نمایش، ویرایش و مدیریت کنم. واقعاً بهره‌وری‌ام را بالا برد!</string>
+    <plurals name="deleted_count">
+        <item quantity="one">%d فایل حذف شد</item>
+        <item quantity="other">%d فایل حذف شد</item>
+    </plurals>
+    <plurals name="moved_to_bin_count">
+        <item quantity="one">%d فایل به سطل بازیافت منتقل شد</item>
+        <item quantity="other">%d فایل به سطل بازیافت منتقل شد</item>
+    </plurals>
+    <plurals name="days_left">
+        <item quantity="one">%d روز باقی مانده</item>
+        <item quantity="other">%d روز باقی مانده</item>
+    </plurals>
+    <plurals name="pages_selected">
+        <item quantity="one">%d صفحه انتخاب شد</item>
+        <item quantity="other">%d صفحه انتخاب شد</item>
+    </plurals>
+    <plurals name="days_count">
+        <item quantity="one">%d روز</item>
+        <item quantity="other">%d روز</item>
+    </plurals>
+    <plurals name="delete_forever_message">
+        <item quantity="one">%d فایل برای همیشه حذف می‌شود. این کار قابل بازگشت نیست.</item>
+        <item quantity="other">%d فایل برای همیشه حذف می‌شوند. این کار قابل بازگشت نیست.</item>
+    </plurals>
+    <plurals name="restored_count">
+        <item quantity="one">%d فایل بازیابی شد</item>
+        <item quantity="other">%d فایل بازیابی شد</item>
+    </plurals>
+    <!-- /step59 -->
 </resources>

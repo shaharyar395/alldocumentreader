@@ -258,4 +258,324 @@
     <string name="helpful_no">😞 Unchalik emas</string>
     <string name="helpful_yes">🥰 Foydali</string>
     <!-- /step26 -->
+    <!-- step27 -->
+    <string name="search_no_results">Hech narsa topilmadi</string>
+    <!-- /step27 -->
+    <!-- step28 -->
+    <string name="search_in_document">Hujjatda qidirish</string>
+    <string name="search_in_pdf">PDF da qidirish</string>
+    <string name="search_in_ppt">PPT da qidirish</string>
+    <string name="search_in_excel">Excel da qidirish</string>
+    <string name="refresh">Yangilash</string>
+    <string name="files_refreshed">Fayllar yangilandi</string>
+    <!-- /step28 -->
+    <!-- step29 -->
+    <string name="new_badge">Yangi</string>
+    <string name="save_to_drive_short">Drive\'ga saqlash</string>
+    <string name="drive_saving">Google Drive\'ga saqlanmoqda…</string>
+    <string name="drive_saved">%1$s Google Drive\'ga saqlandi (All Document Reader jildi)</string>
+    <string name="drive_save_failed_title">Google Drive\'ga saqlab bo\'lmadi</string>
+    <string name="drive_not_allowed">Google Google Drive\'ga ruxsat bermadi. Hisobingizni tanlang va Ruxsat berish tugmasini bosing.</string>
+    <!-- /step29 -->
+    <!-- step30 -->
+    <string name="search_in_txt">TXT da qidirish</string>
+    <!-- /step30 -->
+    <!-- step31 -->
+    <string name="drive_app_missing">Fayllarni Drive\'ga saqlash uchun Google Drive ilovasi kerak. Uni Google Play\'dan o\'rnating va qayta urinib ko\'ring.</string>
+    <string name="drive_install">O\'rnatish</string>
+    <!-- /step31 -->
+    <!-- step32 -->
+    <string name="ready_top">Tayyor bo\'ling:</string>
+    <string name="ready_bottom">7 kunlik bepul sinov</string>
+    <string name="premium_slide_merge">PDF birlashtirish\nva bo\'lish</string>
+    <string name="feat_merge">PDF\'larni oson birlashtirish va bo\'lish</string>
+    <string name="user_reviews">Foydalanuvchi sharhlari</string>
+    <string name="cancel_anytime">Istalgan vaqtda bekor qiling</string>
+    <!-- /step32 -->
+    <!-- step33 -->
+    <string name="tool_merge_pdf">PDF birlashtirish</string>
+    <string name="tool_split_pdf">PDF bo\'lish</string>
+    <string name="premium_free_uses_left">Bepul urinish · bugun %1$d ta qoldi. Cheklovsiz foydalanish uchun Premium oling</string>
+    <string name="premium_last_free_use">Bugungi oxirgi bepul urinish. Cheklovsiz foydalanish uchun Premium oling</string>
+    <string name="premium_limit_reached">\"%1$s\" uchun bugungi bepul urinishlar tugadi. Cheklovsiz foydalanish uchun Premium oling.</string>
+    <string name="select_pdfs_to_merge">Birlashtirish uchun PDF tanlang</string>
+    <string name="select_pdf_to_split">Bo\'lish uchun PDF tanlang</string>
+    <string name="merge_n">Birlashtirish (%1$d)</string>
+    <string name="merge_pick_two">Kamida 2 ta PDF tanlang</string>
+    <string name="merging_progress">Birlashtirilmoqda… (%1$d%%)</string>
+    <string name="merge_failed">Bu PDF\'larni birlashtirib bo\'lmadi (parolli yoki buzilgan?)</string>
+    <string name="split_one_page">Bu PDF\'da faqat bitta sahifa bor</string>
+    <string name="split_info">%1$s · %2$d sahifa</string>
+    <string name="split_ranges_hint">masalan, 1-3, 5, 6-%1$d</string>
+    <string name="split_action">Bo\'lish</string>
+    <string name="split_each_page">Har bir sahifa alohida PDF</string>
+    <string name="split_every_n">Har bir necha sahifada</string>
+    <string name="split_every_hint">Har fayldagi sahifalar, masalan, 2</string>
+    <string name="split_custom">Maxsus sahifa oraliqlari</string>
+    <string name="split_invalid">To\'g\'ri sahifa raqamlarini kiriting</string>
+    <string name="splitting_progress">Bo\'linmoqda… (%1$d%%)</string>
+    <string name="split_failed">Bu PDF\'ni bo\'lib bo\'lmadi</string>
+    <plurals name="split_done">
+        <item quantity="one">%1$d ta faylga bo\'lindi</item>
+        <item quantity="other">%1$d ta faylga bo\'lindi</item>
+    </plurals>
+    <!-- /step33 -->
+    <!-- step35 -->
+    <string name="section_edit_manage">Tahrirlash va boshqarish</string>
+    <string name="add_files">Fayl qo\'shish</string>
+    <string name="add_part">Sahifa qo\'shish</string>
+    <string name="continue_n">Davom etish (%1$d)</string>
+    <string name="quit">Chiqish</string>
+    <string name="quit_merging_title">Birlashtirishdan chiqilsinmi?</string>
+    <string name="quit_splitting_title">Bo\'lishdan chiqilsinmi?</string>
+    <string name="quit_changes_message">O\'zgarishlar saqlanmaydi. Chiqmoqchimisiz?</string>
+    <string name="merged_successfully_excl">Muvaffaqiyatli birlashtirildi!</string>
+    <string name="split_successfully_excl">Muvaffaqiyatli bo\'lindi!</string>
+    <string name="satisfied_question">\"%1$s\" funksiyasidan mamnunmisiz?</string>
+    <string name="satisfied_not_good">😞\nYaxshi emas</string>
+    <string name="satisfied_good">🥰\nYaxshi</string>
+    <string name="thanks_feedback">Fikringiz uchun rahmat!</string>
+    <string name="select_pages">Sahifalarni tanlash</string>
+    <string name="split_method">Bo\'lish usuli</string>
+    <string name="split_custom_range">Maxsus oraliq</string>
+    <string name="split_custom_range_sub">Maxsus oraliq bo\'yicha bo\'lish</string>
+    <string name="split_fixed_range">Belgilangan oraliq</string>
+    <string name="split_fixed_range_sub">Belgilangan sahifa oralig\'i bo\'yicha bo\'lish</string>
+    <string name="interval_settings">Oraliq sozlamasi</string>
+    <string name="split_n">Bo\'lish (%1$d)</string>
+    <string name="part_pages">Sahifa: %1$s</string>
+    <plurals name="pages_and_size">
+        <item quantity="one">%1$d sahifa · %2$s</item>
+        <item quantity="other">%1$d sahifa · %2$s</item>
+    </plurals>
+    <!-- /step35 -->
+    <!-- step39 -->
+    <string name="ad_loading">Reklama yuklanmoqda…</string>
+    <!-- /step39 -->
+    <!-- step40 -->
+    <string name="swipe_pages_tip">Sahifalarni varaqlash uchun chapga/o\'ngga suring</string>
+    <!-- /step40 -->
+    <!-- step59 -->
+    <string name="done">Tayyor</string>
+    <string name="ok">OK</string>
+    <string name="premium">Premium</string>
+    <string name="open">Ochish</string>
+    <string name="add_bookmark">Xatchoʻplarga qoʻshish</string>
+    <string name="remove_bookmark">Xatchoʻplardan olib tashlash</string>
+    <string name="file_info_path">Joylashuv</string>
+    <string name="file_info_size">Hajmi</string>
+    <string name="file_info_modified">Oʻzgartirilgan</string>
+    <string name="no_app_to_open">Bu faylni ochadigan ilova topilmadi</string>
+    <string name="file_not_found">Fayl endi mavjud emas</string>
+    <string name="empty_folder">Bu jild boʻsh</string>
+    <string name="create_new">Yangi yaratish</string>
+    <string name="settings_version">Versiya %1$s</string>
+    <string name="tool_templates">Shablonlar</string>
+    <string name="press_back_again">Chiqish uchun yana Orqaga tugmasini bosing</string>
+    <string name="select">Tanlash</string>
+    <string name="select_all">Hammasini tanlash</string>
+    <string name="delete_failed">Ayrim fayllarni oʻchirib boʻlmadi</string>
+    <string name="rename_empty">Nom boʻsh boʻlishi mumkin emas</string>
+    <string name="rename_invalid">Nomda yaroqsiz belgilar bor</string>
+    <string name="rename_exists">Bunday nomli fayl allaqachon mavjud</string>
+    <string name="rename_failed">Bu fayl nomini oʻzgartirib boʻlmadi</string>
+    <string name="rename_done">Nomi oʻzgartirildi</string>
+    <string name="select_files_first">Avval fayllarni tanlang</string>
+    <string name="shortcut_permission_message"><![CDATA[Fayllarni bosh ekranga qoʻshish uchun <font color=\"#0A5FD9\">\"Bosh ekran yorliqlari\"</font> ruxsati kerak.]]></string>
+    <string name="shortcut_added">Bosh ekranga qoʻshildi</string>
+    <string name="shortcut_not_supported">Launcheringiz bosh ekran yorliqlarini qoʻllab-quvvatlamaydi</string>
+    <string name="rate_title"><![CDATA[<font color=\"#0A5FD9\">Ilovamiz</font> sizga yoqdimi?]]></string>
+    <string name="rate_thanks">Fikr-mulohazangiz uchun rahmat!</string>
+    <string name="restored">Tiklandi</string>
+    <string name="restore_failed">Tiklab boʻlmadi (shu nomli fayl allaqachon mavjud boʻlishi mumkin)</string>
+    <string name="empty_recycle_bin_confirm">Savatdagi barcha fayllar butunlay oʻchirilsinmi?</string>
+    <string name="unsupported_message">Kechirasiz, hozircha bu fayl turini qoʻllab-quvvatlamaymiz.\nAmmo ilovani yaxshilash ustida doimiy ishlayapmiz va keyinchalik koʻproq fayl turlarini qoʻllab-quvvatlaymiz.</string>
+    <string name="faq">Savol-javoblar</string>
+    <string name="faq_message">Ilovada ochiladi: PDF, Word (.docx) va TXT.\n\nExcel, PowerPoint va rasmlar telefoningizdagi boshqa ilova orqali ochiladi.\n\nBoshqa fayl turlari (APK, video, tizim fayllari…) hozircha qoʻllab-quvvatlanmaydi.</string>
+    <string name="convert">Aylantirish</string>
+    <string name="pdf_to_word">PDF → Word</string>
+    <string name="converting_progress">Aylantirilmoqda… (%d%%)</string>
+    <string name="convert_failed">Aylantirib boʻlmadi</string>
+    <string name="print">Chop etish</string>
+    <string name="edit">Tahrirlash</string>
+    <string name="bookmarked">Xatchoʻpga qoʻshildi</string>
+    <string name="pdf_password_protected">Bu PDF parol bilan himoyalangan yoki shikastlangan</string>
+    <string name="undo">Bekor qilish</string>
+    <string name="redo">Qaytarish</string>
+    <string name="setup">Sozlash</string>
+    <string name="delete_pages_message"><![CDATA[Tanlangan <font color=\"#0A5FD9\">%d</font> ta sahifani oʻchirishni xohlaysizmi?]]></string>
+    <string name="pdf_needs_page">PDF kamida bitta sahifadan iborat boʻlishi kerak</string>
+    <string name="discard_title">Oʻzgarishlar bekor qilinsinmi?</string>
+    <string name="discard_message">Sahifalardagi oʻzgarishlar saqlanmagan.</string>
+    <string name="discard">Bekor qilish</string>
+    <string name="saving">Saqlanmoqda…</string>
+    <string name="extracting">Sahifalar ajratilmoqda…</string>
+    <string name="save_failed">PDFni saqlab boʻlmadi</string>
+    <string name="portrait">Tik</string>
+    <string name="landscape">Yotiq</string>
+    <string name="size_letter">Letter</string>
+    <string name="size_legal">Legal</string>
+    <string name="tpl_blank">Boʻsh</string>
+    <string name="tpl_line1">Chiziqli 1</string>
+    <string name="tpl_line2">Chiziqli 2</string>
+    <string name="tpl_notebook">Daftar</string>
+    <string name="tpl_cornell">Cornell</string>
+    <string name="tpl_grid">Katakli</string>
+    <string name="tpl_graph">Grafik</string>
+    <string name="pick_image_hint">JPG, PNG yoki boshqa rasmni tanlang</string>
+    <string name="import_failed">Bu faylni import qilib boʻlmadi</string>
+    <string name="tpl_resume">Rezyume</string>
+    <string name="filter_original">Asl</string>
+    <string name="no_camera">Kamera ilovasi topilmadi</string>
+    <string name="pick_word_hint">Word (.docx) yoki TXT faylni tanlang</string>
+    <string name="pick_pdf_hint">PDF faylni tanlang</string>
+    <string name="pick_ppt_hint">PowerPoint (.pptx) faylni tanlang</string>
+    <string name="convert_old_format">Bu eski format (.doc / .ppt) hozircha qoʻllab-quvvatlanmaydi. Iltimos, .docx yoki .pptx dan foydalaning.</string>
+    <string name="dims_cm">%1$s sm x %2$s sm</string>
+    <string name="flash">Chaqnoq</string>
+    <string name="grid">Toʻr</string>
+    <string name="shutter_sound">Zatvor ovozi</string>
+    <string name="center_guide">Markaz chizigʻi</string>
+    <string name="compare">Asl bilan solishtirish</string>
+    <string name="filter_auto">Avto</string>
+    <string name="filter_docs">Hujjat</string>
+    <string name="filter_color">Rangli</string>
+    <string name="filter_image">Rasm</string>
+    <string name="filter_super">Super</string>
+    <string name="filter_enhance">Yaxshilash</string>
+    <string name="filter_enhance2">Yaxshilash2</string>
+    <string name="filter_gray">Kulrang</string>
+    <string name="filter_invert">Inversiya</string>
+    <string name="underline">Tagiga chizish</string>
+    <string name="strikethrough">Ustiga chizish</string>
+    <string name="add_short">+ Qoʻshish</string>
+    <string name="delete_signature">Imzoni oʻchirish</string>
+    <string name="delete_signature_message">Saqlangan bu imzo oʻchirilsinmi?</string>
+    <string name="how_to_edit">Qanday tahrirlash mumkin</string>
+    <string name="share_app_text">Men PDF, Word, Excel va PowerPoint fayllarini ochish va tahrirlash uchun %1$s dan foydalanaman. Sinab koʻring:</string>
+    <string name="faq_yes">🥳 Ha</string>
+    <string name="faq_no">😞 Yoʻq</string>
+    <string name="faq_q_edit">PDFni qanday tahrirlash mumkin?</string>
+    <string name="faq_q_display">Hujjat koʻrinishini qanday oʻzgartirish mumkin?</string>
+    <string name="faq_q_copy">Matnni qanday nusxalash mumkin?</string>
+    <string name="faq_q_search">Fayldan matnni qanday qidirish mumkin?</string>
+    <string name="faq_q_open">Nega faylimni topa olmayapman yoki ocha olmayapman?</string>
+    <string name="faq_q_create">Yangi faylni qanday yaratish mumkin?</string>
+    <string name="faq_q_print">Faylni qanday chop etish mumkin?</string>
+    <string name="faq_q_subscription">Obunamni qanday boshqaraman yoki bekor qilaman?</string>
+    <string name="faq_q_ads">Nega ilovada reklama bor?</string>
+    <string name="faq_q_slow">Nega fayl sekin ochiladi?</string>
+    <string name="faq_q_permissions">Nega ilovaga fayllarga kirish ruxsati kerak?</string>
+    <string name="feedback_hint">Iltimos, muammo yoki taklifingizni batafsil yozing…</string>
+    <string name="fb_rating_line">Baho: %1$d/5</string>
+    <string name="fb_max_shots">Koʻpi bilan 4 ta skrinshot qoʻshishingiz mumkin</string>
+    <string name="get_premium">Premium olish</string>
+    <string name="premium_slide_sign">PDF tahrirlash\nva imzolash</string>
+    <string name="premium_slide_convert">Formatni\naylantirish</string>
+    <string name="premium_slide_templates">Shablonlar</string>
+    <string name="premium_slide_pages">Sahifalarni boshqarish</string>
+    <string name="feat_ad_free">Reklamasiz foydalanish</string>
+    <string name="feat_edit_sign">PDFlarni oson tahrirlang va imzolang</string>
+    <string name="feat_convert">Fayllarni bir zumda aylantiring</string>
+    <string name="feat_templates">Premium shablonlarni oching</string>
+    <string name="feat_pages">Sahifalarni toʻliq boshqarish</string>
+    <string name="plan_yearly">Yillik</string>
+    <string name="plan_monthly">Oylik</string>
+    <string name="continue_label">Davom etish</string>
+    <string name="no_subscription_found">Amaldagi obuna topilmadi.</string>
+    <string name="w_home">Bosh sahifa</string>
+    <string name="w_recent">Soʻnggi</string>
+    <string name="w_tools_title">Tezkor vositalar</string>
+    <string name="w_tools_desc">Bosh ekrandan qidiring, soʻnggi fayllar va xatchoʻplarni oching yoki PDFni tahrirlang</string>
+    <string name="w_reader_title">Hujjat oʻqigich</string>
+    <string name="w_reader_desc">PDF, Word, Excel va PowerPoint fayllarini bir bosishda oching</string>
+    <string name="w_editor_title">PDF muharriri</string>
+    <string name="w_editor_desc">Darhol PDFni tahrirlashga oʻting</string>
+    <string name="add_widget_button">Bosh ekranga qoʻshish</string>
+    <string name="widget_manual_hint">Bosh ekranni bosib turing, Vidjetlar ga teging va bu ilovani tanlang</string>
+    <string name="thanks_support">Qoʻllab-quvvatlaganingiz uchun rahmat!</string>
+    <string name="dont_miss_apps">Eng yuqori baholangan ilovalarimizni oʻtkazib yubormang 👇</string>
+    <string name="see_our_apps">Ilovalarimizni Google Play da koʻring</string>
+    <string name="faq_a_edit">&lt;b&gt;Vositalar&lt;/b&gt; boʻlimini oching va &lt;b&gt;PDFni tahrirlash&lt;/b&gt; ga teging, soʻng faylni tanlang. Mavjud matnni tahrirlashingiz, yangi matn va rasm qoʻshishingiz, izoh qoldirishingiz (belgilash, tagiga chizish, ustiga chizish, chizish) va imzongizni qoʻshishingiz mumkin. Nusxani saqlash uchun belgi tugmasiga teging.</string>
+    <string name="faq_a_display">Oʻqish paytida pastki panel orqali &lt;b&gt;vertikal&lt;/b&gt; va &lt;b&gt;gorizontal&lt;/b&gt; aylantirish orasida almashing, koʻrinishni buring yoki ranglarni teskari qiling. Kattalashtirish uchun ikki barmoq bilan kengaytiring, sahifaga oʻtish uchun sahifa raqamiga teging.</string>
+    <string name="faq_a_copy">Matnni nusxalash hozircha mavjud emas. Bu ustida ishlayapmiz! Agar bu siz uchun muhim boʻlsa, uni ustuvor qilishimiz uchun &lt;a href=\"app://feedback\"&gt;bizga fikr yuboring&lt;/a&gt;.</string>
+    <string name="faq_a_search">Hujjatni oching va pastki panelda &lt;b&gt;Qidirish&lt;/b&gt; ga teging, soʻng kerakli soʻzni yozing. Natijalar orasida oʻtish uchun strelkalardan foydalaning. Faylni nomi boʻyicha topish uchun bosh ekran yuqorisidagi qidiruv belgisidan foydalaning.</string>
+    <string name="faq_a_open">Ilovada fayllaringizga kirish ruxsati borligiga ishonch hosil qiling. Agar fayl bulut ilovasida yoki boshqa jildda boʻlsa, uni &lt;a href=\"app://filemanager\"&gt;fayl menejeri&lt;/a&gt; orqali oching va bu ilovani tanlang. Fayl baribir ochilmasa, u shikastlangan yoki parol bilan himoyalangan boʻlishi mumkin; iltimos, &lt;a href=\"app://feedback\"&gt;bizga xabar bering&lt;/a&gt;.</string>
+    <string name="faq_a_create">&lt;b&gt;Barcha fayllar&lt;/b&gt; sahifasida &lt;b&gt;+&lt;/b&gt; tugmasiga teging. Shablondan hujjat yaratish, fayllarni import qilish, rasmlarni PDFga aylantirish yoki qogʻoz hujjatlarni kamera bilan skanerlash mumkin.</string>
+    <string name="faq_a_print">PDFni oching, &lt;b&gt;⋮&lt;/b&gt; menyusiga teging va &lt;b&gt;Chop etish&lt;/b&gt; ni tanlang. Boshqa formatlarni avval &lt;b&gt;Vositalar&lt;/b&gt; boʻlimida PDFga aylantirish mumkin.</string>
+    <string name="faq_a_subscription">Obunalar Google Play tomonidan boshqariladi. &lt;b&gt;Sozlamalar → Obunalarni boshqarish&lt;/b&gt; ga oʻting yoki Google Play → Profil → Toʻlovlar va obunalar ni oching. Batafsil maʼlumot uchun &lt;a href=\"app://terms\"&gt;Foydalanish shartlari&lt;/a&gt; bilan tanishing.</string>
+    <string name="faq_a_ads">Reklamalar ilovani hamma uchun bepul saqlashga yordam beradi. Ularni &lt;a href=\"app://premium\"&gt;Premium&lt;/a&gt; bilan olib tashlashingiz mumkin.</string>
+    <string name="faq_a_slow">Juda katta yoki koʻp rasmli fayllar uzoqroq yuklanadi. Boshqa ilovalarni yopish va xotirada joy boʻshatish yordam berishi mumkin. Agar fayl doim sekin ochilsa, iltimos, &lt;a href=\"app://feedback\"&gt;bizga fikr yuboring&lt;/a&gt;.</string>
+    <string name="faq_a_permissions">Ilovaga fayllarga kirish faqat qurilmangizdagi hujjatlarni topish va ochish uchun kerak. Fayllaringiz qurilmangizda qoladi va hech qachon yuklab yuborilmaydi.</string>
+    <string name="terms_html">&lt;p&gt;&lt;i&gt;Oxirgi yangilanish: 2026-yil sentabr&lt;/i&gt;&lt;/p&gt;&lt;p&gt;Ushbu Foydalanish shartlari &lt;b&gt;%1$s&lt;/b&gt; (\"Ilova\") dan foydalanishingizni tartibga soladi. Ilovadan foydalanish orqali siz ushbu shartlarga rozilik bildirasiz.&lt;/p&gt;&lt;h4&gt;1. Ilovadan foydalanish&lt;/h4&gt;&lt;p&gt;Ilovadan shaxsiy yoki biznes maqsadlarida hujjatlarni koʻrish, yaratish, aylantirish va tahrirlash uchun foydalanishingiz mumkin. Siz ochgan va yaratgan hujjatlar hamda ulardan foydalanish huquqiga ega boʻlish uchun oʻzingiz javobgarsiz.&lt;/p&gt;&lt;h4&gt;2. Obunalar&lt;/h4&gt;&lt;p&gt;Ayrim funksiyalar Google Play orqali sotib olinadigan pullik obunani talab qilishi mumkin. Obunalar joriy davr tugashidan kamida 24 soat oldin bekor qilinmasa, avtomatik ravishda yangilanadi. Obunani Google Play hisobingiz sozlamalarida boshqarishingiz yoki bekor qilishingiz mumkin. Pulni qaytarish Google Play qoidalariga muvofiq amalga oshiriladi.&lt;/p&gt;&lt;h4&gt;3. Reklama&lt;/h4&gt;&lt;p&gt;Ilovaning bepul versiyasida uchinchi tomonlar taqdim etgan reklamalar koʻrsatilishi mumkin.&lt;/p&gt;&lt;h4&gt;4. Kafolat yoʻqligi&lt;/h4&gt;&lt;p&gt;Ilova \"boricha\" taqdim etiladi. Uning ishonchli ishlashi uchun qoʻlimizdan kelganini qilamiz, biroq xatosiz boʻlishini kafolatlamaymiz va maʼlumotlar yoʻqolishi uchun javobgar emasmiz. Iltimos, muhim fayllarning zaxira nusxasini saqlang.&lt;/p&gt;&lt;h4&gt;5. Oʻzgarishlar&lt;/h4&gt;&lt;p&gt;Ushbu shartlarni vaqti-vaqti bilan yangilashimiz mumkin. Ilovadan foydalanishni davom ettirishingiz yangilangan shartlarni qabul qilganingizni bildiradi.&lt;/p&gt;&lt;h4&gt;6. Aloqa&lt;/h4&gt;&lt;p&gt;Savollaringiz bormi? Bizga %2$s manziliga yozing.&lt;/p&gt;</string>
+    <string name="premium_trusted_top">Butun dunyo boʻylab</string>
+    <string name="premium_trusted_count">foydalanuvchilarimiz</string>
+    <string name="premium_trusted_bottom">sevib foydalanadi</string>
+    <string name="plan_trial_days">%1$d kunlik bepul sinov</string>
+    <string name="plan_then_only_per_day">Keyin kuniga atigi %1$s</string>
+    <string name="plan_per_day">%1$s/kun</string>
+    <string name="plan_price_year">%1$s/yil</string>
+    <string name="plan_price_month">%1$s/oy</string>
+    <string name="plan_save_percent">%1$d%% tejang</string>
+    <string name="start_free_trial">Bepul sinovni boshlash</string>
+    <string name="trial_today">Bugun</string>
+    <string name="trial_today_sub">Barcha premium funksiyalarni oching</string>
+    <string name="trial_full_access">Toʻliq foydalanish</string>
+    <string name="trial_full_access_sub">Barcha reklamalarni olib tashlang, istalgan formatdagi fayllarni oʻqing, PDFlarni oson tahrirlang va boshqalar.</string>
+    <string name="trial_day7">7-kun</string>
+    <string name="trial_day7_sub">Sinov tugashidan kamida 24 soat oldin bekor qilsangiz, hech qanday toʻlov olinmaydi.</string>
+    <string name="hot">XIT</string>
+    <string name="try_days_free">%1$d kun bepul sinab koʻring</string>
+    <string name="try_then">Keyin %1$s/yil, kuniga atigi %2$s</string>
+    <string name="crop_not_found">Sahifa chetlari topilmadi — sozlash uchun Kesish dan foydalaning</string>
+    <string name="tpl_reset">Tiklash</string>
+    <string name="tpl_close">Yopish</string>
+    <string name="tpl_download">Yuklab olish</string>
+    <string name="tpl_flip_h">Gorizontal aks</string>
+    <string name="tpl_flip_v">Vertikal aks</string>
+    <string name="tpl_bold">Qalin</string>
+    <string name="tpl_italic">Kursiv</string>
+    <string name="tpl_underline">Tagiga chizish</string>
+    <string name="tpl_strike">Ustiga chizish</string>
+    <string name="tpl_bullets">Belgili roʻyxat</string>
+    <string name="tpl_numbers">Raqamli roʻyxat</string>
+    <string name="tpl_save_failed">Faylni saqlab boʻlmadi</string>
+    <string name="tpl_image_failed">Bu rasmni ochib boʻlmadi</string>
+    <string name="ad_badge">Reklama</string>
+    <string name="explore_nothing">Hozircha koʻrsatadigan narsa yoʻq. Iltimos, internet aloqasini tekshiring.</string>
+    <string name="review1_title">Hammasi bitta fayl oʻqigichda</string>
+    <string name="review1_text">Obunaga mutlaqo arziydi!! Barcha formatdagi fayllarni tez ochadi, oʻqish jarayonini kuzatadi, oflayn ishlaydi va hatto oʻchirilgan fayllarni ham tiklaydi!</string>
+    <string name="review2_title">Reklamasiz, yashirin toʻlovlarsiz</string>
+    <string name="review2_text">Obuna boʻlgach, koʻproq funksiyalardan foydalana olaman. Oʻqish va tahrirlashimga hech qanday reklama xalaqit bermaydi, interfeys ham ancha toza. Eng yaxshisi, yashirin toʻlovlar yoʻq!</string>
+    <string name="review3_title">Koʻproq diqqat, tezroq ish</string>
+    <string name="review3_text">Obuna arzon, endi fayllarni zerikarli reklamalarsiz koʻrib chiqish, tahrirlash va boshqarish mumkin. Samaradorligimni ancha oshirdi!</string>
+    <plurals name="deleted_count">
+        <item quantity="one">%d ta fayl oʻchirildi</item>
+        <item quantity="other">%d ta fayl oʻchirildi</item>
+    </plurals>
+    <plurals name="moved_to_bin_count">
+        <item quantity="one">%d ta fayl savatga oʻtkazildi</item>
+        <item quantity="other">%d ta fayl savatga oʻtkazildi</item>
+    </plurals>
+    <plurals name="days_left">
+        <item quantity="one">%d kun qoldi</item>
+        <item quantity="other">%d kun qoldi</item>
+    </plurals>
+    <plurals name="pages_selected">
+        <item quantity="one">%d ta sahifa tanlandi</item>
+        <item quantity="other">%d ta sahifa tanlandi</item>
+    </plurals>
+    <plurals name="days_count">
+        <item quantity="one">%d kun</item>
+        <item quantity="other">%d kun</item>
+    </plurals>
+    <plurals name="delete_forever_message">
+        <item quantity="one">%d ta fayl butunlay oʻchiriladi. Buni ortga qaytarib boʻlmaydi.</item>
+        <item quantity="other">%d ta fayl butunlay oʻchiriladi. Buni ortga qaytarib boʻlmaydi.</item>
+    </plurals>
+    <plurals name="restored_count">
+        <item quantity="one">%d ta fayl tiklandi</item>
+        <item quantity="other">%d ta fayl tiklandi</item>
+    </plurals>
+    <!-- /step59 -->
 </resources>

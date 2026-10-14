@@ -44,4 +44,9 @@
     <color name="paper_text">#1B1F2A</color>
     <color name="icon_main">#000000</color>
     <color name="tools_section">#4F5562</color>
+    <!-- rows of newly found files -->
+    <color name="new_file_bg">#FFEEF0F4</color>
+    <color name="bg_soft_card">#FFF2F4F7</color>
+    <!-- "Recently added" bar on the home screen -->
+    <color name="recent_row_bg">#B3FFFFFF</color>
 </resources>

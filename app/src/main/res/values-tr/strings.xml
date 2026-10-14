@@ -258,4 +258,324 @@
     <string name="helpful_no">😞 Pek değil</string>
     <string name="helpful_yes">🥰 Faydalı</string>
     <!-- /step26 -->
+    <!-- step27 -->
+    <string name="search_no_results">Sonuç bulunamadı</string>
+    <!-- /step27 -->
+    <!-- step28 -->
+    <string name="search_in_document">Belgede ara</string>
+    <string name="search_in_pdf">PDF\'de ara</string>
+    <string name="search_in_ppt">PPT\'de ara</string>
+    <string name="search_in_excel">Excel\'de ara</string>
+    <string name="refresh">Yenile</string>
+    <string name="files_refreshed">Dosyalar güncellendi</string>
+    <!-- /step28 -->
+    <!-- step29 -->
+    <string name="new_badge">Yeni</string>
+    <string name="save_to_drive_short">Drive\'a kaydet</string>
+    <string name="drive_saving">Google Drive\'a kaydediliyor…</string>
+    <string name="drive_saved">%1$s Google Drive\'a kaydedildi (All Document Reader klasörü)</string>
+    <string name="drive_save_failed_title">Google Drive\'a kaydedilemedi</string>
+    <string name="drive_not_allowed">Google, Google Drive erişimi vermedi. Hesabınızı seçip İzin ver\'e dokunun.</string>
+    <!-- /step29 -->
+    <!-- step30 -->
+    <string name="search_in_txt">TXT\'de ara</string>
+    <!-- /step30 -->
+    <!-- step31 -->
+    <string name="drive_app_missing">Dosyaları Drive\'a kaydetmek için Google Drive uygulaması gerekir. Google Play\'den yükleyip tekrar deneyin.</string>
+    <string name="drive_install">Yükle</string>
+    <!-- /step31 -->
+    <!-- step32 -->
+    <string name="ready_top">Hazır olun:</string>
+    <string name="ready_bottom">7 Günlük Ücretsiz Deneme</string>
+    <string name="premium_slide_merge">PDF birleştir\n&amp; böl</string>
+    <string name="feat_merge">PDF\'leri kolayca birleştirin ve bölün</string>
+    <string name="user_reviews">Kullanıcı Yorumları</string>
+    <string name="cancel_anytime">İstediğiniz zaman iptal edin</string>
+    <!-- /step32 -->
+    <!-- step33 -->
+    <string name="tool_merge_pdf">PDF Birleştir</string>
+    <string name="tool_split_pdf">PDF Böl</string>
+    <string name="premium_free_uses_left">Ücretsiz deneme · bugün %1$d kaldı. Sınırsız kullanım için Premium alın</string>
+    <string name="premium_last_free_use">Bugünün son ücretsiz denemesi. Sınırsız kullanım için Premium alın</string>
+    <string name="premium_limit_reached">\"%1$s\" için bugünkü ücretsiz denemeler bitti. Sınırsız kullanım için Premium alın.</string>
+    <string name="select_pdfs_to_merge">Birleştirilecek PDF\'leri seçin</string>
+    <string name="select_pdf_to_split">Bölünecek PDF\'yi seçin</string>
+    <string name="merge_n">Birleştir (%1$d)</string>
+    <string name="merge_pick_two">En az 2 PDF seçin</string>
+    <string name="merging_progress">Birleştiriliyor… (%1$d%%)</string>
+    <string name="merge_failed">Bu PDF\'ler birleştirilemedi (şifreli veya bozuk?)</string>
+    <string name="split_one_page">Bu PDF\'de yalnızca bir sayfa var</string>
+    <string name="split_info">%1$s · %2$d sayfa</string>
+    <string name="split_ranges_hint">örn. 1-3, 5, 6-%1$d</string>
+    <string name="split_action">Böl</string>
+    <string name="split_each_page">Her sayfa ayrı bir PDF</string>
+    <string name="split_every_n">Birkaç sayfada bir</string>
+    <string name="split_every_hint">Dosya başına sayfa, örn. 2</string>
+    <string name="split_custom">Özel sayfa aralıkları</string>
+    <string name="split_invalid">Geçerli sayfa numaraları girin</string>
+    <string name="splitting_progress">Bölünüyor… (%1$d%%)</string>
+    <string name="split_failed">Bu PDF bölünemedi</string>
+    <plurals name="split_done">
+        <item quantity="one">%1$d dosyaya bölündü</item>
+        <item quantity="other">%1$d dosyaya bölündü</item>
+    </plurals>
+    <!-- /step33 -->
+    <!-- step35 -->
+    <string name="section_edit_manage">Düzenle ve Yönet</string>
+    <string name="add_files">Dosya ekle</string>
+    <string name="add_part">Sayfa ekle</string>
+    <string name="continue_n">Devam (%1$d)</string>
+    <string name="quit">Çık</string>
+    <string name="quit_merging_title">Birleştirmeden çıkılsın mı?</string>
+    <string name="quit_splitting_title">Bölmeden çıkılsın mı?</string>
+    <string name="quit_changes_message">Değişiklikler kaydedilmeyecek. Çıkmak istediğinize emin misiniz?</string>
+    <string name="merged_successfully_excl">Başarıyla birleştirildi!</string>
+    <string name="split_successfully_excl">Başarıyla bölündü!</string>
+    <string name="satisfied_question">\"%1$s\" özelliğimizden memnun musunuz?</string>
+    <string name="satisfied_not_good">😞\nİyi değil</string>
+    <string name="satisfied_good">🥰\nİyi</string>
+    <string name="thanks_feedback">Geri bildiriminiz için teşekkürler!</string>
+    <string name="select_pages">Sayfaları seç</string>
+    <string name="split_method">Bölme yöntemi</string>
+    <string name="split_custom_range">Özel aralık</string>
+    <string name="split_custom_range_sub">Özel aralığa göre böl</string>
+    <string name="split_fixed_range">Sabit aralık</string>
+    <string name="split_fixed_range_sub">Sabit sayfa aralığıyla böl</string>
+    <string name="interval_settings">Aralık ayarı</string>
+    <string name="split_n">Böl (%1$d)</string>
+    <string name="part_pages">Sayfa: %1$s</string>
+    <plurals name="pages_and_size">
+        <item quantity="one">%1$d sayfa · %2$s</item>
+        <item quantity="other">%1$d sayfa · %2$s</item>
+    </plurals>
+    <!-- /step35 -->
+    <!-- step39 -->
+    <string name="ad_loading">Reklam yükleniyor…</string>
+    <!-- /step39 -->
+    <!-- step40 -->
+    <string name="swipe_pages_tip">Sayfa çevirmek için sola/sağa kaydırın</string>
+    <!-- /step40 -->
+    <!-- step59 -->
+    <string name="done">Bitti</string>
+    <string name="ok">Tamam</string>
+    <string name="premium">Premium</string>
+    <string name="open">Aç</string>
+    <string name="add_bookmark">Yer imlerine ekle</string>
+    <string name="remove_bookmark">Yer imlerinden kaldır</string>
+    <string name="file_info_path">Konum</string>
+    <string name="file_info_size">Boyut</string>
+    <string name="file_info_modified">Değiştirilme</string>
+    <string name="no_app_to_open">Bu dosyayı açacak uygulama bulunamadı</string>
+    <string name="file_not_found">Dosya artık mevcut değil</string>
+    <string name="empty_folder">Bu klasör boş</string>
+    <string name="create_new">Yeni oluştur</string>
+    <string name="settings_version">Sürüm %1$s</string>
+    <string name="tool_templates">Şablonlar</string>
+    <string name="press_back_again">Çıkmak için tekrar geri tuşuna basın</string>
+    <string name="select">Seç</string>
+    <string name="select_all">Tümünü seç</string>
+    <string name="delete_failed">Bazı dosyalar silinemedi</string>
+    <string name="rename_empty">Ad boş olamaz</string>
+    <string name="rename_invalid">Ad geçersiz karakterler içeriyor</string>
+    <string name="rename_exists">Bu adda bir dosya zaten var</string>
+    <string name="rename_failed">Bu dosya yeniden adlandırılamadı</string>
+    <string name="rename_done">Yeniden adlandırıldı</string>
+    <string name="select_files_first">Önce dosyaları seçin</string>
+    <string name="shortcut_permission_message"><![CDATA[Dosyaları ana ekrana eklemek için <font color=\"#0A5FD9\">\"Ana ekran kısayolları\"</font> iznine ihtiyacımız var.]]></string>
+    <string name="shortcut_added">Ana ekrana eklendi</string>
+    <string name="shortcut_not_supported">Başlatıcınız ana ekran kısayollarını desteklemiyor</string>
+    <string name="rate_title"><![CDATA[<font color=\"#0A5FD9\">Uygulamamızı</font> beğendiniz mi?]]></string>
+    <string name="rate_thanks">Geri bildiriminiz için teşekkürler!</string>
+    <string name="restored">Geri yüklendi</string>
+    <string name="restore_failed">Geri yüklenemedi (aynı adda bir dosya zaten olabilir)</string>
+    <string name="empty_recycle_bin_confirm">Geri dönüşüm kutusundaki tüm dosyalar kalıcı olarak silinsin mi?</string>
+    <string name="unsupported_message">Üzgünüz, bu dosya türünü şu anda desteklemiyoruz.\nAncak uygulamayı geliştirmek için sürekli çalışıyoruz ve ileride daha fazla dosya türünü destekleyeceğiz.</string>
+    <string name="faq">SSS</string>
+    <string name="faq_message">Uygulama içinde açılanlar: PDF, Word (.docx) ve TXT.\n\nExcel, PowerPoint ve görseller telefonunuzdaki başka bir uygulamayla açılır.\n\nDiğer dosya türleri (APK, video, sistem dosyaları…) henüz desteklenmiyor.</string>
+    <string name="convert">Dönüştür</string>
+    <string name="pdf_to_word">PDF\'den Word\'e</string>
+    <string name="converting_progress">Dönüştürülüyor… (%%%d)</string>
+    <string name="convert_failed">Dönüştürme başarısız oldu</string>
+    <string name="print">Yazdır</string>
+    <string name="edit">Düzenle</string>
+    <string name="bookmarked">Yer imlerine eklendi</string>
+    <string name="pdf_password_protected">Bu PDF parola korumalı veya hasarlı</string>
+    <string name="undo">Geri al</string>
+    <string name="redo">Yinele</string>
+    <string name="setup">Kurulum</string>
+    <string name="delete_pages_message"><![CDATA[Seçili <font color=\"#0A5FD9\">%d</font> sayfayı silmek istediğinizden emin misiniz?]]></string>
+    <string name="pdf_needs_page">Bir PDF en az bir sayfa içermelidir</string>
+    <string name="discard_title">Değişiklikler atılsın mı?</string>
+    <string name="discard_message">Sayfa değişiklikleriniz kaydedilmedi.</string>
+    <string name="discard">At</string>
+    <string name="saving">Kaydediliyor…</string>
+    <string name="extracting">Sayfalar çıkarılıyor…</string>
+    <string name="save_failed">PDF kaydedilemedi</string>
+    <string name="portrait">Dikey</string>
+    <string name="landscape">Yatay</string>
+    <string name="size_letter">Letter</string>
+    <string name="size_legal">Legal</string>
+    <string name="tpl_blank">Boş</string>
+    <string name="tpl_line1">Çizgili 1</string>
+    <string name="tpl_line2">Çizgili 2</string>
+    <string name="tpl_notebook">Defter</string>
+    <string name="tpl_cornell">Cornell</string>
+    <string name="tpl_grid">Kareli</string>
+    <string name="tpl_graph">Grafik</string>
+    <string name="pick_image_hint">JPG, PNG veya başka bir görsel seçin</string>
+    <string name="import_failed">Bu dosya içe aktarılamadı</string>
+    <string name="tpl_resume">Özgeçmiş</string>
+    <string name="filter_original">Orijinal</string>
+    <string name="no_camera">Kamera uygulaması bulunamadı</string>
+    <string name="pick_word_hint">Word (.docx) veya TXT dosyası seçin</string>
+    <string name="pick_pdf_hint">PDF dosyası seçin</string>
+    <string name="pick_ppt_hint">PowerPoint (.pptx) dosyası seçin</string>
+    <string name="convert_old_format">Bu eski biçim (.doc / .ppt) henüz desteklenmiyor. Lütfen .docx veya .pptx kullanın.</string>
+    <string name="dims_cm">%1$s cm x %2$s cm</string>
+    <string name="flash">Flaş</string>
+    <string name="grid">Izgara</string>
+    <string name="shutter_sound">Deklanşör sesi</string>
+    <string name="center_guide">Merkez kılavuzu</string>
+    <string name="compare">Orijinalle karşılaştır</string>
+    <string name="filter_auto">Otomatik</string>
+    <string name="filter_docs">Belge</string>
+    <string name="filter_color">Renkli</string>
+    <string name="filter_image">Görsel</string>
+    <string name="filter_super">Süper</string>
+    <string name="filter_enhance">İyileştir</string>
+    <string name="filter_enhance2">İyileştir2</string>
+    <string name="filter_gray">Gri</string>
+    <string name="filter_invert">Ters çevir</string>
+    <string name="underline">Altı çizili</string>
+    <string name="strikethrough">Üstü çizili</string>
+    <string name="add_short">+ Ekle</string>
+    <string name="delete_signature">İmzayı sil</string>
+    <string name="delete_signature_message">Kayıtlı bu imza kaldırılsın mı?</string>
+    <string name="how_to_edit">Nasıl düzenlenir</string>
+    <string name="share_app_text">PDF, Word, Excel ve PowerPoint dosyalarını açmak ve düzenlemek için %1$s kullanıyorum. Sen de dene:</string>
+    <string name="faq_yes">🥳 Evet</string>
+    <string name="faq_no">😞 Hayır</string>
+    <string name="faq_q_edit">Bir PDF\'yi nasıl düzenleyebilirim?</string>
+    <string name="faq_q_display">Belgenin görüntülenme şeklini nasıl değiştirebilirim?</string>
+    <string name="faq_q_copy">Metni nasıl kopyalayabilirim?</string>
+    <string name="faq_q_search">Bir dosyada metni nasıl arayabilirim?</string>
+    <string name="faq_q_open">Dosyamı neden bulamıyor veya açamıyorum?</string>
+    <string name="faq_q_create">Yeni bir dosyayı nasıl oluşturabilirim?</string>
+    <string name="faq_q_print">Bir dosyayı nasıl yazdırabilirim?</string>
+    <string name="faq_q_subscription">Aboneliğimi nasıl yönetir veya iptal ederim?</string>
+    <string name="faq_q_ads">Uygulamada neden reklam var?</string>
+    <string name="faq_q_slow">Bir dosya neden yavaş açılıyor?</string>
+    <string name="faq_q_permissions">Uygulama neden dosya erişim iznine ihtiyaç duyuyor?</string>
+    <string name="feedback_hint">Lütfen sorunu veya önerinizi ayrıntılı olarak açıklayın…</string>
+    <string name="fb_rating_line">Puan: %1$d/5</string>
+    <string name="fb_max_shots">En fazla 4 ekran görüntüsü ekleyebilirsiniz</string>
+    <string name="get_premium">Premium\'a geç</string>
+    <string name="premium_slide_sign">PDF düzenle\nve imzala</string>
+    <string name="premium_slide_convert">Biçim\ndönüştür</string>
+    <string name="premium_slide_templates">Şablonlar</string>
+    <string name="premium_slide_pages">Sayfa yönetimi</string>
+    <string name="feat_ad_free">Reklamsız deneyim</string>
+    <string name="feat_edit_sign">PDF\'leri kolayca düzenleyin ve imzalayın</string>
+    <string name="feat_convert">Dosyaları anında dönüştürün</string>
+    <string name="feat_templates">Premium şablonların kilidini açın</string>
+    <string name="feat_pages">Eksiksiz sayfa yönetimi</string>
+    <string name="plan_yearly">Yıllık</string>
+    <string name="plan_monthly">Aylık</string>
+    <string name="continue_label">Devam</string>
+    <string name="no_subscription_found">Geçerli bir abonelik bulunamadı.</string>
+    <string name="w_home">Ana sayfa</string>
+    <string name="w_recent">Son</string>
+    <string name="w_tools_title">Hızlı araçlar</string>
+    <string name="w_tools_desc">Ana ekranınızdan arama yapın, son dosyaları ve yer imlerini açın veya PDF düzenleyin</string>
+    <string name="w_reader_title">Belge okuyucu</string>
+    <string name="w_reader_desc">PDF, Word, Excel ve PowerPoint dosyalarını tek dokunuşla açın</string>
+    <string name="w_editor_title">PDF düzenleyici</string>
+    <string name="w_editor_desc">Doğrudan PDF düzenlemeye başlayın</string>
+    <string name="add_widget_button">Ana ekrana ekle</string>
+    <string name="widget_manual_hint">Ana ekranınıza uzun basın, Widget\'lar\'a dokunun ve bu uygulamayı seçin</string>
+    <string name="thanks_support">Desteğiniz için teşekkürler!</string>
+    <string name="dont_miss_apps">En yüksek puanlı uygulamalarımızı kaçırmayın 👇</string>
+    <string name="see_our_apps">Uygulamalarımızı Google Play\'de görün</string>
+    <string name="faq_a_edit">&lt;b&gt;Araçlar&lt;/b&gt; sekmesini açıp &lt;b&gt;PDF düzenle&lt;/b&gt;\'ye dokunun, ardından bir dosya seçin. Mevcut metni düzenleyebilir, yeni metin ve görsel ekleyebilir, not ekleyebilir (vurgulama, altını çizme, üstünü çizme, çizim) ve imzanızı ekleyebilirsiniz. Bir kopya kaydetmek için onay işaretine dokunun.</string>
+    <string name="faq_a_display">Okurken alt çubuğu kullanarak &lt;b&gt;dikey&lt;/b&gt; ve &lt;b&gt;yatay&lt;/b&gt; kaydırma arasında geçiş yapın, görünümü döndürün veya renkleri ters çevirin. Yakınlaştırmak için iki parmağınızla açın; bir sayfaya gitmek için sayfa numarasına dokunun.</string>
+    <string name="faq_a_copy">Metin kopyalama henüz kullanılamıyor. Üzerinde çalışıyoruz! Bu sizin için önemliyse, öncelik verebilmemiz için &lt;a href=\"app://feedback\"&gt;bize geri bildirim gönderin&lt;/a&gt;.</string>
+    <string name="faq_a_search">Belgeyi açın ve alt çubukta &lt;b&gt;Ara&lt;/b&gt;\'ya dokunun, ardından aradığınız kelimeyi yazın. Sonuçlar arasında geçmek için okları kullanın. Bir dosyayı adıyla bulmak için ana ekranın üstündeki arama simgesini kullanın.</string>
+    <string name="faq_a_open">Uygulamanın dosyalarınıza erişim izni olduğundan emin olun. Dosya bir bulut uygulamasında veya başka bir klasördeyse, onu &lt;a href=\"app://filemanager\"&gt;dosya yöneticinizle&lt;/a&gt; açın ve bu uygulamayı seçin. Dosya yine de açılmıyorsa hasarlı veya parola korumalı olabilir; lütfen &lt;a href=\"app://feedback\"&gt;bize bildirin&lt;/a&gt;.</string>
+    <string name="faq_a_create">&lt;b&gt;Tüm dosyalar&lt;/b&gt; sayfasında &lt;b&gt;+&lt;/b&gt; düğmesine dokunun. Şablondan belge oluşturabilir, dosya içe aktarabilir, görselleri PDF\'ye dönüştürebilir veya kağıt belgeleri kameranızla tarayabilirsiniz.</string>
+    <string name="faq_a_print">Bir PDF açın, &lt;b&gt;⋮&lt;/b&gt; menüsüne dokunun ve &lt;b&gt;Yazdır&lt;/b&gt;\'ı seçin. Diğer biçimler önce &lt;b&gt;Araçlar&lt;/b&gt; sekmesinden PDF\'ye dönüştürülebilir.</string>
+    <string name="faq_a_subscription">Abonelikler Google Play tarafından yönetilir. &lt;b&gt;Ayarlar → Abonelikleri yönet&lt;/b&gt; bölümüne gidin veya Google Play → Profil → Ödemeler ve abonelikler\'i açın. Ayrıntılar için &lt;a href=\"app://terms\"&gt;Kullanım koşullarımıza&lt;/a&gt; bakın.</string>
+    <string name="faq_a_ads">Reklamlar, uygulamayı herkes için ücretsiz tutmamıza yardımcı olur. Reklamları &lt;a href=\"app://premium\"&gt;Premium&lt;/a&gt; ile kaldırabilirsiniz.</string>
+    <string name="faq_a_slow">Çok büyük veya çok sayıda görsel içeren dosyaların yüklenmesi daha uzun sürer. Diğer uygulamaları kapatmak ve depolama alanı boşaltmak yardımcı olabilir. Bir dosya her zaman yavaşsa lütfen &lt;a href=\"app://feedback\"&gt;bize geri bildirim gönderin&lt;/a&gt;.</string>
+    <string name="faq_a_permissions">Uygulamanın dosya erişimine yalnızca cihazınızdaki belgeleri bulmak ve açmak için ihtiyacı vardır. Dosyalarınız cihazınızda kalır ve asla yüklenmez.</string>
+    <string name="terms_html">&lt;p&gt;&lt;i&gt;Son güncelleme: Eylül 2026&lt;/i&gt;&lt;/p&gt;&lt;p&gt;Bu Kullanım koşulları, &lt;b&gt;%1$s&lt;/b&gt; (\"Uygulama\") kullanımınızı düzenler. Uygulamayı kullanarak bu koşulları kabul etmiş olursunuz.&lt;/p&gt;&lt;h4&gt;1. Uygulamanın kullanımı&lt;/h4&gt;&lt;p&gt;Uygulamayı kişisel veya ticari amaçlarla belgeleri görüntülemek, oluşturmak, dönüştürmek ve düzenlemek için kullanabilirsiniz. Açtığınız ve oluşturduğunuz belgelerden ve bunları kullanma hakkına sahip olmaktan siz sorumlusunuz.&lt;/p&gt;&lt;h4&gt;2. Abonelikler&lt;/h4&gt;&lt;p&gt;Bazı özellikler, Google Play üzerinden satın alınan ücretli bir abonelik gerektirebilir. Abonelikler, mevcut dönemin bitiminden en az 24 saat önce iptal edilmedikçe otomatik olarak yenilenir. Aboneliğinizi Google Play hesap ayarlarınızdan yönetebilir veya iptal edebilirsiniz. İadeler Google Play politikalarına tabidir.&lt;/p&gt;&lt;h4&gt;3. Reklamlar&lt;/h4&gt;&lt;p&gt;Uygulamanın ücretsiz sürümü, üçüncü taraflarca sağlanan reklamlar gösterebilir.&lt;/p&gt;&lt;h4&gt;4. Garanti verilmemesi&lt;/h4&gt;&lt;p&gt;Uygulama \"olduğu gibi\" sunulmaktadır. Güvenilir olması için elimizden geleni yapıyoruz, ancak hatasız olacağını garanti etmiyoruz ve veri kaybından sorumlu değiliz. Lütfen önemli dosyalarınızın yedeğini alın.&lt;/p&gt;&lt;h4&gt;5. Değişiklikler&lt;/h4&gt;&lt;p&gt;Bu koşulları zaman zaman güncelleyebiliriz. Uygulamayı kullanmaya devam etmeniz, güncellenmiş koşulları kabul ettiğiniz anlamına gelir.&lt;/p&gt;&lt;h4&gt;6. İletişim&lt;/h4&gt;&lt;p&gt;Sorularınız mı var? Bize %2$s adresinden e-posta gönderin.&lt;/p&gt;</string>
+    <string name="premium_trusted_top">Dünya genelinde</string>
+    <string name="premium_trusted_count">kullanıcımız</string>
+    <string name="premium_trusted_bottom">tarafından seviliyor</string>
+    <string name="plan_trial_days">%1$d Günlük Ücretsiz Deneme</string>
+    <string name="plan_then_only_per_day">Sonra günde yalnızca %1$s</string>
+    <string name="plan_per_day">%1$s/gün</string>
+    <string name="plan_price_year">%1$s/yıl</string>
+    <string name="plan_price_month">%1$s/ay</string>
+    <string name="plan_save_percent">%%%1$d tasarruf</string>
+    <string name="start_free_trial">Ücretsiz Denemeyi Başlat</string>
+    <string name="trial_today">Bugün</string>
+    <string name="trial_today_sub">Tüm premium özelliklerin kilidini açın</string>
+    <string name="trial_full_access">Tam erişim kazanın</string>
+    <string name="trial_full_access_sub">Tüm reklamları kaldırın, her biçimdeki dosyaları okuyun, PDF\'leri kolayca düzenleyin ve daha fazlası.</string>
+    <string name="trial_day7">7. gün</string>
+    <string name="trial_day7_sub">Deneme bitmeden en az 24 saat önce iptal ederseniz ücret alınmaz.</string>
+    <string name="hot">POPÜLER</string>
+    <string name="try_days_free">%1$d Gün Ücretsiz Deneyin</string>
+    <string name="try_then">Sonra %1$s/yıl, günde yalnızca %2$s</string>
+    <string name="crop_not_found">Sayfa kenarları bulunamadı — ayarlamak için Kırp\'ı kullanın</string>
+    <string name="tpl_reset">Sıfırla</string>
+    <string name="tpl_close">Kapat</string>
+    <string name="tpl_download">İndir</string>
+    <string name="tpl_flip_h">Yatay çevir</string>
+    <string name="tpl_flip_v">Dikey çevir</string>
+    <string name="tpl_bold">Kalın</string>
+    <string name="tpl_italic">İtalik</string>
+    <string name="tpl_underline">Altı çizili</string>
+    <string name="tpl_strike">Üstü çizili</string>
+    <string name="tpl_bullets">Madde işaretli liste</string>
+    <string name="tpl_numbers">Numaralı liste</string>
+    <string name="tpl_save_failed">Dosya kaydedilemedi</string>
+    <string name="tpl_image_failed">Bu resim açılamadı</string>
+    <string name="ad_badge">Reklam</string>
+    <string name="explore_nothing">Şu anda gösterilecek bir şey yok. Lütfen internet bağlantınızı kontrol edin.</string>
+    <string name="review1_title">Hepsi Bir Arada Dosya Okuyucu</string>
+    <string name="review1_text">Aboneliğe kesinlikle değer!! Her biçimdeki dosyaları hızla açıyor, okuma ilerlemesini takip ediyor, çevrimdışı çalışıyor ve silinen dosyaları bile kurtarıyor!</string>
+    <string name="review2_title">Reklam Yok, Gizli Ücret Yok</string>
+    <string name="review2_text">Abone olduktan sonra daha fazla özellik kullanabiliyorum. Okuma ve düzenlememi hiçbir reklam bölmüyor, arayüz de daha sade. En güzeli, hiçbir gizli ücret yok!</string>
+    <string name="review3_title">Daha Fazla Odak, Daha Hızlı İş</string>
+    <string name="review3_text">Abonelik ucuz ve artık dosyaları can sıkıcı reklamlar olmadan önizleyebiliyor, düzenleyebiliyor ve yönetebiliyorum. Verimliliğimi gerçekten artırdı!</string>
+    <plurals name="deleted_count">
+        <item quantity="one">%d dosya silindi</item>
+        <item quantity="other">%d dosya silindi</item>
+    </plurals>
+    <plurals name="moved_to_bin_count">
+        <item quantity="one">%d dosya geri dönüşüm kutusuna taşındı</item>
+        <item quantity="other">%d dosya geri dönüşüm kutusuna taşındı</item>
+    </plurals>
+    <plurals name="days_left">
+        <item quantity="one">%d gün kaldı</item>
+        <item quantity="other">%d gün kaldı</item>
+    </plurals>
+    <plurals name="pages_selected">
+        <item quantity="one">%d sayfa seçildi</item>
+        <item quantity="other">%d sayfa seçildi</item>
+    </plurals>
+    <plurals name="days_count">
+        <item quantity="one">%d gün</item>
+        <item quantity="other">%d gün</item>
+    </plurals>
+    <plurals name="delete_forever_message">
+        <item quantity="one">%d dosya kalıcı olarak silinecek. Bu işlem geri alınamaz.</item>
+        <item quantity="other">%d dosya kalıcı olarak silinecek. Bu işlem geri alınamaz.</item>
+    </plurals>
+    <plurals name="restored_count">
+        <item quantity="one">%d dosya geri yüklendi</item>
+        <item quantity="other">%d dosya geri yüklendi</item>
+    </plurals>
+    <!-- /step59 -->
 </resources>

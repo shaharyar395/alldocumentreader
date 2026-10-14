@@ -9,7 +9,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.FrameLayout
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.core.os.LocaleListCompat
@@ -20,7 +19,7 @@ import com.theoccess.alldocreader.databinding.ActivityLanguageBinding
 import com.theoccess.alldocreader.ui.onboarding.OnboardingActivity
 import com.theoccess.alldocreader.util.dp
 
-class LanguageActivity : AppCompatActivity() {
+class LanguageActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivityLanguageBinding
     private lateinit var adapter: LanguageAdapter
@@ -33,6 +32,9 @@ class LanguageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLanguageBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // bottom banner ad (needs the ads SDK; it shows "Loading ad…" until the ad arrives)
+        binding.adBar.reserveSpace = true
+        com.theoccess.alldocreader.ads.Ads.init(this)
 
         if (fromSettings) {
             binding.btnBack.visibility = View.VISIBLE
@@ -50,6 +52,16 @@ class LanguageActivity : AppCompatActivity() {
         binding.btnDone.setOnClickListener { applySelection() }
 
         if (!fromSettings && savedInstanceState == null) askNotificationPermission()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.adBar.resume()
+    }
+
+    override fun onPause() {
+        binding.adBar.pause()
+        super.onPause()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

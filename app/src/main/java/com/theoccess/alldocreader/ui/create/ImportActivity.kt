@@ -3,7 +3,6 @@ package com.theoccess.alldocreader.ui.create
 import android.net.Uri
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.theoccess.alldocreader.R
 import com.theoccess.alldocreader.data.DocFile
@@ -27,7 +26,7 @@ import kotlinx.coroutines.withContext
  * sent from other apps, see [OpenDocumentActivity]). A small "Loading…" pill shows only if
  * the file has to be copied first (Drive, e-mail attachments…).
  */
-class ImportActivity : AppCompatActivity() {
+class ImportActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private val picker = registerForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
         if (uri == null) finish() else open(uri)

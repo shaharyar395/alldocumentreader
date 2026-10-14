@@ -5,13 +5,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Html
 import android.text.method.LinkMovementMethod
-import androidx.appcompat.app.AppCompatActivity
 import com.theoccess.alldocreader.R
 import com.theoccess.alldocreader.databinding.ActivityPolicyBinding
 import com.theoccess.alldocreader.util.Links
 
 /** Terms of use / Privacy policy (blue bar, readable text). */
-class PolicyActivity : AppCompatActivity() {
+class PolicyActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

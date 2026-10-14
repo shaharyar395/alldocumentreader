@@ -21,6 +21,7 @@ import com.theoccess.alldocreader.ui.create.CreateFilesSheet
 import com.theoccess.alldocreader.ui.create.ImportActivity
 import com.theoccess.alldocreader.ui.create.PickFileActivity
 import com.theoccess.alldocreader.ui.create.TemplatesActivity
+import com.theoccess.alldocreader.premium.PremiumGate
 import com.theoccess.alldocreader.ui.directories.DirectoriesActivity
 import com.theoccess.alldocreader.ui.edit.PdfEditActivity
 import com.theoccess.alldocreader.ui.pages.InsertBlankPagesActivity
@@ -35,27 +36,37 @@ import com.theoccess.alldocreader.util.toast
  */
 class ToolsFragment : Fragment() {
 
-    private class Tool(@DrawableRes val icon: Int, @StringRes val label: Int, val needsAccess: Boolean = true, val target: (Context) -> Intent)
+    /** [premium]: a Premium tool (crown for free users, a few free tries a day — see [PremiumGate]). */
+    private class Tool(
+        @DrawableRes val icon: Int, @StringRes val label: Int, val needsAccess: Boolean = true,
+        val premium: PremiumGate.Feature? = null, val target: (Context) -> Intent
+    )
+
+    private val crowns = ArrayList<View>()
 
     private fun sections(): List<Pair<Int, List<Tool>>> = listOf(
         R.string.section_convert_create to listOf(
-            Tool(R.drawable.ic_cv_image2pdf, R.string.image_to_pdf) { PickFileActivity.intent(it, ConvertKind.IMAGE_TO_PDF) },
+            // like the original: "Take a photo (ML Kit scanner) / Choose from gallery / Cancel" →
+            // page editor → Image to PDF list → Convert
+            Tool(R.drawable.ic_cv_image2pdf, R.string.image_to_pdf, premium = PremiumGate.Feature.CONVERT) { ScanStartActivity.intent(it, scan = false) },
             Tool(R.drawable.ic_cv_scan, R.string.scan_to_pdf) { ScanStartActivity.intent(it, scan = true) },
-            Tool(R.drawable.ic_cv_word2pdf, R.string.word_to_pdf) { PickFileActivity.intent(it, ConvertKind.WORD_TO_PDF) },
-            Tool(R.drawable.ic_cv_pdf2word, R.string.pdf_to_word) { PickFileActivity.intent(it, ConvertKind.PDF_TO_WORD) },
-            Tool(R.drawable.ic_cv_ppt2pdf, R.string.ppt_to_pdf) { PickFileActivity.intent(it, ConvertKind.PPT_TO_PDF) },
+            Tool(R.drawable.ic_cv_word2pdf, R.string.word_to_pdf, premium = PremiumGate.Feature.CONVERT) { PickFileActivity.intent(it, ConvertKind.WORD_TO_PDF) },
+            Tool(R.drawable.ic_cv_pdf2word, R.string.pdf_to_word, premium = PremiumGate.Feature.CONVERT) { PickFileActivity.intent(it, ConvertKind.PDF_TO_WORD) },
+            Tool(R.drawable.ic_cv_ppt2pdf, R.string.ppt_to_pdf, premium = PremiumGate.Feature.CONVERT) { PickFileActivity.intent(it, ConvertKind.PPT_TO_PDF) },
             Tool(R.drawable.ic_create_templates, R.string.tool_templates) { Intent(it, TemplatesActivity::class.java) },
             Tool(R.drawable.ic_create_pdf_badge, R.string.create_pdf) { InsertBlankPagesActivity.createIntent(it) }
         ),
-        R.string.section_edit to listOf(
-            Tool(R.drawable.ic_rt_edit_text, R.string.edit_text) { PickFileActivity.editIntent(it, PdfEditActivity.Mode.EDIT_TEXT) },
-            Tool(R.drawable.ic_rt_annotate, R.string.annotate) { PickFileActivity.editIntent(it, PdfEditActivity.Mode.ANNOTATE) },
-            Tool(R.drawable.ic_rt_add_text, R.string.add_text) { PickFileActivity.editIntent(it, PdfEditActivity.Mode.ADD_TEXT) },
-            Tool(R.drawable.ic_rt_sign, R.string.sign) { PickFileActivity.editIntent(it, PdfEditActivity.Mode.SIGN) }
+        R.string.section_edit_manage to listOf(
+            Tool(R.drawable.ic_rt_edit_text, R.string.edit_text, premium = PremiumGate.Feature.EDIT_SIGN) { PickFileActivity.editIntent(it, PdfEditActivity.Mode.EDIT_TEXT) },
+            Tool(R.drawable.ic_rt_annotate, R.string.annotate, premium = PremiumGate.Feature.EDIT_SIGN) { PickFileActivity.editIntent(it, PdfEditActivity.Mode.ANNOTATE) },
+            Tool(R.drawable.ic_rt_add_text, R.string.add_text, premium = PremiumGate.Feature.EDIT_SIGN) { PickFileActivity.editIntent(it, PdfEditActivity.Mode.ADD_TEXT) },
+            Tool(R.drawable.ic_rt_sign, R.string.sign, premium = PremiumGate.Feature.EDIT_SIGN) { PickFileActivity.editIntent(it, PdfEditActivity.Mode.SIGN) },
+            Tool(R.drawable.ic_rt_manage_pages, R.string.manage_pages, premium = PremiumGate.Feature.PAGES) { PickFileActivity.pagesIntent(it) },
+            Tool(R.drawable.ic_rt_merge, R.string.tool_merge_pdf, premium = PremiumGate.Feature.MERGE_SPLIT) { PickFileActivity.mergeIntent(it) },
+            Tool(R.drawable.ic_rt_split, R.string.tool_split_pdf, premium = PremiumGate.Feature.MERGE_SPLIT) { PickFileActivity.splitIntent(it) }
         ),
         R.string.section_others to listOf(
             Tool(R.drawable.ic_create_import, R.string.import_files) { Intent(it, ImportActivity::class.java) },
-            Tool(R.drawable.ic_rt_manage_pages, R.string.manage_pages) { PickFileActivity.pagesIntent(it) },
             Tool(R.drawable.ic_rt_recycle_bin, R.string.recycle_bin, needsAccess = false) {
                 Intent(it, com.theoccess.alldocreader.ui.directories.RecycleBinActivity::class.java)
             },
@@ -63,7 +74,18 @@ class ToolsFragment : Fragment() {
         )
     )
 
+    override fun onResume() {
+        super.onResume()
+        crowns.forEach { PremiumGate.showCrown(it) }   // gone right after buying Premium
+    }
+
+    override fun onHiddenChanged(hidden: Boolean) {
+        super.onHiddenChanged(hidden)
+        if (!hidden) crowns.forEach { PremiumGate.showCrown(it) }
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        crowns.clear()
         val b = FragmentToolsBinding.inflate(inflater, container, false)
         val ctx = requireContext()
         sections().forEachIndexed { index, (title, tools) ->
@@ -73,7 +95,9 @@ class ToolsFragment : Fragment() {
                 val cell = ItemResultToolBinding.inflate(inflater, s.grid, false)
                 cell.ivIcon.setImageResource(t.icon)
                 cell.tvLabel.setText(t.label)
+                // like the original: the tools are free for everyone (no crown)
                 cell.root.setOnClickListener {
+                    if (t.premium != null && !PremiumGate.check(ctx, t.premium)) return@setOnClickListener
                     if (!t.needsAccess || CreateFilesSheet.ensureAccess(ctx)) startActivity(t.target(ctx))
                 }
                 s.grid.addView(cell.root, GridLayout.LayoutParams(

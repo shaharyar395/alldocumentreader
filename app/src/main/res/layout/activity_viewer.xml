@@ -7,6 +7,7 @@
     android:orientation="vertical">
 
     <FrameLayout
+        android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="56dp">
 
@@ -228,13 +229,16 @@
                 android:layout_height="match_parent"
                 android:clipToPadding="false"
                 android:paddingTop="6dp"
-                android:paddingBottom="6dp"
-                app:fastScrollEnabled="true"
-                app:fastScrollHorizontalThumbDrawable="@drawable/fast_scroll_thumb"
-                app:fastScrollHorizontalTrackDrawable="@drawable/fast_scroll_track"
-                app:fastScrollVerticalThumbDrawable="@drawable/fast_scroll_thumb"
-                app:fastScrollVerticalTrackDrawable="@drawable/fast_scroll_track" />
+                android:paddingBottom="6dp" />
         </com.theoccess.alldocreader.ui.viewer.ZoomLayout>
+
+        <!-- page slider (≡): its lowest position stays just above the Edit button -->
+        <com.theoccess.alldocreader.ui.viewer.PageScrollBar
+            android:id="@+id/pageScroll"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginBottom="76dp" />
 
         <TextView
             android:id="@+id/tvPageChip"

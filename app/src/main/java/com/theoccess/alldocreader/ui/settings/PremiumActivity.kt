@@ -3,12 +3,6 @@ package com.theoccess.alldocreader.ui.settings
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.text.Html
-import android.text.SpannableStringBuilder
-import android.text.Spanned
-import android.text.method.LinkMovementMethod
-import android.text.style.ClickableSpan
-import android.text.style.URLSpan
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -16,7 +10,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.widget.ImageViewCompat
 import com.theoccess.alldocreader.R
@@ -35,7 +28,7 @@ import com.theoccess.alldocreader.util.toast
  * Continue → Google Play's payment sheet (add a credit / debit card …). If the sheet is
  * closed without buying, the "Start Free Trial" screen is offered once.
  */
-class PremiumActivity : AppCompatActivity() {
+class PremiumActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivityPremiumBinding
     private var plan = Billing.Plan.YEARLY
@@ -47,7 +40,8 @@ class PremiumActivity : AppCompatActivity() {
         R.string.premium_slide_sign to R.drawable.ill_prem_sign,
         R.string.premium_slide_convert to R.drawable.ill_prem_convert,
         R.string.premium_slide_templates to R.drawable.ill_prem_templates,
-        R.string.premium_slide_pages to R.drawable.ill_prem_pages
+        R.string.premium_slide_pages to R.drawable.ill_prem_pages,
+        R.string.premium_slide_merge to R.drawable.ill_prem_merge
     )
     private val auto: Runnable = object : Runnable {
         override fun run() {
@@ -64,23 +58,27 @@ class PremiumActivity : AppCompatActivity() {
         trialOffered = savedInstanceState?.getBoolean(STATE_TRIAL) ?: false
 
         binding.btnClose.setOnClickListener { finish() }
-        PaywallUi.revealClose(binding.btnClose)
+        // like the original: "Get Ready for Your 7-Day Free Trial" for a moment, then the page
+        val showReady = savedInstanceState == null && !Billing.isPremium
+        if (showReady) playReady() else binding.readyView.visibility = View.GONE
+        PaywallUi.revealClose(binding.btnClose, if (showReady) 3000L + READY_MS else 3000L)
         binding.btnRestore.setOnClickListener { restore() }
         PaywallUi.gradientText(binding.tvGetPremium, 0xFF6FA8FF.toInt(), 0xFFB18CFF.toInt())
 
         setupSlides()
         setupFeatures()
+        setupReviews()
         binding.planYearly.setOnClickListener { select(Billing.Plan.YEARLY) }
         binding.planMonthly.setOnClickListener { select(Billing.Plan.MONTHLY) }
         select(plan)
         binding.btnContinue.setOnClickListener { onContinue() }
         PaywallUi.shine(binding.btnContinue, binding.shine)
-        setupLegal()
+        setupLinks()
 
         Billing.prices.observe(this) { showPrices(it) }
         val premiumAtStart = Billing.isPremium
         Billing.premium.observe(this) { on ->
-            binding.tvContinue.setText(if (on) R.string.manage_subscriptions else R.string.continue_label)
+            updateButton()
             if (on && !premiumAtStart) finish()   // bought here or on "Start Free Trial"
         }
     }
@@ -191,12 +189,13 @@ class PremiumActivity : AppCompatActivity() {
             R.drawable.ic_q_edit to R.string.feat_edit_sign,
             R.drawable.ic_st_terms to R.string.feat_convert,
             R.drawable.ic_st_widget to R.string.feat_templates,
-            R.drawable.ic_pages to R.string.feat_pages
+            R.drawable.ic_pages to R.string.feat_pages,
+            R.drawable.ic_feat_merge to R.string.feat_merge
         ).forEach { (icon, text) ->
             val row = LinearLayout(this).apply {
                 orientation = LinearLayout.HORIZONTAL
                 gravity = Gravity.CENTER_VERTICAL
-                layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dp(32))
+                layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dp(38))
             }
             row.addView(ImageView(this).apply {
                 layoutParams = LinearLayout.LayoutParams(dp(18), dp(18))
@@ -207,7 +206,7 @@ class PremiumActivity : AppCompatActivity() {
                 layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f).apply { marginStart = dp(12) }
                 setText(text)
                 setTextColor(0xFFFFFFFF.toInt())
-                textSize = 13f
+                textSize = 14f
             })
             row.addView(ImageView(this).apply {
                 layoutParams = LinearLayout.LayoutParams(dp(18), dp(18))
@@ -223,9 +222,26 @@ class PremiumActivity : AppCompatActivity() {
         plan = p
         binding.planYearly.isSelected = p == Billing.Plan.YEARLY
         binding.planMonthly.isSelected = p == Billing.Plan.MONTHLY
+        updateButton()
+    }
+
+    /** "Start Free Trial →" for the yearly plan with a trial, "Continue →" otherwise. */
+    private fun updateButton() {
+        val on = Billing.isPremium
+        val trial = plan == Billing.Plan.YEARLY && (Billing.prices.value?.get(Billing.Plan.YEARLY)?.trialDays ?: 7) > 0
+        binding.tvContinue.setText(
+            when {
+                on -> R.string.manage_subscriptions
+                trial -> R.string.start_free_trial
+                else -> R.string.continue_label
+            }
+        )
+        binding.ivContinueArrow.visibility = if (on) View.GONE else View.VISIBLE
+        binding.tvCancelAnytime.visibility = if (on) View.GONE else View.VISIBLE
     }
 
     private fun showPrices(prices: Map<Billing.Plan, Billing.Price>) {
+        updateButton()
         val y = prices[Billing.Plan.YEARLY]
         val m = prices[Billing.Plan.MONTHLY]
         if (y != null) {
@@ -282,25 +298,121 @@ class PremiumActivity : AppCompatActivity() {
         Billing.refreshPurchases { active ->
             if (isFinishing) return@refreshPurchases
             if (active) { toast(R.string.premium_restored); finish() }
-            else TopPill.show(this, getString(R.string.no_subscription_found), 0, 28)
+            else com.theoccess.alldocreader.premium.PaywallUi.noSubscription(this)
         }
     }
 
-    private fun setupLegal() {
-        val legal = SpannableStringBuilder(Html.fromHtml(getString(R.string.premium_legal), Html.FROM_HTML_MODE_LEGACY))
-        legal.getSpans(0, legal.length, URLSpan::class.java).forEach { s ->
-            val a = legal.getSpanStart(s); val e = legal.getSpanEnd(s)
-            legal.removeSpan(s)
-            legal.setSpan(object : ClickableSpan() {
-                override fun onClick(widget: View) { startActivity(PolicyActivity.intent(this@PremiumActivity, PolicyActivity.TERMS)) }
-            }, a, e, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+    private fun setupLinks() {
+        listOf(binding.tvTerms, binding.tvPrivacy).forEach { it.paintFlags = it.paintFlags or android.graphics.Paint.UNDERLINE_TEXT_FLAG }
+        binding.tvTerms.setOnClickListener { startActivity(PolicyActivity.intent(this, PolicyActivity.TERMS)) }
+        binding.tvPrivacy.setOnClickListener { Links.open(this, Links.PRIVACY_POLICY) }
+    }
+
+    // ------------------------------------------------------------------ user reviews
+
+    /**
+     * "User Reviews" cards under the benefits. NOTE: placeholder texts — before publishing, replace
+     * them (strings review1_… review3_…) with real reviews of your app (Google Play policy).
+     */
+    private fun setupReviews() {
+        PaywallUi.gradientText(binding.tvReviews, 0xFF5B8CFF.toInt(), 0xFFA9BCFF.toInt())
+        listOf(
+            Triple(R.string.review1_title, R.string.review1_name, R.string.review1_text),
+            Triple(R.string.review2_title, R.string.review2_name, R.string.review2_text),
+            Triple(R.string.review3_title, R.string.review3_name, R.string.review3_text)
+        ).forEach { (title, name, text) -> binding.reviews.addView(reviewCard(title, name, text)) }
+    }
+
+    private fun reviewCard(title: Int, name: Int, text: Int): View {
+        val card = android.widget.FrameLayout(this).apply {
+            background = ContextCompat.getDrawable(this@PremiumActivity, R.drawable.bg_review_card)
+            layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { bottomMargin = dp(10) }
         }
-        binding.tvLegal.text = legal
-        binding.tvLegal.movementMethod = LinkMovementMethod.getInstance()
+        // faint quote mark in the corner
+        card.addView(ImageView(this).apply {
+            setImageResource(R.drawable.ic_quote_big)
+            importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO
+        }, android.widget.FrameLayout.LayoutParams(dp(40), dp(40), Gravity.TOP or Gravity.END).apply { topMargin = dp(6); marginEnd = dp(10) })
+        val col = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(dp(14), dp(12), dp(14), dp(14))
+        }
+        col.addView(TextView(this).apply {
+            setText(title)
+            setTextColor(0xFFFFFFFF.toInt())
+            textSize = 15f
+            setTypeface(typeface, android.graphics.Typeface.BOLD)
+        })
+        val stars = LinearLayout(this).apply {
+            orientation = LinearLayout.HORIZONTAL
+            gravity = Gravity.CENTER_VERTICAL
+            layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { topMargin = dp(6) }
+        }
+        repeat(5) {
+            stars.addView(ImageView(this).apply { setImageResource(R.drawable.ic_star_filled) },
+                LinearLayout.LayoutParams(dp(15), dp(15)).apply { marginEnd = dp(3) })
+        }
+        stars.addView(TextView(this).apply {
+            setText(name)
+            setTextColor(0xB3FFFFFF.toInt())
+            textSize = 12f
+        }, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { marginStart = dp(8) })
+        col.addView(stars)
+        col.addView(TextView(this).apply {
+            setText(text)
+            setTextColor(0x99FFFFFF.toInt())
+            textSize = 12.5f
+            setLineSpacing(dp(4).toFloat(), 1f)
+            layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { topMargin = dp(8) }
+        })
+        card.addView(col)
+        return card
+    }
+
+    // ------------------------------------------------------------------ "Get Ready" screen
+
+    /** The red check pops in with a glow and twinkling dots, the text rises in, then the page shows. */
+    private fun playReady() {
+        val r = binding.readyView
+        r.visibility = View.VISIBLE
+        r.alpha = 1f
+        PaywallUi.gradientText(binding.tvReadyTop, 0xFFFF5A3C.toInt(), 0xFFFFB259.toInt())
+        PaywallUi.gradientText(binding.tvReadyBottom, 0xFFFF4B3A.toInt(), 0xFFFFC56E.toInt())
+        binding.readyBall.apply {
+            scaleX = 0.5f; scaleY = 0.5f; alpha = 0f
+            animate().scaleX(1f).scaleY(1f).alpha(1f).setDuration(450)
+                .setInterpolator(android.view.animation.OvershootInterpolator(1.6f)).start()
+        }
+        android.animation.ObjectAnimator.ofFloat(binding.readyGlow, View.ALPHA, 0.55f, 1f).apply {
+            duration = 700
+            repeatCount = android.animation.ValueAnimator.INFINITE
+            repeatMode = android.animation.ValueAnimator.REVERSE
+            start()
+        }
+        listOf(binding.spark1, binding.spark2, binding.spark3).forEachIndexed { i, v ->
+            android.animation.ObjectAnimator.ofFloat(v, View.ALPHA, 0.15f, 1f).apply {
+                duration = 520L + i * 130
+                startDelay = i * 160L
+                repeatCount = android.animation.ValueAnimator.INFINITE
+                repeatMode = android.animation.ValueAnimator.REVERSE
+                start()
+            }
+        }
+        listOf(binding.tvReadyTop, binding.tvReadyBottom).forEachIndexed { i, t ->
+            t.alpha = 0f
+            t.translationY = dp(14).toFloat()
+            t.animate().alpha(1f).translationY(0f).setStartDelay(220L + i * 120).setDuration(380).start()
+        }
+        r.postDelayed({
+            if (isFinishing || isDestroyed) return@postDelayed
+            r.animate().alpha(0f).setDuration(260).withEndAction { r.visibility = View.GONE }.start()
+        }, READY_MS)
     }
 
     companion object {
         private const val STATE_TRIAL = "trial_offered"
+        /** How long "Get Ready for Your 7-Day Free Trial" stays before the page. */
+        private const val READY_MS = 1700L
         fun intent(context: Context) = Intent(context, PremiumActivity::class.java)
     }
 }

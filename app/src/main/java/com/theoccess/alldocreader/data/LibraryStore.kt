@@ -31,6 +31,7 @@ object LibraryStore {
     }
 
     fun addRecent(path: String) {
+        NewFiles.markOpened(path)   // opened (or saved by the app): no "New" tag any more
         val list = listOf(Entry(path, System.currentTimeMillis())) +
             _recents.value.orEmpty().filterNot { it.path == path }
         update(KEY_RECENT, _recents, list.take(MAX_RECENT))

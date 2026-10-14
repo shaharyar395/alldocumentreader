@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.activity.OnBackPressedCallback
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.tabs.TabLayout
@@ -16,6 +15,7 @@ import com.theoccess.alldocreader.data.DocFile
 import com.theoccess.alldocreader.data.FileRepository
 import com.theoccess.alldocreader.data.FileType
 import com.theoccess.alldocreader.data.LibraryStore
+import com.theoccess.alldocreader.data.NewFiles
 import com.theoccess.alldocreader.data.Prefs
 import com.theoccess.alldocreader.data.sortedByMode
 import com.theoccess.alldocreader.databinding.ActivityFileListBinding
@@ -26,7 +26,7 @@ import com.theoccess.alldocreader.util.toast
  * "All files" (and PDF / Word / Excel / PPT / TXT / Image) list.
  * Toolbar: search, select, filter. Rows: bookmark + ⋮ menu. Rows fade in on load.
  */
-class FileListActivity : AppCompatActivity() {
+class FileListActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivityFileListBinding
     private lateinit var adapter: FileAdapter
@@ -86,11 +86,37 @@ class FileListActivity : AppCompatActivity() {
 
         FileRepository.state.observe(this) { render() }
         LibraryStore.bookmarks.observe(this) { list -> adapter.setBookmarks(list.map { it.path }.toSet()) }
+        // "New" tags: re-draw rows when a file was opened or a scan found new ones
+        NewFiles.changes.observe(this) {
+            // re-sorting alone doesn't re-draw rows whose file is unchanged: always refresh the tags
+            if (recentlyAdded) render()
+            adapter.refreshNewTags()
+        }
         FileRepository.refresh(this)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // files added while the app was in the background (downloads, USB, other apps)
+        FileRepository.refreshIfStale(this)
+        // back from a file: its "New" tag and gray row go away
+        if (::adapter.isInitialized) adapter.refreshNewTags()
+    }
+
+    /** Swipe down on the list or the refresh button: scan the storage again for new files. */
+    private var manualRefresh = false
+
+    private fun refreshFiles() {
+        manualRefresh = true
+        binding.swipeRefresh.isRefreshing = true
+        FileRepository.refresh(this, force = true)
     }
 
     private fun setupToolbar() {
         binding.btnBack.setOnClickListener { finish() }
+        binding.btnRefresh.setOnClickListener { refreshFiles() }
+        binding.swipeRefresh.setColorSchemeResources(R.color.primary)
+        binding.swipeRefresh.setOnRefreshListener { refreshFiles() }
         binding.btnSearch.setOnClickListener { openSearch() }
         binding.btnSelect.setOnClickListener {
             if (adapter.itemCount == 0) toast(R.string.no_files_found) else enterSelection(null)
@@ -157,15 +183,23 @@ class FileListActivity : AppCompatActivity() {
     private fun currentFiles(): List<DocFile> {
         val s = FileRepository.current
         val since = System.currentTimeMillis() - RECENT_WINDOW_MS
-        return s.filesFor(category)
-            .filter { !recentlyAdded || it.modified >= since }
+        val list = s.filesFor(category)
+            // Recently added: changed in the last 30 days, or newly found (copied files keep old dates)
+            .filter { !recentlyAdded || it.modified >= since || NewFiles.isNew(it.path) }
             .filter { tabType == null || it.type == tabType }
             .filter { query.isEmpty() || it.name.contains(query, ignoreCase = true) }
             .sortedByMode(Prefs.sortMode, Prefs.sortAscending)
+        // newly found files (not opened yet) first in Recently added
+        return if (recentlyAdded) list.sortedByDescending { NewFiles.isNew(it.path) } else list
     }
 
     private fun render() {
         val s = FileRepository.current
+        if (!s.loading && binding.swipeRefresh.isRefreshing) {
+            binding.swipeRefresh.isRefreshing = false
+            if (manualRefresh) toast(R.string.files_refreshed)
+            manualRefresh = false
+        }
         if (!s.loaded) {
             // First scan still running: spinner like the original app.
             binding.progress.visibility = View.VISIBLE

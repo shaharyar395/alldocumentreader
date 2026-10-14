@@ -1,5 +1,6 @@
 package com.theoccess.alldocreader.ui.scan
 
+import com.theoccess.alldocreader.premium.PremiumGate
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
 import android.animation.ValueAnimator
@@ -14,7 +15,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.GridLayout
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.theoccess.alldocreader.R
 import com.theoccess.alldocreader.data.DocFile
@@ -38,7 +38,7 @@ import java.io.File
  * "Converted successfully!" screen: notebook-style preview, file name with rename,
  * View locally, Open / Share, and Tools (Edit text, Annotate, Add text, PDF to Word, Print PDF, Sign).
  */
-class ConvertResultActivity : AppCompatActivity() {
+class ConvertResultActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivityConvertResultBinding
     private lateinit var doc: DocFile
@@ -61,6 +61,7 @@ class ConvertResultActivity : AppCompatActivity() {
         if (savedInstanceState == null) binding.root.post { com.theoccess.alldocreader.ads.Ads.showInterstitial(this) }
 
         binding.btnBack.setOnClickListener { finish() }
+        setupKind()
         binding.tvName.text = doc.name
         binding.btnRename.setOnClickListener {
             FileSheets.showRename(this, doc) { renamed ->
@@ -84,14 +85,19 @@ class ConvertResultActivity : AppCompatActivity() {
 
     private fun setupTools() {
         val tools: List<Triple<Int, Int, () -> Unit>> = listOf(
+            // same order as the original: Edit text, Annotate, Add text, Sign / PDF to Word, Manage pages, Print PDF
             Triple(R.drawable.ic_rt_edit_text, R.string.edit_text, { annotate(PdfEditActivity.Mode.EDIT_TEXT) }),
             Triple(R.drawable.ic_rt_annotate, R.string.annotate, { annotate(PdfEditActivity.Mode.ANNOTATE) }),
             Triple(R.drawable.ic_rt_add_text, R.string.add_text, { annotate(PdfEditActivity.Mode.ADD_TEXT) }),
+            Triple(R.drawable.ic_rt_sign, R.string.sign, { annotate(PdfEditActivity.Mode.SIGN) }),
             Triple(R.drawable.ic_rt_pdf2word, R.string.pdf_to_word, {
-                startActivity(ConvertActivity.intent(this, ConvertKind.PDF_TO_WORD, doc.path))
+                if (PremiumGate.use(this, PremiumGate.Feature.CONVERT))
+                    startActivity(ConvertActivity.intent(this, ConvertKind.PDF_TO_WORD, doc.path))
             }),
-            Triple(R.drawable.ic_rt_print, R.string.print_pdf, { PdfPrint.print(this, doc.file, doc.name) }),
-            Triple(R.drawable.ic_rt_sign, R.string.sign, { annotate(PdfEditActivity.Mode.SIGN) })
+            Triple(R.drawable.ic_rt_manage_pages, R.string.manage_pages, {
+                edited.launch(com.theoccess.alldocreader.ui.pages.PageOrganizerActivity.intent(this, doc.file))
+            }),
+            Triple(R.drawable.ic_rt_print, R.string.print_pdf, { PdfPrint.print(this, doc.file, doc.name) })
         )
         tools.forEach { (icon, label, action) ->
             val t = ItemResultToolBinding.inflate(LayoutInflater.from(this), binding.toolsGrid, false)
@@ -107,11 +113,41 @@ class ConvertResultActivity : AppCompatActivity() {
     }
 
     private fun annotate(mode: PdfEditActivity.Mode) {
+        if (!PremiumGate.use(this, PremiumGate.Feature.EDIT_SIGN)) return
         edited.launch(PdfEditActivity.intent(this, doc.file, 0, mode))
+    }
+
+    /** Merge / Split: "Merged successfully!" and "Are you satisfied with our "Merge PDF" feature?" */
+    private fun setupKind() {
+        val kind = intent.getStringExtra(EXTRA_KIND) ?: return
+        val (success, feature) = when (kind) {
+            KIND_MERGE -> R.string.merged_successfully_excl to R.string.tool_merge_pdf
+            KIND_SPLIT -> R.string.split_successfully_excl to R.string.tool_split_pdf
+            else -> return
+        }
+        binding.tvSuccess.setText(success)
+        val key = "satisfied_answered_$kind"
+        if (com.theoccess.alldocreader.data.Prefs.raw.getBoolean(key, false)) return
+        binding.feedbackCard.visibility = View.VISIBLE
+        binding.tvSatisfied.text = getString(R.string.satisfied_question, getString(feature))
+        val answered = {
+            com.theoccess.alldocreader.data.Prefs.raw.edit().putBoolean(key, true).apply()
+            binding.feedbackCard.visibility = View.GONE
+        }
+        binding.btnSatisfiedClose.setOnClickListener { binding.feedbackCard.visibility = View.GONE }
+        binding.btnNotGood.setOnClickListener {
+            answered()
+            startActivity(android.content.Intent(this, com.theoccess.alldocreader.ui.settings.FeedbackActivity::class.java))
+        }
+        binding.btnGood.setOnClickListener {
+            answered()
+            toast(R.string.thanks_feedback)
+        }
     }
 
     private fun loadPreview() {
         val file = doc.file
+        var pages = 0
         lifecycleScope.launch {
             val bmp = withContext(Dispatchers.IO) {
                 try {
@@ -122,6 +158,7 @@ class ConvertResultActivity : AppCompatActivity() {
                     }
                     ParcelFileDescriptor.open(file, ParcelFileDescriptor.MODE_READ_ONLY).use { pfd ->
                         PdfRenderer(pfd).use { r ->
+                            pages = r.pageCount
                             if (r.pageCount == 0) null else r.openPage(0).use { p ->
                                 val w = 360
                                 val h = (w * p.height / p.width.toFloat()).toInt().coerceAtLeast(1)
@@ -137,6 +174,8 @@ class ConvertResultActivity : AppCompatActivity() {
                 }
             }
             binding.ivPreview.setImageBitmap(bmp)
+            binding.tvPageCount.visibility = if (pages > 0) View.VISIBLE else View.GONE
+            binding.tvPageCount.text = pages.toString()
         }
     }
 
@@ -174,8 +213,14 @@ class ConvertResultActivity : AppCompatActivity() {
 
     companion object {
         private const val EXTRA_PATH = "path"
+        private const val EXTRA_KIND = "kind"
+        const val KIND_MERGE = "merge"
+        const val KIND_SPLIT = "split"
 
-        fun intent(context: Context, file: File) =
-            Intent(context, ConvertResultActivity::class.java).putExtra(EXTRA_PATH, file.absolutePath)
+        /** [kind]: [KIND_MERGE] / [KIND_SPLIT] for "Merged / Split successfully!" + the feedback card. */
+        fun intent(context: Context, file: File, kind: String? = null) =
+            Intent(context, ConvertResultActivity::class.java)
+                .putExtra(EXTRA_PATH, file.absolutePath)
+                .putExtra(EXTRA_KIND, kind)
     }
 }

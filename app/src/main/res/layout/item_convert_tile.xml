@@ -20,6 +20,18 @@
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:importantForAccessibility="no" />
+
+        <!-- premium tool: crown (hidden for Premium users) -->
+        <ImageView
+            android:id="@+id/ivCrown"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="top|end"
+            android:background="@drawable/bg_crown_badge"
+            android:importantForAccessibility="no"
+            android:padding="2dp"
+            android:src="@drawable/ic_crown"
+            android:visibility="gone" />
     </FrameLayout>
 
     <TextView

@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.theoccess.alldocreader.R
+import com.theoccess.alldocreader.data.NewFiles
 import com.theoccess.alldocreader.data.DocFile
 import com.theoccess.alldocreader.data.LibraryStore
 import com.theoccess.alldocreader.databinding.ItemFileBinding
@@ -42,6 +43,9 @@ class FileAdapter(
     val selectedFiles: List<DocFile> get() = currentList.filter { it.path in selected }
     val selectedCount: Int get() = selected.size
     val allSelected: Boolean get() = currentList.isNotEmpty() && selected.size == currentList.size
+
+    /** "New" tags changed (a file was opened, or a scan found new ones). */
+    fun refreshNewTags() = notifyItemRangeChanged(0, itemCount, PAYLOAD_STATE)
 
     fun setBookmarks(paths: Set<String>) {
         if (paths == bookmarked) return
@@ -117,6 +121,11 @@ class FileAdapter(
         }
 
         fun bindState(item: DocFile) {
+            // newly found file: "New" tag + light-gray row until it is opened
+            val fresh = NewFiles.isNew(item.path)
+            b.tvNew.visibility = if (fresh) View.VISIBLE else View.GONE
+            if (fresh) b.root.setBackgroundColor(ContextCompat.getColor(b.root.context, R.color.new_file_bg))
+            else b.root.background = null
             val actions = showActions && !selectionMode
             b.btnBookmark.visibility = if (actions) View.VISIBLE else View.GONE
             b.btnMore.visibility = if (actions) View.VISIBLE else View.GONE

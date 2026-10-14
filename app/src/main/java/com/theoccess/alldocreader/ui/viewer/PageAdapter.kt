@@ -99,7 +99,6 @@ class PageAdapter(
     override fun onViewRecycled(holder: VH) {
         holder.job?.cancel()
         holder.b.ivPage.setImageDrawable(null)
-        holder.b.highlights.set(emptyList(), emptyList())
     }
 
     /** Page aspect (height / width) after the current rotation. */
@@ -162,7 +161,10 @@ class PageAdapter(
             }
             b.ivPage.setImageDrawable(null)
             b.pbPage.visibility = View.VISIBLE
-            val target = (rvW - pad).coerceAtMost(1600)
+            // Word pages are drawn at 1.5× the screen width (shown scaled down): small text and page
+            // scans stay sharp, also when zoomed in a little. Other types as before.
+            val target = if (source is DocPageSource) ((rvW - pad) * 3 / 2).coerceAtMost(2000)
+            else (rvW - pad).coerceAtMost(1600)
             val rot = rotation
             job = scope.launch {
                 val bmp = try {

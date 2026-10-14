@@ -82,6 +82,8 @@ object FileSheets {
         action(b.actShare, R.drawable.ic_share, R.string.share) { FileActions.share(context, doc) }
         action(b.actRename, R.drawable.ic_rename, R.string.rename) { showRename(context, doc) { onChanged?.invoke() } }
         action(b.actHome, R.drawable.ic_home_add, R.string.to_home_screen) { addToHomeScreen(context, doc) }
+        // upload this file to the chosen Google account's Drive right away
+        action(b.actDrive, R.drawable.ic_st_drive, R.string.save_to_drive_short) { DriveSaveActivity.start(context, java.io.File(doc.path)) }
         action(b.actDelete, R.drawable.ic_delete, R.string.delete) {
             confirmDelete(context, listOf(doc)) { onChanged?.invoke() }
         }

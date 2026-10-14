@@ -743,3 +743,50 @@ print("step20 ok")
 vec("ic_helpful_heart", 44, 24, [p("M12,21 C11.6,21 11.2,20.85 10.9,20.6 C5.5,15.9 2.5,13.1 2.5,9.2 C2.5,6.2 4.8,4 7.6,4 C9.3,4 10.9,4.8 12,6.1 C13.1,4.8 14.7,4 16.4,4 C19.2,4 21.5,6.2 21.5,9.2 C21.5,13.1 18.5,15.9 13.1,20.6 C12.8,20.85 12.4,21 12,21 Z", fill="#FFE53935"),
     p("M7,7.5 C6,8 5.4,9 5.5,10", stroke="#FFFFFFFF", sw="1.4", alpha="0.6")])
 print("step26 ok")
+
+# ---- step 28: refresh (rescan files) ----
+line("ic_refresh", [p("M19,12 a7,7 0 1 1 -2.05,-4.95", stroke=LC, sw="2.1"),
+                    p("M17.3,3.2 L17.3,7.3 L13.2,7.3", stroke=LC, sw="2.1")])
+print("step28 ok")
+
+# ---- step 32: premium page — merge slide, reviews, loading screen ----
+line("ic_feat_merge", [p(rr(3.5, 4, 7, 9, 1.2), stroke=LC, sw="1.6"), p(rr(13.5, 4, 7, 9, 1.2), stroke=LC, sw="1.6"),
+                       p("M7,13 V16 C7,17.5 8,18.5 9.5,18.5 H12 M17,13 V16 C17,17.5 16,18.5 14.5,18.5 H12 M12,18.5 V21.5", stroke=LC, sw="1.6")])
+line("ic_arrow_right_w", [p("M5,12 H19 M13,6 L19,12 L13,18", stroke=LC, sw="2.2")])
+vec("ic_review_face", 18, 24, [p(circ(12, 12, 10), fill="#FF5B8CFF"), p(circ(8.6, 10, 1.4), fill="#FF15172B"), p(circ(15.4, 10, 1.4), fill="#FF15172B"),
+                               p("M7.8,14.2 C9.6,16.8 14.4,16.8 16.2,14.2", stroke="#FF15172B", sw="1.7")])
+vec("ic_review_sparkle", 10, 24, [p("M12,2 L13.6,10.4 L22,12 L13.6,13.6 L12,22 L10.4,13.6 L2,12 L10.4,10.4 Z", fill="#FF8FA2FF")])
+vec("ic_quote_big", 40, 24, [p("M3,17 C3,11 5,7.5 10,6 L10.8,7.6 C8,8.8 7,10.6 7,12.5 H10 V17 Z M13,17 C13,11 15,7.5 20,6 L20.8,7.6 C18,8.8 17,10.6 17,12.5 H20 V17 Z",
+                             fill="#FFFFFFFF", falpha="0.06")])
+vec("ic_ready_check", 40, 24, [p("M6,12.5 L10.2,16.6 L18.2,8", stroke="#FFFFFFFF", sw="3.2")])
+merge_docs = [p(rr(84, 40, 24, 32, 3), fill="#FFFFFFFF"), p(rr(84, 40, 24, 32, 3), stroke="#FFE8453C", sw="1.4"),
+              p("M88,50 H104 M88,56 H100 M88,62 H103", stroke="#FFB0B6C2", sw="1.3"),
+              p(rr(112, 40, 24, 32, 3), fill="#FFFFFFFF"), p(rr(112, 40, 24, 32, 3), stroke="#FF2B7BF0", sw="1.4"),
+              p("M116,50 H132 M116,56 H128 M116,62 H131", stroke="#FFB0B6C2", sw="1.3"),
+              p("M96,74 C96,86 110,84 110,92 M124,74 C124,86 110,84 110,92", stroke="#FF8B5CF6", sw="2.4"),
+              p("M105,90 L110,98 L115,90 Z", fill="#FF8B5CF6"),
+              p(rr(94, 100, 32, 38, 3), fill="#FFFFFFFF"), p(rr(94, 100, 32, 38, 3), stroke="#FF8B5CF6", sw="1.6"),
+              p("M99,110 H121 M99,116 H117 M99,122 H120 M99,128 H114", stroke="#FFB0B6C2", sw="1.3")]
+vec("ill_prem_merge", 180, 180, glow(150, 60, 28, "#FF8B5CF6") + phone(merge_docs + [
+    p(rr(138, 46, 30, 30, 8), fill="#FF8B5CF6"),
+    p("M144,61 H162 M144,61 L148,57 M144,61 L148,65 M162,61 L158,57 M162,61 L158,65", stroke="#FFFFFFFF", sw="2")]), h=150, vph=150)
+print("step32 ok")
+
+# ---- step 33: Tools → Merge PDF / Split PDF (same tile style as ic_rt_*) ----
+vec("ic_rt_merge", 30, 30, [p(RT, fill="#FFE8453C"),
+    p("M8.5,8 H13 V13 H8.5 Z M17,8 H21.5 V13 H17 Z", stroke="#FFFFFFFF", sw="1.5"),
+    p("M10.75,13 V15.5 C10.75,17 12,18 13.5,18 H16.5 C18,18 19.25,17 19.25,15.5 V13 M15,18 V22.5 M13,20.5 L15,22.5 L17,20.5", stroke="#FFFFFFFF", sw="1.5")])
+vec("ic_rt_split", 30, 30, [p(RT, fill="#FFF26201"),
+    p("M12.5,7.5 H17.5 V12.5 H12.5 Z", stroke="#FFFFFFFF", sw="1.5"),
+    p("M15,12.5 V14.5 C15,16 13,16.5 11,18 M15,14.5 C15,16 17,16.5 19,18", stroke="#FFFFFFFF", sw="1.5"),
+    p("M8.5,18 H13 V22.5 H8.5 Z M17,18 H21.5 V22.5 H17 Z", stroke="#FFFFFFFF", sw="1.5")])
+print("step33 ok")
+
+# ---- step 35: Merge / Split screens ----
+vec("ic_drag_dots", 24, 24, [p(circ(9, x, 1.4), fill="#FFB0B6C2") for x in (6, 12, 18)] + [p(circ(15, x, 1.4), fill="#FFB0B6C2") for x in (6, 12, 18)])
+line("ic_remove_circle", [p("M12,12 m-8.5,0 a8.5,8.5 0 1 0 17,0 a8.5,8.5 0 1 0 -17,0", stroke=LC, sw="1.7"), p("M8,12 H16", stroke=LC, sw="1.8")])
+line("ic_file_add", [p("M6,3.5 H14 L18.5,8 V20.5 H6 Z", stroke=LC, sw="1.7"), p("M12,10.5 V17.5 M8.5,14 H15.5", stroke=LC, sw="1.7")])
+print("step35 ok")
+line("ic_split_line", [p("M9.5,3.5 H14.5 V9 H9.5 Z", stroke=LC, sw="1.6"), p("M12,9 V11 C12,12.5 9.5,13 7,15 M12,11 C12,12.5 14.5,13 17,15", stroke=LC, sw="1.6"),
+                       p("M4.5,15 H9.5 V20.5 H4.5 Z M14.5,15 H19.5 V20.5 H14.5 Z", stroke=LC, sw="1.6")])
+print("step35b ok")

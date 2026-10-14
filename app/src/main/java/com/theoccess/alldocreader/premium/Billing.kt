@@ -78,7 +78,8 @@ object Billing : PurchasesUpdatedListener {
 
     /** Called from App.onCreate: connects, loads prices and re-checks the subscription. */
     fun init(context: Context) {
-        _premium.value = Prefs.isPremium
+        _premium.value = effective(Prefs.isPremium)
+        scheduleTestExpiry()
         packageName = context.packageName
         if (client != null) return
         client = BillingClient.newBuilder(context.applicationContext)
@@ -293,13 +294,36 @@ object Billing : PurchasesUpdatedListener {
         }
     }
 
-    /** Debug builds only: the test payment sheet's "Subscribe (test)" turns Premium on. */
-    fun setTestPremium() {
-        if (com.theoccess.alldocreader.BuildConfig.DEBUG) setPremium(true)
+    private const val KEY_TEST_UNTIL = "test_premium_until"
+
+    /** A test subscription ("Subscribe (test)", debug builds) that has not run out yet. */
+    private fun testActive() = Prefs.raw.getLong(KEY_TEST_UNTIL, 0L) > System.currentTimeMillis()
+
+    /** Premium = a real subscription from Google Play, or a test one still running. */
+    private fun effective(real: Boolean) = real || testActive()
+
+    /**
+     * Debug builds only: the test payment sheet's "Subscribe (test)" turns Premium on like a real
+     * subscription — kept across app restarts (no ads anywhere) until its period ends (1 month /
+     * 1 year), then ads come back. Google Play's check at start does not cancel it.
+     */
+    fun setTestPremium(plan: Plan) {
+        if (!com.theoccess.alldocreader.BuildConfig.DEBUG) return
+        val days = if (plan == Plan.YEARLY) 365L else 30L
+        Prefs.raw.edit().putLong(KEY_TEST_UNTIL, System.currentTimeMillis() + days * 24 * 3600_000L).apply()
+        _premium.value = true
+        scheduleTestExpiry()
+    }
+
+    /** Switches Premium off by itself when a test subscription runs out while the app is open. */
+    private fun scheduleTestExpiry() {
+        val left = Prefs.raw.getLong(KEY_TEST_UNTIL, 0L) - System.currentTimeMillis()
+        if (left <= 0L) return
+        main.postDelayed({ _premium.value = effective(Prefs.isPremium) }, left + 1000L)
     }
 
     private fun setPremium(on: Boolean) {
         Prefs.isPremium = on
-        _premium.value = on
+        _premium.value = effective(on)
     }
 }

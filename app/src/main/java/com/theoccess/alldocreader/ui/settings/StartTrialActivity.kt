@@ -1,7 +1,6 @@
 package com.theoccess.alldocreader.ui.settings
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.theoccess.alldocreader.R
 import com.theoccess.alldocreader.databinding.ActivityStartTrialBinding
 import com.theoccess.alldocreader.premium.Billing
@@ -14,7 +13,7 @@ import com.theoccess.alldocreader.util.toast
  * cancelled 24 h before). Continue opens Google Play for the yearly plan with its free trial;
  * if that does not go through, "Subscribe failed" is shown. X goes back to the paywall.
  */
-class StartTrialActivity : AppCompatActivity() {
+class StartTrialActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivityStartTrialBinding
     private var buying = false
@@ -33,7 +32,7 @@ class StartTrialActivity : AppCompatActivity() {
             Billing.refreshPurchases { active ->
                 if (isFinishing) return@refreshPurchases
                 if (active) { toast(R.string.premium_restored); finishAffinity2() }
-                else TopPill.show(this, getString(R.string.no_subscription_found), 0, 28)
+                else com.theoccess.alldocreader.premium.PaywallUi.noSubscription(this)
             }
         }
         binding.btnContinue.setOnClickListener { buy() }

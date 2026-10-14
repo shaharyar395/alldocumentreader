@@ -1,7 +1,5 @@
 package com.theoccess.alldocreader.ui.viewer
 
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.Typeface
 import android.text.Layout
@@ -32,7 +30,7 @@ import java.util.zip.ZipFile
 object DocxParser {
 
     private const val EMU_PER_PT = 12700f
-    private const val MAX_IMAGE_PX = 2000
+    private const val MAX_IMAGE_PX = 1600
 
     /** Resolved paragraph / run defaults of a style. null = not set here. */
     private class Style(
@@ -58,7 +56,7 @@ object DocxParser {
             val parser = Xml.newPullParser()
             parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false)
             parser.setInput(input, "UTF-8")
-            Walker(parser, zip, rels, styles, defaults).run()
+            Walker(parser, zip, file, rels, styles, defaults).run()
         }
     }
 
@@ -196,6 +194,7 @@ object DocxParser {
     private class Walker(
         val p: XmlPullParser,
         val zip: ZipFile,
+        val file: File,
         val rels: Map<String, String>,
         val styles: Map<String, Style>,
         val defaults: Style
@@ -453,10 +452,18 @@ object DocxParser {
         private fun emitImage() {
             val rel = imgRel ?: return
             val path = rels[rel] ?: return
-            val bmp = decode(path) ?: return
             if (tableDepth > 0) return
-            val w = if (imgW > 0) imgW else bmp.width * 0.75f
-            val h = if (imgH > 0) imgH else bmp.height * 0.75f
+            val lower = path.lowercase()
+            if (!listOf(".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp").any { lower.endsWith(it) }) return
+            // only the size is read now; the picture itself is decoded when its page is drawn
+            var w = imgW
+            var h = imgH
+            if (w <= 0 || h <= 0) {
+                val (pw, ph) = LazyBitmap.bounds(zip, path) ?: return
+                if (w <= 0) w = pw * 0.75f
+                if (h <= 0) h = ph * 0.75f
+            } else if (zip.getEntry(path) == null) return
+            val bmp = LazyBitmap.zipEntry(file, path, MAX_IMAGE_PX)
             if (anchorMode) {
                 val anchor = Anchor(posH, posV, relH, relV, alignH, alignV, anchorNoWrap || anchorBehind, anchorBehind)
                 blocks += DocBlock.Image(bmp, w, h, Layout.Alignment.ALIGN_NORMAL, anchor)
@@ -469,23 +476,6 @@ object DocxParser {
                 para = SpannableStringBuilder()
             }
             blocks += DocBlock.Image(bmp, w, h, align ?: pStyle.align ?: Layout.Alignment.ALIGN_NORMAL)
-        }
-
-        private fun decode(path: String): Bitmap? {
-            val entry = zip.getEntry(path) ?: return null
-            val lower = path.lowercase()
-            if (!listOf(".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp").any { lower.endsWith(it) }) return null
-            return try {
-                val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
-                zip.getInputStream(entry).use { BitmapFactory.decodeStream(it, null, bounds) }
-                var sample = 1
-                while (bounds.outWidth / sample > MAX_IMAGE_PX || bounds.outHeight / sample > MAX_IMAGE_PX) sample *= 2
-                zip.getInputStream(entry).use {
-                    BitmapFactory.decodeStream(it, null, BitmapFactory.Options().apply { inSampleSize = sample })
-                }
-            } catch (e: Exception) {
-                null
-            }
         }
 
         private fun highlightColor(v: String?): Int? = when (v) {

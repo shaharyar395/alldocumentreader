@@ -260,4 +260,338 @@
     <string name="helpful_no">😞 Не очень</string>
     <string name="helpful_yes">🥰 Полезно</string>
     <!-- /step26 -->
+    <!-- step27 -->
+    <string name="search_no_results">Ничего не найдено</string>
+    <!-- /step27 -->
+    <!-- step28 -->
+    <string name="search_in_document">Поиск в документе</string>
+    <string name="search_in_pdf">Поиск в PDF</string>
+    <string name="search_in_ppt">Поиск в PPT</string>
+    <string name="search_in_excel">Поиск в Excel</string>
+    <string name="refresh">Обновить</string>
+    <string name="files_refreshed">Файлы обновлены</string>
+    <!-- /step28 -->
+    <!-- step29 -->
+    <string name="new_badge">Новый</string>
+    <string name="save_to_drive_short">Сохранить в Drive</string>
+    <string name="drive_saving">Сохранение в Google Диск…</string>
+    <string name="drive_saved">%1$s сохранён в Google Диске (папка All Document Reader)</string>
+    <string name="drive_save_failed_title">Не удалось сохранить в Google Диск</string>
+    <string name="drive_not_allowed">Google не предоставил доступ к Google Диску. Выберите аккаунт и нажмите «Разрешить».</string>
+    <!-- /step29 -->
+    <!-- step30 -->
+    <string name="search_in_txt">Поиск в TXT</string>
+    <!-- /step30 -->
+    <!-- step31 -->
+    <string name="drive_app_missing">Чтобы сохранять файлы на Диск, нужно приложение Google Диск. Установите его из Google Play и повторите попытку.</string>
+    <string name="drive_install">Установить</string>
+    <!-- /step31 -->
+    <!-- step32 -->
+    <string name="ready_top">Приготовьтесь к</string>
+    <string name="ready_bottom">7-дневной бесплатной пробной версии</string>
+    <string name="premium_slide_merge">Объединение\nи разделение PDF</string>
+    <string name="feat_merge">Лёгкое объединение и разделение PDF</string>
+    <string name="user_reviews">Отзывы пользователей</string>
+    <string name="cancel_anytime">Отмена в любое время</string>
+    <!-- /step32 -->
+    <!-- step33 -->
+    <string name="tool_merge_pdf">Объединить PDF</string>
+    <string name="tool_split_pdf">Разделить PDF</string>
+    <string name="premium_free_uses_left">Бесплатная попытка · осталось %1$d сегодня. Premium — без ограничений</string>
+    <string name="premium_last_free_use">Последняя бесплатная попытка на сегодня. Premium — без ограничений</string>
+    <string name="premium_limit_reached">Бесплатные попытки на сегодня для «%1$s» закончились. Premium — без ограничений.</string>
+    <string name="select_pdfs_to_merge">Выберите PDF для объединения</string>
+    <string name="select_pdf_to_split">Выберите PDF для разделения</string>
+    <string name="merge_n">Объединить (%1$d)</string>
+    <string name="merge_pick_two">Выберите не меньше 2 PDF</string>
+    <string name="merging_progress">Объединение… (%1$d%%)</string>
+    <string name="merge_failed">Не удалось объединить эти PDF (пароль или повреждены?)</string>
+    <string name="split_one_page">В этом PDF только одна страница</string>
+    <string name="split_info">%1$s · страниц: %2$d</string>
+    <string name="split_ranges_hint">напр. 1-3, 5, 6-%1$d</string>
+    <string name="split_action">Разделить</string>
+    <string name="split_each_page">Каждая страница — отдельный PDF</string>
+    <string name="split_every_n">Каждые несколько страниц</string>
+    <string name="split_every_hint">Страниц в файле, напр. 2</string>
+    <string name="split_custom">Свои диапазоны страниц</string>
+    <string name="split_invalid">Введите правильные номера страниц</string>
+    <string name="splitting_progress">Разделение… (%1$d%%)</string>
+    <string name="split_failed">Не удалось разделить этот PDF</string>
+    <plurals name="split_done">
+        <item quantity="one">Разделено на %1$d файл</item>
+        <item quantity="other">Разделено на %1$d файлов</item>
+    </plurals>
+    <!-- /step33 -->
+    <!-- step35 -->
+    <string name="section_edit_manage">Правка и управление</string>
+    <string name="add_files">Добавить файлы</string>
+    <string name="add_part">Добавить страницы</string>
+    <string name="continue_n">Продолжить (%1$d)</string>
+    <string name="quit">Выйти</string>
+    <string name="quit_merging_title">Прервать объединение?</string>
+    <string name="quit_splitting_title">Прервать разделение?</string>
+    <string name="quit_changes_message">Изменения не будут сохранены. Выйти?</string>
+    <string name="merged_successfully_excl">Объединено!</string>
+    <string name="split_successfully_excl">Разделено!</string>
+    <string name="satisfied_question">Вам нравится функция «%1$s»?</string>
+    <string name="satisfied_not_good">😞\nПлохо</string>
+    <string name="satisfied_good">🥰\nХорошо</string>
+    <string name="thanks_feedback">Спасибо за отзыв!</string>
+    <string name="select_pages">Выбрать страницы</string>
+    <string name="split_method">Способ разделения</string>
+    <string name="split_custom_range">Свой диапазон</string>
+    <string name="split_custom_range_sub">Разделить по своему диапазону</string>
+    <string name="split_fixed_range">Фиксированный</string>
+    <string name="split_fixed_range_sub">Разделить через равное число страниц</string>
+    <string name="interval_settings">Интервал</string>
+    <string name="split_n">Разделить (%1$d)</string>
+    <string name="part_pages">Страница: %1$s</string>
+    <plurals name="pages_and_size">
+        <item quantity="one">%1$d стр. · %2$s</item>
+        <item quantity="other">%1$d стр. · %2$s</item>
+    </plurals>
+    <!-- /step35 -->
+    <!-- step39 -->
+    <string name="ad_loading">Загрузка рекламы…</string>
+    <!-- /step39 -->
+    <!-- step40 -->
+    <string name="swipe_pages_tip">Проведите влево/вправо, чтобы листать страницы</string>
+    <!-- /step40 -->
+    <!-- step59 -->
+    <string name="done">Готово</string>
+    <string name="ok">OK</string>
+    <string name="premium">Premium</string>
+    <string name="open">Открыть</string>
+    <string name="add_bookmark">Добавить в закладки</string>
+    <string name="remove_bookmark">Удалить из закладок</string>
+    <string name="file_info_path">Путь</string>
+    <string name="file_info_size">Размер</string>
+    <string name="file_info_modified">Изменён</string>
+    <string name="no_app_to_open">Не найдено приложение для открытия этого файла</string>
+    <string name="file_not_found">Файл больше не существует</string>
+    <string name="empty_folder">Эта папка пуста</string>
+    <string name="create_new">Создать</string>
+    <string name="settings_version">Версия %1$s</string>
+    <string name="tool_templates">Шаблоны</string>
+    <string name="press_back_again">Нажмите «Назад» ещё раз для выхода</string>
+    <string name="select">Выбрать</string>
+    <string name="select_all">Выбрать все</string>
+    <string name="delete_failed">Не удалось удалить некоторые файлы</string>
+    <string name="rename_empty">Имя не может быть пустым</string>
+    <string name="rename_invalid">Имя содержит недопустимые символы</string>
+    <string name="rename_exists">Файл с таким именем уже существует</string>
+    <string name="rename_failed">Не удалось переименовать файл</string>
+    <string name="rename_done">Переименовано</string>
+    <string name="select_files_first">Сначала выберите файлы</string>
+    <string name="shortcut_permission_message"><![CDATA[Чтобы добавлять файлы на главный экран, нужно разрешение <font color=\"#0A5FD9\">\"Ярлыки на главном экране\"</font>.]]></string>
+    <string name="shortcut_added">Добавлено на главный экран</string>
+    <string name="shortcut_not_supported">Ваш лаунчер не поддерживает ярлыки на главном экране</string>
+    <string name="rate_title"><![CDATA[Вам нравится <font color=\"#0A5FD9\">наше приложение</font>?]]></string>
+    <string name="rate_thanks">Спасибо за отзыв!</string>
+    <string name="restored">Восстановлено</string>
+    <string name="restore_failed">Не удалось восстановить (возможно, файл с таким именем уже существует)</string>
+    <string name="empty_recycle_bin_confirm">Удалить навсегда все файлы в корзине?</string>
+    <string name="unsupported_message">Извините, этот тип файлов пока не поддерживается.\nНо мы постоянно улучшаем приложение и позже добавим поддержку других типов файлов.</string>
+    <string name="faq">Частые вопросы</string>
+    <string name="faq_message">Открываются в приложении: PDF, Word (.docx) и TXT.\n\nExcel, PowerPoint и изображения открываются другим приложением на телефоне.\n\nДругие типы файлов (APK, видео, системные файлы…) пока не поддерживаются.</string>
+    <string name="convert">Конвертировать</string>
+    <string name="pdf_to_word">PDF в Word</string>
+    <string name="converting_progress">Конвертация… (%d%%)</string>
+    <string name="convert_failed">Ошибка конвертации</string>
+    <string name="print">Печать</string>
+    <string name="edit">Изменить</string>
+    <string name="bookmarked">В закладках</string>
+    <string name="pdf_password_protected">Этот PDF защищён паролем или повреждён</string>
+    <string name="undo">Отменить</string>
+    <string name="redo">Повторить</string>
+    <string name="setup">Настроить</string>
+    <string name="delete_pages_message"><![CDATA[Удалить выбранные страницы (<font color=\"#0A5FD9\">%d</font>)?]]></string>
+    <string name="pdf_needs_page">В PDF должна быть хотя бы одна страница</string>
+    <string name="discard_title">Отменить изменения?</string>
+    <string name="discard_message">Изменения страниц не сохранены.</string>
+    <string name="discard">Не сохранять</string>
+    <string name="saving">Сохранение…</string>
+    <string name="extracting">Извлечение страниц…</string>
+    <string name="save_failed">Не удалось сохранить PDF</string>
+    <string name="portrait">Книжная</string>
+    <string name="landscape">Альбомная</string>
+    <string name="size_letter">Letter</string>
+    <string name="size_legal">Legal</string>
+    <string name="tpl_blank">Пустой</string>
+    <string name="tpl_line1">Линия 1</string>
+    <string name="tpl_line2">Линия 2</string>
+    <string name="tpl_notebook">Тетрадь</string>
+    <string name="tpl_cornell">Корнелл</string>
+    <string name="tpl_grid">Сетка</string>
+    <string name="tpl_graph">Миллиметровка</string>
+    <string name="pick_image_hint">Выберите JPG, PNG или другое изображение</string>
+    <string name="import_failed">Не удалось импортировать файл</string>
+    <string name="tpl_resume">Резюме</string>
+    <string name="filter_original">Оригинал</string>
+    <string name="no_camera">Приложение камеры не найдено</string>
+    <string name="pick_word_hint">Выберите файл Word (.docx) или TXT</string>
+    <string name="pick_pdf_hint">Выберите файл PDF</string>
+    <string name="pick_ppt_hint">Выберите файл PowerPoint (.pptx)</string>
+    <string name="convert_old_format">Этот старый формат (.doc / .ppt) пока не поддерживается. Используйте .docx или .pptx.</string>
+    <string name="dims_cm">%1$s см x %2$s см</string>
+    <string name="flash">Вспышка</string>
+    <string name="grid">Сетка</string>
+    <string name="shutter_sound">Звук затвора</string>
+    <string name="center_guide">Центровка</string>
+    <string name="compare">Сравнить с оригиналом</string>
+    <string name="filter_auto">Авто</string>
+    <string name="filter_docs">Документ</string>
+    <string name="filter_color">Цвет</string>
+    <string name="filter_image">Фото</string>
+    <string name="filter_super">Супер</string>
+    <string name="filter_enhance">Улучшить</string>
+    <string name="filter_enhance2">Улучшить 2</string>
+    <string name="filter_gray">Серый</string>
+    <string name="filter_invert">Инверсия</string>
+    <string name="underline">Подчеркнуть</string>
+    <string name="strikethrough">Зачеркнуть</string>
+    <string name="add_short">+ Добавить</string>
+    <string name="delete_signature">Удалить подпись</string>
+    <string name="delete_signature_message">Удалить эту сохранённую подпись?</string>
+    <string name="how_to_edit">Как редактировать</string>
+    <string name="share_app_text">Я открываю и редактирую файлы PDF, Word, Excel и PowerPoint в %1$s. Попробуйте:</string>
+    <string name="faq_yes">🥳 Да</string>
+    <string name="faq_no">😞 Нет</string>
+    <string name="faq_q_edit">Как редактировать PDF?</string>
+    <string name="faq_q_display">Как изменить отображение документа?</string>
+    <string name="faq_q_copy">Как скопировать текст?</string>
+    <string name="faq_q_search">Как найти текст в файле?</string>
+    <string name="faq_q_open">Почему я не могу найти или открыть файл?</string>
+    <string name="faq_q_create">Как создать новый файл?</string>
+    <string name="faq_q_print">Как распечатать файл?</string>
+    <string name="faq_q_subscription">Как управлять подпиской или отменить её?</string>
+    <string name="faq_q_ads">Почему в приложении есть реклама?</string>
+    <string name="faq_q_slow">Почему файл открывается медленно?</string>
+    <string name="faq_q_permissions">Зачем приложению доступ к файлам?</string>
+    <string name="feedback_hint">Подробно опишите проблему или ваше предложение…</string>
+    <string name="fb_rating_line">Оценка: %1$d/5</string>
+    <string name="fb_max_shots">Можно добавить до 4 скриншотов</string>
+    <string name="get_premium">Получить Premium</string>
+    <string name="premium_slide_sign">Правка и\nподпись PDF</string>
+    <string name="premium_slide_convert">Конвертация\nформатов</string>
+    <string name="premium_slide_templates">Шаблоны</string>
+    <string name="premium_slide_pages">Управление страницами</string>
+    <string name="feat_ad_free">Без рекламы</string>
+    <string name="feat_edit_sign">Простая правка и подпись PDF</string>
+    <string name="feat_convert">Мгновенная конвертация файлов</string>
+    <string name="feat_templates">Премиум-шаблоны</string>
+    <string name="feat_pages">Полное управление страницами</string>
+    <string name="plan_yearly">Годовая</string>
+    <string name="plan_monthly">Месячная</string>
+    <string name="continue_label">Продолжить</string>
+    <string name="no_subscription_found">Действующая подписка не найдена.</string>
+    <string name="w_home">Главная</string>
+    <string name="w_recent">Недавние</string>
+    <string name="w_tools_title">Быстрые инструменты</string>
+    <string name="w_tools_desc">Поиск, недавние файлы, закладки и редактирование PDF прямо с главного экрана</string>
+    <string name="w_reader_title">Просмотр документов</string>
+    <string name="w_reader_desc">Открывайте PDF, Word, Excel и PowerPoint одним касанием</string>
+    <string name="w_editor_title">Редактор PDF</string>
+    <string name="w_editor_desc">Сразу перейти к редактированию PDF</string>
+    <string name="add_widget_button">Добавить на главный экран</string>
+    <string name="widget_manual_hint">Нажмите и удерживайте главный экран, выберите «Виджеты» и найдите это приложение</string>
+    <string name="thanks_support">Спасибо за поддержку!</string>
+    <string name="dont_miss_apps">Не пропустите наши лучшие приложения 👇</string>
+    <string name="see_our_apps">Наши приложения в Google Play</string>
+    <string name="faq_a_edit">Откройте вкладку &lt;b&gt;Инструменты&lt;/b&gt;, нажмите &lt;b&gt;Изменить PDF&lt;/b&gt; и выберите файл. Можно редактировать текст, добавлять новый текст и изображения, делать пометки (выделение, подчёркивание, зачёркивание, рисование) и ставить подпись. Нажмите на галочку, чтобы сохранить копию.</string>
+    <string name="faq_a_display">Во время чтения используйте нижнюю панель, чтобы переключаться между &lt;b&gt;вертикальной&lt;/b&gt; и &lt;b&gt;горизонтальной&lt;/b&gt; прокруткой, поворачивать вид или инвертировать цвета. Масштабируйте страницу двумя пальцами, а чтобы перейти к нужной странице, нажмите на её номер.</string>
+    <string name="faq_a_copy">Копирование текста пока недоступно. Мы над этим работаем! Если это важно для вас, &lt;a href=\"app://feedback\"&gt;напишите нам&lt;/a&gt;, и мы займёмся этим в первую очередь.</string>
+    <string name="faq_a_search">Откройте документ, нажмите &lt;b&gt;Поиск&lt;/b&gt; на нижней панели и введите нужное слово. Для перехода между результатами используйте стрелки. Чтобы найти файл по имени, нажмите значок поиска вверху главного экрана.</string>
+    <string name="faq_a_open">Убедитесь, что у приложения есть доступ к файлам. Если файл находится в облачном приложении или другой папке, откройте его через &lt;a href=\"app://filemanager\"&gt;файловый менеджер&lt;/a&gt; и выберите это приложение. Если файл всё равно не открывается, возможно, он повреждён или защищён паролем — &lt;a href=\"app://feedback\"&gt;сообщите нам&lt;/a&gt;.</string>
+    <string name="faq_a_create">На странице &lt;b&gt;Все файлы&lt;/b&gt; нажмите кнопку &lt;b&gt;+&lt;/b&gt;. Вы можете создать документ из шаблона, импортировать файлы, конвертировать изображения в PDF или отсканировать бумажные документы камерой.</string>
+    <string name="faq_a_print">Откройте PDF, нажмите меню &lt;b&gt;⋮&lt;/b&gt; и выберите &lt;b&gt;Печать&lt;/b&gt;. Файлы других форматов можно сначала конвертировать в PDF на вкладке &lt;b&gt;Инструменты&lt;/b&gt;.</string>
+    <string name="faq_a_subscription">Подписками управляет Google Play. Перейдите в &lt;b&gt;Настройки → Управление подписками&lt;/b&gt; или откройте Google Play → Профиль → Платежи и подписки. Подробнее см. в &lt;a href=\"app://terms\"&gt;Условиях использования&lt;/a&gt;.</string>
+    <string name="faq_a_ads">Реклама помогает нам сохранять приложение бесплатным для всех. Отключить её можно с помощью &lt;a href=\"app://premium\"&gt;Premium&lt;/a&gt;.</string>
+    <string name="faq_a_slow">Очень большие файлы или файлы с большим количеством изображений загружаются дольше. Может помочь закрытие других приложений и освобождение памяти. Если файл всегда открывается медленно, &lt;a href=\"app://feedback\"&gt;напишите нам&lt;/a&gt;.</string>
+    <string name="faq_a_permissions">Доступ к файлам нужен приложению только для поиска и открытия документов на устройстве. Ваши файлы остаются на устройстве и никуда не загружаются.</string>
+    <string name="terms_html">&lt;p&gt;&lt;i&gt;Последнее обновление: сентябрь 2026 г.&lt;/i&gt;&lt;/p&gt;&lt;p&gt;Настоящие Условия использования регулируют использование вами приложения &lt;b&gt;%1$s&lt;/b&gt; (далее — \"Приложение\"). Используя Приложение, вы соглашаетесь с этими условиями.&lt;/p&gt;&lt;h4&gt;1. Использование Приложения&lt;/h4&gt;&lt;p&gt;Вы можете использовать Приложение для просмотра, создания, конвертации и редактирования документов в личных или деловых целях. Вы несёте ответственность за документы, которые открываете и создаёте, а также за наличие у вас права на их использование.&lt;/p&gt;&lt;h4&gt;2. Подписки&lt;/h4&gt;&lt;p&gt;Для некоторых функций может потребоваться платная подписка, приобретаемая через Google Play. Подписка продлевается автоматически, если её не отменить не позднее чем за 24 часа до окончания текущего периода. Управлять подпиской или отменить её можно в настройках аккаунта Google Play. Возврат средств осуществляется в соответствии с правилами Google Play.&lt;/p&gt;&lt;h4&gt;3. Реклама&lt;/h4&gt;&lt;p&gt;В бесплатной версии Приложения может показываться реклама третьих лиц.&lt;/p&gt;&lt;h4&gt;4. Отказ от гарантий&lt;/h4&gt;&lt;p&gt;Приложение предоставляется \"как есть\". Мы стараемся обеспечить его надёжную работу, но не гарантируем отсутствие ошибок и не несём ответственности за потерю данных. Пожалуйста, храните резервные копии важных файлов.&lt;/p&gt;&lt;h4&gt;5. Изменения&lt;/h4&gt;&lt;p&gt;Мы можем время от времени обновлять эти условия. Продолжая пользоваться Приложением, вы принимаете обновлённые условия.&lt;/p&gt;&lt;h4&gt;6. Контакты&lt;/h4&gt;&lt;p&gt;Есть вопросы? Напишите нам на %2$s.&lt;/p&gt;</string>
+    <string name="premium_trusted_top">Нас выбирают</string>
+    <string name="premium_trusted_count">пользователей</string>
+    <string name="premium_trusted_bottom">по всему миру</string>
+    <string name="plan_trial_days">Бесплатно %1$d дн.</string>
+    <string name="plan_then_only_per_day">Затем всего %1$s/день</string>
+    <string name="plan_per_day">%1$s/день</string>
+    <string name="plan_price_year">%1$s/год</string>
+    <string name="plan_price_month">%1$s/мес.</string>
+    <string name="plan_save_percent">Скидка %1$d%%</string>
+    <string name="start_free_trial">Попробовать бесплатно</string>
+    <string name="trial_today">Сегодня</string>
+    <string name="trial_today_sub">Откройте все премиум-функции</string>
+    <string name="trial_full_access">Полный доступ</string>
+    <string name="trial_full_access_sub">Никакой рекламы, чтение файлов всех форматов, простое редактирование PDF и многое другое.</string>
+    <string name="trial_day7">День 7</string>
+    <string name="trial_day7_sub">Плата не взимается, если отменить подписку не позднее чем за 24 часа до конца пробного периода.</string>
+    <string name="hot">ХИТ</string>
+    <string name="try_days_free">%1$d дн. бесплатно</string>
+    <string name="try_then">Затем %1$s/год, всего %2$s/день</string>
+    <string name="crop_not_found">Не удалось найти края страницы — настройте их с помощью обрезки</string>
+    <string name="tpl_reset">Сбросить</string>
+    <string name="tpl_close">Закрыть</string>
+    <string name="tpl_download">Скачать</string>
+    <string name="tpl_flip_h">Отразить ↔</string>
+    <string name="tpl_flip_v">Отразить ↕</string>
+    <string name="tpl_bold">Жирный</string>
+    <string name="tpl_italic">Курсив</string>
+    <string name="tpl_underline">Подчёркнутый</string>
+    <string name="tpl_strike">Зачёркнутый</string>
+    <string name="tpl_bullets">Маркированный список</string>
+    <string name="tpl_numbers">Нумерованный список</string>
+    <string name="tpl_save_failed">Не удалось сохранить файл</string>
+    <string name="tpl_image_failed">Не удалось открыть изображение</string>
+    <string name="ad_badge">Реклама</string>
+    <string name="explore_nothing">Пока здесь ничего нет. Проверьте подключение к интернету.</string>
+    <string name="review1_title">Все файлы в одном приложении</string>
+    <string name="review1_text">Подписка того стоит!! Быстро открывает файлы любых форматов, запоминает, где я остановился, работает офлайн и даже восстанавливает удалённые файлы!</string>
+    <string name="review2_title">Без рекламы и скрытых платежей</string>
+    <string name="review2_text">После подписки мне доступно больше функций. Реклама не мешает читать и редактировать, интерфейс стал чище. А главное — никаких скрытых платежей!</string>
+    <string name="review3_title">Больше фокуса, выше скорость</string>
+    <string name="review3_text">Подписка недорогая, и теперь я могу просматривать, редактировать и упорядочивать файлы без надоедливой рекламы. Эффективность реально выросла!</string>
+    <plurals name="deleted_count">
+        <item quantity="one">Удалён %d файл</item>
+        <item quantity="few">Удалено %d файла</item>
+        <item quantity="many">Удалено %d файлов</item>
+        <item quantity="other">Удалено %d файла</item>
+    </plurals>
+    <plurals name="moved_to_bin_count">
+        <item quantity="one">%d файл перемещён в корзину</item>
+        <item quantity="few">%d файла перемещены в корзину</item>
+        <item quantity="many">%d файлов перемещено в корзину</item>
+        <item quantity="other">%d файла перемещено в корзину</item>
+    </plurals>
+    <plurals name="days_left">
+        <item quantity="one">Остался %d день</item>
+        <item quantity="few">Осталось %d дня</item>
+        <item quantity="many">Осталось %d дней</item>
+        <item quantity="other">Осталось %d дня</item>
+    </plurals>
+    <plurals name="pages_selected">
+        <item quantity="one">Выбрана %d страница</item>
+        <item quantity="few">Выбрано %d страницы</item>
+        <item quantity="many">Выбрано %d страниц</item>
+        <item quantity="other">Выбрано %d страницы</item>
+    </plurals>
+    <plurals name="days_count">
+        <item quantity="one">%d день</item>
+        <item quantity="few">%d дня</item>
+        <item quantity="many">%d дней</item>
+        <item quantity="other">%d дня</item>
+    </plurals>
+    <plurals name="delete_forever_message">
+        <item quantity="one">%d файл будет удалён навсегда. Это действие нельзя отменить.</item>
+        <item quantity="few">%d файла будут удалены навсегда. Это действие нельзя отменить.</item>
+        <item quantity="many">%d файлов будут удалены навсегда. Это действие нельзя отменить.</item>
+        <item quantity="other">%d файла будут удалены навсегда. Это действие нельзя отменить.</item>
+    </plurals>
+    <plurals name="restored_count">
+        <item quantity="one">Восстановлен %d файл</item>
+        <item quantity="few">Восстановлено %d файла</item>
+        <item quantity="many">Восстановлено %d файлов</item>
+        <item quantity="other">Восстановлено %d файла</item>
+    </plurals>
+    <!-- /step59 -->
 </resources>

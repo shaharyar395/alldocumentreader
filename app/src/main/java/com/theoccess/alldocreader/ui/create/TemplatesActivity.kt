@@ -1,12 +1,13 @@
 package com.theoccess.alldocreader.ui.create
 
+import com.theoccess.alldocreader.premium.PremiumGate
 import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -32,7 +33,7 @@ import kotlinx.coroutines.withContext
  * sections (the tab follows the scrolling, tapping a tab jumps to its section), and a
  * "Need more templates? Tell us" card at the end. Tapping a template opens it in the editor.
  */
-class TemplatesActivity : AppCompatActivity() {
+class TemplatesActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivityTemplatesBinding
 
@@ -106,6 +107,11 @@ class TemplatesActivity : AppCompatActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        binding.rvList.adapter?.notifyDataSetChanged()   // crowns go away right after buying Premium
+    }
+
     private fun categoryAt(pos: Int): Category {
         for (i in pos downTo 0) {
             when (val r = rows[i]) {
@@ -156,7 +162,11 @@ class TemplatesActivity : AppCompatActivity() {
                     val b = ItemTplThumbBinding.bind(holder.itemView)
                     val bmp = thumbs[r.tpl.id]
                     if (bmp != null) b.ivThumb.setImageBitmap(bmp) else b.ivThumb.setImageDrawable(null)
+                    val premiumTpl = PremiumGate.isPremiumTemplate(r.tpl.id)
+                    if (premiumTpl) PremiumGate.showCrown(b.ivCrown) else b.ivCrown.visibility = View.GONE
                     b.card.setOnClickListener {
+                        // crowned templates: Premium (a few free tries a day for free users)
+                        if (premiumTpl && !PremiumGate.use(this@TemplatesActivity, PremiumGate.Feature.TEMPLATES)) return@setOnClickListener
                         editor.launch(Intent(this@TemplatesActivity, TemplateEditorActivity::class.java)
                             .putExtra(TemplateEditorActivity.EXTRA_ID, r.tpl.id))
                     }

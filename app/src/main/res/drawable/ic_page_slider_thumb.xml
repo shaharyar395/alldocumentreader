@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Page slider handle: dark rounded tab with ≡, drawn with a soft shadow ring so it shows on white and dark pages -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="30dp"
+    android:height="46dp"
+    android:viewportWidth="30"
+    android:viewportHeight="46">
+    <path
+        android:fillColor="#33000000"
+        android:pathData="M7,1 H25 A4,4 0 0 1 29,5 V41 A4,4 0 0 1 25,45 H7 A6,6 0 0 1 1,39 V7 A6,6 0 0 1 7,1 Z" />
+    <path
+        android:fillColor="#FF2B303A"
+        android:pathData="M8,2 H24 A4,4 0 0 1 28,6 V40 A4,4 0 0 1 24,44 H8 A6,6 0 0 1 2,38 V8 A6,6 0 0 1 8,2 Z" />
+    <path
+        android:pathData="M9,16 H21 M9,23 H21 M9,30 H21"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeLineCap="round"
+        android:strokeWidth="2.2" />
+</vector>

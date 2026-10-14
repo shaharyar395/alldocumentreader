@@ -1,7 +1,6 @@
 package com.theoccess.alldocreader.ui.files
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.theoccess.alldocreader.R
 import com.theoccess.alldocreader.data.DocFile
 import com.theoccess.alldocreader.util.FileActions
@@ -9,7 +8,7 @@ import com.theoccess.alldocreader.util.toast
 import java.io.File
 
 /** Target of home-screen shortcuts: opens the document and closes itself. */
-class OpenFileActivity : AppCompatActivity() {
+class OpenFileActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

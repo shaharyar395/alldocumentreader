@@ -10,7 +10,6 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.widget.doAfterTextChanged
 import com.google.android.material.chip.Chip
@@ -25,7 +24,7 @@ import com.theoccess.alldocreader.util.toast
  * "Feedback or suggestion": star rating, "What problems did you encounter?" chips, details,
  * up to 4 screenshots, Submit (sends an e-mail to the support address with everything attached).
  */
-class FeedbackActivity : AppCompatActivity() {
+class FeedbackActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivityFeedbackBinding
     private var rating = 0

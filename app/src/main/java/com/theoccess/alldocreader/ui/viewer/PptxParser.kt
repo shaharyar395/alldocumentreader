@@ -1,7 +1,6 @@
 package com.theoccess.alldocreader.ui.viewer
 
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
@@ -33,7 +32,7 @@ object PptxParser {
 
     sealed class Element(val box: RectF) {
         class Text(box: RectF, val text: CharSequence, val fill: Int?, val placeholder: String?) : Element(box)
-        class Picture(box: RectF, val bitmap: Bitmap) : Element(box)
+        class Picture(box: RectF, val bitmap: LazyBitmap) : Element(box)
     }
 
     class Slide(val background: Int, val elements: List<Element>) {
@@ -68,7 +67,7 @@ object PptxParser {
                 .sortedBy { it.removePrefix("ppt/slides/slide").removeSuffix(".xml").toIntOrNull() ?: 0 }
                 .toList()
         }
-        val slides = slidePaths.mapNotNull { path -> zip.getEntry(path)?.let { parseSlide(zip, path, w, h) } }
+        val slides = slidePaths.mapNotNull { path -> zip.getEntry(path)?.let { parseSlide(zip, file, path, w, h) } }
         Deck(w, h, slides)
     }
 
@@ -123,7 +122,7 @@ object PptxParser {
     private fun hex(v: String?): Int? =
         if (v == null || v.length != 6) null else try { Color.parseColor("#$v") } catch (e: Exception) { null }
 
-    private fun parseSlide(zip: ZipFile, path: String, slideW: Float, slideH: Float): Slide {
+    private fun parseSlide(zip: ZipFile, file: File, path: String, slideW: Float, slideH: Float): Slide {
         val dir = path.substringBeforeLast('/') + "/"
         val rels = readRels(zip, dir + "_rels/" + path.substringAfterLast('/') + ".rels", dir)
         val elements = ArrayList<Element>()
@@ -286,27 +285,16 @@ object PptxParser {
                         "p:pic" -> {
                             inPic = false
                             val target = blip?.let { rels[it] }
-                            val bmp = target?.let { decode(zip, it) }
-                            if (bmp != null) elements += Element.Picture(box(), bmp)
+                            // decoded only when the slide is drawn (fast opening of big decks)
+                            if (target != null && LazyBitmap.bounds(zip, target) != null) {
+                                elements += Element.Picture(box(), LazyBitmap.zipEntry(file, target, 1600))
+                            }
                         }
                     }
                 }
             }
         }
         return Slide(background, elements)
-    }
-
-    private fun decode(zip: ZipFile, path: String): Bitmap? {
-        val entry = zip.getEntry(path) ?: return null
-        return try {
-            val o = BitmapFactory.Options().apply { inJustDecodeBounds = true }
-            zip.getInputStream(entry).use { BitmapFactory.decodeStream(it, null, o) }
-            var s = 1
-            while (o.outWidth / s > 1600 || o.outHeight / s > 1600) s *= 2
-            zip.getInputStream(entry).use { BitmapFactory.decodeStream(it, null, BitmapFactory.Options().apply { inSampleSize = s }) }
-        } catch (e: Exception) {
-            null
-        }
     }
 
     // ------------------------------------------------------------------ drawing
@@ -324,7 +312,7 @@ object PptxParser {
         val slide = deck.slides[index]
         canvas.drawColor(slide.background)
         for (e in slide.elements) when (e) {
-            is Element.Picture -> canvas.drawBitmap(e.bitmap, null, e.box, imagePaint)
+            is Element.Picture -> e.bitmap.get()?.let { canvas.drawBitmap(it, null, e.box, imagePaint) }
             is Element.Text -> {
                 e.fill?.let { fillPaint.color = it; canvas.drawRect(e.box, fillPaint) }
                 if (e.text.isNotBlank()) {

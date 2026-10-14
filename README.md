@@ -273,3 +273,274 @@ tools/       gen_vectors.py (regenerates all icons), gen_translations*.py (value
 * Package / applicationId: `com.theoccess.alldocreader` – change in `app/build.gradle.kts` if needed.
 * All icons and illustrations are original vector drawables (no assets copied from the reference app).
 * Ads are intentionally left out.
+
+## Step 27 — Search fix, highlights, Excel viewer
+- **Search in Document** now works in DOCX/TXT/PPTX as well as PDF: text is normalised (non-breaking
+  spaces, curly quotes, dashes) before matching, multi-word queries match across extra spaces.
+- Matches are **highlighted** (yellow; current match orange) by `HighlightView` over each page, and the
+  list **scrolls to the exact spot** of the match (PDF positions from PDFBox `TextPosition`s, documents
+  from `StaticLayout` line/char positions). "No results found" toast when nothing matches.
+- **Excel** opens in-app (`SheetParser`): .xlsx/.xlsm/.xltx, .ods, .csv/.tsv — every sheet as a grid with
+  column letters, row numbers, the sheet's column widths, shared strings, numbers, dates, %, booleans.
+  Old binary **.xls** still opens in another installed app.
+
+## Step 28 — Search hint per type, faster opening, refresh files
+- Viewer search hint follows the file: "Search in PDF / PPT / Excel / Document" (22 languages).
+- **Faster opening of long files**
+  - Word / TXT / Excel: only the first 3 pages are laid out before the document shows; the rest is
+    laid out in the background (`DocLayout(eager = false)`, `layoutMore`, `PageSource.finishLoading`)
+    and the page list grows as pages are ready. Search waits for the full layout; Convert finishes it.
+  - Pictures in Word / PowerPoint are no longer decoded while opening: `LazyBitmap` reads only the
+    size, decodes when the page is drawn and keeps decoded pictures in a shared LRU cache.
+  - PDF: only page 1 is measured before showing; other page sizes are read in the background and
+    pages with a different size are re-measured (`onPagesResized`).
+- **New files without restarting**
+  - Pull down on the Home list and on every file list to rescan; refresh button in the file-list toolbar.
+  - `FileRepository.refresh`: media index first (lists fill at once), then a folder walk for files the
+    index doesn't know yet (USB copies, downloads, Bluetooth, Android/media WhatsApp/Telegram); those are
+    added and handed to the media scanner.
+  - Auto: rescans when the media store changes (ContentObserver, debounced) and when returning to the
+    app / a list after 8 s (`refreshIfStale`).
+
+## Step 29 — "New" files, Save to Drive for one file
+- `NewFiles`: each complete scan is compared with the paths already known (first scan after install =
+  baseline). Newly found files get a **New** tag next to the name and a light-gray row (`new_file_bg`)
+  in every file list until opened (`LibraryStore.addRecent` → `markOpened`); app-saved / opened files
+  are never new; renames keep the state; tags expire after 30 days. Recently added shows new files first
+  (also copies with old dates) and the home "+N" counts unopened new files.
+- **Save to Drive** in the file ⋮ menu and the viewer ⋮ menu (`DriveSaveActivity`): Google account /
+  permission screen, then the file is uploaded at once to "All Document Reader" in that account's Drive,
+  with progress and a result message. Failures are no longer silent: the reason is shown (OAuth client /
+  SHA-1 missing, Drive API not enabled, access not allowed / not a test user, offline, Drive full).
+  Uploads are streamed (big files are not read into memory).
+
+## Step 30 — Fixes: New rows, Save to Drive, TXT hint, exact highlights
+- New-file rows: tags/gray background are re-drawn whenever a file is opened (Recently added re-sorted
+  without re-binding unchanged rows before) and on returning to a list.
+- Save to Drive (one file) now hands the file to the **Google Drive app's own "Save to Drive" screen**
+  (account + folder → Save; no Google Cloud setup needed). Direct API upload only when Drive isn't installed.
+- TXT viewer search hint: "Search in TXT".
+- Exact search highlights: `HighlightView` translated by the page frame padding twice (boxes 4dp low and
+  8dp right) — fixed; Word/TXT/Excel boxes now cover the letters only (no line spacing); PDF boxes use
+  the font size around the baseline.
+
+## Step 31 — Cursor fixes merged
+- From Cursor: **Image to PDF** picks an image file (`ConvertKind.IMAGE_TO_PDF`, `Converters.imagesToPdf`);
+  Edit / Pages / Print also accept pictures (converted to PDF first); **Convert to PDF** button in the
+  picture viewer; files opened by convert / edit / pages / print / scan results go to Recent; the app
+  accepts shared pictures and text; "+N" next to Recently added clears once that list is visited
+  (combined with the per-file "New" tags).
+- From Cursor: the Settings auto-copy "Save to Google Drive" (Google sign-in, `DriveBackup`,
+  play-services-auth) is removed. "Save to Drive" in the file / viewer ⋮ menus uses the Google Drive
+  app's own "Save to Drive" screen (offers to install Drive when it is missing).
+
+## Step 32 — Premium page like the original
+- Opening Premium first shows **"Get Ready for Your 7-Day Free Trial"** (dark screen, glowing red check that
+  pops in, twinkling dots, orange gradient italic text) for ~1.7 s, then fades into the page (`readyView`).
+- The page scrolls like the original: picture slides (6 now, + **Merge & split PDFs**), **Get Premium**,
+  all 6 benefits (+ **Merge & split PDFs seamlessly**) and a **User Reviews** section with 3 cards
+  (title, 5 stars, name, text, faint quote mark). Plans, **Start Free Trial →** (Continue → for Monthly),
+  **Cancel anytime** and **Terms of use | Privacy policy** stay fixed at the bottom; content fades out above them.
+- ⚠ The 3 review texts (strings `review1_…`–`review3_…`) are placeholders copied from the original —
+  replace them with real reviews of your app before publishing (Google Play policy on misleading content).
+
+## Step 33 — Premium unlocks exactly the "Get Premium" points
+`premium/PremiumGate.kt` (free users: **2 free tries per tool per day**, then the Get Premium page;
+Premium / free trial: unlimited, crowns hidden). Viewing, scanning, printing, importing stay free.
+| Get Premium point | What is gated |
+|---|---|
+| Ad-free experience | all ads (Ads.kt, already) |
+| Edit & sign PDFs easily | Tools → Edit text / Annotate / Add text / Sign, viewer ✎, result-screen edit tools, widget |
+| Convert files instantly | Word/PPT/Image → PDF, PDF → Word (Tools, "+" sheet, viewer convert, picture viewer, result screen) |
+| Unlock premium templates | 8 of 16 templates have a crown (second half of each category) |
+| Complete page management | Manage pages (Tools, viewer Pages button / menu) |
+| Merge & split PDFs seamlessly | **new** Tools → Merge PDF (pick PDFs in order, numbered) and Split PDF (every page / every N pages / custom ranges), `ui/pages/PdfTools.kt` |
+A free try is counted when the tool really starts (file chosen / Convert tapped); a toast says how many are left.
+Change `FREE_USES_PER_DAY` or `PREMIUM_TEMPLATES` in PremiumGate to tune it.
+
+## Step 34 — Tools are free (like the original)
+- No crown and no daily limit on any tool: Convert (Image/Word/PPT → PDF, PDF → Word), Edit text, Annotate,
+  Add text, Sign, Manage pages, Merge PDF, Split PDF — also from the viewer, picture viewer and result screen.
+  `PremiumGate.Feature.limited = false` for these; only the crowned templates (and ads) depend on Premium.
+- Tools tab: **Manage pages** moved from Others into Edit, before Merge PDF.
+
+## Step 35 — Manage pages, Merge PDF, Split PDF exactly like the original
+- Tools: section renamed **Edit & Manage** (Edit text, Annotate, Add text, Sign, Manage pages, Merge PDF, Split PDF).
+- **Manage pages** (Tools): page editor as before; Insert → Images now asks **Take a photo / Choose from gallery /
+  Cancel**; after **Done**: "Saved successfully" → ad → the saved PDF opens in the reader.
+- **Merge PDF**: "Select a file" with a checkbox on every row ("2 selected", "Continue (2)", needs 2) →
+  `MergePdfActivity`: ⋮⋮ drag to reorder, "2 pages · 8.7 KB", ⊖ remove, file+ adds more (current ones ticked),
+  back → "Quit merging?" → "Merge (n)" → "Merging… (x%)" → result screen "Merged successfully!".
+  Output `Documents/AllDocumentReader/merged/Merged_yyyyMMdd_HHmm.pdf`.
+- **Split PDF**: pick a PDF → `SplitPdfActivity` (notebook preview, page count, Split method):
+  Custom range → "Select pages" (`SelectPagesActivity`, page grid, select all, "Continue (n)") → part
+  "Split_yyyyMMdd_HHmm ✎ / Page: 1,2" (rename, ⊖, file+ adds another part) → "Split (n)";
+  Fixed range → Interval settings [− n +] → "Split". "Splitting… (x%)" → ad → "Split successfully!".
+  Output in `Documents/AllDocumentReader/split/`.
+- Result screen: page-count badge, tools in the original order (+ Manage pages) and
+  "Are you satisfied with our "Merge PDF" / "Split PDF" feature?" 😞 Not good / 🥰 Good (asked once per feature).
+- Viewer ⋮ menu (PDF): **Merge PDF** (this file pre-ticked) and **Split PDF**.
+
+## Step 36 — Search inside pictures (Word picture pages, scanned PDFs)
+- Some Word files (made from PDFs or scans) have pages that are pictures, so "Search in Document" found nothing (0/0).
+- New `ui/viewer/PictureOcr.kt`: Google ML Kit text recognition reads the words in those pictures on the phone (no upload).
+- `DocPageSource` adds the recognised words to `findMatches`/`pageText`; `PdfPageSource` does the same for PDF pages without text.
+- Matches are highlighted on exactly the matching letters, and ▲/▼ jump between them like normal text.
+- `ViewerActivity` starts reading the pictures in the background as soon as search opens.
+- Dependency `play-services-mlkit-text-recognition:19.0.1`; manifest meta-data `com.google.mlkit.vision.DEPENDENCIES = ocr`. Google Play services downloads the model.
+
+## Step 37 — App Open ad at app start and after "Welcome back…"
+- App start (after the splash, not on the very first run) and "Welcome back…" now always show the **App Open** ad ("Continue to app ›"). Before, they took turns and app start used the full-screen interstitial.
+- The splash waits up to 5 s for the ad, and "Welcome back…" up to 4 s. Only if no App Open ad arrives in time is a ready interstitial shown instead.
+- The App Open ad loads first when the SDK starts, again whenever the app goes to the background, and after a failed load it retries in 5 s, 15 s, 45 s … (up to 2 min apart).
+- If Android closed the app in the background and the user reopens it from Recents, "Welcome back…" + the App Open ad now show too (before, nothing showed).
+- The app never gets stuck on the loading screen; there's never two ads at once. Logcat tag `Ads` shows why an ad didn't load (e.g. code 3 = no fill).
+
+## Step 38 — Language screen: bottom banner ad, names aligned left
+- A banner ad (`AdBar`) at the bottom of the Language screen (first run and from Settings); hidden for premium users and until an ad loads. The ads SDK now starts on this screen, so the banner also shows on the very first run.
+- Arabic (العربية) and Persian (فارسی) names are aligned to the left like the other languages (`textDirection="locale"`, `textAlignment="viewStart"`); in an RTL app language all rows align right together.
+
+## Step 39 — The 4 issues, done again carefully (version 1.0.39)
+Settings shows "Version 1.0.39", so you can check that the phone runs this build.
+1. **App Open ad at app start**
+   - Every start, including the very first, goes: loading screen → App Open ad → language / intro / home.
+   - The ads SDK and consent start on the splash. The ad waits for the EEA/UK consent form if it is shown.
+   - A Premium test purchase ("Subscribe (test)", debug builds) now lasts for one app run only. Before, it was saved, so later starts were treated as Premium and skipped the ad.
+2. **App Open ad after "Welcome back…"**
+   - Leaving the app with Home, Recents or another app from ANY screen (reader, tools, lists …) and coming back after 3 s shows "Welcome back…" then the App Open ad. Before, this only worked from the main screen.
+   - It doesn't show when the app itself opened something (Files app, share, sign-in, settings). Every screen now extends `ui/BaseActivity`, which records that.
+   - It also shows when Android had closed the app in the background.
+3. **Language screen banner:** an `AdBar` at the bottom shows "Loading ad…" in the banner's space right away, then the ad. It hides only if no ad comes; it's never shown for Premium.
+4. **Language names:** each row is laid out left-to-right in code and XML, so Arabic, Persian and Urdu names start on the left like the others.
+- Debug builds show a short "Ads: …" message when an App Open ad doesn't show, with the reason (Premium on, no consent, failed with code 3 = no ad to show …). Release builds never show it.
+
+## Step 40 — Reader: swipe tutorial and tap to hide the bars (version 1.0.40)
+- **Swipe tutorial:** the first time Horizontal (page by page) is switched on, a dimmed overlay shows a hand moving left and right between yellow arrows, and "Swipe left/right to turn pages" [OK]. It's shown once (`viewer_swipe_tip_shown`).
+  - `layout/view_swipe_tutorial.xml`, `ic_swipe_arrows`, `ic_swipe_hand`, `ic_tip_pointer_up`, `bg_tutorial_card`, `bg_outline_pill_large`.
+- **Tap to hide the bars:** one tap on the document hides the toolbar, the bottom tools, the page number, the edit button and the status bar, so only the pages show. Another tap brings them back.
+  - The ad stays, like the original. Double-tap zoom, pinch and scrolling don't toggle it, and it's off while searching.
+  - `ZoomLayout.onSingleTap` (`onSingleTapConfirmed`), `ViewerActivity.setBarsHidden`; the top bar has the id `topBar`.
+
+## Step 41 — Page slider stops above the Edit button (version 1.0.41)
+- The ≡ page slider is now `ui/viewer/PageScrollBar` (same handle picture, `ic_fast_scroll_thumb`) instead of RecyclerView's built-in fast scroller, whose track always ran to the very bottom and covered the Edit button.
+- Its lowest position (the last page) is just above the Edit button. When there is no Edit button (Word / Excel / PPT / TXT) or the bars are hidden by a tap, it goes down to the bottom.
+- Like before: it appears while scrolling, fades after 1.5 s and can be dragged. Touches outside the handle go to the pages. It is shown in Vertical mode only.
+
+## Step 42 — App Open ad after the loading screen every time (version 1.0.42)
+- The cause was "none loaded in time": the App Open ad was only requested after `MobileAds.initialize` had finished, which can take several seconds on a cold start, so the ad often arrived after the splash had given up.
+- Now the App Open ad is requested right away when the ads SDK starts (allowed without mediation) and the loading screen waits up to 10 s, but only while the ad is still loading. It shows the moment it's ready and goes on at once if it fails.
+- If the first request fails during the loading screen, it's tried once more straight away.
+
+## Step 43 — Sharp text in big picture-page Word files (version 1.0.43)
+- Pictures in .docx / .pptx were decoded by halving (inSampleSize 1, 2, 4 …) until they fit 1600 px, which could overshoot far below it.
+  - A 2480×3508 page scan ended up 620×877, smaller than the screen, so whole-page pictures (e.g. en_Sahih_Al-Bukhari.docx, 1700 pages) looked blurry.
+- `LazyBitmap.zipEntry` now halves only while the result stays ≥ 1600 px, then resizes smoothly to 1600 px. That example is now 1131×1600, so the text is clear.
+
+## Step 44 — Page slider: bigger, easier to find, works in long documents (version 1.0.44)
+- **Bigger handle:** `ic_page_slider_thumb` is 30 × 46 dp (was 22 × 26 dp), with a soft edge so it shows on white and dark pages.
+- **Easier to find:** it shows for a moment when a long document opens, appears while scrolling and fades 2 s after.
+- **Dragging by page:** the handle now jumps by page position (`scrollToPositionWithOffset`) instead of scrolling by pixels.
+  - Pixel scrolling had to lay out every page in between, so it was slow and jumpy in long files such as a 1700-page DOCX.
+  - The top of the track is page 1 and the bottom is the end of the last page. The page number chip follows along.
+- Older builds (before 1.0.41) used RecyclerView's own fast scroller, which shrank to thin dashes in long documents. That one is no longer used.
+
+## Step 45 — One page slider for every file type, tap and swipe (version 1.0.45)
+- PDF, Word, Excel, PowerPoint and TXT all open in `ViewerActivity`, so they share the same `PageScrollBar`: same 30 × 46 dp handle, same position and the same rule for when it's there.
+  - The rule: more than one page and longer than the screen. Before, it needed a document at least 2 screens long, so short files had none.
+- **Swipe:** grab the handle and move up or down; it goes page by page, and the page chip follows.
+- **Tap:** while the slider is showing, a tap on its strip at the right edge jumps there, and the finger can keep swiping from that point. While it's hidden, taps go to the pages as before.
+
+## Step 46 — "Go to page" while searching no longer reloads / freezes (version 1.0.46)
+- **Cause:** the search ran on the single page-drawing thread and went through every page (1000 in sample-1000pages.pdf).
+  - After "Go to page", no page could be drawn until the search had finished, which showed blank pages with spinners, freezes and white or black screens.
+  - Replaced searches (each typed letter) weren't stopped, so they queued up.
+  - When the search ended it scrolled back to the first match on page 1.
+- **Fix:**
+  - Search has its own thread (`searchDispatcher`), so pages keep drawing while it runs.
+  - A replaced or closed search stops at once (`yield()` per page).
+  - If "Go to page" was used during a search, the result starts at the first match from that page on.
+  - The keyboard stays hidden after the jump.
+
+## Step 47 — Tools → Image to PDF: Take a photo / Choose from gallery / Cancel (version 1.0.47)
+- The Tools tile now opens `ScanStartActivity` (Image to PDF mode) instead of the file list, like the original.
+- A white screen with ← shows the "Take a photo / Choose from gallery / Cancel" sheet:
+  - **Take a photo:** Google ML Kit document scanner (the in-app camera if ML Kit isn't available), the same as Scan to PDF and Add pages.
+  - **Choose from gallery:** photo picker (several pictures) → "Choose cropping method".
+  - Then the page editor (filters, crop, rotate) → Done → Image to PDF list (reorder, add pages) → Convert → result screen.
+  - **Cancel:** back to Tools.
+
+## Step 48 — "Recently added" bar follows dark mode (version 1.0.48)
+- `bg_recent_row` had a fixed 70 % white fill, so the bar stayed light in dark mode.
+- It now uses `@color/recent_row_bg`: 70 % white in light mode (unchanged) and #23262D in dark mode, the same as other dark cards. The text was already themed.
+
+## Step 49 — Switching theme without a black screen (version 1.0.49)
+- **Cause:** choosing a theme in Settings → App theme made Android tear the main screen down and rebuild it, which showed a black screen in between.
+- **Fix:**
+  - `MainActivity` now handles `uiMode` itself (manifest `configChanges="uiMode"`).
+  - When day/night changes it opens a fresh copy of itself with a quick cross-fade and closes the old one. The old screen stays visible until the new one is drawn, so the new theme appears at once, back on the Settings tab.
+  - If the main screen isn't in front (e.g. the system dark mode changes while a document is open) it is rebuilt quietly in the background.
+
+## Step 50 — Swipe tutorial hand points with the index finger (version 1.0.50)
+- `ic_swipe_hand` is redrawn like the original: the raised finger is on the left of the hand, the thumb sticks out on the lower left, and the three curled fingers step down to the right. Before, there were folded fingers on both sides of the raised one, so it looked like the middle finger.
+- The finger tip is still at the top centre, on the yellow touch point. Nothing else changed.
+
+## Step 51 — Swipe tutorial: the original's hand (version 1.0.51)
+- The hand is now the picture from the original app (`drawable/img_swipe_hand.png`, cut out with a transparent background): index finger up, thumb on the left, the other fingers curled.
+- It's the same size as there (58 × 86 dp, was 64 × 110 dp) and the finger tip sits on the yellow dot. `ic_swipe_hand.xml` was removed. Nothing else changed.
+
+## Step 52 — Excel / PPT / TXT counted after "All files access" is granted (version 1.0.52)
+- A scan made before "All files access" was on only sees pictures and the app's own files. Android hides other apps' documents, so the Excel / PPT / TXT tiles showed 0.
+- Such a scan could stay in memory after access was granted, because `refresh()` without force kept a finished scan.
+- `FileRepository` now remembers whether the last scan had access, and scans again as soon as access is there. This also applies when access arrives while a scan is running.
+- The file-index query uses `_data LIKE ?` (already case-insensitive) instead of `LOWER(_data) LIKE ?`.
+
+## Step 53 — Faster search and sharper pages in big picture-page Word files (version 1.0.53)
+**Search**
+- Reading the words in the page pictures (ML Kit) now starts when the Word file opens, on a low-priority background thread, not when search is opened.
+  - It follows the layout as the document grows; the old loop stopped at the pages that were ready when it started.
+  - A per-page lock means the background reading and a search never read the same page twice.
+- Results now appear while the search is still running. The first match shows at once, the count grows ("1/12…"), and pages still being laid out are searched as soon as they're ready.
+  - Before, nothing showed until every page had been laid out and read.
+
+**Sharpness**
+- Pictures are no longer shrunk by skipping pixels (`inSampleSize`) below twice the target size, which broke up thin letter strokes in page scans. They're shrunk by smooth halving plus one final resize instead; there's a memory guard for huge pictures.
+- Word pages are drawn at 1.5× the screen width (at most 2000 px) and shown scaled down, so text stays sharp, also when zoomed a little.
+
+## Step 54 — Fast tab switching under rapid taps (version 1.0.54)
+- **Duplicate tabs:** tab changes were queued (`commit()`), so fast taps could find a not-yet-added tab and add it again. Stacked duplicate screens made each switch slower.
+  - `showTab` now runs queued changes first and applies its own change at once (`commitNow()`), and ignores taps after the state is saved.
+- **All files tab:** the Recent / Bookmarks list checked every file on storage (exists, size, date) on the main thread each time the tab came back. That now happens in the background, and the list on screen stays until the new one is ready.
+- **Tools / Settings:** both are built hidden as soon as the app is idle after start (`prebuildTabs`), so the first tap on them is instant. All files is still built only when it's opened, because it may ask for storage access.
+
+## Step 55 — Premium stays on after restart; no "Premium is on" message (version 1.0.55)
+- A test subscription ("Subscribe (test)", debug builds) is now saved with its end date: Monthly 30 days, Yearly 365 days (`test_premium_until`). Since 1.0.39 it lasted for one app run only, so ads came back after a restart.
+- Premium = a real Google Play subscription or a test one still running. Google Play's check at start no longer cancels a running test subscription.
+- When the period ends (at start, or while the app is open) Premium switches off and ads load again. A real subscription that ends is switched off by Google Play's check at start, as before.
+- The debug message "Ads: no App Open ad: Premium is on" is gone: with Premium the app simply goes on, no ad and no message.
+
+## Step 56 — No "Ads: …" messages; Restore message like the original (version 1.0.56)
+- The on-screen "Ads: …" notes (e.g. "no App Open ad: none loaded in time") are gone in every build. The reason is still written to Logcat (tag `Ads`). The ad after the loading screen works as before.
+- **Restore** (Get Premium and Start Free Trial screens) asks Google Play for an active subscription; a running test subscription counts too.
+  - Found: "Premium restored", as before.
+  - Not found: the orange pill at the top with the ⓘ icon, "No valid subscription found.", in the same style as the "subscription failed" pill (`PaywallUi.noSubscription`).
+
+## Step 57 — App theme switches instantly (version 1.0.57)
+- Choosing a theme opened the new main screen with a fade-in / fade-out, which looked like loading.
+- It now swaps with no animation (`FLAG_ACTIVITY_NO_ANIMATION`, `overridePendingTransition(0, 0)`), like the original. Android still shows the new screen only once it's drawn, so there's no black frame.
+
+## Step 58 — App theme switches instantly, in place (version 1.0.58)
+- Opening a fresh main screen for the new theme took a moment. Meanwhile the old screen already redrew with half-changed colours, so text disappeared and came back.
+- `MainActivity.rebuildForTheme()` now rebuilds the same screen at once, before anything is drawn:
+  - it sets the new window, status bar and navigation bar colours;
+  - it rebuilds the tabs: the visible one at once, Tools / Settings again when idle;
+  - nothing new opens, so there's no loading and no black frame — like the original.
+- If the main screen isn't in front (system dark mode changed while a document is open), it's rebuilt quietly in the background as before.
+
+## Step 59 — The whole app in every language (version 1.0.59)
+- **Audit:** 270 texts and 7 plurals had no translation in any of the 22 languages, so those parts stayed English: FAQ, Premium / Start Free Trial pages, terms of use, scanner and editor labels, file info, rename / delete / restore messages, widgets, templates editor, etc.
+- **Added:** translations of the 193 texts and 7 plurals that are used, for ar, de, es, fa, fr, in, it, ja, ko, ms, pl, pt, ru, th, tl, tr, uk, ur, uz, vi, zh-rCN and zh-rTW. Each language has its own plural forms (Arabic zero/one/two/few/many, Russian / Ukrainian / Polish one/few/many).
+  - Source: `tools/i18n_step59/<locale>.json`; `tools/gen_translations_step59.py` writes them in.
+- **Checked:** placeholders (%1$s, %d, %%), escapes (\' \" \n), HTML tags and XML validity in every file.
+- **Kept the same in every language:** 57 texts no longer used anywhere, format-only texts (e.g. "%1$d / %2$d"), file-type names (PDF, Word, Excel, PPT, TXT, PNG, JPG), "B&W" filter names, price fallbacks and reviewer names.
+- The tiny "Search…" in the first intro picture now uses `@string/search_for_files`.
+- **Not translated on purpose:** sample text inside document templates (it's document content) and the debug-only test purchase sheet.

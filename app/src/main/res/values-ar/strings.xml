@@ -262,4 +262,352 @@
     <string name="helpful_no">😞 ليس حقًا</string>
     <string name="helpful_yes">🥰 مفيد</string>
     <!-- /step26 -->
+    <!-- step27 -->
+    <string name="search_no_results">لم يتم العثور على نتائج</string>
+    <!-- /step27 -->
+    <!-- step28 -->
+    <string name="search_in_document">البحث في المستند</string>
+    <string name="search_in_pdf">البحث في PDF</string>
+    <string name="search_in_ppt">البحث في PPT</string>
+    <string name="search_in_excel">البحث في Excel</string>
+    <string name="refresh">تحديث</string>
+    <string name="files_refreshed">تم تحديث الملفات</string>
+    <!-- /step28 -->
+    <!-- step29 -->
+    <string name="new_badge">جديد</string>
+    <string name="save_to_drive_short">حفظ في Drive</string>
+    <string name="drive_saving">جارٍ الحفظ في Google Drive…</string>
+    <string name="drive_saved">تم حفظ %1$s في Google Drive (مجلد All Document Reader)</string>
+    <string name="drive_save_failed_title">تعذّر الحفظ في Google Drive</string>
+    <string name="drive_not_allowed">لم يمنح Google الوصول إلى Google Drive. اختر حسابك واضغط سماح.</string>
+    <!-- /step29 -->
+    <!-- step30 -->
+    <string name="search_in_txt">البحث في TXT</string>
+    <!-- /step30 -->
+    <!-- step31 -->
+    <string name="drive_app_missing">تطبيق Google Drive مطلوب لحفظ الملفات في Drive. ثبّته من Google Play ثم حاول مرة أخرى.</string>
+    <string name="drive_install">تثبيت</string>
+    <!-- /step31 -->
+    <!-- step32 -->
+    <string name="ready_top">استعد لتجربتك</string>
+    <string name="ready_bottom">المجانية لمدة 7 أيام</string>
+    <string name="premium_slide_merge">دمج\nوتقسيم PDF</string>
+    <string name="feat_merge">دمج وتقسيم ملفات PDF بسلاسة</string>
+    <string name="user_reviews">آراء المستخدمين</string>
+    <string name="cancel_anytime">يمكنك الإلغاء في أي وقت</string>
+    <!-- /step32 -->
+    <!-- step33 -->
+    <string name="tool_merge_pdf">دمج PDF</string>
+    <string name="tool_split_pdf">تقسيم PDF</string>
+    <string name="premium_free_uses_left">تجربة مجانية · متبقٍ %1$d اليوم. احصل على Premium للاستخدام غير المحدود</string>
+    <string name="premium_last_free_use">آخر تجربة مجانية اليوم. احصل على Premium للاستخدام غير المحدود</string>
+    <string name="premium_limit_reached">انتهت التجارب المجانية اليوم لـ \"%1$s\". احصل على Premium للاستخدام غير المحدود.</string>
+    <string name="select_pdfs_to_merge">اختر ملفات PDF للدمج</string>
+    <string name="select_pdf_to_split">اختر ملف PDF للتقسيم</string>
+    <string name="merge_n">دمج (%1$d)</string>
+    <string name="merge_pick_two">اختر ملفي PDF على الأقل</string>
+    <string name="merging_progress">جارٍ الدمج… (%1$d%%)</string>
+    <string name="merge_failed">تعذّر دمج ملفات PDF هذه (محمية بكلمة مرور أو تالفة؟)</string>
+    <string name="split_one_page">هذا الملف يحتوي على صفحة واحدة فقط</string>
+    <string name="split_info">%1$s · %2$d صفحات</string>
+    <string name="split_ranges_hint">مثال: 1-3، 5، 6-%1$d</string>
+    <string name="split_action">تقسيم</string>
+    <string name="split_each_page">كل صفحة كملف PDF منفصل</string>
+    <string name="split_every_n">كل بضع صفحات</string>
+    <string name="split_every_hint">عدد الصفحات لكل ملف، مثل 2</string>
+    <string name="split_custom">نطاقات صفحات مخصصة</string>
+    <string name="split_invalid">يرجى إدخال أرقام صفحات صحيحة</string>
+    <string name="splitting_progress">جارٍ التقسيم… (%1$d%%)</string>
+    <string name="split_failed">تعذّر تقسيم ملف PDF هذا</string>
+    <plurals name="split_done">
+        <item quantity="one">تم التقسيم إلى %1$d ملف</item>
+        <item quantity="other">تم التقسيم إلى %1$d ملفات</item>
+    </plurals>
+    <!-- /step33 -->
+    <!-- step35 -->
+    <string name="section_edit_manage">تحرير وإدارة</string>
+    <string name="add_files">إضافة ملفات</string>
+    <string name="add_part">إضافة صفحات</string>
+    <string name="continue_n">متابعة (%1$d)</string>
+    <string name="quit">خروج</string>
+    <string name="quit_merging_title">الخروج من الدمج؟</string>
+    <string name="quit_splitting_title">الخروج من التقسيم؟</string>
+    <string name="quit_changes_message">لن يتم حفظ التغييرات. هل تريد الخروج؟</string>
+    <string name="merged_successfully_excl">تم الدمج بنجاح!</string>
+    <string name="split_successfully_excl">تم التقسيم بنجاح!</string>
+    <string name="satisfied_question">هل أنت راضٍ عن ميزة \"%1$s\"؟</string>
+    <string name="satisfied_not_good">😞\nغير جيد</string>
+    <string name="satisfied_good">🥰\nجيد</string>
+    <string name="thanks_feedback">شكرًا على ملاحظاتك!</string>
+    <string name="select_pages">تحديد الصفحات</string>
+    <string name="split_method">طريقة التقسيم</string>
+    <string name="split_custom_range">نطاق مخصص</string>
+    <string name="split_custom_range_sub">التقسيم حسب نطاق مخصص</string>
+    <string name="split_fixed_range">نطاق ثابت</string>
+    <string name="split_fixed_range_sub">التقسيم كل عدد ثابت من الصفحات</string>
+    <string name="interval_settings">إعدادات الفاصل</string>
+    <string name="split_n">تقسيم (%1$d)</string>
+    <string name="part_pages">الصفحة: %1$s</string>
+    <plurals name="pages_and_size">
+        <item quantity="one">%1$d صفحة · %2$s</item>
+        <item quantity="other">%1$d صفحات · %2$s</item>
+    </plurals>
+    <!-- /step35 -->
+    <!-- step39 -->
+    <string name="ad_loading">جارٍ تحميل الإعلان…</string>
+    <!-- /step39 -->
+    <!-- step40 -->
+    <string name="swipe_pages_tip">اسحب لليسار/لليمين لتقليب الصفحات</string>
+    <!-- /step40 -->
+    <!-- step59 -->
+    <string name="done">تم</string>
+    <string name="ok">حسنًا</string>
+    <string name="premium">Premium</string>
+    <string name="open">فتح</string>
+    <string name="add_bookmark">إضافة إلى الإشارات المرجعية</string>
+    <string name="remove_bookmark">إزالة من الإشارات المرجعية</string>
+    <string name="file_info_path">المسار</string>
+    <string name="file_info_size">الحجم</string>
+    <string name="file_info_modified">تاريخ التعديل</string>
+    <string name="no_app_to_open">لم يتم العثور على تطبيق لفتح هذا الملف</string>
+    <string name="file_not_found">الملف لم يعد موجودًا</string>
+    <string name="empty_folder">هذا المجلد فارغ</string>
+    <string name="create_new">إنشاء جديد</string>
+    <string name="settings_version">الإصدار %1$s</string>
+    <string name="tool_templates">القوالب</string>
+    <string name="press_back_again">اضغط رجوع مرة أخرى للخروج</string>
+    <string name="select">تحديد</string>
+    <string name="select_all">تحديد الكل</string>
+    <string name="delete_failed">تعذّر حذف بعض الملفات</string>
+    <string name="rename_empty">لا يمكن أن يكون الاسم فارغًا</string>
+    <string name="rename_invalid">يحتوي الاسم على أحرف غير صالحة</string>
+    <string name="rename_exists">يوجد ملف بهذا الاسم بالفعل</string>
+    <string name="rename_failed">تعذّرت إعادة تسمية هذا الملف</string>
+    <string name="rename_done">تمت إعادة التسمية</string>
+    <string name="select_files_first">حدد الملفات أولًا</string>
+    <string name="shortcut_permission_message"><![CDATA[لإضافة الملفات إلى الشاشة الرئيسية، نحتاج إلى إذن <font color=\"#0A5FD9\">\"اختصارات الشاشة الرئيسية\"</font>.]]></string>
+    <string name="shortcut_added">تمت الإضافة إلى الشاشة الرئيسية</string>
+    <string name="shortcut_not_supported">المشغّل لديك لا يدعم اختصارات الشاشة الرئيسية</string>
+    <string name="rate_title"><![CDATA[هل يعجبك <font color=\"#0A5FD9\">تطبيقنا</font>؟]]></string>
+    <string name="rate_thanks">شكرًا على ملاحظاتك!</string>
+    <string name="restored">تمت الاستعادة</string>
+    <string name="restore_failed">تعذّرت الاستعادة (قد يكون هناك ملف بالاسم نفسه)</string>
+    <string name="empty_recycle_bin_confirm">هل تريد حذف جميع الملفات في سلة المحذوفات نهائيًا؟</string>
+    <string name="unsupported_message">عذرًا، لا ندعم هذا النوع من الملفات حاليًا.\nلكننا نعمل باستمرار على تحسين التطبيق وسندعم المزيد من أنواع الملفات لاحقًا.</string>
+    <string name="faq">الأسئلة الشائعة</string>
+    <string name="faq_message">تُفتح داخل التطبيق: PDF وWord (.docx) وTXT.\n\nتُفتح ملفات Excel وPowerPoint والصور بتطبيق آخر على هاتفك.\n\nأنواع الملفات الأخرى (APK، الفيديو، ملفات النظام…) غير مدعومة بعد.</string>
+    <string name="convert">تحويل</string>
+    <string name="pdf_to_word">PDF إلى Word</string>
+    <string name="converting_progress">جارٍ التحويل… (%d%%)</string>
+    <string name="convert_failed">فشل التحويل</string>
+    <string name="print">طباعة</string>
+    <string name="edit">تعديل</string>
+    <string name="bookmarked">تمت الإضافة إلى الإشارات المرجعية</string>
+    <string name="pdf_password_protected">ملف PDF هذا محمي بكلمة مرور أو تالف</string>
+    <string name="undo">تراجع</string>
+    <string name="redo">إعادة</string>
+    <string name="setup">الإعداد</string>
+    <string name="delete_pages_message"><![CDATA[هل تريد بالتأكيد حذف الصفحات المحددة (<font color=\"#0A5FD9\">%d</font>)؟]]></string>
+    <string name="pdf_needs_page">يجب أن يحتوي ملف PDF على صفحة واحدة على الأقل</string>
+    <string name="discard_title">تجاهل التغييرات؟</string>
+    <string name="discard_message">لم يتم حفظ التغييرات على الصفحات.</string>
+    <string name="discard">تجاهل</string>
+    <string name="saving">جارٍ الحفظ…</string>
+    <string name="extracting">جارٍ استخراج الصفحات…</string>
+    <string name="save_failed">تعذّر حفظ ملف PDF</string>
+    <string name="portrait">عمودي</string>
+    <string name="landscape">أفقي</string>
+    <string name="size_letter">Letter</string>
+    <string name="size_legal">Legal</string>
+    <string name="tpl_blank">فارغ</string>
+    <string name="tpl_line1">سطور 1</string>
+    <string name="tpl_line2">سطور 2</string>
+    <string name="tpl_notebook">دفتر</string>
+    <string name="tpl_cornell">كورنيل</string>
+    <string name="tpl_grid">شبكة</string>
+    <string name="tpl_graph">ورق بياني</string>
+    <string name="pick_image_hint">اختر صورة JPG أو PNG أو غيرها</string>
+    <string name="import_failed">تعذّر استيراد هذا الملف</string>
+    <string name="tpl_resume">سيرة ذاتية</string>
+    <string name="filter_original">الأصلي</string>
+    <string name="no_camera">لم يتم العثور على تطبيق كاميرا</string>
+    <string name="pick_word_hint">اختر ملف Word (.docx) أو TXT</string>
+    <string name="pick_pdf_hint">اختر ملف PDF</string>
+    <string name="pick_ppt_hint">اختر ملف PowerPoint (.pptx)</string>
+    <string name="convert_old_format">هذه الصيغة القديمة (.doc / .ppt) غير مدعومة بعد. يُرجى استخدام .docx أو .pptx.</string>
+    <string name="dims_cm">%1$s سم × %2$s سم</string>
+    <string name="flash">الفلاش</string>
+    <string name="grid">الشبكة</string>
+    <string name="shutter_sound">صوت الغالق</string>
+    <string name="center_guide">دليل التوسيط</string>
+    <string name="compare">مقارنة بالأصل</string>
+    <string name="filter_auto">تلقائي</string>
+    <string name="filter_docs">مستندات</string>
+    <string name="filter_color">ألوان</string>
+    <string name="filter_image">صورة</string>
+    <string name="filter_super">فائق</string>
+    <string name="filter_enhance">تحسين</string>
+    <string name="filter_enhance2">تحسين 2</string>
+    <string name="filter_gray">رمادي</string>
+    <string name="filter_invert">عكس</string>
+    <string name="underline">تسطير</string>
+    <string name="strikethrough">يتوسطه خط</string>
+    <string name="add_short">+ إضافة</string>
+    <string name="delete_signature">حذف التوقيع</string>
+    <string name="delete_signature_message">هل تريد إزالة هذا التوقيع المحفوظ؟</string>
+    <string name="how_to_edit">طريقة التعديل</string>
+    <string name="share_app_text">أستخدم %1$s لفتح ملفات PDF وWord وExcel وPowerPoint وتعديلها. جرّبه:</string>
+    <string name="faq_yes">🥳 نعم</string>
+    <string name="faq_no">😞 لا</string>
+    <string name="faq_q_edit">كيف يمكنني تعديل ملف PDF؟</string>
+    <string name="faq_q_display">كيف يمكنني تغيير طريقة عرض المستند؟</string>
+    <string name="faq_q_copy">كيف يمكنني نسخ النص؟</string>
+    <string name="faq_q_search">كيف يمكنني البحث عن نص في ملف؟</string>
+    <string name="faq_q_open">لماذا لا أستطيع العثور على ملفي أو فتحه؟</string>
+    <string name="faq_q_create">كيف يمكنني إنشاء ملف جديد؟</string>
+    <string name="faq_q_print">كيف يمكنني طباعة ملف؟</string>
+    <string name="faq_q_subscription">كيف أدير اشتراكي أو ألغيه؟</string>
+    <string name="faq_q_ads">لماذا توجد إعلانات في التطبيق؟</string>
+    <string name="faq_q_slow">لماذا يُفتح الملف ببطء؟</string>
+    <string name="faq_q_permissions">لماذا يحتاج التطبيق إلى إذن الوصول إلى الملفات؟</string>
+    <string name="feedback_hint">يُرجى وصف المشكلة أو اقتراحك بالتفصيل…</string>
+    <string name="fb_rating_line">التقييم: %1$d/5</string>
+    <string name="fb_max_shots">يمكنك إضافة 4 لقطات شاشة كحد أقصى</string>
+    <string name="get_premium">احصل على Premium</string>
+    <string name="premium_slide_sign">تعديل وتوقيع\nملفات PDF</string>
+    <string name="premium_slide_convert">تحويل\nالصيغ</string>
+    <string name="premium_slide_templates">القوالب</string>
+    <string name="premium_slide_pages">إدارة الصفحات</string>
+    <string name="feat_ad_free">تجربة بلا إعلانات</string>
+    <string name="feat_edit_sign">تعديل ملفات PDF وتوقيعها بسهولة</string>
+    <string name="feat_convert">تحويل الملفات فورًا</string>
+    <string name="feat_templates">فتح القوالب المميزة</string>
+    <string name="feat_pages">إدارة كاملة للصفحات</string>
+    <string name="plan_yearly">سنوي</string>
+    <string name="plan_monthly">شهري</string>
+    <string name="continue_label">متابعة</string>
+    <string name="no_subscription_found">لم يتم العثور على اشتراك صالح.</string>
+    <string name="w_home">الرئيسية</string>
+    <string name="w_recent">الأخيرة</string>
+    <string name="w_tools_title">أدوات سريعة</string>
+    <string name="w_tools_desc">ابحث وافتح الملفات الأخيرة والإشارات المرجعية أو عدّل ملف PDF من شاشتك الرئيسية</string>
+    <string name="w_reader_title">قارئ المستندات</string>
+    <string name="w_reader_desc">افتح ملفات PDF وWord وExcel وPowerPoint بنقرة واحدة</string>
+    <string name="w_editor_title">محرر PDF</string>
+    <string name="w_editor_desc">ابدأ تعديل ملف PDF مباشرةً</string>
+    <string name="add_widget_button">إضافة إلى الشاشة الرئيسية</string>
+    <string name="widget_manual_hint">اضغط مطولًا على الشاشة الرئيسية، ثم انقر على الأدوات واختر هذا التطبيق</string>
+    <string name="thanks_support">شكرًا لدعمك!</string>
+    <string name="dont_miss_apps">لا تفوّت تطبيقاتنا الأعلى تقييمًا 👇</string>
+    <string name="see_our_apps">شاهد تطبيقاتنا على Google Play</string>
+    <string name="faq_a_edit">افتح علامة التبويب &lt;b&gt;الأدوات&lt;/b&gt; وانقر على &lt;b&gt;تعديل PDF&lt;/b&gt;، ثم اختر ملفًا. يمكنك تعديل النص الموجود وإضافة نص جديد وإضافة صور والتعليق (تمييز، تسطير، يتوسطه خط، رسم) وإضافة توقيعك. انقر على علامة الصح لحفظ نسخة.</string>
+    <string name="faq_a_display">أثناء القراءة، استخدم الشريط السفلي للتبديل بين التمرير &lt;b&gt;العمودي&lt;/b&gt; و&lt;b&gt;الأفقي&lt;/b&gt; أو تدوير العرض أو عكس الألوان. باعد بين إصبعين للتكبير، وانقر على رقم الصفحة للانتقال إلى صفحة.</string>
+    <string name="faq_a_copy">نسخ النص غير متاح بعد. نحن نعمل على ذلك! إذا كان هذا مهمًا لك، &lt;a href=\"app://feedback\"&gt;أرسل لنا ملاحظاتك&lt;/a&gt; حتى نمنحه الأولوية.</string>
+    <string name="faq_a_search">افتح المستند وانقر على &lt;b&gt;بحث&lt;/b&gt; في الشريط السفلي، ثم اكتب الكلمة التي تبحث عنها. استخدم الأسهم للتنقل بين النتائج. للعثور على ملف بالاسم، استخدم أيقونة البحث أعلى الشاشة الرئيسية.</string>
+    <string name="faq_a_open">تأكد من أن التطبيق لديه إذن الوصول إلى ملفاتك. إذا كان الملف في تطبيق سحابي أو مجلد آخر، فافتحه باستخدام &lt;a href=\"app://filemanager\"&gt;مدير الملفات&lt;/a&gt; واختر هذا التطبيق. إذا استمر تعذّر فتح الملف فقد يكون تالفًا أو محميًا بكلمة مرور؛ يُرجى &lt;a href=\"app://feedback\"&gt;إخبارنا&lt;/a&gt;.</string>
+    <string name="faq_a_create">في صفحة &lt;b&gt;كل الملفات&lt;/b&gt; انقر على زر &lt;b&gt;+&lt;/b&gt;. يمكنك إنشاء مستند من قالب أو استيراد ملفات أو تحويل الصور إلى PDF أو مسح المستندات الورقية ضوئيًا بالكاميرا.</string>
+    <string name="faq_a_print">افتح ملف PDF، وانقر على قائمة &lt;b&gt;⋮&lt;/b&gt; واختر &lt;b&gt;طباعة&lt;/b&gt;. يمكن تحويل الصيغ الأخرى أولًا إلى PDF من علامة التبويب &lt;b&gt;الأدوات&lt;/b&gt;.</string>
+    <string name="faq_a_subscription">تتم إدارة الاشتراكات عبر Google Play. انتقل إلى &lt;b&gt;الإعدادات ← إدارة الاشتراكات&lt;/b&gt;، أو افتح Google Play ← الملف الشخصي ← الدفعات والاشتراكات. راجع &lt;a href=\"app://terms\"&gt;شروط الاستخدام&lt;/a&gt; لمزيد من التفاصيل.</string>
+    <string name="faq_a_ads">تساعدنا الإعلانات في إبقاء التطبيق مجانيًا للجميع. يمكنك إزالتها باستخدام &lt;a href=\"app://premium\"&gt;Premium&lt;/a&gt;.</string>
+    <string name="faq_a_slow">تستغرق الملفات الكبيرة جدًا أو التي تحتوي على صور كثيرة وقتًا أطول للتحميل. قد يساعد إغلاق التطبيقات الأخرى وتحرير مساحة التخزين. إذا كان ملف ما بطيئًا دائمًا، يُرجى &lt;a href=\"app://feedback\"&gt;إرسال ملاحظاتك إلينا&lt;/a&gt;.</string>
+    <string name="faq_a_permissions">يحتاج التطبيق إلى الوصول إلى الملفات فقط للعثور على المستندات الموجودة على جهازك وفتحها. تبقى ملفاتك على جهازك ولا يتم رفعها أبدًا.</string>
+    <string name="terms_html">&lt;p&gt;&lt;i&gt;آخر تحديث: سبتمبر 2026&lt;/i&gt;&lt;/p&gt;&lt;p&gt;تحكم شروط الاستخدام هذه استخدامك لتطبيق &lt;b&gt;%1$s&lt;/b&gt; (\"التطبيق\"). باستخدامك التطبيق فإنك توافق على هذه الشروط.&lt;/p&gt;&lt;h4&gt;1. استخدام التطبيق&lt;/h4&gt;&lt;p&gt;يمكنك استخدام التطبيق لعرض المستندات وإنشائها وتحويلها وتعديلها لأغراض شخصية أو تجارية. أنت مسؤول عن المستندات التي تفتحها وتنشئها، وعن امتلاكك حق استخدامها.&lt;/p&gt;&lt;h4&gt;2. الاشتراكات&lt;/h4&gt;&lt;p&gt;قد تتطلب بعض الميزات اشتراكًا مدفوعًا يتم شراؤه عبر Google Play. تتجدد الاشتراكات تلقائيًا ما لم يتم إلغاؤها قبل 24 ساعة على الأقل من نهاية الفترة الحالية. يمكنك إدارة الاشتراك أو إلغاؤه من إعدادات حسابك على Google Play. تخضع المبالغ المستردة لسياسات Google Play.&lt;/p&gt;&lt;h4&gt;3. الإعلانات&lt;/h4&gt;&lt;p&gt;قد يعرض الإصدار المجاني من التطبيق إعلانات تقدمها جهات خارجية.&lt;/p&gt;&lt;h4&gt;4. إخلاء الضمان&lt;/h4&gt;&lt;p&gt;يتم توفير التطبيق \"كما هو\". نبذل قصارى جهدنا للحفاظ على موثوقيته، لكننا لا نضمن خلوه من الأخطاء، ولسنا مسؤولين عن فقدان البيانات. يُرجى الاحتفاظ بنسخ احتياطية من الملفات المهمة.&lt;/p&gt;&lt;h4&gt;5. التغييرات&lt;/h4&gt;&lt;p&gt;قد نقوم بتحديث هذه الشروط من وقت لآخر. ويعني استمرارك في استخدام التطبيق قبولك للشروط المحدّثة.&lt;/p&gt;&lt;h4&gt;6. التواصل&lt;/h4&gt;&lt;p&gt;لديك أسئلة؟ راسلنا عبر البريد الإلكتروني على %2$s.&lt;/p&gt;</string>
+    <string name="premium_trusted_top">يحبه</string>
+    <string name="premium_trusted_count">مستخدمينا</string>
+    <string name="premium_trusted_bottom">حول العالم</string>
+    <string name="plan_trial_days">تجربة مجانية لمدة %1$d يوم</string>
+    <string name="plan_then_only_per_day">ثم %1$s فقط/يوم</string>
+    <string name="plan_per_day">%1$s/يوم</string>
+    <string name="plan_price_year">%1$s/سنة</string>
+    <string name="plan_price_month">%1$s/شهر</string>
+    <string name="plan_save_percent">وفّر %1$d%%</string>
+    <string name="start_free_trial">ابدأ التجربة المجانية</string>
+    <string name="trial_today">اليوم</string>
+    <string name="trial_today_sub">افتح جميع الميزات المميزة</string>
+    <string name="trial_full_access">احصل على وصول كامل</string>
+    <string name="trial_full_access_sub">أزل جميع الإعلانات، واقرأ الملفات بجميع الصيغ، وعدّل ملفات PDF بسهولة، وغير ذلك.</string>
+    <string name="trial_day7">اليوم 7</string>
+    <string name="trial_day7_sub">لن يتم تحصيل أي رسوم إذا ألغيت قبل 24 ساعة على الأقل من انتهاء الفترة التجريبية.</string>
+    <string name="hot">رائج</string>
+    <string name="try_days_free">جرّبه مجانًا لمدة %1$d يوم</string>
+    <string name="try_then">ثم %1$s/سنة، فقط %2$s/يوم</string>
+    <string name="crop_not_found">تعذّر العثور على حواف الصفحة — استخدم القص للضبط</string>
+    <string name="tpl_reset">إعادة تعيين</string>
+    <string name="tpl_close">إغلاق</string>
+    <string name="tpl_download">تنزيل</string>
+    <string name="tpl_flip_h">قلب أفقي</string>
+    <string name="tpl_flip_v">قلب عمودي</string>
+    <string name="tpl_bold">غامق</string>
+    <string name="tpl_italic">مائل</string>
+    <string name="tpl_underline">تسطير</string>
+    <string name="tpl_strike">يتوسطه خط</string>
+    <string name="tpl_bullets">قائمة نقطية</string>
+    <string name="tpl_numbers">قائمة مرقّمة</string>
+    <string name="tpl_save_failed">تعذّر حفظ الملف</string>
+    <string name="tpl_image_failed">تعذّر فتح هذه الصورة</string>
+    <string name="ad_badge">إعلان</string>
+    <string name="explore_nothing">لا يوجد شيء لعرضه الآن. يُرجى التحقق من اتصالك بالإنترنت.</string>
+    <string name="review1_title">قارئ ملفات شامل</string>
+    <string name="review1_text">يستحق الاشتراك تمامًا!! يفتح الملفات بجميع الصيغ بسرعة، ويتتبع تقدم القراءة، ويعمل دون اتصال، بل ويستعيد الملفات المحذوفة!</string>
+    <string name="review2_title">بلا إعلانات وبلا رسوم خفية</string>
+    <string name="review2_text">بعد الاشتراك، أصبح بإمكاني استخدام ميزات أكثر. لا إعلانات تقاطع قراءتي وتعديلي، والواجهة أنظف. والأفضل من ذلك كله، لا رسوم خفية!</string>
+    <string name="review3_title">تركيز أكبر وعمل أسرع</string>
+    <string name="review3_text">حسنًا، الاشتراك رخيص، وأصبح بإمكاني الآن معاينة الملفات وتعديلها وإدارتها دون إعلانات مزعجة. لقد عزّز إنتاجيتي حقًا!</string>
+    <plurals name="deleted_count">
+        <item quantity="zero">تم حذف %d ملف</item>
+        <item quantity="one">تم حذف ملف واحد (%d)</item>
+        <item quantity="two">تم حذف ملفين (%d)</item>
+        <item quantity="few">تم حذف %d ملفات</item>
+        <item quantity="many">تم حذف %d ملفًا</item>
+        <item quantity="other">تم حذف %d ملف</item>
+    </plurals>
+    <plurals name="moved_to_bin_count">
+        <item quantity="zero">تم نقل %d ملف إلى سلة المحذوفات</item>
+        <item quantity="one">تم نقل ملف واحد (%d) إلى سلة المحذوفات</item>
+        <item quantity="two">تم نقل ملفين (%d) إلى سلة المحذوفات</item>
+        <item quantity="few">تم نقل %d ملفات إلى سلة المحذوفات</item>
+        <item quantity="many">تم نقل %d ملفًا إلى سلة المحذوفات</item>
+        <item quantity="other">تم نقل %d ملف إلى سلة المحذوفات</item>
+    </plurals>
+    <plurals name="days_left">
+        <item quantity="zero">متبقٍ %d يوم</item>
+        <item quantity="one">متبقٍ يوم واحد (%d)</item>
+        <item quantity="two">متبقٍ يومان (%d)</item>
+        <item quantity="few">متبقٍ %d أيام</item>
+        <item quantity="many">متبقٍ %d يومًا</item>
+        <item quantity="other">متبقٍ %d يوم</item>
+    </plurals>
+    <plurals name="pages_selected">
+        <item quantity="zero">تم تحديد %d صفحة</item>
+        <item quantity="one">تم تحديد صفحة واحدة (%d)</item>
+        <item quantity="two">تم تحديد صفحتين (%d)</item>
+        <item quantity="few">تم تحديد %d صفحات</item>
+        <item quantity="many">تم تحديد %d صفحة</item>
+        <item quantity="other">تم تحديد %d صفحة</item>
+    </plurals>
+    <plurals name="days_count">
+        <item quantity="zero">%d يوم</item>
+        <item quantity="one">يوم واحد (%d)</item>
+        <item quantity="two">يومان (%d)</item>
+        <item quantity="few">%d أيام</item>
+        <item quantity="many">%d يومًا</item>
+        <item quantity="other">%d يوم</item>
+    </plurals>
+    <plurals name="delete_forever_message">
+        <item quantity="zero">سيتم حذف %d ملف نهائيًا. لا يمكن التراجع عن هذا الإجراء.</item>
+        <item quantity="one">سيتم حذف ملف واحد (%d) نهائيًا. لا يمكن التراجع عن هذا الإجراء.</item>
+        <item quantity="two">سيتم حذف ملفين (%d) نهائيًا. لا يمكن التراجع عن هذا الإجراء.</item>
+        <item quantity="few">سيتم حذف %d ملفات نهائيًا. لا يمكن التراجع عن هذا الإجراء.</item>
+        <item quantity="many">سيتم حذف %d ملفًا نهائيًا. لا يمكن التراجع عن هذا الإجراء.</item>
+        <item quantity="other">سيتم حذف %d ملف نهائيًا. لا يمكن التراجع عن هذا الإجراء.</item>
+    </plurals>
+    <plurals name="restored_count">
+        <item quantity="zero">تمت استعادة %d ملف</item>
+        <item quantity="one">تمت استعادة ملف واحد (%d)</item>
+        <item quantity="two">تمت استعادة ملفين (%d)</item>
+        <item quantity="few">تمت استعادة %d ملفات</item>
+        <item quantity="many">تمت استعادة %d ملفًا</item>
+        <item quantity="other">تمت استعادة %d ملف</item>
+    </plurals>
+    <!-- /step59 -->
 </resources>

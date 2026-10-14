@@ -258,4 +258,324 @@
     <string name="helpful_no">😞 Nicht wirklich</string>
     <string name="helpful_yes">🥰 Hilfreich</string>
     <!-- /step26 -->
+    <!-- step27 -->
+    <string name="search_no_results">Keine Ergebnisse gefunden</string>
+    <!-- /step27 -->
+    <!-- step28 -->
+    <string name="search_in_document">Im Dokument suchen</string>
+    <string name="search_in_pdf">Im PDF suchen</string>
+    <string name="search_in_ppt">In PPT suchen</string>
+    <string name="search_in_excel">In Excel suchen</string>
+    <string name="refresh">Aktualisieren</string>
+    <string name="files_refreshed">Dateien aktualisiert</string>
+    <!-- /step28 -->
+    <!-- step29 -->
+    <string name="new_badge">Neu</string>
+    <string name="save_to_drive_short">In Drive speichern</string>
+    <string name="drive_saving">Wird in Google Drive gespeichert…</string>
+    <string name="drive_saved">%1$s in Google Drive gespeichert (Ordner All Document Reader)</string>
+    <string name="drive_save_failed_title">Speichern in Google Drive fehlgeschlagen</string>
+    <string name="drive_not_allowed">Google hat keinen Zugriff auf Google Drive erteilt. Wähle dein Konto und tippe auf Zulassen.</string>
+    <!-- /step29 -->
+    <!-- step30 -->
+    <string name="search_in_txt">In TXT suchen</string>
+    <!-- /step30 -->
+    <!-- step31 -->
+    <string name="drive_app_missing">Zum Speichern in Drive wird die Google Drive-App benötigt. Installiere sie über Google Play und versuche es erneut.</string>
+    <string name="drive_install">Installieren</string>
+    <!-- /step31 -->
+    <!-- step32 -->
+    <string name="ready_top">Mach dich bereit für deine</string>
+    <string name="ready_bottom">7-tägige Gratis-Testversion</string>
+    <string name="premium_slide_merge">PDFs zusammenführen\n&amp; teilen</string>
+    <string name="feat_merge">PDFs nahtlos zusammenführen &amp; teilen</string>
+    <string name="user_reviews">Nutzerbewertungen</string>
+    <string name="cancel_anytime">Jederzeit kündbar</string>
+    <!-- /step32 -->
+    <!-- step33 -->
+    <string name="tool_merge_pdf">PDF zusammenführen</string>
+    <string name="tool_split_pdf">PDF teilen</string>
+    <string name="premium_free_uses_left">Gratis-Versuch · heute noch %1$d. Mit Premium unbegrenzt nutzen</string>
+    <string name="premium_last_free_use">Letzter Gratis-Versuch für heute. Mit Premium unbegrenzt nutzen</string>
+    <string name="premium_limit_reached">Die heutigen Gratis-Versuche für „%1$s“ sind aufgebraucht. Mit Premium unbegrenzt nutzen.</string>
+    <string name="select_pdfs_to_merge">PDFs zum Zusammenführen wählen</string>
+    <string name="select_pdf_to_split">PDF zum Teilen wählen</string>
+    <string name="merge_n">Zusammenführen (%1$d)</string>
+    <string name="merge_pick_two">Mindestens 2 PDFs auswählen</string>
+    <string name="merging_progress">Wird zusammengeführt… (%1$d%%)</string>
+    <string name="merge_failed">Diese PDFs konnten nicht zusammengeführt werden (Passwort oder beschädigt?)</string>
+    <string name="split_one_page">Diese PDF hat nur eine Seite</string>
+    <string name="split_info">%1$s · %2$d Seiten</string>
+    <string name="split_ranges_hint">z. B. 1-3, 5, 6-%1$d</string>
+    <string name="split_action">Teilen</string>
+    <string name="split_each_page">Jede Seite als eigene PDF</string>
+    <string name="split_every_n">Alle paar Seiten</string>
+    <string name="split_every_hint">Seiten pro Datei, z. B. 2</string>
+    <string name="split_custom">Eigene Seitenbereiche</string>
+    <string name="split_invalid">Bitte gültige Seitenzahlen eingeben</string>
+    <string name="splitting_progress">Wird geteilt… (%1$d%%)</string>
+    <string name="split_failed">Diese PDF konnte nicht geteilt werden</string>
+    <plurals name="split_done">
+        <item quantity="one">In %1$d Datei geteilt</item>
+        <item quantity="other">In %1$d Dateien geteilt</item>
+    </plurals>
+    <!-- /step33 -->
+    <!-- step35 -->
+    <string name="section_edit_manage">Bearbeiten &amp; Verwalten</string>
+    <string name="add_files">Dateien hinzufügen</string>
+    <string name="add_part">Seiten hinzufügen</string>
+    <string name="continue_n">Weiter (%1$d)</string>
+    <string name="quit">Beenden</string>
+    <string name="quit_merging_title">Zusammenführen beenden?</string>
+    <string name="quit_splitting_title">Teilen beenden?</string>
+    <string name="quit_changes_message">Die Änderungen werden nicht gespeichert. Wirklich beenden?</string>
+    <string name="merged_successfully_excl">Erfolgreich zusammengeführt!</string>
+    <string name="split_successfully_excl">Erfolgreich geteilt!</string>
+    <string name="satisfied_question">Bist du mit der Funktion „%1$s“ zufrieden?</string>
+    <string name="satisfied_not_good">😞\nNicht gut</string>
+    <string name="satisfied_good">🥰\nGut</string>
+    <string name="thanks_feedback">Danke für dein Feedback!</string>
+    <string name="select_pages">Seiten auswählen</string>
+    <string name="split_method">Teilungsart</string>
+    <string name="split_custom_range">Eigener Bereich</string>
+    <string name="split_custom_range_sub">Nach eigenem Bereich teilen</string>
+    <string name="split_fixed_range">Fester Bereich</string>
+    <string name="split_fixed_range_sub">Nach festem Seitenabstand teilen</string>
+    <string name="interval_settings">Intervall</string>
+    <string name="split_n">Teilen (%1$d)</string>
+    <string name="part_pages">Seite: %1$s</string>
+    <plurals name="pages_and_size">
+        <item quantity="one">%1$d Seite · %2$s</item>
+        <item quantity="other">%1$d Seiten · %2$s</item>
+    </plurals>
+    <!-- /step35 -->
+    <!-- step39 -->
+    <string name="ad_loading">Anzeige wird geladen…</string>
+    <!-- /step39 -->
+    <!-- step40 -->
+    <string name="swipe_pages_tip">Nach links/rechts wischen, um zu blättern</string>
+    <!-- /step40 -->
+    <!-- step59 -->
+    <string name="done">Fertig</string>
+    <string name="ok">OK</string>
+    <string name="premium">Premium</string>
+    <string name="open">Öffnen</string>
+    <string name="add_bookmark">Zu Lesezeichen hinzufügen</string>
+    <string name="remove_bookmark">Aus Lesezeichen entfernen</string>
+    <string name="file_info_path">Pfad</string>
+    <string name="file_info_size">Größe</string>
+    <string name="file_info_modified">Geändert</string>
+    <string name="no_app_to_open">Keine App zum Öffnen dieser Datei gefunden</string>
+    <string name="file_not_found">Datei existiert nicht mehr</string>
+    <string name="empty_folder">Dieser Ordner ist leer</string>
+    <string name="create_new">Neu erstellen</string>
+    <string name="settings_version">Version %1$s</string>
+    <string name="tool_templates">Vorlagen</string>
+    <string name="press_back_again">Zum Beenden erneut „Zurück\" drücken</string>
+    <string name="select">Auswählen</string>
+    <string name="select_all">Alle auswählen</string>
+    <string name="delete_failed">Einige Dateien konnten nicht gelöscht werden</string>
+    <string name="rename_empty">Der Name darf nicht leer sein</string>
+    <string name="rename_invalid">Der Name enthält ungültige Zeichen</string>
+    <string name="rename_exists">Eine Datei mit diesem Namen existiert bereits</string>
+    <string name="rename_failed">Datei konnte nicht umbenannt werden</string>
+    <string name="rename_done">Umbenannt</string>
+    <string name="select_files_first">Wähle zuerst Dateien aus</string>
+    <string name="shortcut_permission_message"><![CDATA[Um Dateien zum Startbildschirm hinzuzufügen, benötigen wir die Berechtigung <font color=\"#0A5FD9\">„Verknüpfungen auf dem Startbildschirm\"</font>.]]></string>
+    <string name="shortcut_added">Zum Startbildschirm hinzugefügt</string>
+    <string name="shortcut_not_supported">Dein Launcher unterstützt keine Verknüpfungen auf dem Startbildschirm</string>
+    <string name="rate_title"><![CDATA[Gefällt dir <font color=\"#0A5FD9\">unsere App</font>?]]></string>
+    <string name="rate_thanks">Danke für dein Feedback!</string>
+    <string name="restored">Wiederhergestellt</string>
+    <string name="restore_failed">Wiederherstellung fehlgeschlagen (möglicherweise existiert bereits eine Datei mit demselben Namen)</string>
+    <string name="empty_recycle_bin_confirm">Alle Dateien im Papierkorb endgültig löschen?</string>
+    <string name="unsupported_message">Dieser Dateityp wird derzeit leider nicht unterstützt.\nWir arbeiten jedoch ständig an der Verbesserung der App und werden später weitere Dateitypen unterstützen.</string>
+    <string name="faq">FAQ</string>
+    <string name="faq_message">In der App geöffnet: PDF, Word (.docx) und TXT.\n\nExcel, PowerPoint und Bilder werden mit einer anderen App auf deinem Handy geöffnet.\n\nAndere Dateitypen (APK, Videos, Systemdateien…) werden noch nicht unterstützt.</string>
+    <string name="convert">Konvertieren</string>
+    <string name="pdf_to_word">PDF zu Word</string>
+    <string name="converting_progress">Wird konvertiert… (%d%%)</string>
+    <string name="convert_failed">Konvertierung fehlgeschlagen</string>
+    <string name="print">Drucken</string>
+    <string name="edit">Bearbeiten</string>
+    <string name="bookmarked">Lesezeichen gesetzt</string>
+    <string name="pdf_password_protected">Diese PDF ist passwortgeschützt oder beschädigt</string>
+    <string name="undo">Rückgängig</string>
+    <string name="redo">Wiederholen</string>
+    <string name="setup">Einrichten</string>
+    <string name="delete_pages_message"><![CDATA[Möchtest du die <font color=\"#0A5FD9\">%d</font> ausgewählte(n) Seite(n) wirklich löschen?]]></string>
+    <string name="pdf_needs_page">Eine PDF benötigt mindestens eine Seite</string>
+    <string name="discard_title">Änderungen verwerfen?</string>
+    <string name="discard_message">Deine Seitenänderungen wurden nicht gespeichert.</string>
+    <string name="discard">Verwerfen</string>
+    <string name="saving">Wird gespeichert…</string>
+    <string name="extracting">Seiten werden extrahiert…</string>
+    <string name="save_failed">Die PDF konnte nicht gespeichert werden</string>
+    <string name="portrait">Hochformat</string>
+    <string name="landscape">Querformat</string>
+    <string name="size_letter">Letter</string>
+    <string name="size_legal">Legal</string>
+    <string name="tpl_blank">Leer</string>
+    <string name="tpl_line1">Linie 1</string>
+    <string name="tpl_line2">Linie 2</string>
+    <string name="tpl_notebook">Notizbuch</string>
+    <string name="tpl_cornell">Cornell</string>
+    <string name="tpl_grid">Raster</string>
+    <string name="tpl_graph">Millimeter</string>
+    <string name="pick_image_hint">Wähle ein JPG-, PNG- oder anderes Bild aus</string>
+    <string name="import_failed">Diese Datei konnte nicht importiert werden</string>
+    <string name="tpl_resume">Lebenslauf</string>
+    <string name="filter_original">Original</string>
+    <string name="no_camera">Keine Kamera-App gefunden</string>
+    <string name="pick_word_hint">Wähle eine Word- (.docx) oder TXT-Datei aus</string>
+    <string name="pick_pdf_hint">Wähle eine PDF-Datei aus</string>
+    <string name="pick_ppt_hint">Wähle eine PowerPoint-Datei (.pptx) aus</string>
+    <string name="convert_old_format">Dieses ältere Format (.doc / .ppt) wird noch nicht unterstützt. Bitte verwende .docx oder .pptx.</string>
+    <string name="dims_cm">%1$s cm x %2$s cm</string>
+    <string name="flash">Blitz</string>
+    <string name="grid">Raster</string>
+    <string name="shutter_sound">Auslöseton</string>
+    <string name="center_guide">Mittellinie</string>
+    <string name="compare">Mit Original vergleichen</string>
+    <string name="filter_auto">Auto</string>
+    <string name="filter_docs">Dokumente</string>
+    <string name="filter_color">Farbe</string>
+    <string name="filter_image">Bild</string>
+    <string name="filter_super">Super</string>
+    <string name="filter_enhance">Verbessern</string>
+    <string name="filter_enhance2">Verbessern2</string>
+    <string name="filter_gray">Grau</string>
+    <string name="filter_invert">Invertieren</string>
+    <string name="underline">Unterstreichen</string>
+    <string name="strikethrough">Durchstreichen</string>
+    <string name="add_short">+ Hinzufügen</string>
+    <string name="delete_signature">Unterschrift löschen</string>
+    <string name="delete_signature_message">Diese gespeicherte Unterschrift entfernen?</string>
+    <string name="how_to_edit">So bearbeitest du</string>
+    <string name="share_app_text">Ich nutze %1$s, um PDF-, Word-, Excel- und PowerPoint-Dateien zu öffnen und zu bearbeiten. Probier es aus:</string>
+    <string name="faq_yes">🥳 Ja</string>
+    <string name="faq_no">😞 Nein</string>
+    <string name="faq_q_edit">Wie kann ich eine PDF bearbeiten?</string>
+    <string name="faq_q_display">Wie kann ich die Anzeige eines Dokuments ändern?</string>
+    <string name="faq_q_copy">Wie kann ich Text kopieren?</string>
+    <string name="faq_q_search">Wie kann ich in einer Datei nach Text suchen?</string>
+    <string name="faq_q_open">Warum kann ich meine Datei nicht finden oder öffnen?</string>
+    <string name="faq_q_create">Wie kann ich eine neue Datei erstellen?</string>
+    <string name="faq_q_print">Wie kann ich eine Datei drucken?</string>
+    <string name="faq_q_subscription">Wie verwalte oder kündige ich mein Abo?</string>
+    <string name="faq_q_ads">Warum gibt es Werbung in der App?</string>
+    <string name="faq_q_slow">Warum öffnet sich eine Datei langsam?</string>
+    <string name="faq_q_permissions">Warum benötigt die App Zugriff auf Dateien?</string>
+    <string name="feedback_hint">Bitte beschreibe das Problem oder deinen Vorschlag ausführlich…</string>
+    <string name="fb_rating_line">Bewertung: %1$d/5</string>
+    <string name="fb_max_shots">Du kannst bis zu 4 Screenshots hinzufügen</string>
+    <string name="get_premium">Premium holen</string>
+    <string name="premium_slide_sign">PDFs bearbeiten\n&amp; unterschreiben</string>
+    <string name="premium_slide_convert">Format\nkonvertieren</string>
+    <string name="premium_slide_templates">Vorlagen</string>
+    <string name="premium_slide_pages">Seiten verwalten</string>
+    <string name="feat_ad_free">Werbefreies Erlebnis</string>
+    <string name="feat_edit_sign">PDFs einfach bearbeiten &amp; unterschreiben</string>
+    <string name="feat_convert">Dateien sofort konvertieren</string>
+    <string name="feat_templates">Premium-Vorlagen freischalten</string>
+    <string name="feat_pages">Komplette Seitenverwaltung</string>
+    <string name="plan_yearly">Jährlich</string>
+    <string name="plan_monthly">Monatlich</string>
+    <string name="continue_label">Weiter</string>
+    <string name="no_subscription_found">Kein gültiges Abo gefunden.</string>
+    <string name="w_home">Start</string>
+    <string name="w_recent">Zuletzt</string>
+    <string name="w_tools_title">Schnell-Tools</string>
+    <string name="w_tools_desc">Suchen, zuletzt geöffnete Dateien und Lesezeichen öffnen oder eine PDF direkt vom Startbildschirm aus bearbeiten</string>
+    <string name="w_reader_title">Dokument-Reader</string>
+    <string name="w_reader_desc">PDF-, Word-, Excel- und PowerPoint-Dateien mit einem Tippen öffnen</string>
+    <string name="w_editor_title">PDF-Editor</string>
+    <string name="w_editor_desc">Direkt mit der Bearbeitung einer PDF loslegen</string>
+    <string name="add_widget_button">Zum Startbildschirm hinzufügen</string>
+    <string name="widget_manual_hint">Halte den Startbildschirm gedrückt, tippe auf „Widgets\" und wähle diese App</string>
+    <string name="thanks_support">Danke für deine Unterstützung!</string>
+    <string name="dont_miss_apps">Verpasse nicht unsere bestbewerteten Apps 👇</string>
+    <string name="see_our_apps">Unsere Apps bei Google Play ansehen</string>
+    <string name="faq_a_edit">Öffne den Tab &lt;b&gt;Tools&lt;/b&gt; und tippe auf &lt;b&gt;PDF bearbeiten&lt;/b&gt;, dann wähle eine Datei aus. Du kannst vorhandenen Text bearbeiten, neuen Text und Bilder hinzufügen, Anmerkungen machen (markieren, unterstreichen, durchstreichen, zeichnen) und deine Unterschrift einfügen. Tippe auf das Häkchen, um eine Kopie zu speichern.</string>
+    <string name="faq_a_display">Nutze beim Lesen die untere Leiste, um zwischen &lt;b&gt;vertikalem&lt;/b&gt; und &lt;b&gt;horizontalem&lt;/b&gt; Scrollen zu wechseln, die Ansicht zu drehen oder die Farben umzukehren. Zum Zoomen die Finger zusammenziehen oder spreizen; tippe auf die Seitenzahl, um zu einer Seite zu springen.</string>
+    <string name="faq_a_copy">Das Kopieren von Text ist noch nicht verfügbar. Wir arbeiten daran! Wenn es dir wichtig ist, &lt;a href=\"app://feedback\"&gt;sende uns Feedback&lt;/a&gt;, damit wir es priorisieren können.</string>
+    <string name="faq_a_search">Öffne das Dokument, tippe in der unteren Leiste auf &lt;b&gt;Suchen&lt;/b&gt; und gib das gesuchte Wort ein. Mit den Pfeilen wechselst du zwischen den Ergebnissen. Um eine Datei nach Namen zu finden, nutze das Suchsymbol oben auf dem Startbildschirm.</string>
+    <string name="faq_a_open">Stelle sicher, dass die App Zugriff auf deine Dateien hat. Wenn sich die Datei in einer Cloud-App oder einem anderen Ordner befindet, öffne sie mit deinem &lt;a href=\"app://filemanager\"&gt;Dateimanager&lt;/a&gt; und wähle diese App. Wenn sich eine Datei immer noch nicht öffnen lässt, ist sie möglicherweise beschädigt oder passwortgeschützt; bitte &lt;a href=\"app://feedback\"&gt;gib uns Bescheid&lt;/a&gt;.</string>
+    <string name="faq_a_create">Tippe auf der Seite &lt;b&gt;Alle Dateien&lt;/b&gt; auf die Schaltfläche &lt;b&gt;+&lt;/b&gt;. Du kannst ein Dokument aus einer Vorlage erstellen, Dateien importieren, Bilder in PDF umwandeln oder Papierdokumente mit der Kamera scannen.</string>
+    <string name="faq_a_print">Öffne eine PDF, tippe auf das Menü &lt;b&gt;⋮&lt;/b&gt; und wähle &lt;b&gt;Drucken&lt;/b&gt;. Andere Formate können zuvor im Tab &lt;b&gt;Tools&lt;/b&gt; in PDF umgewandelt werden.</string>
+    <string name="faq_a_subscription">Abos werden über Google Play verwaltet. Gehe zu &lt;b&gt;Einstellungen → Abos verwalten&lt;/b&gt; oder öffne Google Play → Profil → Zahlungen &amp;amp; Abos. Details findest du in unseren &lt;a href=\"app://terms\"&gt;Nutzungsbedingungen&lt;/a&gt;.</string>
+    <string name="faq_a_ads">Werbung hilft uns, die App für alle kostenlos zu halten. Mit &lt;a href=\"app://premium\"&gt;Premium&lt;/a&gt; kannst du sie entfernen.</string>
+    <string name="faq_a_slow">Sehr große Dateien oder Dateien mit vielen Bildern laden länger. Andere Apps zu schließen und Speicherplatz freizugeben kann helfen. Wenn eine Datei immer langsam ist, &lt;a href=\"app://feedback\"&gt;sende uns bitte Feedback&lt;/a&gt;.</string>
+    <string name="faq_a_permissions">Die App benötigt Dateizugriff nur, um die Dokumente auf deinem Gerät zu finden und zu öffnen. Deine Dateien bleiben auf deinem Gerät und werden nie hochgeladen.</string>
+    <string name="terms_html">&lt;p&gt;&lt;i&gt;Zuletzt aktualisiert: September 2026&lt;/i&gt;&lt;/p&gt;&lt;p&gt;Diese Nutzungsbedingungen regeln deine Nutzung von &lt;b&gt;%1$s&lt;/b&gt; (die „App\"). Durch die Nutzung der App stimmst du diesen Bedingungen zu.&lt;/p&gt;&lt;h4&gt;1. Nutzung der App&lt;/h4&gt;&lt;p&gt;Du kannst die App nutzen, um Dokumente für private oder geschäftliche Zwecke anzuzeigen, zu erstellen, zu konvertieren und zu bearbeiten. Du bist für die Dokumente verantwortlich, die du öffnest und erstellst, sowie dafür, dass du zu ihrer Nutzung berechtigt bist.&lt;/p&gt;&lt;h4&gt;2. Abonnements&lt;/h4&gt;&lt;p&gt;Einige Funktionen erfordern möglicherweise ein kostenpflichtiges Abonnement, das über Google Play erworben wird. Abonnements verlängern sich automatisch, sofern sie nicht mindestens 24 Stunden vor Ende des aktuellen Zeitraums gekündigt werden. Du kannst ein Abonnement in den Einstellungen deines Google Play-Kontos verwalten oder kündigen. Erstattungen richten sich nach den Richtlinien von Google Play.&lt;/p&gt;&lt;h4&gt;3. Werbung&lt;/h4&gt;&lt;p&gt;Die kostenlose Version der App kann Werbung von Drittanbietern anzeigen.&lt;/p&gt;&lt;h4&gt;4. Keine Gewährleistung&lt;/h4&gt;&lt;p&gt;Die App wird „wie besehen\" bereitgestellt. Wir tun unser Bestes, um sie zuverlässig zu halten, garantieren jedoch nicht, dass sie fehlerfrei ist, und haften nicht für Datenverluste. Bitte erstelle Sicherungskopien wichtiger Dateien.&lt;/p&gt;&lt;h4&gt;5. Änderungen&lt;/h4&gt;&lt;p&gt;Wir können diese Bedingungen von Zeit zu Zeit aktualisieren. Die weitere Nutzung der App bedeutet, dass du die aktualisierten Bedingungen akzeptierst.&lt;/p&gt;&lt;h4&gt;6. Kontakt&lt;/h4&gt;&lt;p&gt;Fragen? Schreib uns eine E-Mail an %2$s.&lt;/p&gt;</string>
+    <string name="premium_trusted_top">Beliebt bei</string>
+    <string name="premium_trusted_count">unseren Nutzern</string>
+    <string name="premium_trusted_bottom">weltweit</string>
+    <string name="plan_trial_days">%1$d Tage kostenlos testen</string>
+    <string name="plan_then_only_per_day">Danach nur %1$s/Tag</string>
+    <string name="plan_per_day">%1$s/Tag</string>
+    <string name="plan_price_year">%1$s/Jahr</string>
+    <string name="plan_price_month">%1$s/Monat</string>
+    <string name="plan_save_percent">%1$d%% sparen</string>
+    <string name="start_free_trial">Kostenlos testen</string>
+    <string name="trial_today">Heute</string>
+    <string name="trial_today_sub">Alle Premium-Funktionen freischalten</string>
+    <string name="trial_full_access">Vollzugriff erhalten</string>
+    <string name="trial_full_access_sub">Alle Werbung entfernen, Dateien in allen Formaten lesen, PDFs einfach bearbeiten usw.</string>
+    <string name="trial_day7">Tag 7</string>
+    <string name="trial_day7_sub">Keine Kosten, wenn du mindestens 24 Stunden vor Ende des Testzeitraums kündigst.</string>
+    <string name="hot">TOP</string>
+    <string name="try_days_free">%1$d Tage kostenlos testen</string>
+    <string name="try_then">Danach %1$s/Jahr, nur %2$s/Tag</string>
+    <string name="crop_not_found">Seitenränder nicht gefunden – passe sie mit „Zuschneiden\" an</string>
+    <string name="tpl_reset">Zurücksetzen</string>
+    <string name="tpl_close">Schließen</string>
+    <string name="tpl_download">Herunterladen</string>
+    <string name="tpl_flip_h">H spiegeln</string>
+    <string name="tpl_flip_v">V spiegeln</string>
+    <string name="tpl_bold">Fett</string>
+    <string name="tpl_italic">Kursiv</string>
+    <string name="tpl_underline">Unterstrichen</string>
+    <string name="tpl_strike">Durchgestrichen</string>
+    <string name="tpl_bullets">Aufzählung</string>
+    <string name="tpl_numbers">Nummerierte Liste</string>
+    <string name="tpl_save_failed">Datei konnte nicht gespeichert werden</string>
+    <string name="tpl_image_failed">Dieses Bild konnte nicht geöffnet werden</string>
+    <string name="ad_badge">Anzeige</string>
+    <string name="explore_nothing">Derzeit gibt es nichts anzuzeigen. Bitte überprüfe deine Internetverbindung.</string>
+    <string name="review1_title">Alles-in-einem-Dateireader</string>
+    <string name="review1_text">Das Abo lohnt sich total!! Öffnet Dateien aller Formate schnell, merkt sich den Lesefortschritt, funktioniert offline und stellt sogar gelöschte Dateien wieder her!</string>
+    <string name="review2_title">Keine Werbung, keine versteckten Kosten</string>
+    <string name="review2_text">Seit dem Abo kann ich mehr Funktionen nutzen. Keine Werbung unterbricht mein Lesen und Bearbeiten, und die Oberfläche ist übersichtlicher. Das Beste: keine versteckten Gebühren!</string>
+    <string name="review3_title">Konzentrierter und schneller arbeiten</string>
+    <string name="review3_text">Das Abo ist günstig, und ich kann jetzt Dateien ohne nervige Werbung ansehen, bearbeiten und verwalten. Hat meine Effizienz echt gesteigert!</string>
+    <plurals name="deleted_count">
+        <item quantity="one">%d Datei gelöscht</item>
+        <item quantity="other">%d Dateien gelöscht</item>
+    </plurals>
+    <plurals name="moved_to_bin_count">
+        <item quantity="one">%d Datei in den Papierkorb verschoben</item>
+        <item quantity="other">%d Dateien in den Papierkorb verschoben</item>
+    </plurals>
+    <plurals name="days_left">
+        <item quantity="one">Noch %d Tag</item>
+        <item quantity="other">Noch %d Tage</item>
+    </plurals>
+    <plurals name="pages_selected">
+        <item quantity="one">%d Seite ausgewählt</item>
+        <item quantity="other">%d Seiten ausgewählt</item>
+    </plurals>
+    <plurals name="days_count">
+        <item quantity="one">%d Tag</item>
+        <item quantity="other">%d Tage</item>
+    </plurals>
+    <plurals name="delete_forever_message">
+        <item quantity="one">%d Datei wird endgültig gelöscht. Dies kann nicht rückgängig gemacht werden.</item>
+        <item quantity="other">%d Dateien werden endgültig gelöscht. Dies kann nicht rückgängig gemacht werden.</item>
+    </plurals>
+    <plurals name="restored_count">
+        <item quantity="one">%d Datei wiederhergestellt</item>
+        <item quantity="other">%d Dateien wiederhergestellt</item>
+    </plurals>
+    <!-- /step59 -->
 </resources>

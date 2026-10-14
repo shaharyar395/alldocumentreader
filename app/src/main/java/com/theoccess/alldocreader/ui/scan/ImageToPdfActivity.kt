@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.ItemTouchHelper
@@ -42,7 +41,7 @@ import java.util.Locale
  * tap to edit again, Add pages (tile or top-right icon) — then Convert → "Converting… (x%)"
  * → Converted successfully screen.
  */
-class ImageToPdfActivity : AppCompatActivity() {
+class ImageToPdfActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivityImageToPdfBinding
     private val pages get() = ScanSession.pages

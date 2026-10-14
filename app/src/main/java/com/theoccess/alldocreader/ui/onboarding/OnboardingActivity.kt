@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
@@ -15,7 +14,7 @@ import com.theoccess.alldocreader.databinding.ActivityOnboardingBinding
 import com.theoccess.alldocreader.ui.main.MainActivity
 import com.theoccess.alldocreader.util.dp
 
-class OnboardingActivity : AppCompatActivity() {
+class OnboardingActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivityOnboardingBinding
     private val adapter = OnboardingAdapter()

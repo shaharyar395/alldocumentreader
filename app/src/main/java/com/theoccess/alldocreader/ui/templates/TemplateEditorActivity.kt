@@ -21,7 +21,6 @@ import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -59,7 +58,7 @@ import kotlin.math.min
  *  - picture selected: Replace, Crop, H Flip, V Flip, Delete, X;
  *  - leaving with unsaved changes asks "Quit now?" (Discard / Save).
  */
-class TemplateEditorActivity : AppCompatActivity(), TemplateCanvasView.Listener {
+class TemplateEditorActivity : com.theoccess.alldocreader.ui.BaseActivity(), TemplateCanvasView.Listener {
 
     companion object {
         const val EXTRA_ID = "template_id"

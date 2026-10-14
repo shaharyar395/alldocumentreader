@@ -15,6 +15,9 @@ class ZoomLayout @JvmOverloads constructor(context: Context, attrs: AttributeSet
 
     var scale = 1f
         private set
+
+    /** One tap on the pages (not a double-tap / drag / pinch): the reader shows or hides its bars. */
+    var onSingleTap: (() -> Unit)? = null
     private val minScale = 1f
     private val maxScale = 4f
 
@@ -26,6 +29,11 @@ class ZoomLayout @JvmOverloads constructor(context: Context, attrs: AttributeSet
     })
 
     private val gestureDetector = GestureDetector(context, object : GestureDetector.SimpleOnGestureListener() {
+        override fun onSingleTapConfirmed(e: MotionEvent): Boolean {
+            onSingleTap?.invoke()
+            return false
+        }
+
         override fun onDoubleTap(e: MotionEvent): Boolean {
             applyScale(if (scale > 1.2f) 1f else 2f)
             return true

@@ -11,7 +11,6 @@ import android.text.style.URLSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import com.theoccess.alldocreader.R
 import com.theoccess.alldocreader.databinding.ActivityFaqBinding
 import com.theoccess.alldocreader.databinding.ItemFaqBinding
@@ -24,7 +23,7 @@ import com.theoccess.alldocreader.util.toast
  * questions that open with the answer and a "Was this helpful? YES / NO", and a
  * "Feedback or suggestion" button at the bottom.
  */
-class FaqActivity : AppCompatActivity() {
+class FaqActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private class Q(val icon: Int, val question: Int, val answer: Int)
 

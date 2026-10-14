@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DiffUtil
@@ -23,6 +22,7 @@ import com.theoccess.alldocreader.data.FileRepository
 import com.theoccess.alldocreader.data.FileType
 import com.theoccess.alldocreader.databinding.ActivityPickFileBinding
 import com.theoccess.alldocreader.databinding.ItemPickFileBinding
+import com.theoccess.alldocreader.premium.PremiumGate
 import com.theoccess.alldocreader.ui.edit.PdfEditActivity
 import com.theoccess.alldocreader.ui.files.ListStateHelper
 import com.theoccess.alldocreader.ui.scan.ImageToPdfActivity
@@ -47,7 +47,7 @@ import java.util.Locale
  * "Select a file" for Word/PDF/PPT/Image convert, or PDF/image for edit / pages / print.
  * Images used for edit tools are converted to PDF first.
  */
-class PickFileActivity : AppCompatActivity() {
+class PickFileActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivityPickFileBinding
     private lateinit var kind: ConvertKind
@@ -77,6 +77,18 @@ class PickFileActivity : AppCompatActivity() {
         editMode = intent.getIntExtra(EXTRA_EDIT_MODE, 0)
         // edit / pages / print list PDFs and images (images → PDF first)
         if (target != TARGET_CONVERT) kind = ConvertKind.PDF_TO_WORD
+        // premium tool with today's free tries used up: straight to Get Premium
+        feature?.let { if (!PremiumGate.check(this, it)) { finish(); return } }
+        when (target) {
+        }
+        if (target == TARGET_MERGE) {
+            adapter.multi = true
+            intent.getStringArrayListExtra(EXTRA_PRESELECTED)?.let { adapter.picked += it }
+            savedInstanceState?.getStringArrayList(STATE_PICKED)?.let { adapter.picked.clear(); adapter.picked += it }
+            binding.btnAction.visibility = View.VISIBLE
+            binding.btnAction.setOnClickListener { continueMerge() }
+            updateMergeButton()
+        }
         state = ListStateHelper(binding.state)
         onBackPressedDispatcher.addCallback(this, searchBack)
 
@@ -126,6 +138,7 @@ class PickFileActivity : AppCompatActivity() {
             .filter {
                 when (target) {
                     TARGET_CONVERT -> kind.matches(it)
+                    TARGET_MERGE, TARGET_SPLIT -> it.type == FileType.PDF
                     else -> it.type == FileType.PDF || isImage(it)
                 }
             }
@@ -139,24 +152,33 @@ class PickFileActivity : AppCompatActivity() {
         }
     }
 
+    /** The premium feature behind this list (null = free, e.g. Print). */
+    private val feature: PremiumGate.Feature?
+        get() = when (target) {
+            TARGET_CONVERT -> PremiumGate.Feature.CONVERT
+            TARGET_EDIT -> PremiumGate.Feature.EDIT_SIGN
+            TARGET_PAGES -> PremiumGate.Feature.PAGES
+            TARGET_MERGE, TARGET_SPLIT -> PremiumGate.Feature.MERGE_SPLIT
+            else -> null
+        }
+
     private fun choose(doc: DocFile) {
         if (busy) return
+        if (target == TARGET_MERGE) { togglePick(doc); return }
+        if (target == TARGET_SPLIT) { askSplit(doc); return }
+        if (target == TARGET_CONVERT && !kind.canConvert(doc)) {
+            toast(R.string.convert_old_format)
+            return
+        }
+        // a free try is counted now (unlimited with Premium); none left → Get Premium
+        feature?.let { if (!PremiumGate.use(this, it)) return }
         com.theoccess.alldocreader.data.LibraryStore.addRecent(doc.path)
         when (target) {
             TARGET_CONVERT -> {
-                if (!kind.canConvert(doc)) {
-                    toast(R.string.convert_old_format)
-                    return
-                }
                 if (kind == ConvertKind.IMAGE_TO_PDF) {
                     ScanSession.clear(this)
                     ScanSession.scanMode = false
-                    // Library photos: keep original look (AUTO is for camera scans)
-                    ScanSession.pages.add(
-                        ScanSession.newPage(doc.file, fromCamera = false).also {
-                            it.filter = com.theoccess.alldocreader.ui.scan.ScanFilter.ORIGINAL
-                        }
-                    )
+                    ScanSession.pages.add(ScanSession.newPage(doc.file, fromCamera = false))
                     convert.launch(Intent(this, ImageToPdfActivity::class.java))
                 } else {
                     convert.launch(ConvertActivity.intent(this, kind, doc.path))
@@ -166,9 +188,7 @@ class PickFileActivity : AppCompatActivity() {
                 if (doc.type == FileType.PDF) {
                     usePdf(doc.file)
                 } else if (isImage(doc)) {
-                    // Print: don't register as a new saved file until the user actually prints a kept PDF
-                    val persist = target != TARGET_PRINT
-                    convertImageThen(doc, persist = persist) { pdf -> usePdf(pdf) }
+                    convertImageThen(doc) { pdf -> usePdf(pdf) }
                 } else {
                     toast(R.string.convert_old_format)
                 }
@@ -189,7 +209,7 @@ class PickFileActivity : AppCompatActivity() {
                 finish()
             }
             TARGET_PAGES -> {
-                startActivity(com.theoccess.alldocreader.ui.pages.PageOrganizerActivity.intent(this, pdf))
+                startActivity(com.theoccess.alldocreader.ui.pages.PageOrganizerActivity.intent(this, pdf, openAfterSave = true))
                 finish()
             }
             TARGET_PRINT -> PdfPrint.print(this, pdf, pdf.name)
@@ -198,7 +218,7 @@ class PickFileActivity : AppCompatActivity() {
     }
 
     /** Image → PDF, then run edit / pages / print on the new file. */
-    private fun convertImageThen(doc: DocFile, persist: Boolean = true, onReady: (File) -> Unit) {
+    private fun convertImageThen(doc: DocFile, onReady: (File) -> Unit) {
         busy = true
         val pill = ProgressPill(this)
         pill.show(getString(R.string.converting_progress, 0))
@@ -208,11 +228,7 @@ class PickFileActivity : AppCompatActivity() {
                     Converters.imageToPdf(applicationContext, doc.file, doc.file.nameWithoutExtension) { p ->
                         runOnUiThread { pill.show(getString(R.string.converting_progress, p)) }
                     }.also {
-                        if (persist) {
-                            com.theoccess.alldocreader.data.SavedFiles.onSaved(applicationContext, it)
-                        } else {
-                            com.theoccess.alldocreader.data.LibraryStore.addRecent(it.absolutePath)
-                        }
+                        com.theoccess.alldocreader.data.SavedFiles.onSaved(applicationContext, it)
                     }
                 } catch (_: Throwable) {
                     null
@@ -228,8 +244,58 @@ class PickFileActivity : AppCompatActivity() {
         }
     }
 
+    // ------------------------------------------------------------------ Merge PDF
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        if (target == TARGET_MERGE) outState.putStringArrayList(STATE_PICKED, ArrayList(adapter.picked))
+    }
+
+    private fun togglePick(doc: DocFile) {
+        adapter.toggle(doc.path)
+        updateMergeButton()
+    }
+
+    /** "Select a file" → "2 selected"; "Continue" → "Continue (2)" (two PDFs are needed). */
+    private fun updateMergeButton() {
+        val n = adapter.picked.size
+        binding.tvTitle.text = if (n == 0) getString(R.string.select_a_file) else getString(R.string.selected_count, n)
+        binding.btnAction.isEnabled = n >= 2
+        binding.btnAction.alpha = if (n >= 2) 1f else 0.4f
+        binding.btnAction.text = if (n == 0) getString(R.string.continue_label) else getString(R.string.continue_n, n)
+    }
+
+    private fun continueMerge() {
+        val paths = adapter.picked.filter { File(it).exists() }
+        if (paths.size < 2) return
+        if (intent.getBooleanExtra(EXTRA_FOR_RESULT, false)) {
+            setResult(Activity.RESULT_OK, Intent().putStringArrayListExtra(EXTRA_RESULT_PATHS, ArrayList(paths)))
+        } else {
+            if (!PremiumGate.use(this, PremiumGate.Feature.MERGE_SPLIT)) return
+            startActivity(com.theoccess.alldocreader.ui.pages.MergePdfActivity.intent(this, paths))
+        }
+        finish()
+    }
+
+    // ------------------------------------------------------------------ Split PDF
+
+    private fun askSplit(doc: DocFile) {
+        if (!PremiumGate.use(this, PremiumGate.Feature.MERGE_SPLIT)) return
+        com.theoccess.alldocreader.data.LibraryStore.addRecent(doc.path)
+        startActivity(com.theoccess.alldocreader.ui.pages.SplitPdfActivity.intent(this, doc.file))
+    }
+
     private class PickAdapter(val onClick: (DocFile) -> Unit) : ListAdapter<DocFile, PickAdapter.VH>(DIFF) {
         private val dateFormat = SimpleDateFormat("MM/dd/yyyy", Locale.US)
+
+        /** Merge PDF: several files can be picked (checkbox on every row, in the order they are ticked). */
+        var multi = false
+        val picked = ArrayList<String>()
+
+        fun toggle(path: String) {
+            if (!picked.remove(path)) picked += path
+            notifyItemRangeChanged(0, itemCount)
+        }
 
         class VH(val b: ItemPickFileBinding) : RecyclerView.ViewHolder(b.root)
 
@@ -242,6 +308,8 @@ class PickFileActivity : AppCompatActivity() {
             holder.b.tvName.text = doc.name
             holder.b.tvMeta.text = "${dateFormat.format(Date(doc.modified))} · ${formatSize(doc.size)}"
             holder.b.root.setOnClickListener { onClick(doc) }
+            holder.b.cbPick.visibility = if (multi) View.VISIBLE else View.GONE
+            holder.b.cbPick.isChecked = doc.path in picked
         }
 
         companion object {
@@ -260,6 +328,13 @@ class PickFileActivity : AppCompatActivity() {
         private const val TARGET_EDIT = 1
         private const val TARGET_PAGES = 2
         private const val TARGET_PRINT = 3
+        private const val TARGET_MERGE = 4
+        private const val TARGET_SPLIT = 5
+        private const val EXTRA_PRESELECTED = "preselected"
+        private const val EXTRA_FOR_RESULT = "for_result"
+        private const val STATE_PICKED = "picked"
+        /** Merge's "add files": the whole new selection comes back in this extra. */
+        const val EXTRA_RESULT_PATHS = "result_paths"
 
         fun intent(context: Context, kind: ConvertKind) =
             Intent(context, PickFileActivity::class.java).putExtra(EXTRA_KIND, kind.ordinal)
@@ -272,6 +347,20 @@ class PickFileActivity : AppCompatActivity() {
 
         fun pagesIntent(context: Context) =
             Intent(context, PickFileActivity::class.java).putExtra(EXTRA_TARGET, TARGET_PAGES)
+
+        /** Tools → Merge PDF: tick PDFs → "Continue (n)" → Merge PDF screen. [preselected]: already ticked (viewer ⋮ → Merge PDF). */
+        fun mergeIntent(context: Context, preselected: List<String> = emptyList()) =
+            Intent(context, PickFileActivity::class.java)
+                .putExtra(EXTRA_TARGET, TARGET_MERGE)
+                .putStringArrayListExtra(EXTRA_PRESELECTED, ArrayList(preselected))
+
+        /** Merge PDF's file+ button: the current PDFs ticked; the new selection is returned. */
+        fun mergeSelectIntent(context: Context, current: List<String>) =
+            mergeIntent(context, current).putExtra(EXTRA_FOR_RESULT, true)
+
+        /** Tools → Split PDF: pick a PDF → Split PDF screen. */
+        fun splitIntent(context: Context) =
+            Intent(context, PickFileActivity::class.java).putExtra(EXTRA_TARGET, TARGET_SPLIT)
 
         fun printIntent(context: Context) =
             Intent(context, PickFileActivity::class.java).putExtra(EXTRA_TARGET, TARGET_PRINT)

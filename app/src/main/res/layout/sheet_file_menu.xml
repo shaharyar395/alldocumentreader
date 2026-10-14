@@ -85,6 +85,10 @@
             layout="@layout/item_file_action" />
 
         <include
+            android:id="@+id/actDrive"
+            layout="@layout/item_file_action" />
+
+        <include
             android:id="@+id/actDelete"
             layout="@layout/item_file_action" />
     </LinearLayout>

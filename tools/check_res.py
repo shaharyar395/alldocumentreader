@@ -10,6 +10,7 @@ have={k:set() for k in ['drawable','string','color','style','layout','menu','mip
 for t in ['drawable','color','layout','menu','xml','anim']:
     for f in glob.glob(f'{res}/{t}/*.xml'): have[t].add(os.path.basename(f)[:-4])
 for f in glob.glob(res+'/mipmap-*/*'): have['mipmap'].add(os.path.basename(f).split('.')[0])
+for f in glob.glob(res+'/drawable*/*.png')+glob.glob(res+'/drawable*/*.webp'): have['drawable'].add(os.path.basename(f).split('.')[0])
 for f in glob.glob(res+'/values/*.xml'):
     for t,n in re.findall(r'<(string|color|style|plurals)\s+name="([^"]+)"',open(f,encoding='utf-8').read()): have[t].add(n)
 for f in glob.glob(res+'/values-*/strings.xml'):

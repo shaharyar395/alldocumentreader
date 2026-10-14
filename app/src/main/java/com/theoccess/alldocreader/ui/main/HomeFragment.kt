@@ -14,6 +14,8 @@ import android.view.ViewGroup
 import android.view.animation.OvershootInterpolator
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.tabs.TabLayout
@@ -100,7 +102,22 @@ class HomeFragment : Fragment() {
         setupList()
         setupFab()
 
+        // swipe down: scan the storage again for files added since
+        binding.swipeRefresh.setColorSchemeResources(R.color.primary)
+        binding.swipeRefresh.setOnRefreshListener {
+            val ctx = context
+            if (ctx == null || !StorageAccess.has(ctx)) {
+                binding.swipeRefresh.isRefreshing = false
+                return@setOnRefreshListener
+            }
+            manualRefresh = true
+            FileRepository.refresh(ctx, force = true)
+        }
         FileRepository.state.observe(viewLifecycleOwner) { renderScan(it) }
+        com.theoccess.alldocreader.data.NewFiles.changes.observe(viewLifecycleOwner) {
+            fileAdapter.refreshNewTags()
+            updateRecentBadge(FileRepository.current)
+        }
         LibraryStore.recents.observe(viewLifecycleOwner) { renderList() }
         LibraryStore.bookmarks.observe(viewLifecycleOwner) { entries ->
             fileAdapter.setBookmarks(entries.map { it.path }.toSet())
@@ -112,6 +129,8 @@ class HomeFragment : Fragment() {
         super.onResume()
         if (!isHidden) maybeReloadAfterSave()
         onAccessMaybeChanged()
+        // files added while the app was in the background (downloads, USB, other apps)
+        context?.let { if (StorageAccess.has(it)) FileRepository.refreshIfStale(it) }
         updateRecentBadge(FileRepository.current)
         maybeShowRating()
     }
@@ -138,6 +157,7 @@ class HomeFragment : Fragment() {
         binding.rowRecentlyAdded.setOnClickListener {
             if (!StorageAccess.has(requireContext())) showPermissionDialog()
             else {
+                // the "+N" goes away once the list was visited (each file keeps its "New" tag until opened)
                 Prefs.recentSeenAt = System.currentTimeMillis()
                 updateRecentBadge(FileRepository.current)
                 startActivity(FileListActivity.intent(requireContext(), Category.ALL, recentlyAdded = true))
@@ -236,8 +256,15 @@ class HomeFragment : Fragment() {
         else legacyPermission.launch(StorageAccess.runtimePermissions)
     }
 
+    private var manualRefresh = false
+
     private fun renderScan(state: FileRepository.ScanState) {
         val b = _binding ?: return
+        if (!state.loading && b.swipeRefresh.isRefreshing) {
+            b.swipeRefresh.isRefreshing = false
+            if (manualRefresh) context?.toast(R.string.files_refreshed)
+            manualRefresh = false
+        }
         val hasAccess = StorageAccess.has(requireContext())
         val counts = mutableMapOf<Category, String>()
         if (state.loaded) {
@@ -268,14 +295,16 @@ class HomeFragment : Fragment() {
         updateRecentBadge(state)
     }
 
-    /** "+N" next to Recently added: files added since the user last opened that list. */
+    /** "+N" next to Recently added: new files (not opened yet) found since the user last visited that list. */
     private fun updateRecentBadge(state: FileRepository.ScanState) {
         val b = _binding ?: return
-        if (Prefs.recentSeenAt == 0L) Prefs.recentSeenAt = System.currentTimeMillis()
         val since = Prefs.recentSeenAt
-        val n = if (state.loaded) state.all().count { it.modified > since } else 0
+        val n = if (state.loaded) state.all().count { f ->
+            val at = com.theoccess.alldocreader.data.NewFiles.foundAt(f.path)
+            at != null && at > since
+        } else 0
         b.tvRecentBadge.visibility = if (n > 0) View.VISIBLE else View.GONE
-        if (n > 0) b.tvRecentBadge.text = if (n > 99) "+99" else "+$n"
+        b.tvRecentBadge.text = if (n > 99) "+99" else "+$n"
     }
 
     private fun countText(n: Int) = resources.getQuantityString(R.plurals.files_count, n, n)
@@ -290,18 +319,31 @@ class HomeFragment : Fragment() {
         return list?.firstOrNull { it.path == path }?.time
     }
 
+    private var listJob: kotlinx.coroutines.Job? = null
+
+    /**
+     * Recent / Bookmarks list. Checking each file on storage (exists, size, date) now happens in
+     * the background: on the main thread it ran every time the All files tab came back, which
+     * made fast tab switching stutter. The list on screen stays until the new one is ready.
+     */
     private fun renderList() {
-        val b = _binding ?: return
+        if (_binding == null) return
         val entries = if (selectedTab == TAB_RECENT) LibraryStore.recents.value.orEmpty()
         else LibraryStore.bookmarks.value.orEmpty()
-        val files = entries.mapNotNull { e ->
-            val f = File(e.path)
-            if (f.exists()) DocFile.from(f) else null
+        listJob?.cancel()
+        listJob = viewLifecycleOwner.lifecycleScope.launch {
+            val files = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+                entries.mapNotNull { e ->
+                    val f = File(e.path)
+                    if (f.exists()) DocFile.from(f) else null
+                }
+            }
+            val b = _binding ?: return@launch
+            fileAdapter.submitList(files)
+            val busy = b.loadingView.visibility == View.VISIBLE || b.permissionView.visibility == View.VISIBLE
+            b.emptyView.visibility = if (files.isEmpty() && !busy) View.VISIBLE else View.GONE
+            b.rvFiles.visibility = if (files.isEmpty()) View.INVISIBLE else View.VISIBLE
         }
-        fileAdapter.submitList(files)
-        val busy = b.loadingView.visibility == View.VISIBLE || b.permissionView.visibility == View.VISIBLE
-        b.emptyView.visibility = if (files.isEmpty() && !busy) View.VISIBLE else View.GONE
-        b.rvFiles.visibility = if (files.isEmpty()) View.INVISIBLE else View.VISIBLE
     }
 
     // ---------------------------------------------------------------- actions

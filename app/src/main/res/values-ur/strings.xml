@@ -258,4 +258,324 @@
     <string name="helpful_no">😞 زیادہ نہیں</string>
     <string name="helpful_yes">🥰 مددگار</string>
     <!-- /step26 -->
+    <!-- step27 -->
+    <string name="search_no_results">کوئی نتیجہ نہیں ملا</string>
+    <!-- /step27 -->
+    <!-- step28 -->
+    <string name="search_in_document">دستاویز میں تلاش کریں</string>
+    <string name="search_in_pdf">PDF میں تلاش کریں</string>
+    <string name="search_in_ppt">PPT میں تلاش کریں</string>
+    <string name="search_in_excel">Excel میں تلاش کریں</string>
+    <string name="refresh">ریفریش</string>
+    <string name="files_refreshed">فائلیں اپ ڈیٹ ہو گئیں</string>
+    <!-- /step28 -->
+    <!-- step29 -->
+    <string name="new_badge">نیا</string>
+    <string name="save_to_drive_short">Drive میں محفوظ کریں</string>
+    <string name="drive_saving">Google Drive میں محفوظ ہو رہا ہے…</string>
+    <string name="drive_saved">%1$s Google Drive میں محفوظ ہو گیا (All Document Reader فولڈر)</string>
+    <string name="drive_save_failed_title">Google Drive میں محفوظ نہیں ہو سکا</string>
+    <string name="drive_not_allowed">Google نے Google Drive تک رسائی نہیں دی۔ اپنا اکاؤنٹ منتخب کریں اور اجازت دیں پر ٹیپ کریں۔</string>
+    <!-- /step29 -->
+    <!-- step30 -->
+    <string name="search_in_txt">TXT میں تلاش کریں</string>
+    <!-- /step30 -->
+    <!-- step31 -->
+    <string name="drive_app_missing">Drive میں فائلیں محفوظ کرنے کے لیے Google Drive ایپ درکار ہے۔ اسے Google Play سے انسٹال کریں، پھر دوبارہ کوشش کریں۔</string>
+    <string name="drive_install">انسٹال کریں</string>
+    <!-- /step31 -->
+    <!-- step32 -->
+    <string name="ready_top">تیار ہو جائیں اپنے</string>
+    <string name="ready_bottom">7 دن کے مفت ٹرائل کے لیے</string>
+    <string name="premium_slide_merge">PDF ملائیں\nاور تقسیم کریں</string>
+    <string name="feat_merge">PDF کو آسانی سے ملائیں اور تقسیم کریں</string>
+    <string name="user_reviews">صارفین کی رائے</string>
+    <string name="cancel_anytime">کسی بھی وقت منسوخ کریں</string>
+    <!-- /step32 -->
+    <!-- step33 -->
+    <string name="tool_merge_pdf">PDF ملائیں</string>
+    <string name="tool_split_pdf">PDF تقسیم کریں</string>
+    <string name="premium_free_uses_left">مفت آزمائش · آج %1$d باقی۔ لامحدود استعمال کے لیے Premium لیں</string>
+    <string name="premium_last_free_use">آج کی آخری مفت آزمائش۔ لامحدود استعمال کے لیے Premium لیں</string>
+    <string name="premium_limit_reached">\"%1$s\" کی آج کی مفت آزمائشیں ختم ہو گئیں۔ لامحدود استعمال کے لیے Premium لیں۔</string>
+    <string name="select_pdfs_to_merge">ملانے کے لیے PDF منتخب کریں</string>
+    <string name="select_pdf_to_split">تقسیم کے لیے PDF منتخب کریں</string>
+    <string name="merge_n">ملائیں (%1$d)</string>
+    <string name="merge_pick_two">کم از کم 2 PDF منتخب کریں</string>
+    <string name="merging_progress">ملایا جا رہا ہے… (%1$d%%)</string>
+    <string name="merge_failed">یہ PDF نہیں ملائی جا سکیں (پاس ورڈ یا خراب؟)</string>
+    <string name="split_one_page">اس PDF میں صرف ایک صفحہ ہے</string>
+    <string name="split_info">%1$s · %2$d صفحات</string>
+    <string name="split_ranges_hint">مثلاً 1-3، 5، 6-%1$d</string>
+    <string name="split_action">تقسیم کریں</string>
+    <string name="split_each_page">ہر صفحہ الگ PDF میں</string>
+    <string name="split_every_n">ہر چند صفحات پر</string>
+    <string name="split_every_hint">فی فائل صفحات، مثلاً 2</string>
+    <string name="split_custom">اپنی مرضی کی صفحہ رینج</string>
+    <string name="split_invalid">براہ کرم درست صفحہ نمبر درج کریں</string>
+    <string name="splitting_progress">تقسیم ہو رہا ہے… (%1$d%%)</string>
+    <string name="split_failed">یہ PDF تقسیم نہیں ہو سکی</string>
+    <plurals name="split_done">
+        <item quantity="one">%1$d فائل میں تقسیم</item>
+        <item quantity="other">%1$d فائلوں میں تقسیم</item>
+    </plurals>
+    <!-- /step33 -->
+    <!-- step35 -->
+    <string name="section_edit_manage">ترمیم اور انتظام</string>
+    <string name="add_files">فائلیں شامل کریں</string>
+    <string name="add_part">صفحات شامل کریں</string>
+    <string name="continue_n">جاری رکھیں (%1$d)</string>
+    <string name="quit">باہر نکلیں</string>
+    <string name="quit_merging_title">ملانا چھوڑ دیں؟</string>
+    <string name="quit_splitting_title">تقسیم چھوڑ دیں؟</string>
+    <string name="quit_changes_message">تبدیلیاں محفوظ نہیں ہوں گی۔ کیا آپ واقعی باہر نکلنا چاہتے ہیں؟</string>
+    <string name="merged_successfully_excl">کامیابی سے ملا دیا گیا!</string>
+    <string name="split_successfully_excl">کامیابی سے تقسیم ہو گیا!</string>
+    <string name="satisfied_question">کیا آپ ہماری \"%1$s\" سہولت سے مطمئن ہیں؟</string>
+    <string name="satisfied_not_good">😞\nاچھا نہیں</string>
+    <string name="satisfied_good">🥰\nاچھا</string>
+    <string name="thanks_feedback">آپ کی رائے کا شکریہ!</string>
+    <string name="select_pages">صفحات منتخب کریں</string>
+    <string name="split_method">تقسیم کا طریقہ</string>
+    <string name="split_custom_range">اپنی مرضی کی رینج</string>
+    <string name="split_custom_range_sub">اپنی مرضی کی رینج سے تقسیم</string>
+    <string name="split_fixed_range">مقررہ رینج</string>
+    <string name="split_fixed_range_sub">مقررہ صفحات کے وقفے سے تقسیم</string>
+    <string name="interval_settings">وقفے کی ترتیب</string>
+    <string name="split_n">تقسیم (%1$d)</string>
+    <string name="part_pages">صفحہ: %1$s</string>
+    <plurals name="pages_and_size">
+        <item quantity="one">%1$d صفحہ · %2$s</item>
+        <item quantity="other">%1$d صفحات · %2$s</item>
+    </plurals>
+    <!-- /step35 -->
+    <!-- step39 -->
+    <string name="ad_loading">اشتہار لوڈ ہو رہا ہے…</string>
+    <!-- /step39 -->
+    <!-- step40 -->
+    <string name="swipe_pages_tip">صفحات پلٹنے کے لیے بائیں/دائیں سوائپ کریں</string>
+    <!-- /step40 -->
+    <!-- step59 -->
+    <string name="done">ہو گیا</string>
+    <string name="ok">ٹھیک ہے</string>
+    <string name="premium">Premium</string>
+    <string name="open">کھولیں</string>
+    <string name="add_bookmark">بُک مارکس میں شامل کریں</string>
+    <string name="remove_bookmark">بُک مارکس سے ہٹائیں</string>
+    <string name="file_info_path">پاتھ</string>
+    <string name="file_info_size">سائز</string>
+    <string name="file_info_modified">ترمیم شدہ</string>
+    <string name="no_app_to_open">یہ فائل کھولنے کے لیے کوئی ایپ نہیں ملی</string>
+    <string name="file_not_found">فائل اب موجود نہیں ہے</string>
+    <string name="empty_folder">یہ فولڈر خالی ہے</string>
+    <string name="create_new">نیا بنائیں</string>
+    <string name="settings_version">ورژن %1$s</string>
+    <string name="tool_templates">ٹیمپلیٹس</string>
+    <string name="press_back_again">باہر نکلنے کے لیے دوبارہ واپس دبائیں</string>
+    <string name="select">منتخب کریں</string>
+    <string name="select_all">سب منتخب کریں</string>
+    <string name="delete_failed">کچھ فائلیں حذف نہیں ہو سکیں</string>
+    <string name="rename_empty">نام خالی نہیں ہو سکتا</string>
+    <string name="rename_invalid">نام میں غلط حروف ہیں</string>
+    <string name="rename_exists">اس نام کی فائل پہلے سے موجود ہے</string>
+    <string name="rename_failed">اس فائل کا نام تبدیل نہیں ہو سکا</string>
+    <string name="rename_done">نام تبدیل ہو گیا</string>
+    <string name="select_files_first">پہلے فائلیں منتخب کریں</string>
+    <string name="shortcut_permission_message"><![CDATA[فائلیں ہوم اسکرین پر شامل کرنے کے لیے ہمیں <font color=\"#0A5FD9\">\"ہوم اسکرین شارٹ کٹس\"</font> کی اجازت درکار ہے۔]]></string>
+    <string name="shortcut_added">ہوم اسکرین پر شامل ہو گیا</string>
+    <string name="shortcut_not_supported">آپ کا لانچر ہوم اسکرین شارٹ کٹس کو سپورٹ نہیں کرتا</string>
+    <string name="rate_title"><![CDATA[کیا آپ کو <font color=\"#0A5FD9\">ہماری ایپ</font> پسند ہے؟]]></string>
+    <string name="rate_thanks">آپ کی رائے کا شکریہ!</string>
+    <string name="restored">بحال ہو گیا</string>
+    <string name="restore_failed">بحال نہیں ہو سکا (اسی نام کی فائل پہلے سے موجود ہو سکتی ہے)</string>
+    <string name="empty_recycle_bin_confirm">ری سائیکل بن کی تمام فائلیں مستقل طور پر حذف کریں؟</string>
+    <string name="unsupported_message">معذرت، ہم فی الحال اس قسم کی فائل کو سپورٹ نہیں کرتے۔\nلیکن ہم ایپ کو بہتر بنانے پر مسلسل کام کر رہے ہیں اور بعد میں مزید اقسام کی فائلیں سپورٹ کریں گے۔</string>
+    <string name="faq">عمومی سوالات</string>
+    <string name="faq_message">ایپ میں کھلتی ہیں: PDF، Word (.docx) اور TXT۔\n\nExcel، PowerPoint اور تصاویر آپ کے فون کی کسی دوسری ایپ سے کھلتی ہیں۔\n\nدیگر اقسام کی فائلیں (APK، ویڈیو، سسٹم فائلیں…) ابھی سپورٹ نہیں ہیں۔</string>
+    <string name="convert">تبدیل کریں</string>
+    <string name="pdf_to_word">PDF سے Word</string>
+    <string name="converting_progress">تبدیل ہو رہا ہے… (%d%%)</string>
+    <string name="convert_failed">تبدیلی ناکام ہو گئی</string>
+    <string name="print">پرنٹ</string>
+    <string name="edit">ترمیم</string>
+    <string name="bookmarked">بُک مارک ہو گیا</string>
+    <string name="pdf_password_protected">یہ PDF پاس ورڈ سے محفوظ ہے یا خراب ہے</string>
+    <string name="undo">کالعدم کریں</string>
+    <string name="redo">دوبارہ کریں</string>
+    <string name="setup">سیٹ اپ</string>
+    <string name="delete_pages_message"><![CDATA[کیا آپ واقعی <font color=\"#0A5FD9\">%d</font> منتخب صفحات حذف کرنا چاہتے ہیں؟]]></string>
+    <string name="pdf_needs_page">PDF میں کم از کم ایک صفحہ ہونا ضروری ہے</string>
+    <string name="discard_title">تبدیلیاں رد کریں؟</string>
+    <string name="discard_message">صفحات میں آپ کی تبدیلیاں محفوظ نہیں ہوئیں۔</string>
+    <string name="discard">رد کریں</string>
+    <string name="saving">محفوظ ہو رہا ہے…</string>
+    <string name="extracting">صفحات نکالے جا رہے ہیں…</string>
+    <string name="save_failed">PDF محفوظ نہیں ہو سکی</string>
+    <string name="portrait">عمودی</string>
+    <string name="landscape">افقی</string>
+    <string name="size_letter">Letter</string>
+    <string name="size_legal">Legal</string>
+    <string name="tpl_blank">خالی</string>
+    <string name="tpl_line1">لائنیں 1</string>
+    <string name="tpl_line2">لائنیں 2</string>
+    <string name="tpl_notebook">نوٹ بک</string>
+    <string name="tpl_cornell">کارنیل</string>
+    <string name="tpl_grid">گرڈ</string>
+    <string name="tpl_graph">گراف</string>
+    <string name="pick_image_hint">JPG، PNG یا کوئی اور تصویر منتخب کریں</string>
+    <string name="import_failed">یہ فائل امپورٹ نہیں ہو سکی</string>
+    <string name="tpl_resume">سی وی</string>
+    <string name="filter_original">اصل</string>
+    <string name="no_camera">کوئی کیمرہ ایپ نہیں ملی</string>
+    <string name="pick_word_hint">Word (.docx) یا TXT فائل منتخب کریں</string>
+    <string name="pick_pdf_hint">PDF فائل منتخب کریں</string>
+    <string name="pick_ppt_hint">PowerPoint (.pptx) فائل منتخب کریں</string>
+    <string name="convert_old_format">یہ پرانا فارمیٹ (.doc / .ppt) ابھی سپورٹ نہیں ہے۔ براہ کرم .docx یا .pptx استعمال کریں۔</string>
+    <string name="dims_cm">%1$s سینٹی میٹر × %2$s سینٹی میٹر</string>
+    <string name="flash">فلیش</string>
+    <string name="grid">گرڈ</string>
+    <string name="shutter_sound">شٹر کی آواز</string>
+    <string name="center_guide">سینٹر گائیڈ</string>
+    <string name="compare">اصل سے موازنہ کریں</string>
+    <string name="filter_auto">خودکار</string>
+    <string name="filter_docs">دستاویزات</string>
+    <string name="filter_color">رنگین</string>
+    <string name="filter_image">تصویر</string>
+    <string name="filter_super">سپر</string>
+    <string name="filter_enhance">بہتر</string>
+    <string name="filter_enhance2">بہتر 2</string>
+    <string name="filter_gray">گرے</string>
+    <string name="filter_invert">الٹ</string>
+    <string name="underline">انڈر لائن</string>
+    <string name="strikethrough">اسٹرائیک تھرو</string>
+    <string name="add_short">+ شامل کریں</string>
+    <string name="delete_signature">دستخط حذف کریں</string>
+    <string name="delete_signature_message">یہ محفوظ دستخط ہٹائیں؟</string>
+    <string name="how_to_edit">ترمیم کیسے کریں</string>
+    <string name="share_app_text">میں PDF، Word، Excel اور PowerPoint فائلیں کھولنے اور ان میں ترمیم کرنے کے لیے %1$s استعمال کرتا ہوں۔ آزمائیں:</string>
+    <string name="faq_yes">🥳 ہاں</string>
+    <string name="faq_no">😞 نہیں</string>
+    <string name="faq_q_edit">میں PDF میں ترمیم کیسے کروں؟</string>
+    <string name="faq_q_display">میں دستاویز کے ڈسپلے کا طریقہ کیسے تبدیل کروں؟</string>
+    <string name="faq_q_copy">میں ٹیکسٹ کاپی کیسے کروں؟</string>
+    <string name="faq_q_search">میں فائل میں ٹیکسٹ کیسے تلاش کروں؟</string>
+    <string name="faq_q_open">مجھے اپنی فائل کیوں نہیں مل رہی یا کھل رہی؟</string>
+    <string name="faq_q_create">میں نئی فائل کیسے بناؤں؟</string>
+    <string name="faq_q_print">میں فائل پرنٹ کیسے کروں؟</string>
+    <string name="faq_q_subscription">میں اپنی سبسکرپشن کا انتظام یا اسے منسوخ کیسے کروں؟</string>
+    <string name="faq_q_ads">ایپ میں اشتہارات کیوں ہیں؟</string>
+    <string name="faq_q_slow">فائل آہستہ کیوں کھلتی ہے؟</string>
+    <string name="faq_q_permissions">ایپ کو فائل تک رسائی کی اجازت کیوں چاہیے؟</string>
+    <string name="feedback_hint">براہ کرم مسئلہ یا اپنی تجویز تفصیل سے بیان کریں…</string>
+    <string name="fb_rating_line">ریٹنگ: %1$d/5</string>
+    <string name="fb_max_shots">آپ زیادہ سے زیادہ 4 اسکرین شاٹس شامل کر سکتے ہیں</string>
+    <string name="get_premium">Premium حاصل کریں</string>
+    <string name="premium_slide_sign">PDF میں ترمیم\nاور دستخط</string>
+    <string name="premium_slide_convert">فارمیٹ\nتبدیل کریں</string>
+    <string name="premium_slide_templates">ٹیمپلیٹس</string>
+    <string name="premium_slide_pages">صفحات کا انتظام</string>
+    <string name="feat_ad_free">اشتہارات سے پاک تجربہ</string>
+    <string name="feat_edit_sign">PDF میں آسانی سے ترمیم اور دستخط کریں</string>
+    <string name="feat_convert">فائلیں فوراً تبدیل کریں</string>
+    <string name="feat_templates">پریمیم ٹیمپلیٹس ان لاک کریں</string>
+    <string name="feat_pages">صفحات کا مکمل انتظام</string>
+    <string name="plan_yearly">سالانہ</string>
+    <string name="plan_monthly">ماہانہ</string>
+    <string name="continue_label">جاری رکھیں</string>
+    <string name="no_subscription_found">کوئی درست سبسکرپشن نہیں ملی۔</string>
+    <string name="w_home">ہوم</string>
+    <string name="w_recent">حالیہ</string>
+    <string name="w_tools_title">فوری ٹولز</string>
+    <string name="w_tools_desc">اپنی ہوم اسکرین سے تلاش کریں، حالیہ فائلیں اور بُک مارکس کھولیں یا PDF میں ترمیم کریں</string>
+    <string name="w_reader_title">دستاویز ریڈر</string>
+    <string name="w_reader_desc">PDF، Word، Excel اور PowerPoint فائلیں ایک ٹیپ میں کھولیں</string>
+    <string name="w_editor_title">PDF ایڈیٹر</string>
+    <string name="w_editor_desc">سیدھے PDF میں ترمیم شروع کریں</string>
+    <string name="add_widget_button">ہوم اسکرین پر شامل کریں</string>
+    <string name="widget_manual_hint">اپنی ہوم اسکرین کو دیر تک دبائیں، ویجیٹس پر ٹیپ کریں اور یہ ایپ منتخب کریں</string>
+    <string name="thanks_support">آپ کے تعاون کا شکریہ!</string>
+    <string name="dont_miss_apps">ہماری بہترین ریٹنگ والی ایپس سے محروم نہ رہیں 👇</string>
+    <string name="see_our_apps">Google Play پر ہماری ایپس دیکھیں</string>
+    <string name="faq_a_edit">&lt;b&gt;ٹولز&lt;/b&gt; ٹیب کھولیں اور &lt;b&gt;PDF میں ترمیم&lt;/b&gt; پر ٹیپ کریں، پھر کوئی فائل منتخب کریں۔ آپ موجودہ ٹیکسٹ میں ترمیم، نیا ٹیکسٹ اور تصاویر شامل، تشریح (ہائی لائٹ، انڈر لائن، اسٹرائیک تھرو، ڈرا) اور اپنے دستخط شامل کر سکتے ہیں۔ کاپی محفوظ کرنے کے لیے ٹِک کے نشان پر ٹیپ کریں۔</string>
+    <string name="faq_a_display">پڑھتے وقت نیچے والی بار سے &lt;b&gt;عمودی&lt;/b&gt; اور &lt;b&gt;افقی&lt;/b&gt; اسکرولنگ کے درمیان تبدیل کریں، ویو گھمائیں یا رنگ الٹ کریں۔ زوم کے لیے دو انگلیوں سے پھیلائیں، اور کسی صفحے پر جانے کے لیے صفحہ نمبر پر ٹیپ کریں۔</string>
+    <string name="faq_a_copy">ٹیکسٹ کاپی کرنا ابھی دستیاب نہیں ہے۔ ہم اس پر کام کر رہے ہیں! اگر یہ آپ کے لیے اہم ہے تو &lt;a href=\"app://feedback\"&gt;ہمیں رائے بھیجیں&lt;/a&gt; تاکہ ہم اسے ترجیح دے سکیں۔</string>
+    <string name="faq_a_search">دستاویز کھولیں اور نیچے والی بار میں &lt;b&gt;تلاش&lt;/b&gt; پر ٹیپ کریں، پھر مطلوبہ لفظ ٹائپ کریں۔ نتائج کے درمیان جانے کے لیے تیر استعمال کریں۔ نام سے فائل ڈھونڈنے کے لیے ہوم اسکرین کے اوپر تلاش کا آئیکن استعمال کریں۔</string>
+    <string name="faq_a_open">یقینی بنائیں کہ ایپ کو آپ کی فائلوں تک رسائی کی اجازت ہے۔ اگر فائل کسی کلاؤڈ ایپ یا دوسرے فولڈر میں ہے تو اسے اپنے &lt;a href=\"app://filemanager\"&gt;فائل مینیجر&lt;/a&gt; سے کھولیں اور یہ ایپ منتخب کریں۔ اگر فائل پھر بھی نہ کھلے تو ہو سکتا ہے وہ خراب یا پاس ورڈ سے محفوظ ہو؛ براہ کرم &lt;a href=\"app://feedback\"&gt;ہمیں بتائیں&lt;/a&gt;۔</string>
+    <string name="faq_a_create">&lt;b&gt;تمام فائلیں&lt;/b&gt; صفحے پر &lt;b&gt;+&lt;/b&gt; بٹن پر ٹیپ کریں۔ آپ ٹیمپلیٹ سے دستاویز بنا سکتے ہیں، فائلیں امپورٹ کر سکتے ہیں، تصاویر کو PDF میں تبدیل کر سکتے ہیں یا کیمرے سے کاغذی دستاویزات اسکین کر سکتے ہیں۔</string>
+    <string name="faq_a_print">PDF کھولیں، &lt;b&gt;⋮&lt;/b&gt; مینو پر ٹیپ کریں اور &lt;b&gt;پرنٹ&lt;/b&gt; منتخب کریں۔ دیگر فارمیٹس کو پہلے &lt;b&gt;ٹولز&lt;/b&gt; ٹیب سے PDF میں تبدیل کیا جا سکتا ہے۔</string>
+    <string name="faq_a_subscription">سبسکرپشنز کا انتظام Google Play کرتا ہے۔ &lt;b&gt;ترتیبات ← سبسکرپشنز کا انتظام&lt;/b&gt; پر جائیں، یا Google Play ← پروفائل ← ادائیگیاں اور سبسکرپشنز کھولیں۔ تفصیلات کے لیے ہماری &lt;a href=\"app://terms\"&gt;شرائطِ استعمال&lt;/a&gt; دیکھیں۔</string>
+    <string name="faq_a_ads">اشتہارات ایپ کو سب کے لیے مفت رکھنے میں ہماری مدد کرتے ہیں۔ آپ انہیں &lt;a href=\"app://premium\"&gt;Premium&lt;/a&gt; سے ہٹا سکتے ہیں۔</string>
+    <string name="faq_a_slow">بہت بڑی فائلیں یا زیادہ تصاویر والی فائلیں لوڈ ہونے میں زیادہ وقت لیتی ہیں۔ دوسری ایپس بند کرنا اور اسٹوریج خالی کرنا مددگار ہو سکتا ہے۔ اگر کوئی فائل ہمیشہ آہستہ کھلتی ہے تو براہ کرم &lt;a href=\"app://feedback\"&gt;ہمیں رائے بھیجیں&lt;/a&gt;۔</string>
+    <string name="faq_a_permissions">ایپ کو فائل تک رسائی صرف آپ کے آلے پر موجود دستاویزات تلاش کرنے اور کھولنے کے لیے چاہیے۔ آپ کی فائلیں آپ کے آلے پر ہی رہتی ہیں اور کبھی اپ لوڈ نہیں کی جاتیں۔</string>
+    <string name="terms_html">&lt;p&gt;&lt;i&gt;آخری اپ ڈیٹ: ستمبر 2026&lt;/i&gt;&lt;/p&gt;&lt;p&gt;یہ شرائطِ استعمال &lt;b&gt;%1$s&lt;/b&gt; (\"ایپ\") کے آپ کے استعمال پر لاگو ہوتی ہیں۔ ایپ استعمال کر کے آپ ان شرائط سے اتفاق کرتے ہیں۔&lt;/p&gt;&lt;h4&gt;1. ایپ کا استعمال&lt;/h4&gt;&lt;p&gt;آپ ایپ کو ذاتی یا کاروباری مقاصد کے لیے دستاویزات دیکھنے، بنانے، تبدیل کرنے اور ان میں ترمیم کرنے کے لیے استعمال کر سکتے ہیں۔ آپ جو دستاویزات کھولتے اور بناتے ہیں، ان کی اور ان کے استعمال کا حق رکھنے کی ذمہ داری آپ پر ہے۔&lt;/p&gt;&lt;h4&gt;2. سبسکرپشنز&lt;/h4&gt;&lt;p&gt;کچھ خصوصیات کے لیے Google Play کے ذریعے خریدی گئی ادا شدہ سبسکرپشن درکار ہو سکتی ہے۔ سبسکرپشنز خود بخود تجدید ہوتی ہیں جب تک کہ موجودہ مدت ختم ہونے سے کم از کم 24 گھنٹے پہلے منسوخ نہ کی جائیں۔ آپ اپنے Google Play اکاؤنٹ کی ترتیبات میں سبسکرپشن کا انتظام یا اسے منسوخ کر سکتے ہیں۔ رقم کی واپسی Google Play کی پالیسیوں کے مطابق ہوتی ہے۔&lt;/p&gt;&lt;h4&gt;3. اشتہارات&lt;/h4&gt;&lt;p&gt;ایپ کے مفت ورژن میں فریقِ ثالث کی جانب سے فراہم کردہ اشتہارات دکھائے جا سکتے ہیں۔&lt;/p&gt;&lt;h4&gt;4. کوئی ضمانت نہیں&lt;/h4&gt;&lt;p&gt;ایپ \"جیسی ہے\" کی بنیاد پر فراہم کی جاتی ہے۔ ہم اسے قابلِ اعتماد رکھنے کی پوری کوشش کرتے ہیں، لیکن ہم ضمانت نہیں دیتے کہ یہ غلطیوں سے پاک ہوگی، اور ہم ڈیٹا کے نقصان کے ذمہ دار نہیں ہیں۔ براہ کرم اہم فائلوں کا بیک اپ رکھیں۔&lt;/p&gt;&lt;h4&gt;5. تبدیلیاں&lt;/h4&gt;&lt;p&gt;ہم وقتاً فوقتاً ان شرائط کو اپ ڈیٹ کر سکتے ہیں۔ ایپ کا مسلسل استعمال اس بات کا مطلب ہے کہ آپ اپ ڈیٹ شدہ شرائط قبول کرتے ہیں۔&lt;/p&gt;&lt;h4&gt;6. رابطہ&lt;/h4&gt;&lt;p&gt;سوالات ہیں؟ ہمیں %2$s پر ای میل کریں۔&lt;/p&gt;</string>
+    <string name="premium_trusted_top">پسندیدہ</string>
+    <string name="premium_trusted_count">ہمارے صارفین</string>
+    <string name="premium_trusted_bottom">دنیا بھر میں</string>
+    <string name="plan_trial_days">%1$d دن کی مفت آزمائش</string>
+    <string name="plan_then_only_per_day">پھر صرف %1$s/دن</string>
+    <string name="plan_per_day">%1$s/دن</string>
+    <string name="plan_price_year">%1$s/سال</string>
+    <string name="plan_price_month">%1$s/ماہ</string>
+    <string name="plan_save_percent">%1$d%% بچائیں</string>
+    <string name="start_free_trial">مفت آزمائش شروع کریں</string>
+    <string name="trial_today">آج</string>
+    <string name="trial_today_sub">تمام پریمیم خصوصیات ان لاک کریں</string>
+    <string name="trial_full_access">مکمل رسائی حاصل کریں</string>
+    <string name="trial_full_access_sub">تمام اشتہارات ہٹائیں، ہر فارمیٹ کی فائلیں پڑھیں، PDF میں آسانی سے ترمیم کریں، وغیرہ۔</string>
+    <string name="trial_day7">دن 7</string>
+    <string name="trial_day7_sub">اگر آپ آزمائش ختم ہونے سے کم از کم 24 گھنٹے پہلے منسوخ کر دیں تو کوئی چارج نہیں ہوگا۔</string>
+    <string name="hot">مقبول</string>
+    <string name="try_days_free">%1$d دن مفت آزمائیں</string>
+    <string name="try_then">پھر %1$s/سال، صرف %2$s/دن</string>
+    <string name="crop_not_found">صفحے کے کنارے نہیں مل سکے — ایڈجسٹ کرنے کے لیے کراپ استعمال کریں</string>
+    <string name="tpl_reset">ری سیٹ</string>
+    <string name="tpl_close">بند کریں</string>
+    <string name="tpl_download">ڈاؤن لوڈ</string>
+    <string name="tpl_flip_h">افقی پلٹیں</string>
+    <string name="tpl_flip_v">عمودی پلٹیں</string>
+    <string name="tpl_bold">بولڈ</string>
+    <string name="tpl_italic">اٹالک</string>
+    <string name="tpl_underline">انڈر لائن</string>
+    <string name="tpl_strike">اسٹرائیک تھرو</string>
+    <string name="tpl_bullets">بلٹ فہرست</string>
+    <string name="tpl_numbers">نمبر والی فہرست</string>
+    <string name="tpl_save_failed">فائل محفوظ نہیں ہو سکی</string>
+    <string name="tpl_image_failed">یہ تصویر نہیں کھل سکی</string>
+    <string name="ad_badge">اشتہار</string>
+    <string name="explore_nothing">ابھی دکھانے کے لیے کچھ نہیں ہے۔ براہ کرم اپنا انٹرنیٹ کنکشن چیک کریں۔</string>
+    <string name="review1_title">آل اِن ون فائل ریڈر</string>
+    <string name="review1_text">سبسکرائب کرنا بالکل فائدہ مند ہے!! یہ ہر فارمیٹ کی فائلیں تیزی سے کھولتی ہے، پڑھنے کی پیش رفت محفوظ رکھتی ہے، آف لائن کام کرتی ہے، اور حذف شدہ فائلیں بھی بحال کر دیتی ہے!</string>
+    <string name="review2_title">نہ اشتہارات، نہ پوشیدہ فیس</string>
+    <string name="review2_text">سبسکرائب کرنے کے بعد میں زیادہ خصوصیات استعمال کر سکتا ہوں۔ کوئی اشتہار میرے پڑھنے اور ترمیم میں رکاوٹ نہیں بنتا، اور انٹرفیس زیادہ صاف ہے۔ سب سے اچھی بات، کوئی پوشیدہ چارجز نہیں!</string>
+    <string name="review3_title">زیادہ توجہ، تیز کام</string>
+    <string name="review3_text">سبسکرپشن سستی ہے، اور اب میں پریشان کن اشتہارات کے بغیر فائلوں کا پیش منظر دیکھ سکتا ہوں، ترمیم اور انتظام کر سکتا ہوں۔ میری کارکردگی واقعی بڑھ گئی!</string>
+    <plurals name="deleted_count">
+        <item quantity="one">%d فائل حذف ہو گئی</item>
+        <item quantity="other">%d فائلیں حذف ہو گئیں</item>
+    </plurals>
+    <plurals name="moved_to_bin_count">
+        <item quantity="one">%d فائل ری سائیکل بن میں منتقل ہو گئی</item>
+        <item quantity="other">%d فائلیں ری سائیکل بن میں منتقل ہو گئیں</item>
+    </plurals>
+    <plurals name="days_left">
+        <item quantity="one">%d دن باقی</item>
+        <item quantity="other">%d دن باقی</item>
+    </plurals>
+    <plurals name="pages_selected">
+        <item quantity="one">%d صفحہ منتخب</item>
+        <item quantity="other">%d صفحات منتخب</item>
+    </plurals>
+    <plurals name="days_count">
+        <item quantity="one">%d دن</item>
+        <item quantity="other">%d دن</item>
+    </plurals>
+    <plurals name="delete_forever_message">
+        <item quantity="one">%d فائل مستقل طور پر حذف ہو جائے گی۔ اسے واپس نہیں کیا جا سکتا۔</item>
+        <item quantity="other">%d فائلیں مستقل طور پر حذف ہو جائیں گی۔ اسے واپس نہیں کیا جا سکتا۔</item>
+    </plurals>
+    <plurals name="restored_count">
+        <item quantity="one">%d فائل بحال ہو گئی</item>
+        <item quantity="other">%d فائلیں بحال ہو گئیں</item>
+    </plurals>
+    <!-- /step59 -->
 </resources>

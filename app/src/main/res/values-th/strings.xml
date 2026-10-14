@@ -257,4 +257,324 @@
     <string name="helpful_no">😞 ไม่ค่อย</string>
     <string name="helpful_yes">🥰 มีประโยชน์</string>
     <!-- /step26 -->
+    <!-- step27 -->
+    <string name="search_no_results">ไม่พบผลลัพธ์</string>
+    <!-- /step27 -->
+    <!-- step28 -->
+    <string name="search_in_document">ค้นหาในเอกสาร</string>
+    <string name="search_in_pdf">ค้นหาใน PDF</string>
+    <string name="search_in_ppt">ค้นหาใน PPT</string>
+    <string name="search_in_excel">ค้นหาใน Excel</string>
+    <string name="refresh">รีเฟรช</string>
+    <string name="files_refreshed">อัปเดตไฟล์แล้ว</string>
+    <!-- /step28 -->
+    <!-- step29 -->
+    <string name="new_badge">ใหม่</string>
+    <string name="save_to_drive_short">บันทึกลงไดรฟ์</string>
+    <string name="drive_saving">กำลังบันทึกลง Google ไดรฟ์…</string>
+    <string name="drive_saved">บันทึก %1$s ลง Google ไดรฟ์แล้ว (โฟลเดอร์ All Document Reader)</string>
+    <string name="drive_save_failed_title">บันทึกลง Google ไดรฟ์ไม่ได้</string>
+    <string name="drive_not_allowed">Google ไม่ได้ให้สิทธิ์เข้าถึง Google ไดรฟ์ เลือกบัญชีแล้วแตะอนุญาต</string>
+    <!-- /step29 -->
+    <!-- step30 -->
+    <string name="search_in_txt">ค้นหาใน TXT</string>
+    <!-- /step30 -->
+    <!-- step31 -->
+    <string name="drive_app_missing">ต้องใช้แอป Google ไดรฟ์เพื่อบันทึกไฟล์ลงไดรฟ์ ติดตั้งจาก Google Play แล้วลองอีกครั้ง</string>
+    <string name="drive_install">ติดตั้ง</string>
+    <!-- /step31 -->
+    <!-- step32 -->
+    <string name="ready_top">เตรียมพร้อมสำหรับ</string>
+    <string name="ready_bottom">ทดลองใช้ฟรี 7 วัน</string>
+    <string name="premium_slide_merge">รวมและ\nแยก PDF</string>
+    <string name="feat_merge">รวมและแยก PDF ได้อย่างราบรื่น</string>
+    <string name="user_reviews">รีวิวจากผู้ใช้</string>
+    <string name="cancel_anytime">ยกเลิกได้ทุกเมื่อ</string>
+    <!-- /step32 -->
+    <!-- step33 -->
+    <string name="tool_merge_pdf">รวม PDF</string>
+    <string name="tool_split_pdf">แยก PDF</string>
+    <string name="premium_free_uses_left">ทดลองใช้ฟรี · เหลือ %1$d ครั้งวันนี้ อัปเกรด Premium เพื่อใช้ไม่จำกัด</string>
+    <string name="premium_last_free_use">ทดลองใช้ฟรีครั้งสุดท้ายของวันนี้ อัปเกรด Premium เพื่อใช้ไม่จำกัด</string>
+    <string name="premium_limit_reached">ใช้สิทธิ์ทดลองฟรีของ \"%1$s\" วันนี้หมดแล้ว อัปเกรด Premium เพื่อใช้ไม่จำกัด</string>
+    <string name="select_pdfs_to_merge">เลือก PDF ที่จะรวม</string>
+    <string name="select_pdf_to_split">เลือก PDF ที่จะแยก</string>
+    <string name="merge_n">รวม (%1$d)</string>
+    <string name="merge_pick_two">เลือก PDF อย่างน้อย 2 ไฟล์</string>
+    <string name="merging_progress">กำลังรวม… (%1$d%%)</string>
+    <string name="merge_failed">รวม PDF เหล่านี้ไม่ได้ (มีรหัสผ่านหรือเสียหาย?)</string>
+    <string name="split_one_page">PDF นี้มีเพียงหน้าเดียว</string>
+    <string name="split_info">%1$s · %2$d หน้า</string>
+    <string name="split_ranges_hint">เช่น 1-3, 5, 6-%1$d</string>
+    <string name="split_action">แยก</string>
+    <string name="split_each_page">แยกทุกหน้าเป็น PDF</string>
+    <string name="split_every_n">ทุก ๆ ไม่กี่หน้า</string>
+    <string name="split_every_hint">จำนวนหน้าต่อไฟล์ เช่น 2</string>
+    <string name="split_custom">กำหนดช่วงหน้าเอง</string>
+    <string name="split_invalid">โปรดใส่หมายเลขหน้าที่ถูกต้อง</string>
+    <string name="splitting_progress">กำลังแยก… (%1$d%%)</string>
+    <string name="split_failed">แยก PDF นี้ไม่ได้</string>
+    <plurals name="split_done">
+        <item quantity="one">แยกเป็น %1$d ไฟล์</item>
+        <item quantity="other">แยกเป็น %1$d ไฟล์</item>
+    </plurals>
+    <!-- /step33 -->
+    <!-- step35 -->
+    <string name="section_edit_manage">แก้ไขและจัดการ</string>
+    <string name="add_files">เพิ่มไฟล์</string>
+    <string name="add_part">เพิ่มหน้า</string>
+    <string name="continue_n">ดำเนินการต่อ (%1$d)</string>
+    <string name="quit">ออก</string>
+    <string name="quit_merging_title">ออกจากการรวม?</string>
+    <string name="quit_splitting_title">ออกจากการแยก?</string>
+    <string name="quit_changes_message">การเปลี่ยนแปลงจะไม่ถูกบันทึก ต้องการออกใช่ไหม</string>
+    <string name="merged_successfully_excl">รวมสำเร็จ!</string>
+    <string name="split_successfully_excl">แยกสำเร็จ!</string>
+    <string name="satisfied_question">คุณพอใจกับฟีเจอร์ \"%1$s\" ไหม</string>
+    <string name="satisfied_not_good">😞\nไม่ดี</string>
+    <string name="satisfied_good">🥰\nดี</string>
+    <string name="thanks_feedback">ขอบคุณสำหรับความคิดเห็น!</string>
+    <string name="select_pages">เลือกหน้า</string>
+    <string name="split_method">วิธีแยก</string>
+    <string name="split_custom_range">ช่วงที่กำหนดเอง</string>
+    <string name="split_custom_range_sub">แยกตามช่วงที่กำหนดเอง</string>
+    <string name="split_fixed_range">ช่วงคงที่</string>
+    <string name="split_fixed_range_sub">แยกทุกจำนวนหน้าคงที่</string>
+    <string name="interval_settings">ตั้งค่าช่วง</string>
+    <string name="split_n">แยก (%1$d)</string>
+    <string name="part_pages">หน้า: %1$s</string>
+    <plurals name="pages_and_size">
+        <item quantity="one">%1$d หน้า · %2$s</item>
+        <item quantity="other">%1$d หน้า · %2$s</item>
+    </plurals>
+    <!-- /step35 -->
+    <!-- step39 -->
+    <string name="ad_loading">กำลังโหลดโฆษณา…</string>
+    <!-- /step39 -->
+    <!-- step40 -->
+    <string name="swipe_pages_tip">ปัดซ้าย/ขวาเพื่อเปลี่ยนหน้า</string>
+    <!-- /step40 -->
+    <!-- step59 -->
+    <string name="done">เสร็จสิ้น</string>
+    <string name="ok">ตกลง</string>
+    <string name="premium">Premium</string>
+    <string name="open">เปิด</string>
+    <string name="add_bookmark">เพิ่มในบุ๊กมาร์ก</string>
+    <string name="remove_bookmark">นำออกจากบุ๊กมาร์ก</string>
+    <string name="file_info_path">ตำแหน่ง</string>
+    <string name="file_info_size">ขนาด</string>
+    <string name="file_info_modified">แก้ไขเมื่อ</string>
+    <string name="no_app_to_open">ไม่พบแอปที่เปิดไฟล์นี้ได้</string>
+    <string name="file_not_found">ไฟล์นี้ไม่มีอยู่แล้ว</string>
+    <string name="empty_folder">โฟลเดอร์นี้ว่างเปล่า</string>
+    <string name="create_new">สร้างใหม่</string>
+    <string name="settings_version">เวอร์ชัน %1$s</string>
+    <string name="tool_templates">เทมเพลต</string>
+    <string name="press_back_again">กดย้อนกลับอีกครั้งเพื่อออก</string>
+    <string name="select">เลือก</string>
+    <string name="select_all">เลือกทั้งหมด</string>
+    <string name="delete_failed">ไม่สามารถลบบางไฟล์ได้</string>
+    <string name="rename_empty">ชื่อต้องไม่ว่างเปล่า</string>
+    <string name="rename_invalid">ชื่อมีอักขระที่ไม่ถูกต้อง</string>
+    <string name="rename_exists">มีไฟล์ชื่อนี้อยู่แล้ว</string>
+    <string name="rename_failed">ไม่สามารถเปลี่ยนชื่อไฟล์นี้ได้</string>
+    <string name="rename_done">เปลี่ยนชื่อแล้ว</string>
+    <string name="select_files_first">โปรดเลือกไฟล์ก่อน</string>
+    <string name="shortcut_permission_message"><![CDATA[หากต้องการเพิ่มไฟล์ลงในหน้าจอหลัก เราต้องได้รับสิทธิ์ <font color=\"#0A5FD9\">\"ทางลัดหน้าจอหลัก\"</font>]]></string>
+    <string name="shortcut_added">เพิ่มลงในหน้าจอหลักแล้ว</string>
+    <string name="shortcut_not_supported">ตัวเรียกใช้งานของคุณไม่รองรับทางลัดหน้าจอหลัก</string>
+    <string name="rate_title"><![CDATA[คุณชอบ<font color=\"#0A5FD9\">แอปของเรา</font>ไหม?]]></string>
+    <string name="rate_thanks">ขอบคุณสำหรับความคิดเห็นของคุณ!</string>
+    <string name="restored">กู้คืนแล้ว</string>
+    <string name="restore_failed">ไม่สามารถกู้คืนได้ (อาจมีไฟล์ชื่อเดียวกันอยู่แล้ว)</string>
+    <string name="empty_recycle_bin_confirm">ลบไฟล์ทั้งหมดในถังรีไซเคิลอย่างถาวรใช่ไหม?</string>
+    <string name="unsupported_message">ขออภัย ขณะนี้เรายังไม่รองรับไฟล์ประเภทนี้\nแต่เรากำลังพัฒนาแอปอย่างต่อเนื่องและจะรองรับไฟล์ประเภทอื่นๆ เพิ่มเติมในภายหลัง</string>
+    <string name="faq">คำถามที่พบบ่อย</string>
+    <string name="faq_message">เปิดในแอป: PDF, Word (.docx) และ TXT\n\nExcel, PowerPoint และรูปภาพจะเปิดด้วยแอปอื่นในโทรศัพท์ของคุณ\n\nไฟล์ประเภทอื่น (APK, วิดีโอ, ไฟล์ระบบ…) ยังไม่รองรับ</string>
+    <string name="convert">แปลงไฟล์</string>
+    <string name="pdf_to_word">PDF เป็น Word</string>
+    <string name="converting_progress">กำลังแปลง… (%d%%)</string>
+    <string name="convert_failed">แปลงไฟล์ไม่สำเร็จ</string>
+    <string name="print">พิมพ์</string>
+    <string name="edit">แก้ไข</string>
+    <string name="bookmarked">บุ๊กมาร์กแล้ว</string>
+    <string name="pdf_password_protected">PDF นี้มีการป้องกันด้วยรหัสผ่านหรือไฟล์เสียหาย</string>
+    <string name="undo">เลิกทำ</string>
+    <string name="redo">ทำซ้ำ</string>
+    <string name="setup">ตั้งค่า</string>
+    <string name="delete_pages_message"><![CDATA[คุณแน่ใจหรือไม่ว่าต้องการลบ <font color=\"#0A5FD9\">%d</font> หน้าที่เลือก?]]></string>
+    <string name="pdf_needs_page">PDF ต้องมีอย่างน้อยหนึ่งหน้า</string>
+    <string name="discard_title">ยกเลิกการเปลี่ยนแปลง?</string>
+    <string name="discard_message">การเปลี่ยนแปลงหน้าของคุณยังไม่ได้บันทึก</string>
+    <string name="discard">ทิ้ง</string>
+    <string name="saving">กำลังบันทึก…</string>
+    <string name="extracting">กำลังแยกหน้า…</string>
+    <string name="save_failed">ไม่สามารถบันทึก PDF ได้</string>
+    <string name="portrait">แนวตั้ง</string>
+    <string name="landscape">แนวนอน</string>
+    <string name="size_letter">Letter</string>
+    <string name="size_legal">Legal</string>
+    <string name="tpl_blank">ว่างเปล่า</string>
+    <string name="tpl_line1">เส้น 1</string>
+    <string name="tpl_line2">เส้น 2</string>
+    <string name="tpl_notebook">สมุดบันทึก</string>
+    <string name="tpl_cornell">Cornell</string>
+    <string name="tpl_grid">ตาราง</string>
+    <string name="tpl_graph">กราฟ</string>
+    <string name="pick_image_hint">เลือกไฟล์ JPG, PNG หรือรูปภาพอื่น</string>
+    <string name="import_failed">ไม่สามารถนำเข้าไฟล์นี้ได้</string>
+    <string name="tpl_resume">เรซูเม่</string>
+    <string name="filter_original">ต้นฉบับ</string>
+    <string name="no_camera">ไม่พบแอปกล้อง</string>
+    <string name="pick_word_hint">เลือกไฟล์ Word (.docx) หรือ TXT</string>
+    <string name="pick_pdf_hint">เลือกไฟล์ PDF</string>
+    <string name="pick_ppt_hint">เลือกไฟล์ PowerPoint (.pptx)</string>
+    <string name="convert_old_format">ยังไม่รองรับรูปแบบเก่านี้ (.doc / .ppt) โปรดใช้ .docx หรือ .pptx</string>
+    <string name="dims_cm">%1$s ซม. x %2$s ซม.</string>
+    <string name="flash">แฟลช</string>
+    <string name="grid">เส้นตาราง</string>
+    <string name="shutter_sound">เสียงชัตเตอร์</string>
+    <string name="center_guide">เส้นกึ่งกลาง</string>
+    <string name="compare">เปรียบเทียบกับต้นฉบับ</string>
+    <string name="filter_auto">อัตโนมัติ</string>
+    <string name="filter_docs">เอกสาร</string>
+    <string name="filter_color">สี</string>
+    <string name="filter_image">รูปภาพ</string>
+    <string name="filter_super">ซูเปอร์</string>
+    <string name="filter_enhance">ปรับให้คมชัด</string>
+    <string name="filter_enhance2">ปรับให้คมชัด2</string>
+    <string name="filter_gray">ขาวดำ</string>
+    <string name="filter_invert">กลับสี</string>
+    <string name="underline">ขีดเส้นใต้</string>
+    <string name="strikethrough">ขีดฆ่า</string>
+    <string name="add_short">+ เพิ่ม</string>
+    <string name="delete_signature">ลบลายเซ็น</string>
+    <string name="delete_signature_message">ลบลายเซ็นที่บันทึกไว้นี้ใช่ไหม?</string>
+    <string name="how_to_edit">วิธีแก้ไข</string>
+    <string name="share_app_text">ฉันใช้ %1$s เปิดและแก้ไขไฟล์ PDF, Word, Excel และ PowerPoint ลองใช้ดูสิ:</string>
+    <string name="faq_yes">🥳 ใช่</string>
+    <string name="faq_no">😞 ไม่</string>
+    <string name="faq_q_edit">จะแก้ไข PDF ได้อย่างไร?</string>
+    <string name="faq_q_display">จะเปลี่ยนการแสดงผลเอกสารได้อย่างไร?</string>
+    <string name="faq_q_copy">จะคัดลอกข้อความได้อย่างไร?</string>
+    <string name="faq_q_search">จะค้นหาข้อความในไฟล์ได้อย่างไร?</string>
+    <string name="faq_q_open">ทำไมฉันจึงหาหรือเปิดไฟล์ของฉันไม่ได้?</string>
+    <string name="faq_q_create">จะสร้างไฟล์ใหม่ได้อย่างไร?</string>
+    <string name="faq_q_print">จะพิมพ์ไฟล์ได้อย่างไร?</string>
+    <string name="faq_q_subscription">จะจัดการหรือยกเลิกการสมัครสมาชิกได้อย่างไร?</string>
+    <string name="faq_q_ads">ทำไมจึงมีโฆษณาในแอป?</string>
+    <string name="faq_q_slow">ทำไมไฟล์จึงเปิดช้า?</string>
+    <string name="faq_q_permissions">ทำไมแอปจึงต้องได้รับสิทธิ์เข้าถึงไฟล์?</string>
+    <string name="feedback_hint">โปรดอธิบายปัญหาหรือข้อเสนอแนะของคุณโดยละเอียด…</string>
+    <string name="fb_rating_line">คะแนน: %1$d/5</string>
+    <string name="fb_max_shots">คุณเพิ่มภาพหน้าจอได้สูงสุด 4 ภาพ</string>
+    <string name="get_premium">รับ Premium</string>
+    <string name="premium_slide_sign">แก้ไขและ\nเซ็น PDF</string>
+    <string name="premium_slide_convert">แปลง\nรูปแบบ</string>
+    <string name="premium_slide_templates">เทมเพลต</string>
+    <string name="premium_slide_pages">จัดการหน้า</string>
+    <string name="feat_ad_free">ใช้งานได้โดยไม่มีโฆษณา</string>
+    <string name="feat_edit_sign">แก้ไขและเซ็น PDF ได้อย่างง่ายดาย</string>
+    <string name="feat_convert">แปลงไฟล์ได้ทันที</string>
+    <string name="feat_templates">ปลดล็อกเทมเพลตพรีเมียม</string>
+    <string name="feat_pages">จัดการหน้าได้ครบถ้วน</string>
+    <string name="plan_yearly">รายปี</string>
+    <string name="plan_monthly">รายเดือน</string>
+    <string name="continue_label">ดำเนินการต่อ</string>
+    <string name="no_subscription_found">ไม่พบการสมัครสมาชิกที่ใช้งานได้</string>
+    <string name="w_home">หน้าแรก</string>
+    <string name="w_recent">ล่าสุด</string>
+    <string name="w_tools_title">เครื่องมือด่วน</string>
+    <string name="w_tools_desc">ค้นหา เปิดไฟล์ล่าสุดและบุ๊กมาร์ก หรือแก้ไข PDF จากหน้าจอหลัก</string>
+    <string name="w_reader_title">โปรแกรมอ่านเอกสาร</string>
+    <string name="w_reader_desc">เปิดไฟล์ PDF, Word, Excel และ PowerPoint ได้ในแตะเดียว</string>
+    <string name="w_editor_title">โปรแกรมแก้ไข PDF</string>
+    <string name="w_editor_desc">เริ่มแก้ไข PDF ได้ทันที</string>
+    <string name="add_widget_button">เพิ่มลงในหน้าจอหลัก</string>
+    <string name="widget_manual_hint">กดค้างที่หน้าจอหลัก แตะวิดเจ็ต แล้วเลือกแอปนี้</string>
+    <string name="thanks_support">ขอบคุณสำหรับการสนับสนุน!</string>
+    <string name="dont_miss_apps">อย่าพลาดแอปยอดนิยมของเรา 👇</string>
+    <string name="see_our_apps">ดูแอปของเราใน Google Play</string>
+    <string name="faq_a_edit">เปิดแท็บ &lt;b&gt;เครื่องมือ&lt;/b&gt; แล้วแตะ &lt;b&gt;แก้ไข PDF&lt;/b&gt; จากนั้นเลือกไฟล์ คุณสามารถแก้ไขข้อความเดิม เพิ่มข้อความใหม่ เพิ่มรูปภาพ ใส่คำอธิบายประกอบ (ไฮไลต์ ขีดเส้นใต้ ขีดฆ่า วาด) และเพิ่มลายเซ็นของคุณ แตะเครื่องหมายถูกเพื่อบันทึกสำเนา</string>
+    <string name="faq_a_display">ขณะอ่าน ใช้แถบด้านล่างเพื่อสลับระหว่างการเลื่อน&lt;b&gt;แนวตั้ง&lt;/b&gt;และ&lt;b&gt;แนวนอน&lt;/b&gt; หมุนมุมมอง หรือกลับสี ใช้สองนิ้วเพื่อซูม และแตะหมายเลขหน้าเพื่อข้ามไปยังหน้าที่ต้องการ</string>
+    <string name="faq_a_copy">ยังไม่สามารถคัดลอกข้อความได้ เรากำลังพัฒนาอยู่! หากฟีเจอร์นี้สำคัญสำหรับคุณ &lt;a href=\"app://feedback\"&gt;ส่งความคิดเห็นถึงเรา&lt;/a&gt; เพื่อให้เราจัดลำดับความสำคัญ</string>
+    <string name="faq_a_search">เปิดเอกสารแล้วแตะ &lt;b&gt;ค้นหา&lt;/b&gt; ที่แถบด้านล่าง จากนั้นพิมพ์คำที่ต้องการค้นหา ใช้ลูกศรเพื่อเลื่อนระหว่างผลลัพธ์ หากต้องการค้นหาไฟล์ตามชื่อ ให้ใช้ไอคอนค้นหาที่ด้านบนของหน้าแรก</string>
+    <string name="faq_a_open">ตรวจสอบให้แน่ใจว่าแอปได้รับสิทธิ์เข้าถึงไฟล์ของคุณ หากไฟล์อยู่ในแอปคลาวด์หรือโฟลเดอร์อื่น ให้เปิดด้วย&lt;a href=\"app://filemanager\"&gt;ตัวจัดการไฟล์&lt;/a&gt;แล้วเลือกแอปนี้ หากยังเปิดไฟล์ไม่ได้ ไฟล์อาจเสียหายหรือมีการป้องกันด้วยรหัสผ่าน โปรด&lt;a href=\"app://feedback\"&gt;แจ้งให้เราทราบ&lt;/a&gt;</string>
+    <string name="faq_a_create">ในหน้า &lt;b&gt;ไฟล์ทั้งหมด&lt;/b&gt; แตะปุ่ม &lt;b&gt;+&lt;/b&gt; คุณสามารถสร้างเอกสารจากเทมเพลต นำเข้าไฟล์ แปลงรูปภาพเป็น PDF หรือสแกนเอกสารกระดาษด้วยกล้อง</string>
+    <string name="faq_a_print">เปิด PDF แตะเมนู &lt;b&gt;⋮&lt;/b&gt; แล้วเลือก &lt;b&gt;พิมพ์&lt;/b&gt; ไฟล์รูปแบบอื่นสามารถแปลงเป็น PDF ก่อนได้จากแท็บ &lt;b&gt;เครื่องมือ&lt;/b&gt;</string>
+    <string name="faq_a_subscription">การสมัครสมาชิกจัดการโดย Google Play ไปที่ &lt;b&gt;การตั้งค่า → จัดการการสมัครสมาชิก&lt;/b&gt; หรือเปิด Google Play → โปรไฟล์ → การชำระเงิน &amp;amp; การสมัครใช้บริการ ดูรายละเอียดได้ใน&lt;a href=\"app://terms\"&gt;ข้อกำหนดการใช้งาน&lt;/a&gt;ของเรา</string>
+    <string name="faq_a_ads">โฆษณาช่วยให้เราเปิดให้ทุกคนใช้แอปได้ฟรี คุณสามารถลบโฆษณาได้ด้วย &lt;a href=\"app://premium\"&gt;Premium&lt;/a&gt;</string>
+    <string name="faq_a_slow">ไฟล์ที่มีขนาดใหญ่มากหรือมีรูปภาพจำนวนมากจะใช้เวลาโหลดนานขึ้น การปิดแอปอื่นและเพิ่มพื้นที่เก็บข้อมูลอาจช่วยได้ หากไฟล์เปิดช้าเสมอ โปรด&lt;a href=\"app://feedback\"&gt;ส่งความคิดเห็นถึงเรา&lt;/a&gt;</string>
+    <string name="faq_a_permissions">แอปต้องการสิทธิ์เข้าถึงไฟล์เพื่อค้นหาและเปิดเอกสารในอุปกรณ์ของคุณเท่านั้น ไฟล์ของคุณจะอยู่ในอุปกรณ์และไม่มีการอัปโหลด</string>
+    <string name="terms_html">&lt;p&gt;&lt;i&gt;อัปเดตล่าสุด: กันยายน 2026&lt;/i&gt;&lt;/p&gt;&lt;p&gt;ข้อกำหนดการใช้งานนี้ควบคุมการใช้งาน &lt;b&gt;%1$s&lt;/b&gt; (\"แอป\") ของคุณ การใช้แอปถือว่าคุณยอมรับข้อกำหนดเหล่านี้&lt;/p&gt;&lt;h4&gt;1. การใช้แอป&lt;/h4&gt;&lt;p&gt;คุณสามารถใช้แอปเพื่อดู สร้าง แปลง และแก้ไขเอกสารเพื่อวัตถุประสงค์ส่วนตัวหรือธุรกิจ คุณต้องรับผิดชอบต่อเอกสารที่คุณเปิดและสร้าง รวมถึงต้องมีสิทธิ์ในการใช้เอกสารเหล่านั้น&lt;/p&gt;&lt;h4&gt;2. การสมัครสมาชิก&lt;/h4&gt;&lt;p&gt;ฟีเจอร์บางอย่างอาจต้องสมัครสมาชิกแบบชำระเงินผ่าน Google Play การสมัครสมาชิกจะต่ออายุโดยอัตโนมัติ เว้นแต่จะยกเลิกอย่างน้อย 24 ชั่วโมงก่อนสิ้นสุดรอบปัจจุบัน คุณสามารถจัดการหรือยกเลิกการสมัครสมาชิกได้ในการตั้งค่าบัญชี Google Play การคืนเงินเป็นไปตามนโยบายของ Google Play&lt;/p&gt;&lt;h4&gt;3. การโฆษณา&lt;/h4&gt;&lt;p&gt;แอปเวอร์ชันฟรีอาจแสดงโฆษณาที่ให้บริการโดยบุคคลที่สาม&lt;/p&gt;&lt;h4&gt;4. ไม่มีการรับประกัน&lt;/h4&gt;&lt;p&gt;แอปนี้ให้บริการ \"ตามสภาพ\" เราพยายามอย่างดีที่สุดเพื่อให้แอปทำงานได้อย่างน่าเชื่อถือ แต่เราไม่รับประกันว่าแอปจะปราศจากข้อผิดพลาด และเราไม่รับผิดชอบต่อการสูญหายของข้อมูล โปรดสำรองไฟล์สำคัญไว้เสมอ&lt;/p&gt;&lt;h4&gt;5. การเปลี่ยนแปลง&lt;/h4&gt;&lt;p&gt;เราอาจอัปเดตข้อกำหนดเหล่านี้เป็นครั้งคราว การใช้แอปต่อไปหมายความว่าคุณยอมรับข้อกำหนดที่อัปเดตแล้ว&lt;/p&gt;&lt;h4&gt;6. ติดต่อ&lt;/h4&gt;&lt;p&gt;มีคำถามไหม? ส่งอีเมลถึงเราที่ %2$s&lt;/p&gt;</string>
+    <string name="premium_trusted_top">เป็นที่ชื่นชอบของ</string>
+    <string name="premium_trusted_count">ผู้ใช้ของเรา</string>
+    <string name="premium_trusted_bottom">ทั่วโลก</string>
+    <string name="plan_trial_days">ทดลองใช้ฟรี %1$d วัน</string>
+    <string name="plan_then_only_per_day">จากนั้นเพียง %1$s/วัน</string>
+    <string name="plan_per_day">%1$s/วัน</string>
+    <string name="plan_price_year">%1$s/ปี</string>
+    <string name="plan_price_month">%1$s/เดือน</string>
+    <string name="plan_save_percent">ประหยัด %1$d%%</string>
+    <string name="start_free_trial">เริ่มทดลองใช้ฟรี</string>
+    <string name="trial_today">วันนี้</string>
+    <string name="trial_today_sub">ปลดล็อกฟีเจอร์พรีเมียมทั้งหมด</string>
+    <string name="trial_full_access">ใช้งานได้เต็มรูปแบบ</string>
+    <string name="trial_full_access_sub">ลบโฆษณาทั้งหมด อ่านไฟล์ได้ทุกรูปแบบ แก้ไข PDF ได้ง่าย ฯลฯ</string>
+    <string name="trial_day7">วันที่ 7</string>
+    <string name="trial_day7_sub">ไม่มีค่าใช้จ่ายหากคุณยกเลิกอย่างน้อย 24 ชั่วโมงก่อนสิ้นสุดช่วงทดลองใช้</string>
+    <string name="hot">ฮิต</string>
+    <string name="try_days_free">ทดลองใช้ฟรี %1$d วัน</string>
+    <string name="try_then">จากนั้น %1$s/ปี เพียง %2$s/วัน</string>
+    <string name="crop_not_found">ไม่พบขอบหน้า — ใช้ครอบตัดเพื่อปรับ</string>
+    <string name="tpl_reset">รีเซ็ต</string>
+    <string name="tpl_close">ปิด</string>
+    <string name="tpl_download">ดาวน์โหลด</string>
+    <string name="tpl_flip_h">พลิกแนวนอน</string>
+    <string name="tpl_flip_v">พลิกแนวตั้ง</string>
+    <string name="tpl_bold">ตัวหนา</string>
+    <string name="tpl_italic">ตัวเอียง</string>
+    <string name="tpl_underline">ขีดเส้นใต้</string>
+    <string name="tpl_strike">ขีดฆ่า</string>
+    <string name="tpl_bullets">รายการสัญลักษณ์</string>
+    <string name="tpl_numbers">รายการลำดับเลข</string>
+    <string name="tpl_save_failed">ไม่สามารถบันทึกไฟล์ได้</string>
+    <string name="tpl_image_failed">ไม่สามารถเปิดรูปภาพนี้ได้</string>
+    <string name="ad_badge">โฆษณา</string>
+    <string name="explore_nothing">ยังไม่มีอะไรแสดงในขณะนี้ โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ต</string>
+    <string name="review1_title">แอปอ่านไฟล์ครบจบในที่เดียว</string>
+    <string name="review1_text">คุ้มค่ากับการสมัครสมาชิกสุดๆ!! เปิดไฟล์ได้ทุกรูปแบบอย่างรวดเร็ว จำความคืบหน้าการอ่าน ใช้งานออฟไลน์ได้ และยังกู้คืนไฟล์ที่ลบไปได้อีกด้วย!</string>
+    <string name="review2_title">ไม่มีโฆษณา ไม่มีค่าใช้จ่ายแอบแฝง</string>
+    <string name="review2_text">หลังจากสมัครสมาชิก ฉันใช้ฟีเจอร์ได้มากขึ้น ไม่มีโฆษณามารบกวนการอ่านและแก้ไข หน้าตาแอปก็สะอาดตากว่าเดิม ที่ดีที่สุดคือไม่มีค่าใช้จ่ายแอบแฝง!</string>
+    <string name="review3_title">โฟกัสมากขึ้น ทำงานเร็วขึ้น</string>
+    <string name="review3_text">ค่าสมัครสมาชิกถูก และตอนนี้ฉันดูตัวอย่าง แก้ไข และจัดการไฟล์ได้โดยไม่มีโฆษณาน่ารำคาญ ช่วยเพิ่มประสิทธิภาพการทำงานได้จริงๆ!</string>
+    <plurals name="deleted_count">
+        <item quantity="one">ลบแล้ว %d ไฟล์</item>
+        <item quantity="other">ลบแล้ว %d ไฟล์</item>
+    </plurals>
+    <plurals name="moved_to_bin_count">
+        <item quantity="one">ย้าย %d ไฟล์ไปยังถังรีไซเคิลแล้ว</item>
+        <item quantity="other">ย้าย %d ไฟล์ไปยังถังรีไซเคิลแล้ว</item>
+    </plurals>
+    <plurals name="days_left">
+        <item quantity="one">เหลืออีก %d วัน</item>
+        <item quantity="other">เหลืออีก %d วัน</item>
+    </plurals>
+    <plurals name="pages_selected">
+        <item quantity="one">เลือกแล้ว %d หน้า</item>
+        <item quantity="other">เลือกแล้ว %d หน้า</item>
+    </plurals>
+    <plurals name="days_count">
+        <item quantity="one">%d วัน</item>
+        <item quantity="other">%d วัน</item>
+    </plurals>
+    <plurals name="delete_forever_message">
+        <item quantity="one">%d ไฟล์จะถูกลบอย่างถาวร และไม่สามารถเลิกทำได้</item>
+        <item quantity="other">%d ไฟล์จะถูกลบอย่างถาวร และไม่สามารถเลิกทำได้</item>
+    </plurals>
+    <plurals name="restored_count">
+        <item quantity="one">กู้คืนแล้ว %d ไฟล์</item>
+        <item quantity="other">กู้คืนแล้ว %d ไฟล์</item>
+    </plurals>
+    <!-- /step59 -->
 </resources>

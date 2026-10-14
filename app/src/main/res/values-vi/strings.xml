@@ -257,4 +257,324 @@
     <string name="helpful_no">😞 Không hẳn</string>
     <string name="helpful_yes">🥰 Hữu ích</string>
     <!-- /step26 -->
+    <!-- step27 -->
+    <string name="search_no_results">Không tìm thấy kết quả</string>
+    <!-- /step27 -->
+    <!-- step28 -->
+    <string name="search_in_document">Tìm trong tài liệu</string>
+    <string name="search_in_pdf">Tìm trong PDF</string>
+    <string name="search_in_ppt">Tìm trong PPT</string>
+    <string name="search_in_excel">Tìm trong Excel</string>
+    <string name="refresh">Làm mới</string>
+    <string name="files_refreshed">Đã cập nhật tệp</string>
+    <!-- /step28 -->
+    <!-- step29 -->
+    <string name="new_badge">Mới</string>
+    <string name="save_to_drive_short">Lưu vào Drive</string>
+    <string name="drive_saving">Đang lưu vào Google Drive…</string>
+    <string name="drive_saved">Đã lưu %1$s vào Google Drive (thư mục All Document Reader)</string>
+    <string name="drive_save_failed_title">Không thể lưu vào Google Drive</string>
+    <string name="drive_not_allowed">Google chưa cấp quyền truy cập Google Drive. Hãy chọn tài khoản và nhấn Cho phép.</string>
+    <!-- /step29 -->
+    <!-- step30 -->
+    <string name="search_in_txt">Tìm trong TXT</string>
+    <!-- /step30 -->
+    <!-- step31 -->
+    <string name="drive_app_missing">Cần ứng dụng Google Drive để lưu tệp vào Drive. Hãy cài đặt từ Google Play rồi thử lại.</string>
+    <string name="drive_install">Cài đặt</string>
+    <!-- /step31 -->
+    <!-- step32 -->
+    <string name="ready_top">Sẵn sàng cho</string>
+    <string name="ready_bottom">7 ngày dùng thử miễn phí</string>
+    <string name="premium_slide_merge">Gộp &amp;\ntách PDF</string>
+    <string name="feat_merge">Gộp &amp; tách PDF dễ dàng</string>
+    <string name="user_reviews">Đánh giá của người dùng</string>
+    <string name="cancel_anytime">Hủy bất cứ lúc nào</string>
+    <!-- /step32 -->
+    <!-- step33 -->
+    <string name="tool_merge_pdf">Gộp PDF</string>
+    <string name="tool_split_pdf">Tách PDF</string>
+    <string name="premium_free_uses_left">Dùng thử miễn phí · còn %1$d lần hôm nay. Nâng cấp Premium để dùng không giới hạn</string>
+    <string name="premium_last_free_use">Lần dùng thử miễn phí cuối hôm nay. Nâng cấp Premium để dùng không giới hạn</string>
+    <string name="premium_limit_reached">Đã hết lượt dùng thử hôm nay cho \"%1$s\". Nâng cấp Premium để dùng không giới hạn.</string>
+    <string name="select_pdfs_to_merge">Chọn các PDF để gộp</string>
+    <string name="select_pdf_to_split">Chọn PDF để tách</string>
+    <string name="merge_n">Gộp (%1$d)</string>
+    <string name="merge_pick_two">Chọn ít nhất 2 PDF</string>
+    <string name="merging_progress">Đang gộp… (%1$d%%)</string>
+    <string name="merge_failed">Không thể gộp các PDF này (có mật khẩu hoặc bị hỏng?)</string>
+    <string name="split_one_page">PDF này chỉ có một trang</string>
+    <string name="split_info">%1$s · %2$d trang</string>
+    <string name="split_ranges_hint">vd: 1-3, 5, 6-%1$d</string>
+    <string name="split_action">Tách</string>
+    <string name="split_each_page">Mỗi trang thành một PDF riêng</string>
+    <string name="split_every_n">Cứ vài trang</string>
+    <string name="split_every_hint">Số trang mỗi tệp, vd: 2</string>
+    <string name="split_custom">Khoảng trang tùy chỉnh</string>
+    <string name="split_invalid">Vui lòng nhập số trang hợp lệ</string>
+    <string name="splitting_progress">Đang tách… (%1$d%%)</string>
+    <string name="split_failed">Không thể tách PDF này</string>
+    <plurals name="split_done">
+        <item quantity="one">Đã tách thành %1$d tệp</item>
+        <item quantity="other">Đã tách thành %1$d tệp</item>
+    </plurals>
+    <!-- /step33 -->
+    <!-- step35 -->
+    <string name="section_edit_manage">Chỉnh sửa &amp; Quản lý</string>
+    <string name="add_files">Thêm tệp</string>
+    <string name="add_part">Thêm trang</string>
+    <string name="continue_n">Tiếp tục (%1$d)</string>
+    <string name="quit">Thoát</string>
+    <string name="quit_merging_title">Thoát gộp?</string>
+    <string name="quit_splitting_title">Thoát tách?</string>
+    <string name="quit_changes_message">Các thay đổi sẽ không được lưu. Bạn chắc chắn muốn thoát?</string>
+    <string name="merged_successfully_excl">Gộp thành công!</string>
+    <string name="split_successfully_excl">Tách thành công!</string>
+    <string name="satisfied_question">Bạn có hài lòng với tính năng \"%1$s\" không?</string>
+    <string name="satisfied_not_good">😞\nChưa tốt</string>
+    <string name="satisfied_good">🥰\nTốt</string>
+    <string name="thanks_feedback">Cảm ơn phản hồi của bạn!</string>
+    <string name="select_pages">Chọn trang</string>
+    <string name="split_method">Cách tách</string>
+    <string name="split_custom_range">Khoảng tùy chỉnh</string>
+    <string name="split_custom_range_sub">Tách theo khoảng tùy chỉnh</string>
+    <string name="split_fixed_range">Khoảng cố định</string>
+    <string name="split_fixed_range_sub">Tách theo số trang cố định</string>
+    <string name="interval_settings">Cài đặt khoảng</string>
+    <string name="split_n">Tách (%1$d)</string>
+    <string name="part_pages">Trang: %1$s</string>
+    <plurals name="pages_and_size">
+        <item quantity="one">%1$d trang · %2$s</item>
+        <item quantity="other">%1$d trang · %2$s</item>
+    </plurals>
+    <!-- /step35 -->
+    <!-- step39 -->
+    <string name="ad_loading">Đang tải quảng cáo…</string>
+    <!-- /step39 -->
+    <!-- step40 -->
+    <string name="swipe_pages_tip">Vuốt sang trái/phải để lật trang</string>
+    <!-- /step40 -->
+    <!-- step59 -->
+    <string name="done">Xong</string>
+    <string name="ok">OK</string>
+    <string name="premium">Premium</string>
+    <string name="open">Mở</string>
+    <string name="add_bookmark">Thêm vào dấu trang</string>
+    <string name="remove_bookmark">Xóa khỏi dấu trang</string>
+    <string name="file_info_path">Đường dẫn</string>
+    <string name="file_info_size">Kích thước</string>
+    <string name="file_info_modified">Đã sửa đổi</string>
+    <string name="no_app_to_open">Không tìm thấy ứng dụng để mở tệp này</string>
+    <string name="file_not_found">Tệp không còn tồn tại</string>
+    <string name="empty_folder">Thư mục này trống</string>
+    <string name="create_new">Tạo mới</string>
+    <string name="settings_version">Phiên bản %1$s</string>
+    <string name="tool_templates">Mẫu</string>
+    <string name="press_back_again">Nhấn quay lại lần nữa để thoát</string>
+    <string name="select">Chọn</string>
+    <string name="select_all">Chọn tất cả</string>
+    <string name="delete_failed">Không thể xóa một số tệp</string>
+    <string name="rename_empty">Tên không được để trống</string>
+    <string name="rename_invalid">Tên chứa ký tự không hợp lệ</string>
+    <string name="rename_exists">Đã có tệp trùng tên</string>
+    <string name="rename_failed">Không thể đổi tên tệp này</string>
+    <string name="rename_done">Đã đổi tên</string>
+    <string name="select_files_first">Hãy chọn tệp trước</string>
+    <string name="shortcut_permission_message"><![CDATA[Để thêm tệp vào màn hình chính, chúng tôi cần quyền <font color=\"#0A5FD9\">\"Lối tắt trên màn hình chính\"</font>.]]></string>
+    <string name="shortcut_added">Đã thêm vào màn hình chính</string>
+    <string name="shortcut_not_supported">Trình khởi chạy của bạn không hỗ trợ lối tắt trên màn hình chính</string>
+    <string name="rate_title"><![CDATA[Bạn có thích <font color=\"#0A5FD9\">ứng dụng của chúng tôi</font> không?]]></string>
+    <string name="rate_thanks">Cảm ơn bạn đã góp ý!</string>
+    <string name="restored">Đã khôi phục</string>
+    <string name="restore_failed">Không thể khôi phục (có thể đã có tệp trùng tên)</string>
+    <string name="empty_recycle_bin_confirm">Xóa vĩnh viễn tất cả tệp trong thùng rác?</string>
+    <string name="unsupported_message">Rất tiếc, hiện chúng tôi chưa hỗ trợ loại tệp này.\nNhưng chúng tôi luôn nỗ lực tối ưu ứng dụng và sẽ hỗ trợ thêm nhiều loại tệp sau này.</string>
+    <string name="faq">Câu hỏi thường gặp</string>
+    <string name="faq_message">Mở trong ứng dụng: PDF, Word (.docx) và TXT.\n\nExcel, PowerPoint và hình ảnh được mở bằng ứng dụng khác trên điện thoại của bạn.\n\nCác loại tệp khác (APK, video, tệp hệ thống…) chưa được hỗ trợ.</string>
+    <string name="convert">Chuyển đổi</string>
+    <string name="pdf_to_word">PDF sang Word</string>
+    <string name="converting_progress">Đang chuyển đổi… (%d%%)</string>
+    <string name="convert_failed">Chuyển đổi thất bại</string>
+    <string name="print">In</string>
+    <string name="edit">Chỉnh sửa</string>
+    <string name="bookmarked">Đã đánh dấu</string>
+    <string name="pdf_password_protected">PDF này được bảo vệ bằng mật khẩu hoặc bị hỏng</string>
+    <string name="undo">Hoàn tác</string>
+    <string name="redo">Làm lại</string>
+    <string name="setup">Thiết lập</string>
+    <string name="delete_pages_message"><![CDATA[Bạn có chắc muốn xóa <font color=\"#0A5FD9\">%d</font> trang đã chọn?]]></string>
+    <string name="pdf_needs_page">PDF cần có ít nhất một trang</string>
+    <string name="discard_title">Hủy thay đổi?</string>
+    <string name="discard_message">Các thay đổi trang của bạn chưa được lưu.</string>
+    <string name="discard">Hủy bỏ</string>
+    <string name="saving">Đang lưu…</string>
+    <string name="extracting">Đang trích xuất trang…</string>
+    <string name="save_failed">Không thể lưu PDF</string>
+    <string name="portrait">Dọc</string>
+    <string name="landscape">Ngang</string>
+    <string name="size_letter">Letter</string>
+    <string name="size_legal">Legal</string>
+    <string name="tpl_blank">Trống</string>
+    <string name="tpl_line1">Dòng kẻ 1</string>
+    <string name="tpl_line2">Dòng kẻ 2</string>
+    <string name="tpl_notebook">Sổ tay</string>
+    <string name="tpl_cornell">Cornell</string>
+    <string name="tpl_grid">Ô lưới</string>
+    <string name="tpl_graph">Ô ly</string>
+    <string name="pick_image_hint">Chọn ảnh JPG, PNG hoặc ảnh khác</string>
+    <string name="import_failed">Không thể nhập tệp này</string>
+    <string name="tpl_resume">CV</string>
+    <string name="filter_original">Gốc</string>
+    <string name="no_camera">Không tìm thấy ứng dụng máy ảnh</string>
+    <string name="pick_word_hint">Chọn tệp Word (.docx) hoặc TXT</string>
+    <string name="pick_pdf_hint">Chọn tệp PDF</string>
+    <string name="pick_ppt_hint">Chọn tệp PowerPoint (.pptx)</string>
+    <string name="convert_old_format">Định dạng cũ này (.doc / .ppt) chưa được hỗ trợ. Vui lòng dùng .docx hoặc .pptx.</string>
+    <string name="dims_cm">%1$s cm x %2$s cm</string>
+    <string name="flash">Đèn flash</string>
+    <string name="grid">Lưới</string>
+    <string name="shutter_sound">Âm thanh chụp</string>
+    <string name="center_guide">Đường căn giữa</string>
+    <string name="compare">So sánh với bản gốc</string>
+    <string name="filter_auto">Tự động</string>
+    <string name="filter_docs">Tài liệu</string>
+    <string name="filter_color">Màu</string>
+    <string name="filter_image">Hình ảnh</string>
+    <string name="filter_super">Siêu nét</string>
+    <string name="filter_enhance">Tăng cường</string>
+    <string name="filter_enhance2">Tăng cường 2</string>
+    <string name="filter_gray">Xám</string>
+    <string name="filter_invert">Đảo màu</string>
+    <string name="underline">Gạch chân</string>
+    <string name="strikethrough">Gạch ngang</string>
+    <string name="add_short">+ Thêm</string>
+    <string name="delete_signature">Xóa chữ ký</string>
+    <string name="delete_signature_message">Xóa chữ ký đã lưu này?</string>
+    <string name="how_to_edit">Cách chỉnh sửa</string>
+    <string name="share_app_text">Mình dùng %1$s để mở và chỉnh sửa tệp PDF, Word, Excel và PowerPoint. Thử xem nhé:</string>
+    <string name="faq_yes">🥳 Có</string>
+    <string name="faq_no">😞 Không</string>
+    <string name="faq_q_edit">Làm thế nào để chỉnh sửa PDF?</string>
+    <string name="faq_q_display">Làm thế nào để thay đổi cách hiển thị tài liệu?</string>
+    <string name="faq_q_copy">Làm thế nào để sao chép văn bản?</string>
+    <string name="faq_q_search">Làm thế nào để tìm văn bản trong tệp?</string>
+    <string name="faq_q_open">Tại sao tôi không tìm thấy hoặc không mở được tệp?</string>
+    <string name="faq_q_create">Làm thế nào để tạo tệp mới?</string>
+    <string name="faq_q_print">Làm thế nào để in tệp?</string>
+    <string name="faq_q_subscription">Làm thế nào để quản lý hoặc hủy gói đăng ký?</string>
+    <string name="faq_q_ads">Tại sao ứng dụng có quảng cáo?</string>
+    <string name="faq_q_slow">Tại sao tệp mở chậm?</string>
+    <string name="faq_q_permissions">Tại sao ứng dụng cần quyền truy cập tệp?</string>
+    <string name="feedback_hint">Vui lòng mô tả chi tiết vấn đề hoặc góp ý của bạn…</string>
+    <string name="fb_rating_line">Đánh giá: %1$d/5</string>
+    <string name="fb_max_shots">Bạn có thể thêm tối đa 4 ảnh chụp màn hình</string>
+    <string name="get_premium">Nâng cấp Premium</string>
+    <string name="premium_slide_sign">Sửa &amp;\nký PDF</string>
+    <string name="premium_slide_convert">Chuyển đổi\nđịnh dạng</string>
+    <string name="premium_slide_templates">Mẫu</string>
+    <string name="premium_slide_pages">Quản lý trang</string>
+    <string name="feat_ad_free">Trải nghiệm không quảng cáo</string>
+    <string name="feat_edit_sign">Sửa &amp; ký PDF dễ dàng</string>
+    <string name="feat_convert">Chuyển đổi tệp tức thì</string>
+    <string name="feat_templates">Mở khóa mẫu cao cấp</string>
+    <string name="feat_pages">Quản lý trang toàn diện</string>
+    <string name="plan_yearly">Hằng năm</string>
+    <string name="plan_monthly">Hằng tháng</string>
+    <string name="continue_label">Tiếp tục</string>
+    <string name="no_subscription_found">Không tìm thấy gói đăng ký hợp lệ.</string>
+    <string name="w_home">Trang chủ</string>
+    <string name="w_recent">Gần đây</string>
+    <string name="w_tools_title">Công cụ nhanh</string>
+    <string name="w_tools_desc">Tìm kiếm, mở tệp gần đây và dấu trang, hoặc sửa PDF ngay từ màn hình chính</string>
+    <string name="w_reader_title">Trình đọc tài liệu</string>
+    <string name="w_reader_desc">Mở tệp PDF, Word, Excel và PowerPoint chỉ với một chạm</string>
+    <string name="w_editor_title">Trình sửa PDF</string>
+    <string name="w_editor_desc">Bắt đầu sửa PDF ngay</string>
+    <string name="add_widget_button">Thêm vào màn hình chính</string>
+    <string name="widget_manual_hint">Nhấn giữ màn hình chính, chạm vào Tiện ích và chọn ứng dụng này</string>
+    <string name="thanks_support">Cảm ơn bạn đã ủng hộ!</string>
+    <string name="dont_miss_apps">Đừng bỏ lỡ các ứng dụng được đánh giá cao của chúng tôi 👇</string>
+    <string name="see_our_apps">Xem ứng dụng của chúng tôi trên Google Play</string>
+    <string name="faq_a_edit">Mở thẻ &lt;b&gt;Công cụ&lt;/b&gt; và chạm vào &lt;b&gt;Sửa PDF&lt;/b&gt;, sau đó chọn tệp. Bạn có thể sửa văn bản có sẵn, thêm văn bản mới, thêm hình ảnh, chú thích (tô sáng, gạch chân, gạch ngang, vẽ) và thêm chữ ký. Chạm vào dấu tích để lưu bản sao.</string>
+    <string name="faq_a_display">Khi đọc, dùng thanh dưới cùng để chuyển giữa cuộn &lt;b&gt;dọc&lt;/b&gt; và &lt;b&gt;ngang&lt;/b&gt;, xoay chế độ xem hoặc đảo màu. Chụm hai ngón để thu phóng, và chạm vào số trang để chuyển đến một trang.</string>
+    <string name="faq_a_copy">Chức năng sao chép văn bản chưa có. Chúng tôi đang phát triển! Nếu điều này quan trọng với bạn, hãy &lt;a href=\"app://feedback\"&gt;gửi góp ý cho chúng tôi&lt;/a&gt; để chúng tôi ưu tiên.</string>
+    <string name="faq_a_search">Mở tài liệu và chạm vào &lt;b&gt;Tìm kiếm&lt;/b&gt; trên thanh dưới cùng, sau đó nhập từ bạn cần tìm. Dùng các mũi tên để di chuyển giữa các kết quả. Để tìm tệp theo tên, hãy dùng biểu tượng tìm kiếm ở đầu màn hình chính.</string>
+    <string name="faq_a_open">Hãy đảm bảo ứng dụng có quyền truy cập tệp của bạn. Nếu tệp nằm trong ứng dụng đám mây hoặc thư mục khác, hãy mở bằng &lt;a href=\"app://filemanager\"&gt;trình quản lý tệp&lt;/a&gt; và chọn ứng dụng này. Nếu tệp vẫn không mở được, có thể tệp bị hỏng hoặc được bảo vệ bằng mật khẩu; vui lòng &lt;a href=\"app://feedback\"&gt;báo cho chúng tôi&lt;/a&gt;.</string>
+    <string name="faq_a_create">Trên trang &lt;b&gt;Tất cả tệp&lt;/b&gt;, chạm vào nút &lt;b&gt;+&lt;/b&gt;. Bạn có thể tạo tài liệu từ mẫu, nhập tệp, chuyển ảnh sang PDF hoặc quét tài liệu giấy bằng máy ảnh.</string>
+    <string name="faq_a_print">Mở PDF, chạm vào menu &lt;b&gt;⋮&lt;/b&gt; và chọn &lt;b&gt;In&lt;/b&gt;. Các định dạng khác có thể được chuyển sang PDF trước từ thẻ &lt;b&gt;Công cụ&lt;/b&gt;.</string>
+    <string name="faq_a_subscription">Gói đăng ký được quản lý bởi Google Play. Vào &lt;b&gt;Cài đặt → Quản lý gói đăng ký&lt;/b&gt;, hoặc mở Google Play → Hồ sơ → Thanh toán &amp;amp; gói đăng ký. Xem &lt;a href=\"app://terms\"&gt;Điều khoản sử dụng&lt;/a&gt; của chúng tôi để biết chi tiết.</string>
+    <string name="faq_a_ads">Quảng cáo giúp chúng tôi duy trì ứng dụng miễn phí cho mọi người. Bạn có thể xóa quảng cáo với &lt;a href=\"app://premium\"&gt;Premium&lt;/a&gt;.</string>
+    <string name="faq_a_slow">Tệp rất lớn hoặc có nhiều hình ảnh sẽ mất nhiều thời gian tải hơn. Đóng các ứng dụng khác và giải phóng dung lượng lưu trữ có thể giúp ích. Nếu tệp luôn mở chậm, vui lòng &lt;a href=\"app://feedback\"&gt;gửi góp ý cho chúng tôi&lt;/a&gt;.</string>
+    <string name="faq_a_permissions">Ứng dụng chỉ cần quyền truy cập tệp để tìm và mở tài liệu trên thiết bị của bạn. Tệp của bạn luôn nằm trên thiết bị và không bao giờ được tải lên.</string>
+    <string name="terms_html">&lt;p&gt;&lt;i&gt;Cập nhật lần cuối: Tháng 9 năm 2026&lt;/i&gt;&lt;/p&gt;&lt;p&gt;Điều khoản sử dụng này điều chỉnh việc bạn sử dụng &lt;b&gt;%1$s&lt;/b&gt; (\"Ứng dụng\"). Khi sử dụng Ứng dụng, bạn đồng ý với các điều khoản này.&lt;/p&gt;&lt;h4&gt;1. Sử dụng Ứng dụng&lt;/h4&gt;&lt;p&gt;Bạn có thể sử dụng Ứng dụng để xem, tạo, chuyển đổi và chỉnh sửa tài liệu cho mục đích cá nhân hoặc kinh doanh. Bạn chịu trách nhiệm về các tài liệu bạn mở và tạo, cũng như về việc có quyền sử dụng chúng.&lt;/p&gt;&lt;h4&gt;2. Gói đăng ký&lt;/h4&gt;&lt;p&gt;Một số tính năng có thể yêu cầu gói đăng ký trả phí được mua qua Google Play. Gói đăng ký sẽ tự động gia hạn trừ khi được hủy ít nhất 24 giờ trước khi kết thúc kỳ hiện tại. Bạn có thể quản lý hoặc hủy gói đăng ký trong phần cài đặt tài khoản Google Play. Việc hoàn tiền tuân theo chính sách của Google Play.&lt;/p&gt;&lt;h4&gt;3. Quảng cáo&lt;/h4&gt;&lt;p&gt;Phiên bản miễn phí của Ứng dụng có thể hiển thị quảng cáo do bên thứ ba cung cấp.&lt;/p&gt;&lt;h4&gt;4. Không bảo đảm&lt;/h4&gt;&lt;p&gt;Ứng dụng được cung cấp \"nguyên trạng\". Chúng tôi cố gắng hết sức để Ứng dụng hoạt động ổn định, nhưng không bảo đảm rằng Ứng dụng không có lỗi, và chúng tôi không chịu trách nhiệm về việc mất dữ liệu. Vui lòng sao lưu các tệp quan trọng.&lt;/p&gt;&lt;h4&gt;5. Thay đổi&lt;/h4&gt;&lt;p&gt;Chúng tôi có thể cập nhật các điều khoản này theo thời gian. Việc tiếp tục sử dụng Ứng dụng đồng nghĩa với việc bạn chấp nhận các điều khoản đã cập nhật.&lt;/p&gt;&lt;h4&gt;6. Liên hệ&lt;/h4&gt;&lt;p&gt;Có câu hỏi? Gửi email cho chúng tôi tại %2$s.&lt;/p&gt;</string>
+    <string name="premium_trusted_top">Được yêu thích bởi</string>
+    <string name="premium_trusted_count">người dùng</string>
+    <string name="premium_trusted_bottom">trên toàn thế giới</string>
+    <string name="plan_trial_days">Dùng thử miễn phí %1$d ngày</string>
+    <string name="plan_then_only_per_day">Sau đó chỉ %1$s/ngày</string>
+    <string name="plan_per_day">%1$s/ngày</string>
+    <string name="plan_price_year">%1$s/năm</string>
+    <string name="plan_price_month">%1$s/tháng</string>
+    <string name="plan_save_percent">Tiết kiệm %1$d%%</string>
+    <string name="start_free_trial">Bắt đầu dùng thử miễn phí</string>
+    <string name="trial_today">Hôm nay</string>
+    <string name="trial_today_sub">Mở khóa tất cả tính năng cao cấp</string>
+    <string name="trial_full_access">Truy cập đầy đủ</string>
+    <string name="trial_full_access_sub">Xóa mọi quảng cáo, đọc tệp ở mọi định dạng, dễ dàng sửa PDF, v.v.</string>
+    <string name="trial_day7">Ngày 7</string>
+    <string name="trial_day7_sub">Không mất phí nếu bạn hủy ít nhất 24 giờ trước khi kết thúc dùng thử.</string>
+    <string name="hot">HOT</string>
+    <string name="try_days_free">Dùng thử miễn phí %1$d ngày</string>
+    <string name="try_then">Sau đó %1$s/năm, chỉ %2$s/ngày</string>
+    <string name="crop_not_found">Không tìm thấy mép trang — dùng Cắt để điều chỉnh</string>
+    <string name="tpl_reset">Đặt lại</string>
+    <string name="tpl_close">Đóng</string>
+    <string name="tpl_download">Tải xuống</string>
+    <string name="tpl_flip_h">Lật ngang</string>
+    <string name="tpl_flip_v">Lật dọc</string>
+    <string name="tpl_bold">Đậm</string>
+    <string name="tpl_italic">Nghiêng</string>
+    <string name="tpl_underline">Gạch chân</string>
+    <string name="tpl_strike">Gạch ngang</string>
+    <string name="tpl_bullets">Danh sách dấu đầu dòng</string>
+    <string name="tpl_numbers">Danh sách đánh số</string>
+    <string name="tpl_save_failed">Không thể lưu tệp</string>
+    <string name="tpl_image_failed">Không thể mở ảnh này</string>
+    <string name="ad_badge">QC</string>
+    <string name="explore_nothing">Hiện chưa có nội dung. Vui lòng kiểm tra kết nối internet.</string>
+    <string name="review1_title">Trình đọc tệp tất cả trong một</string>
+    <string name="review1_text">Hoàn toàn đáng để đăng ký!! Mở nhanh tệp mọi định dạng, ghi nhớ tiến độ đọc, dùng được ngoại tuyến, thậm chí còn khôi phục được tệp đã xóa!</string>
+    <string name="review2_title">Không quảng cáo, không phí ẩn</string>
+    <string name="review2_text">Sau khi đăng ký, mình dùng được nhiều tính năng hơn. Không còn quảng cáo làm gián đoạn khi đọc và sửa, giao diện cũng gọn gàng hơn. Tuyệt nhất là không có phí ẩn!</string>
+    <string name="review3_title">Tập trung hơn, làm việc nhanh hơn</string>
+    <string name="review3_text">Gói đăng ký rẻ, và giờ mình có thể xem trước, chỉnh sửa và quản lý tệp mà không bị quảng cáo phiền phức. Thực sự giúp mình làm việc hiệu quả hơn!</string>
+    <plurals name="deleted_count">
+        <item quantity="one">Đã xóa %d tệp</item>
+        <item quantity="other">Đã xóa %d tệp</item>
+    </plurals>
+    <plurals name="moved_to_bin_count">
+        <item quantity="one">Đã chuyển %d tệp vào thùng rác</item>
+        <item quantity="other">Đã chuyển %d tệp vào thùng rác</item>
+    </plurals>
+    <plurals name="days_left">
+        <item quantity="one">Còn %d ngày</item>
+        <item quantity="other">Còn %d ngày</item>
+    </plurals>
+    <plurals name="pages_selected">
+        <item quantity="one">Đã chọn %d trang</item>
+        <item quantity="other">Đã chọn %d trang</item>
+    </plurals>
+    <plurals name="days_count">
+        <item quantity="one">%d ngày</item>
+        <item quantity="other">%d ngày</item>
+    </plurals>
+    <plurals name="delete_forever_message">
+        <item quantity="one">%d tệp sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.</item>
+        <item quantity="other">%d tệp sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.</item>
+    </plurals>
+    <plurals name="restored_count">
+        <item quantity="one">Đã khôi phục %d tệp</item>
+        <item quantity="other">Đã khôi phục %d tệp</item>
+    </plurals>
+    <!-- /step59 -->
 </resources>

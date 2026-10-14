@@ -23,7 +23,6 @@ import android.widget.SeekBar
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.ImageViewCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -61,7 +60,7 @@ import kotlin.math.min
  * Sign (signature pad, saved signatures). Undo / redo, Done saves into the PDF and stays open
  * with "Saved successfully"; "i" shows the animated how-to.
  */
-class PdfEditActivity : AppCompatActivity(), EditHost {
+class PdfEditActivity : com.theoccess.alldocreader.ui.BaseActivity(), EditHost {
 
     enum class Mode { NONE, EDIT_TEXT, ADD_TEXT, ANNOTATE, SIGN }
 

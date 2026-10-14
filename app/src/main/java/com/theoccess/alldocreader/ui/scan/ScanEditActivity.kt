@@ -13,7 +13,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -42,7 +41,7 @@ import kotlin.math.min
  * (with "Apply to all"), Retake, Pages (add more), Rotate and Crop (frame editor with
  * Left / Right / No crop ⇄ Auto crop). Done → "Processing… (x%)" → Image to PDF list.
  */
-class ScanEditActivity : AppCompatActivity() {
+class ScanEditActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivityScanEditBinding
     private val pages get() = ScanSession.pages

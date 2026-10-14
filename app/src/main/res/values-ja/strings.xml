@@ -257,4 +257,317 @@
     <string name="helpful_no">😞 あまり</string>
     <string name="helpful_yes">🥰 役に立った</string>
     <!-- /step26 -->
+    <!-- step27 -->
+    <string name="search_no_results">結果が見つかりません</string>
+    <!-- /step27 -->
+    <!-- step28 -->
+    <string name="search_in_document">ドキュメント内を検索</string>
+    <string name="search_in_pdf">PDF内を検索</string>
+    <string name="search_in_ppt">PPT内を検索</string>
+    <string name="search_in_excel">Excel内を検索</string>
+    <string name="refresh">更新</string>
+    <string name="files_refreshed">ファイルを更新しました</string>
+    <!-- /step28 -->
+    <!-- step29 -->
+    <string name="new_badge">新規</string>
+    <string name="save_to_drive_short">ドライブに保存</string>
+    <string name="drive_saving">Google ドライブに保存しています…</string>
+    <string name="drive_saved">%1$s を Google ドライブに保存しました（All Document Reader フォルダ）</string>
+    <string name="drive_save_failed_title">Google ドライブに保存できませんでした</string>
+    <string name="drive_not_allowed">Google ドライブへのアクセスが許可されませんでした。アカウントを選んで「許可」をタップしてください。</string>
+    <!-- /step29 -->
+    <!-- step30 -->
+    <string name="search_in_txt">TXT内を検索</string>
+    <!-- /step30 -->
+    <!-- step31 -->
+    <string name="drive_app_missing">Drive にファイルを保存するには Google ドライブ アプリが必要です。Google Play からインストールして、もう一度お試しください。</string>
+    <string name="drive_install">インストール</string>
+    <!-- /step31 -->
+    <!-- step32 -->
+    <string name="ready_top">まもなく始まります</string>
+    <string name="ready_bottom">7日間の無料トライアル</string>
+    <string name="premium_slide_merge">PDFの\n結合と分割</string>
+    <string name="feat_merge">PDFをスムーズに結合・分割</string>
+    <string name="user_reviews">ユーザーレビュー</string>
+    <string name="cancel_anytime">いつでも解約できます</string>
+    <!-- /step32 -->
+    <!-- step33 -->
+    <string name="tool_merge_pdf">PDFを結合</string>
+    <string name="tool_split_pdf">PDFを分割</string>
+    <string name="premium_free_uses_left">無料お試し · 今日はあと%1$d回。Premiumで無制限に使えます</string>
+    <string name="premium_last_free_use">今日最後の無料お試しです。Premiumで無制限に使えます</string>
+    <string name="premium_limit_reached">「%1$s」の今日の無料お試しは終了しました。Premiumで無制限に使えます。</string>
+    <string name="select_pdfs_to_merge">結合するPDFを選択</string>
+    <string name="select_pdf_to_split">分割するPDFを選択</string>
+    <string name="merge_n">結合 (%1$d)</string>
+    <string name="merge_pick_two">PDFを2つ以上選択してください</string>
+    <string name="merging_progress">結合中… (%1$d%%)</string>
+    <string name="merge_failed">これらのPDFを結合できませんでした（パスワード付きまたは破損？）</string>
+    <string name="split_one_page">このPDFは1ページしかありません</string>
+    <string name="split_info">%1$s · %2$dページ</string>
+    <string name="split_ranges_hint">例: 1-3, 5, 6-%1$d</string>
+    <string name="split_action">分割</string>
+    <string name="split_each_page">1ページずつ別のPDFに</string>
+    <string name="split_every_n">数ページごと</string>
+    <string name="split_every_hint">1ファイルあたりのページ数（例: 2）</string>
+    <string name="split_custom">ページ範囲を指定</string>
+    <string name="split_invalid">有効なページ番号を入力してください</string>
+    <string name="splitting_progress">分割中… (%1$d%%)</string>
+    <string name="split_failed">このPDFを分割できませんでした</string>
+    <plurals name="split_done">
+        <item quantity="one">%1$d個のファイルに分割しました</item>
+        <item quantity="other">%1$d個のファイルに分割しました</item>
+    </plurals>
+    <!-- /step33 -->
+    <!-- step35 -->
+    <string name="section_edit_manage">編集と管理</string>
+    <string name="add_files">ファイルを追加</string>
+    <string name="add_part">ページを追加</string>
+    <string name="continue_n">続行 (%1$d)</string>
+    <string name="quit">終了</string>
+    <string name="quit_merging_title">結合を終了しますか？</string>
+    <string name="quit_splitting_title">分割を終了しますか？</string>
+    <string name="quit_changes_message">変更は保存されません。終了しますか？</string>
+    <string name="merged_successfully_excl">結合しました！</string>
+    <string name="split_successfully_excl">分割しました！</string>
+    <string name="satisfied_question">「%1$s」機能に満足していますか？</string>
+    <string name="satisfied_not_good">😞\nいまいち</string>
+    <string name="satisfied_good">🥰\n良い</string>
+    <string name="thanks_feedback">フィードバックありがとうございます！</string>
+    <string name="select_pages">ページを選択</string>
+    <string name="split_method">分割方法</string>
+    <string name="split_custom_range">カスタム範囲</string>
+    <string name="split_custom_range_sub">指定した範囲で分割</string>
+    <string name="split_fixed_range">固定範囲</string>
+    <string name="split_fixed_range_sub">一定のページ数ごとに分割</string>
+    <string name="interval_settings">間隔の設定</string>
+    <string name="split_n">分割 (%1$d)</string>
+    <string name="part_pages">ページ: %1$s</string>
+    <plurals name="pages_and_size">
+        <item quantity="one">%1$dページ · %2$s</item>
+        <item quantity="other">%1$dページ · %2$s</item>
+    </plurals>
+    <!-- /step35 -->
+    <!-- step39 -->
+    <string name="ad_loading">広告を読み込み中…</string>
+    <!-- /step39 -->
+    <!-- step40 -->
+    <string name="swipe_pages_tip">左右にスワイプしてページをめくります</string>
+    <!-- /step40 -->
+    <!-- step59 -->
+    <string name="done">完了</string>
+    <string name="ok">OK</string>
+    <string name="premium">Premium</string>
+    <string name="open">開く</string>
+    <string name="add_bookmark">ブックマークに追加</string>
+    <string name="remove_bookmark">ブックマークから削除</string>
+    <string name="file_info_path">パス</string>
+    <string name="file_info_size">サイズ</string>
+    <string name="file_info_modified">更新日時</string>
+    <string name="no_app_to_open">このファイルを開けるアプリが見つかりません</string>
+    <string name="file_not_found">ファイルが存在しません</string>
+    <string name="empty_folder">このフォルダは空です</string>
+    <string name="create_new">新規作成</string>
+    <string name="settings_version">バージョン %1$s</string>
+    <string name="tool_templates">テンプレート</string>
+    <string name="press_back_again">もう一度戻るを押すと終了します</string>
+    <string name="select">選択</string>
+    <string name="select_all">すべて選択</string>
+    <string name="delete_failed">一部のファイルを削除できませんでした</string>
+    <string name="rename_empty">名前を入力してください</string>
+    <string name="rename_invalid">名前に使用できない文字が含まれています</string>
+    <string name="rename_exists">同じ名前のファイルが既に存在します</string>
+    <string name="rename_failed">ファイル名を変更できませんでした</string>
+    <string name="rename_done">名前を変更しました</string>
+    <string name="select_files_first">先にファイルを選択してください</string>
+    <string name="shortcut_permission_message"><![CDATA[ファイルをホーム画面に追加するには、<font color=\"#0A5FD9\">「ホーム画面のショートカット」</font>の権限が必要です。]]></string>
+    <string name="shortcut_added">ホーム画面に追加しました</string>
+    <string name="shortcut_not_supported">お使いのランチャーはホーム画面のショートカットに対応していません</string>
+    <string name="rate_title"><![CDATA[<font color=\"#0A5FD9\">このアプリ</font>は気に入りましたか？]]></string>
+    <string name="rate_thanks">フィードバックありがとうございます！</string>
+    <string name="restored">復元しました</string>
+    <string name="restore_failed">復元できませんでした（同じ名前のファイルが既に存在する可能性があります）</string>
+    <string name="empty_recycle_bin_confirm">ごみ箱内のすべてのファイルを完全に削除しますか？</string>
+    <string name="unsupported_message">申し訳ありませんが、このファイル形式には現在対応していません。\nアプリの改善に日々取り組んでおり、今後対応形式を増やしていく予定です。</string>
+    <string name="faq">よくある質問</string>
+    <string name="faq_message">アプリ内で開ける形式：PDF、Word (.docx)、TXT。\n\nExcel、PowerPoint、画像はスマートフォン上の別のアプリで開きます。\n\nその他のファイル形式（APK、動画、システムファイルなど）には現在対応していません。</string>
+    <string name="convert">変換</string>
+    <string name="pdf_to_word">PDFをWordに</string>
+    <string name="converting_progress">変換中…（%d%%）</string>
+    <string name="convert_failed">変換に失敗しました</string>
+    <string name="print">印刷</string>
+    <string name="edit">編集</string>
+    <string name="bookmarked">ブックマーク済み</string>
+    <string name="pdf_password_protected">このPDFはパスワードで保護されているか、破損しています</string>
+    <string name="undo">元に戻す</string>
+    <string name="redo">やり直す</string>
+    <string name="setup">設定</string>
+    <string name="delete_pages_message"><![CDATA[選択した<font color=\"#0A5FD9\">%d</font>ページを削除しますか？]]></string>
+    <string name="pdf_needs_page">PDFには少なくとも1ページが必要です</string>
+    <string name="discard_title">変更を破棄しますか？</string>
+    <string name="discard_message">ページの変更は保存されていません。</string>
+    <string name="discard">破棄</string>
+    <string name="saving">保存中…</string>
+    <string name="extracting">ページを抽出中…</string>
+    <string name="save_failed">PDFを保存できませんでした</string>
+    <string name="portrait">縦向き</string>
+    <string name="landscape">横向き</string>
+    <string name="size_letter">Letter</string>
+    <string name="size_legal">Legal</string>
+    <string name="tpl_blank">白紙</string>
+    <string name="tpl_line1">罫線 1</string>
+    <string name="tpl_line2">罫線 2</string>
+    <string name="tpl_notebook">ノート</string>
+    <string name="tpl_cornell">コーネル</string>
+    <string name="tpl_grid">方眼</string>
+    <string name="tpl_graph">グラフ用紙</string>
+    <string name="pick_image_hint">JPG、PNGなどの画像を選択してください</string>
+    <string name="import_failed">このファイルをインポートできませんでした</string>
+    <string name="tpl_resume">履歴書</string>
+    <string name="filter_original">オリジナル</string>
+    <string name="no_camera">カメラアプリが見つかりません</string>
+    <string name="pick_word_hint">Word (.docx) または TXT ファイルを選択してください</string>
+    <string name="pick_pdf_hint">PDFファイルを選択してください</string>
+    <string name="pick_ppt_hint">PowerPoint (.pptx) ファイルを選択してください</string>
+    <string name="convert_old_format">この古い形式（.doc / .ppt）にはまだ対応していません。.docx または .pptx をご利用ください。</string>
+    <string name="dims_cm">%1$s cm x %2$s cm</string>
+    <string name="flash">フラッシュ</string>
+    <string name="grid">グリッド</string>
+    <string name="shutter_sound">シャッター音</string>
+    <string name="center_guide">中央ガイド</string>
+    <string name="compare">元の画像と比較</string>
+    <string name="filter_auto">自動</string>
+    <string name="filter_docs">文書</string>
+    <string name="filter_color">カラー</string>
+    <string name="filter_image">画像</string>
+    <string name="filter_super">スーパー</string>
+    <string name="filter_enhance">補正</string>
+    <string name="filter_enhance2">補正2</string>
+    <string name="filter_gray">グレー</string>
+    <string name="filter_invert">反転</string>
+    <string name="underline">下線</string>
+    <string name="strikethrough">取り消し線</string>
+    <string name="add_short">+ 追加</string>
+    <string name="delete_signature">署名を削除</string>
+    <string name="delete_signature_message">保存したこの署名を削除しますか？</string>
+    <string name="how_to_edit">編集方法</string>
+    <string name="share_app_text">%1$s で PDF、Word、Excel、PowerPoint ファイルを開いて編集しています。試してみて：</string>
+    <string name="faq_yes">🥳 はい</string>
+    <string name="faq_no">😞 いいえ</string>
+    <string name="faq_q_edit">PDFを編集するには？</string>
+    <string name="faq_q_display">文書の表示方法を変更するには？</string>
+    <string name="faq_q_copy">テキストをコピーするには？</string>
+    <string name="faq_q_search">ファイル内のテキストを検索するには？</string>
+    <string name="faq_q_open">ファイルが見つからない、または開けないのはなぜですか？</string>
+    <string name="faq_q_create">新しいファイルを作成するには？</string>
+    <string name="faq_q_print">ファイルを印刷するには？</string>
+    <string name="faq_q_subscription">定期購入の管理や解約はどうすればよいですか？</string>
+    <string name="faq_q_ads">アプリに広告が表示されるのはなぜですか？</string>
+    <string name="faq_q_slow">ファイルを開くのが遅いのはなぜですか？</string>
+    <string name="faq_q_permissions">アプリにファイルへのアクセス権限が必要なのはなぜですか？</string>
+    <string name="feedback_hint">問題やご提案を詳しくお書きください…</string>
+    <string name="fb_rating_line">評価：%1$d/5</string>
+    <string name="fb_max_shots">スクリーンショットは4枚まで追加できます</string>
+    <string name="get_premium">Premiumを入手</string>
+    <string name="premium_slide_sign">PDFの編集\nと署名</string>
+    <string name="premium_slide_convert">形式\n変換</string>
+    <string name="premium_slide_templates">テンプレート</string>
+    <string name="premium_slide_pages">ページ管理</string>
+    <string name="feat_ad_free">広告なしで快適</string>
+    <string name="feat_edit_sign">PDFの編集・署名がかんたん</string>
+    <string name="feat_convert">ファイルをすぐに変換</string>
+    <string name="feat_templates">プレミアムテンプレートを解放</string>
+    <string name="feat_pages">充実のページ管理</string>
+    <string name="plan_yearly">年間</string>
+    <string name="plan_monthly">月間</string>
+    <string name="continue_label">続ける</string>
+    <string name="no_subscription_found">有効な定期購入が見つかりません。</string>
+    <string name="w_home">ホーム</string>
+    <string name="w_recent">最近</string>
+    <string name="w_tools_title">クイックツール</string>
+    <string name="w_tools_desc">ホーム画面から検索、最近のファイルやブックマークを開く、PDFを編集</string>
+    <string name="w_reader_title">ドキュメントリーダー</string>
+    <string name="w_reader_desc">PDF、Word、Excel、PowerPointをワンタップで開く</string>
+    <string name="w_editor_title">PDFエディタ</string>
+    <string name="w_editor_desc">すぐにPDFの編集を開始</string>
+    <string name="add_widget_button">ホーム画面に追加</string>
+    <string name="widget_manual_hint">ホーム画面を長押しし、［ウィジェット］をタップしてこのアプリを選択してください</string>
+    <string name="thanks_support">ご支援ありがとうございます！</string>
+    <string name="dont_miss_apps">高評価のアプリもぜひチェック 👇</string>
+    <string name="see_our_apps">Google Playで他のアプリを見る</string>
+    <string name="faq_a_edit">&lt;b&gt;ツール&lt;/b&gt;タブを開いて&lt;b&gt;PDFを編集&lt;/b&gt;をタップし、ファイルを選びます。既存のテキストの編集、テキストや画像の追加、注釈（ハイライト、下線、取り消し線、描画）、署名の追加ができます。チェックマークをタップするとコピーが保存されます。</string>
+    <string name="faq_a_display">閲覧中に下部のバーで&lt;b&gt;縦&lt;/b&gt;スクロールと&lt;b&gt;横&lt;/b&gt;スクロールの切り替え、表示の回転、色の反転ができます。ピンチでズームし、ページ番号をタップすると指定のページに移動できます。</string>
+    <string name="faq_a_copy">テキストのコピーにはまだ対応していません。現在開発中です！この機能が必要な場合は、優先して対応できるよう&lt;a href=\"app://feedback\"&gt;フィードバックをお送りください&lt;/a&gt;。</string>
+    <string name="faq_a_search">文書を開いて下部のバーの&lt;b&gt;検索&lt;/b&gt;をタップし、探したい語句を入力します。矢印で検索結果を移動できます。ファイル名で探すには、ホーム画面上部の検索アイコンを使います。</string>
+    <string name="faq_a_open">アプリにファイルへのアクセス権限があることを確認してください。ファイルがクラウドアプリや別のフォルダにある場合は、&lt;a href=\"app://filemanager\"&gt;ファイルマネージャー&lt;/a&gt;で開いてこのアプリを選択してください。それでも開けない場合は、ファイルが破損しているかパスワードで保護されている可能性があります。&lt;a href=\"app://feedback\"&gt;お知らせください&lt;/a&gt;。</string>
+    <string name="faq_a_create">&lt;b&gt;すべてのファイル&lt;/b&gt;ページで&lt;b&gt;+&lt;/b&gt;ボタンをタップします。テンプレートからの文書作成、ファイルのインポート、画像のPDF変換、カメラでの紙文書のスキャンができます。</string>
+    <string name="faq_a_print">PDFを開き、&lt;b&gt;⋮&lt;/b&gt;メニューをタップして&lt;b&gt;印刷&lt;/b&gt;を選びます。その他の形式は、&lt;b&gt;ツール&lt;/b&gt;タブで先にPDFに変換できます。</string>
+    <string name="faq_a_subscription">定期購入はGoogle Playで管理されています。&lt;b&gt;設定 → 定期購入の管理&lt;/b&gt;に進むか、Google Play → プロフィール → お支払いと定期購入 を開いてください。詳しくは&lt;a href=\"app://terms\"&gt;利用規約&lt;/a&gt;をご覧ください。</string>
+    <string name="faq_a_ads">広告のおかげで、アプリを誰でも無料で使えるようにしています。&lt;a href=\"app://premium\"&gt;Premium&lt;/a&gt;で広告を非表示にできます。</string>
+    <string name="faq_a_slow">サイズの大きいファイルや画像の多いファイルは読み込みに時間がかかります。他のアプリを閉じたり、ストレージの空き容量を増やしたりすると改善する場合があります。特定のファイルが常に遅い場合は、&lt;a href=\"app://feedback\"&gt;フィードバックをお送りください&lt;/a&gt;。</string>
+    <string name="faq_a_permissions">ファイルへのアクセスは、端末内の文書を探して開くためだけに使用します。ファイルは端末内に保存されたままで、アップロードされることはありません。</string>
+    <string name="terms_html">&lt;p&gt;&lt;i&gt;最終更新日：2026年9月&lt;/i&gt;&lt;/p&gt;&lt;p&gt;本利用規約は、&lt;b&gt;%1$s&lt;/b&gt;（以下「本アプリ」）の利用に適用されます。本アプリを利用することにより、お客様は本規約に同意したものとみなされます。&lt;/p&gt;&lt;h4&gt;1. 本アプリの利用&lt;/h4&gt;&lt;p&gt;お客様は、個人または業務の目的で、文書の閲覧、作成、変換、編集に本アプリを利用できます。お客様は、開いたり作成したりする文書について、またそれらを利用する権利を有していることについて責任を負います。&lt;/p&gt;&lt;h4&gt;2. 定期購入&lt;/h4&gt;&lt;p&gt;一部の機能には、Google Playで購入する有料の定期購入が必要な場合があります。定期購入は、現在の期間が終了する24時間前までに解約しない限り自動的に更新されます。定期購入の管理や解約は、Google Playのアカウント設定から行えます。返金はGoogle Playのポリシーに従います。&lt;/p&gt;&lt;h4&gt;3. 広告&lt;/h4&gt;&lt;p&gt;本アプリの無料版では、第三者が提供する広告が表示される場合があります。&lt;/p&gt;&lt;h4&gt;4. 保証の否認&lt;/h4&gt;&lt;p&gt;本アプリは「現状のまま」提供されます。安定した動作に努めていますが、エラーがないことを保証するものではなく、データの損失について責任を負いません。重要なファイルはバックアップを保管してください。&lt;/p&gt;&lt;h4&gt;5. 変更&lt;/h4&gt;&lt;p&gt;本規約は随時更新されることがあります。更新後も本アプリを継続して利用することで、更新後の規約に同意したものとみなされます。&lt;/p&gt;&lt;h4&gt;6. お問い合わせ&lt;/h4&gt;&lt;p&gt;ご質問は %2$s までメールでお寄せください。&lt;/p&gt;</string>
+    <string name="premium_trusted_top">世界中で</string>
+    <string name="premium_trusted_count">人のユーザー</string>
+    <string name="premium_trusted_bottom">に愛用されています</string>
+    <string name="plan_trial_days">%1$d日間無料トライアル</string>
+    <string name="plan_then_only_per_day">その後わずか%1$s/日</string>
+    <string name="plan_per_day">%1$s/日</string>
+    <string name="plan_price_year">%1$s/年</string>
+    <string name="plan_price_month">%1$s/月</string>
+    <string name="plan_save_percent">%1$d%%お得</string>
+    <string name="start_free_trial">無料トライアルを開始</string>
+    <string name="trial_today">今日</string>
+    <string name="trial_today_sub">すべてのプレミアム機能を解放</string>
+    <string name="trial_full_access">全機能を利用</string>
+    <string name="trial_full_access_sub">広告を完全に削除、あらゆる形式のファイルを閲覧、PDFをかんたん編集など。</string>
+    <string name="trial_day7">7日目</string>
+    <string name="trial_day7_sub">トライアル終了の24時間前までに解約すれば料金はかかりません。</string>
+    <string name="hot">人気</string>
+    <string name="try_days_free">%1$d日間無料でお試し</string>
+    <string name="try_then">その後%1$s/年、1日わずか%2$s</string>
+    <string name="crop_not_found">ページの端を検出できませんでした。トリミングで調整してください</string>
+    <string name="tpl_reset">リセット</string>
+    <string name="tpl_close">閉じる</string>
+    <string name="tpl_download">ダウンロード</string>
+    <string name="tpl_flip_h">左右反転</string>
+    <string name="tpl_flip_v">上下反転</string>
+    <string name="tpl_bold">太字</string>
+    <string name="tpl_italic">斜体</string>
+    <string name="tpl_underline">下線</string>
+    <string name="tpl_strike">取り消し線</string>
+    <string name="tpl_bullets">箇条書き</string>
+    <string name="tpl_numbers">番号付きリスト</string>
+    <string name="tpl_save_failed">ファイルを保存できませんでした</string>
+    <string name="tpl_image_failed">この画像を開けませんでした</string>
+    <string name="ad_badge">広告</string>
+    <string name="explore_nothing">現在表示できる内容がありません。インターネット接続を確認してください。</string>
+    <string name="review1_title">オールインワンのファイルリーダー</string>
+    <string name="review1_text">定期購入する価値あり！！どんな形式のファイルもすぐ開けて、読書の進み具合も記録してくれるし、オフラインでも使えて、削除したファイルまで復元できます！</string>
+    <string name="review2_title">広告なし、隠れた料金なし</string>
+    <string name="review2_text">定期購入したら使える機能が増えました。広告に邪魔されずに読んだり編集したりできて、画面もすっきり。何より隠れた料金が一切ないのが最高です！</string>
+    <string name="review3_title">集中できて作業もはかどる</string>
+    <string name="review3_text">定期購入は安いし、うっとうしい広告なしでファイルのプレビュー、編集、管理ができるようになりました。本当に効率が上がりました！</string>
+    <plurals name="deleted_count">
+        <item quantity="other">%d 件のファイルを削除しました</item>
+    </plurals>
+    <plurals name="moved_to_bin_count">
+        <item quantity="other">%d 件のファイルをごみ箱に移動しました</item>
+    </plurals>
+    <plurals name="days_left">
+        <item quantity="other">残り %d 日</item>
+    </plurals>
+    <plurals name="pages_selected">
+        <item quantity="other">%d ページを選択中</item>
+    </plurals>
+    <plurals name="days_count">
+        <item quantity="other">%d 日</item>
+    </plurals>
+    <plurals name="delete_forever_message">
+        <item quantity="other">%d 件のファイルが完全に削除されます。この操作は元に戻せません。</item>
+    </plurals>
+    <plurals name="restored_count">
+        <item quantity="other">%d 件のファイルを復元しました</item>
+    </plurals>
+    <!-- /step59 -->
 </resources>

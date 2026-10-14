@@ -6,7 +6,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.OnBackPressedCallback
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.theoccess.alldocreader.R
@@ -38,7 +37,7 @@ import java.util.concurrent.Executors
  * Preview of the chosen file (title = file name, pages on grey) with "Convert to PDF" /
  * "Convert to Word" at the bottom → "Converting… (x%)" → Converted successfully screen.
  */
-class ConvertActivity : AppCompatActivity() {
+class ConvertActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivityConvertBinding
     private lateinit var kind: ConvertKind

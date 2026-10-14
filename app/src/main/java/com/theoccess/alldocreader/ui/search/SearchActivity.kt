@@ -2,7 +2,6 @@ package com.theoccess.alldocreader.ui.search
 
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.theoccess.alldocreader.data.FileRepository
@@ -15,7 +14,7 @@ import com.theoccess.alldocreader.util.FileActions
 import com.theoccess.alldocreader.util.StorageAccess
 
 /** Searches every scanned document by name. */
-class SearchActivity : AppCompatActivity() {
+class SearchActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivitySearchBinding
     private lateinit var adapter: FileAdapter
@@ -45,6 +44,7 @@ class SearchActivity : AppCompatActivity() {
 
         FileRepository.state.observe(this) { render() }
         LibraryStore.bookmarks.observe(this) { list -> adapter.setBookmarks(list.map { it.path }.toSet()) }
+        com.theoccess.alldocreader.data.NewFiles.changes.observe(this) { adapter.refreshNewTags() }
         if (StorageAccess.has(this)) FileRepository.refresh(this)
         binding.etSearch.requestFocus()
     }

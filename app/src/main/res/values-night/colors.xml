@@ -19,4 +19,9 @@
     <color name="choice_selected_bg">#1B2A42</color>
     <color name="icon_main">#E6E8EC</color>
     <color name="tools_section">#BCC1CA</color>
+    <!-- rows of newly found files -->
+    <color name="new_file_bg">#FF2B2F36</color>
+    <color name="bg_soft_card">#FF23262C</color>
+    <!-- "Recently added" bar on the home screen -->
+    <color name="recent_row_bg">#23262D</color>
 </resources>

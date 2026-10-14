@@ -15,7 +15,6 @@ import android.provider.OpenableColumns
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.activity.OnBackPressedCallback
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.theoccess.alldocreader.R
 import com.theoccess.alldocreader.data.DocFile
@@ -42,7 +41,7 @@ import java.io.File
  * is copied into Documents/AllDocumentReader/import first.
  */
 @SuppressLint("CustomSplashScreen")
-class OpenDocumentActivity : AppCompatActivity() {
+class OpenDocumentActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivitySplashBinding
     private var progressAnim: ObjectAnimator? = null
@@ -226,7 +225,8 @@ class OpenDocumentActivity : AppCompatActivity() {
             "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" -> "xlsx"
             "application/vnd.ms-excel" -> "xls"
             "text/plain" -> "txt"
-            "text/csv" -> "csv"
+            "text/csv", "text/comma-separated-values" -> "csv"
+            "application/vnd.oasis.opendocument.spreadsheet" -> "ods"
             "application/rtf" -> "rtf"
             else -> android.webkit.MimeTypeMap.getSingleton().getExtensionFromMimeType(mime) ?: "bin"
         }

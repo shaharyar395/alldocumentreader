@@ -8,7 +8,6 @@ import android.os.Bundle
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.activity.OnBackPressedCallback
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.theoccess.alldocreader.databinding.ActivityWelcomeBackBinding
 import kotlinx.coroutines.delay
@@ -18,7 +17,7 @@ import kotlinx.coroutines.launch
  * "Welcome back…" with the sliding blue bar. Shown on top of the main screen when the user
  * returns to the app; it closes by itself and the tab they were on is there again.
  */
-class WelcomeBackActivity : AppCompatActivity() {
+class WelcomeBackActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivityWelcomeBackBinding
     private var anim: ObjectAnimator? = null
@@ -33,7 +32,7 @@ class WelcomeBackActivity : AppCompatActivity() {
         startSlidingBar(binding.progressTrack, binding.progressThumb) { anim = it }
         lifecycleScope.launch {
             delay(DURATION_MS)
-            // like the original: "Welcome back…" → full-screen ad → the tab the user was on
+            // like the original: "Welcome back…" → App Open ad → the tab the user was on
             com.theoccess.alldocreader.ads.Ads.showOnLaunch(this@WelcomeBackActivity, AD_WAIT_MS) {
                 finish()
                 @Suppress("DEPRECATION")
@@ -49,7 +48,7 @@ class WelcomeBackActivity : AppCompatActivity() {
 
     companion object {
         const val DURATION_MS = 1800L
-        private const val AD_WAIT_MS = 2500L
+        private const val AD_WAIT_MS = 4000L
 
         fun intent(context: Context) = Intent(context, WelcomeBackActivity::class.java)
 

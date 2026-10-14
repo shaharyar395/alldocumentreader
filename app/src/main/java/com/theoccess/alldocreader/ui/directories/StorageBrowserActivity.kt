@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.activity.OnBackPressedCallback
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DiffUtil
@@ -34,7 +33,7 @@ import java.util.Date
 import java.util.Locale
 
 /** Folder browser opened from the Storage tab ("Storage" title + path line). */
-class StorageBrowserActivity : AppCompatActivity() {
+class StorageBrowserActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private sealed class Entry {
         data class Folder(val file: File, val childCount: Int, val modified: Long) : Entry()

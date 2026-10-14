@@ -8,7 +8,6 @@ import android.graphics.Matrix
 import android.media.ExifInterface
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.theoccess.alldocreader.R
 import com.theoccess.alldocreader.data.DocFile
@@ -26,7 +25,7 @@ import java.io.File
 import kotlin.math.max
 
 /** In-app viewer for JPG / PNG (and other pictures): zoom, share, convert to PDF, bookmark, file menu. */
-class ImageViewerActivity : AppCompatActivity() {
+class ImageViewerActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     companion object {
         const val EXTRA_PATH = "path"
@@ -89,11 +88,7 @@ class ImageViewerActivity : AppCompatActivity() {
 
     private fun convertToPdf() {
         if (converting) return
-        val ext = doc.name.substringAfterLast('.', "").lowercase()
-        if (ext !in setOf("jpg", "jpeg", "png", "webp", "bmp", "gif")) {
-            toast(R.string.convert_old_format)
-            return
-        }
+        if (!com.theoccess.alldocreader.premium.PremiumGate.use(this, com.theoccess.alldocreader.premium.PremiumGate.Feature.CONVERT)) return
         converting = true
         val pill = ProgressPill(this)
         pill.show(getString(R.string.converting_progress, 0))

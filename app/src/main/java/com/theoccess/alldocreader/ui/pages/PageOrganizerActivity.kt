@@ -37,7 +37,6 @@ import android.widget.PopupWindow
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.ItemTouchHelper
@@ -68,7 +67,7 @@ import java.util.concurrent.Executors
  * "Pages" for a PDF: drag to reorder, select, rotate, extract, delete, insert blank pages / images,
  * undo / redo, and Done to save back into the same file.
  */
-class PageOrganizerActivity : AppCompatActivity() {
+class PageOrganizerActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivityPageOrganizerBinding
     private lateinit var file: File
@@ -104,6 +103,34 @@ class PageOrganizerActivity : AppCompatActivity() {
 
     private val pickImages = registerForActivityResult(ActivityResultContracts.PickMultipleVisualMedia(50)) { uris ->
         if (uris.isNotEmpty()) insertItems(uris.map { PageItem(nextId++, PageKind.Picture(it.toString())) })
+    }
+
+    // ------------------------------------------------------------------ Images → Take a photo
+
+    private var photoUri: android.net.Uri? = null
+
+    private val takePicture = registerForActivityResult(ActivityResultContracts.TakePicture()) { ok ->
+        val uri = photoUri
+        if (ok && uri != null) insertItems(listOf(PageItem(nextId++, PageKind.Picture(uri.toString()))))
+    }
+
+    private val cameraPermission = registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+        if (granted) takePhoto() else toast(R.string.camera_permission_needed)
+    }
+
+    private fun takePhoto() {
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
+            cameraPermission.launch(android.Manifest.permission.CAMERA)
+            return
+        }
+        val f = File(File(cacheDir, "page_photos").apply { mkdirs() }, "photo_${System.currentTimeMillis()}.jpg")
+        val uri = androidx.core.content.FileProvider.getUriForFile(this, "$packageName.fileprovider", f)
+        photoUri = uri
+        try {
+            takePicture.launch(uri)
+        } catch (e: Exception) {
+            toast(R.string.no_app_to_open)
+        }
     }
 
     private val backCallback = object : OnBackPressedCallback(true) {
@@ -262,7 +289,10 @@ class PageOrganizerActivity : AppCompatActivity() {
         }
         pb.optImages.setOnClickListener {
             popup.dismiss()
-            pickImages.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+            // like the original: "Take a photo / Choose from gallery / Cancel"
+            com.theoccess.alldocreader.ui.scan.SourceSheet.show(this,
+                onCamera = { takePhoto() },
+                onGallery = { pickImages.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)) })
         }
         pb.root.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED)
         popup.showAsDropDown(anchor, dp(8), -(anchor.height + pb.root.measuredHeight + dp(4)), Gravity.START)
@@ -561,7 +591,19 @@ class PageOrganizerActivity : AppCompatActivity() {
             selected.clear()
             open()
             TopPill.show(this@PageOrganizerActivity, getString(R.string.saved_successfully), topMarginDp = 60)
-            com.theoccess.alldocreader.ads.Ads.showInterstitial(this@PageOrganizerActivity)
+            if (intent.getBooleanExtra(EXTRA_OPEN_AFTER_SAVE, false)) {
+                // Tools → Manage pages: "Saved successfully", the ad, then the saved PDF opens (like the original)
+                binding.root.postDelayed({
+                    if (isFinishing || isDestroyed) return@postDelayed
+                    com.theoccess.alldocreader.ads.Ads.showInterstitial(this@PageOrganizerActivity, force = true) {
+                        if (isFinishing || isDestroyed) return@showInterstitial
+                        startActivity(com.theoccess.alldocreader.ui.viewer.ViewerActivity.intent(this@PageOrganizerActivity, file))
+                        finish()
+                    }
+                }, 1500)
+            } else {
+                com.theoccess.alldocreader.ads.Ads.showInterstitial(this@PageOrganizerActivity)
+            }
         }
     }
 
@@ -758,14 +800,17 @@ class PageOrganizerActivity : AppCompatActivity() {
     }
 
     companion object {
+        private const val EXTRA_OPEN_AFTER_SAVE = "open_after_save"
         private const val EXTRA_PATH = "path"
         private const val EXTRA_PAGE = "page"
         private const val PAYLOAD_SELECT = "select"
         private const val KEY_HINT_CLOSED = "organizer_hint_closed"
 
-        fun intent(context: Context, file: File, currentPage: Int = -1) =
+        /** [openAfterSave]: Tools → Manage pages — after Done the saved PDF opens in the reader. */
+        fun intent(context: Context, file: File, currentPage: Int = -1, openAfterSave: Boolean = false) =
             Intent(context, PageOrganizerActivity::class.java)
                 .putExtra(EXTRA_PATH, file.absolutePath)
                 .putExtra(EXTRA_PAGE, currentPage)
+                .putExtra(EXTRA_OPEN_AFTER_SAVE, openAfterSave)
     }
 }

@@ -47,6 +47,9 @@ object Ads {
     private var premiumOfferedThisRun = false
     private var appContext: Context? = null
     private val readyListeners = ArrayList<() -> Unit>()
+    /** True while Google's consent check / form (EEA / UK) is running: the launch ad waits for it. */
+    @Volatile
+    private var consentBusy = false
 
     /** True when ads may be requested: not premium, consent handled and the SDK started. */
     val enabled: Boolean get() = ready && !Billing.isPremium
@@ -58,12 +61,15 @@ object Ads {
     fun init(activity: Activity) {
         appContext = activity.applicationContext
         val consent = UserMessagingPlatform.getConsentInformation(activity)
+        consentBusy = true
         consent.requestConsentInfoUpdate(activity, ConsentRequestParameters.Builder().build(), {
             UserMessagingPlatform.loadAndShowConsentFormIfRequired(activity) { err ->
+                consentBusy = false
                 if (err != null) Log.w(TAG, "consent form: ${err.message}")
                 if (consent.canRequestAds()) start(activity.applicationContext)
             }
         }, { err ->
+            consentBusy = false
             Log.w(TAG, "consent info: ${err.message}")
             if (consent.canRequestAds()) start(activity.applicationContext)
         })
@@ -71,14 +77,30 @@ object Ads {
         if (consent.canRequestAds()) start(activity.applicationContext)
     }
 
+    /** Why an ad did not show: Logcat only (tag "Ads"), never on screen. */
+    @Suppress("UNUSED_PARAMETER")
+    private fun debugNote(context: Context, msg: String) {
+        Log.d(TAG, msg)
+    }
+
     private fun start(context: Context) {
         if (!started.compareAndSet(false, true)) return
+        // Premium switched off (expired / restore found nothing): load the ads right away
+        main.post {
+            Billing.premium.observeForever { premium ->
+                if (premium == false && ready) { loadAppOpen(context); loadInterstitial(context) }
+            }
+        }
         Thread {
+            // the App Open ad is requested right away, not after the SDK has finished starting
+            // (that can take several seconds on a cold start, so the ad came too late for the
+            // loading screen); without mediation Google allows loading before initialization ends
+            android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({ loadAppOpen(context) }, 50)
             MobileAds.initialize(context) {
                 ready = true
                 android.os.Handler(android.os.Looper.getMainLooper()).post {
+                    loadAppOpen(context)   // first: it is the ad shown at app start / "Welcome back"
                     loadInterstitial(context)
-                    loadAppOpen(context)
                     loadNative(context)
                     val l = ArrayList(readyListeners); readyListeners.clear()
                     l.forEach { it() }
@@ -142,48 +164,73 @@ object Ads {
         return interstitial != null
     }
 
-    // ------------------------------------------------------------------ "Continue to app" ads
+    // ------------------------------------------------------------------ App Open ads ("Continue to app ›")
 
     private const val APP_OPEN_MAX_AGE_MS = 4 * 3600_000L   // Google: app open ads expire after 4 h
     private var appOpen: AppOpenAd? = null
     private var appOpenLoadedAt = 0L
     private var appOpenLoading = false
-    private var launchCount = 0
+    private var appOpenFailures = 0
+    /** True while an App Open / launch ad is on screen (never two at once). */
+    @Volatile
+    private var showingLaunchAd = false
+    private val main by lazy { android.os.Handler(android.os.Looper.getMainLooper()) }
 
     private val hasAppOpen: Boolean
-        get() = appOpen != null && SystemClock.elapsedRealtime() - appOpenLoadedAt < APP_OPEN_MAX_AGE_MS
+        get() {
+            if (appOpen != null && SystemClock.elapsedRealtime() - appOpenLoadedAt >= APP_OPEN_MAX_AGE_MS) appOpen = null
+            return appOpen != null
+        }
 
     private fun loadAppOpen(context: Context) {
-        if (!enabled || appOpenLoading || hasAppOpen) return
+        // started (consent OK) is enough: no need to wait for the SDK's "ready"
+        if (!started.get() || Billing.isPremium || appOpenLoading || hasAppOpen) return
         appOpenLoading = true
-        AppOpenAd.load(context, AdIds.APP_OPEN, request(), object : AppOpenAd.AppOpenAdLoadCallback() {
+        val app = context.applicationContext
+        AppOpenAd.load(app, AdIds.APP_OPEN, request(), object : AppOpenAd.AppOpenAdLoadCallback() {
             override fun onAdLoaded(ad: AppOpenAd) {
                 appOpen = ad; appOpenLoadedAt = SystemClock.elapsedRealtime(); appOpenLoading = false
+                appOpenFailures = 0
+                Log.d(TAG, "app open: loaded")
             }
-            override fun onAdFailedToLoad(e: LoadAdError) { appOpen = null; appOpenLoading = false; Log.w(TAG, "app open: ${e.message}") }
+            override fun onAdFailedToLoad(e: LoadAdError) {
+                appOpen = null; appOpenLoading = false
+                if (appOpenFailures == 0) debugNote(app, "App Open ad failed to load (code ${e.code}${if (e.code == 3) " = no ad to show" else ""}): ${e.message}")
+                // try again a little later (5 s, 15 s, 45 s …, at most 2 min), so the next
+                // app start / "Welcome back" has an ad ready
+                val wait = minOf(120_000L, 5_000L * Math.pow(3.0, appOpenFailures.toDouble()).toLong())
+                appOpenFailures++
+                main.postDelayed({ loadAppOpen(app) }, wait)
+            }
         })
+    }
+
+    /** The app went to the background: make sure an App Open ad is ready for when the user comes back. */
+    fun onAppBackground(context: Context) {
+        if (ready) loadAppOpen(context)
     }
 
     private fun showAppOpen(activity: Activity, then: () -> Unit) {
         val ad = appOpen ?: return then()
         appOpen = null
+        showingLaunchAd = true
         ad.fullScreenContentCallback = object : FullScreenContentCallback() {
+            override fun onAdShowedFullScreenContent() { Log.d(TAG, "app open: showing") }
             override fun onAdDismissedFullScreenContent() {
+                showingLaunchAd = false
                 lastShownAt = SystemClock.elapsedRealtime()
                 loadAppOpen(activity.applicationContext)
                 then()
             }
             override fun onAdFailedToShowFullScreenContent(e: AdError) {
+                showingLaunchAd = false
+                debugNote(activity, "App Open ad could not show: ${e.message}")
                 loadAppOpen(activity.applicationContext)
                 then()
             }
         }
         ad.show(activity)
     }
-
-    /** True while a launch ad could still arrive (ads allowed and one is loading / loaded). */
-    private val launchAdComing: Boolean
-        get() = !Billing.isPremium && (!ready || loading || appOpenLoading || interstitial != null || hasAppOpen)
 
     private fun isInFront(activity: Activity): Boolean {
         val resumed = (activity as? androidx.lifecycle.LifecycleOwner)?.lifecycle?.currentState
@@ -193,7 +240,7 @@ object Ads {
 
     /**
      * Starts the ads SDK straight away when the user's consent is already known from an earlier
-     * run (called from App.onCreate), so the first full-screen ad has more time to load.
+     * run (called from App.onCreate), so the App Open ad has more time to load.
      */
     fun warmUp(context: Context) {
         try {
@@ -204,34 +251,58 @@ object Ads {
     }
 
     /**
-     * App start (after the "All Document Reader" splash) and "Welcome back": waits up to
-     * [maxWaitMs] for an ad, then shows — taking turns, like the original — either the
-     * "Continue to app ›" ad or the full-screen ad (whichever is ready if only one is), and runs
-     * [then] when it closes, or straight away when there is no ad (premium, no internet…).
+     * App start (after the "All Document Reader" splash) and "Welcome back…": shows the App Open
+     * ad ("Continue to app ›"), waiting up to [maxWaitMs] for it to load. Only if no App Open ad
+     * arrives in time is a ready full-screen ad shown instead. [then] runs once, when the ad
+     * closes, or straight away when there is no ad (premium, no internet…).
      */
     fun showOnLaunch(activity: Activity, maxWaitMs: Long, then: () -> Unit) {
-        if (Billing.isPremium) { then(); return }
-        val handler = android.os.Handler(android.os.Looper.getMainLooper())
-        val until = SystemClock.elapsedRealtime() + maxWaitMs
-        val preferAppOpen = launchCount++ % 2 == 1
-        if (ready) { loadInterstitial(activity.applicationContext); loadAppOpen(activity.applicationContext) }
+        var done = false
+        val finish = { if (!done) { done = true; then() } }
+        // Premium: no ad and no message about it
+        if (Billing.isPremium) { finish(); return }
+        if (showingLaunchAd) { finish(); return }
+        var until = SystemClock.elapsedRealtime() + maxWaitMs
+        var asked = started.get()
+        var retried = false
+        if (asked) { loadAppOpen(activity.applicationContext); loadInterstitial(activity.applicationContext) }
         val check = object : Runnable {
             override fun run() {
                 if (activity.isFinishing || activity.isDestroyed) return
+                val now = SystemClock.elapsedRealtime()
+                // the consent form is up (or being checked): wait for the user, then for the ad
+                if (consentBusy && !ready) { until = now + maxWaitMs; main.postDelayed(this, 150); return }
+                val timeUp = now >= until
                 // never open the ad window while this screen is still appearing / not in front:
-                // that is what makes a full-screen ad come up black with only "Test Ad" on it
-                if (!isInFront(activity)) { handler.postDelayed(this, 150); return }
-                val wanted = if (preferAppOpen) hasAppOpen else hasInterstitial
-                val timeUp = SystemClock.elapsedRealtime() >= until
+                // that is what makes a full-screen ad come up black with only "Test Ad" on it.
+                // Give up after a while so the app never gets stuck on this screen.
+                if (!isInFront(activity)) {
+                    if (now >= until + 3_000L) { debugNote(activity, "no App Open ad: screen not in front"); finish() } else main.postDelayed(this, 150)
+                    return
+                }
+                if (Billing.isPremium) { finish(); return }
+                // SDK started later (consent just given): ask for the ad now
+                if (started.get() && !asked) { asked = true; loadAppOpen(activity.applicationContext); loadInterstitial(activity.applicationContext) }
+                // the request failed (network hiccup …) and there is still time: try once more now
+                if (asked && !retried && !hasAppOpen && !appOpenLoading && !timeUp) {
+                    retried = true
+                    loadAppOpen(activity.applicationContext)
+                }
+                val appOpenComing = appOpenLoading || (!ready && !asked)
                 when {
-                    // the preferred kind is ready, or time is up / nothing more is coming: use what we have
-                    wanted || timeUp || !launchAdComing -> when {
-                        preferAppOpen && hasAppOpen -> showAppOpen(activity, then)
-                        hasInterstitial -> showInterstitial(activity, force = true, then = then)
-                        hasAppOpen -> showAppOpen(activity, then)
-                        else -> then()
+                    hasAppOpen -> showAppOpen(activity, finish)
+                    !timeUp && appOpenComing -> main.postDelayed(this, 150)
+                    // no App Open ad: a ready full-screen ad instead, like the original
+                    hasInterstitial -> { showingLaunchAd = true; showInterstitial(activity, force = true) { showingLaunchAd = false; finish() } }
+                    !timeUp && loading -> main.postDelayed(this, 150)
+                    else -> {
+                        debugNote(activity, when {
+                            !started.get() -> "no App Open ad: ads not started (consent not given yet)"
+                            !ready -> "no App Open ad: ads SDK still starting"
+                            else -> "no App Open ad: none loaded in time"
+                        })
+                        finish()
                     }
-                    else -> handler.postDelayed(this, 150)
                 }
             }
         }

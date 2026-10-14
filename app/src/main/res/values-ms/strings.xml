@@ -257,4 +257,324 @@
     <string name="helpful_no">😞 Tidak juga</string>
     <string name="helpful_yes">🥰 Berguna</string>
     <!-- /step26 -->
+    <!-- step27 -->
+    <string name="search_no_results">Tiada hasil ditemui</string>
+    <!-- /step27 -->
+    <!-- step28 -->
+    <string name="search_in_document">Cari dalam Dokumen</string>
+    <string name="search_in_pdf">Cari dalam PDF</string>
+    <string name="search_in_ppt">Cari dalam PPT</string>
+    <string name="search_in_excel">Cari dalam Excel</string>
+    <string name="refresh">Muat semula</string>
+    <string name="files_refreshed">Fail dikemas kini</string>
+    <!-- /step28 -->
+    <!-- step29 -->
+    <string name="new_badge">Baharu</string>
+    <string name="save_to_drive_short">Simpan ke Drive</string>
+    <string name="drive_saving">Menyimpan ke Google Drive…</string>
+    <string name="drive_saved">%1$s disimpan ke Google Drive (folder All Document Reader)</string>
+    <string name="drive_save_failed_title">Tidak dapat menyimpan ke Google Drive</string>
+    <string name="drive_not_allowed">Google tidak memberi akses ke Google Drive. Pilih akaun anda dan ketik Benarkan.</string>
+    <!-- /step29 -->
+    <!-- step30 -->
+    <string name="search_in_txt">Cari dalam TXT</string>
+    <!-- /step30 -->
+    <!-- step31 -->
+    <string name="drive_app_missing">Apl Google Drive diperlukan untuk menyimpan fail ke Drive. Pasang dari Google Play, kemudian cuba lagi.</string>
+    <string name="drive_install">Pasang</string>
+    <!-- /step31 -->
+    <!-- step32 -->
+    <string name="ready_top">Bersedia untuk</string>
+    <string name="ready_bottom">Percubaan Percuma 7 Hari</string>
+    <string name="premium_slide_merge">Gabung &amp;\npisah PDF</string>
+    <string name="feat_merge">Gabung &amp; pisah PDF dengan lancar</string>
+    <string name="user_reviews">Ulasan Pengguna</string>
+    <string name="cancel_anytime">Batal bila-bila masa</string>
+    <!-- /step32 -->
+    <!-- step33 -->
+    <string name="tool_merge_pdf">Gabung PDF</string>
+    <string name="tool_split_pdf">Pisah PDF</string>
+    <string name="premium_free_uses_left">Cubaan percuma · tinggal %1$d hari ini. Dapatkan Premium untuk penggunaan tanpa had</string>
+    <string name="premium_last_free_use">Cubaan percuma terakhir hari ini. Dapatkan Premium untuk penggunaan tanpa had</string>
+    <string name="premium_limit_reached">Cubaan percuma hari ini untuk \"%1$s\" telah habis. Dapatkan Premium untuk penggunaan tanpa had.</string>
+    <string name="select_pdfs_to_merge">Pilih PDF untuk digabung</string>
+    <string name="select_pdf_to_split">Pilih PDF untuk dipisah</string>
+    <string name="merge_n">Gabung (%1$d)</string>
+    <string name="merge_pick_two">Pilih sekurang-kurangnya 2 PDF</string>
+    <string name="merging_progress">Menggabung… (%1$d%%)</string>
+    <string name="merge_failed">Tidak dapat menggabung PDF ini (berkata laluan atau rosak?)</string>
+    <string name="split_one_page">PDF ini hanya ada satu halaman</string>
+    <string name="split_info">%1$s · %2$d halaman</string>
+    <string name="split_ranges_hint">cth. 1-3, 5, 6-%1$d</string>
+    <string name="split_action">Pisah</string>
+    <string name="split_each_page">Setiap halaman sebagai PDF berasingan</string>
+    <string name="split_every_n">Setiap beberapa halaman</string>
+    <string name="split_every_hint">Halaman setiap fail, cth. 2</string>
+    <string name="split_custom">Julat halaman tersuai</string>
+    <string name="split_invalid">Sila masukkan nombor halaman yang sah</string>
+    <string name="splitting_progress">Memisah… (%1$d%%)</string>
+    <string name="split_failed">Tidak dapat memisahkan PDF ini</string>
+    <plurals name="split_done">
+        <item quantity="one">Dipisah kepada %1$d fail</item>
+        <item quantity="other">Dipisah kepada %1$d fail</item>
+    </plurals>
+    <!-- /step33 -->
+    <!-- step35 -->
+    <string name="section_edit_manage">Sunting &amp; Urus</string>
+    <string name="add_files">Tambah fail</string>
+    <string name="add_part">Tambah halaman</string>
+    <string name="continue_n">Teruskan (%1$d)</string>
+    <string name="quit">Keluar</string>
+    <string name="quit_merging_title">Keluar daripada penggabungan?</string>
+    <string name="quit_splitting_title">Keluar daripada pemisahan?</string>
+    <string name="quit_changes_message">Perubahan tidak akan disimpan. Pasti mahu keluar?</string>
+    <string name="merged_successfully_excl">Berjaya digabung!</string>
+    <string name="split_successfully_excl">Berjaya dipisah!</string>
+    <string name="satisfied_question">Adakah anda berpuas hati dengan ciri \"%1$s\"?</string>
+    <string name="satisfied_not_good">😞\nTidak bagus</string>
+    <string name="satisfied_good">🥰\nBagus</string>
+    <string name="thanks_feedback">Terima kasih atas maklum balas anda!</string>
+    <string name="select_pages">Pilih halaman</string>
+    <string name="split_method">Kaedah pemisahan</string>
+    <string name="split_custom_range">Julat tersuai</string>
+    <string name="split_custom_range_sub">Pisah mengikut julat tersuai</string>
+    <string name="split_fixed_range">Julat tetap</string>
+    <string name="split_fixed_range_sub">Pisah mengikut selang halaman tetap</string>
+    <string name="interval_settings">Tetapan selang</string>
+    <string name="split_n">Pisah (%1$d)</string>
+    <string name="part_pages">Halaman: %1$s</string>
+    <plurals name="pages_and_size">
+        <item quantity="one">%1$d halaman · %2$s</item>
+        <item quantity="other">%1$d halaman · %2$s</item>
+    </plurals>
+    <!-- /step35 -->
+    <!-- step39 -->
+    <string name="ad_loading">Memuatkan iklan…</string>
+    <!-- /step39 -->
+    <!-- step40 -->
+    <string name="swipe_pages_tip">Leret ke kiri/kanan untuk menyelak halaman</string>
+    <!-- /step40 -->
+    <!-- step59 -->
+    <string name="done">Selesai</string>
+    <string name="ok">OK</string>
+    <string name="premium">Premium</string>
+    <string name="open">Buka</string>
+    <string name="add_bookmark">Tambah ke penanda buku</string>
+    <string name="remove_bookmark">Alih keluar daripada penanda buku</string>
+    <string name="file_info_path">Laluan</string>
+    <string name="file_info_size">Saiz</string>
+    <string name="file_info_modified">Diubah suai</string>
+    <string name="no_app_to_open">Tiada apl ditemui untuk membuka fail ini</string>
+    <string name="file_not_found">Fail tidak wujud lagi</string>
+    <string name="empty_folder">Folder ini kosong</string>
+    <string name="create_new">Cipta baharu</string>
+    <string name="settings_version">Versi %1$s</string>
+    <string name="tool_templates">Templat</string>
+    <string name="press_back_again">Tekan kembali sekali lagi untuk keluar</string>
+    <string name="select">Pilih</string>
+    <string name="select_all">Pilih semua</string>
+    <string name="delete_failed">Sesetengah fail tidak dapat dipadam</string>
+    <string name="rename_empty">Nama tidak boleh kosong</string>
+    <string name="rename_invalid">Nama mengandungi aksara yang tidak sah</string>
+    <string name="rename_exists">Fail dengan nama ini sudah wujud</string>
+    <string name="rename_failed">Tidak dapat menamakan semula fail ini</string>
+    <string name="rename_done">Dinamakan semula</string>
+    <string name="select_files_first">Pilih fail dahulu</string>
+    <string name="shortcut_permission_message"><![CDATA[Untuk menambah fail ke skrin utama, kami memerlukan kebenaran <font color=\"#0A5FD9\">\"Pintasan skrin utama\"</font>.]]></string>
+    <string name="shortcut_added">Ditambah ke skrin utama</string>
+    <string name="shortcut_not_supported">Pelancar anda tidak menyokong pintasan skrin utama</string>
+    <string name="rate_title"><![CDATA[Adakah anda suka <font color=\"#0A5FD9\">apl kami</font>?]]></string>
+    <string name="rate_thanks">Terima kasih atas maklum balas anda!</string>
+    <string name="restored">Dipulihkan</string>
+    <string name="restore_failed">Tidak dapat memulihkan (fail dengan nama yang sama mungkin sudah wujud)</string>
+    <string name="empty_recycle_bin_confirm">Padam semua fail dalam tong kitar semula secara kekal?</string>
+    <string name="unsupported_message">Maaf, kami belum menyokong jenis fail ini buat masa ini.\nNamun kami sentiasa berusaha mengoptimumkan apl dan akan menyokong lebih banyak jenis fail kemudian.</string>
+    <string name="faq">Soalan Lazim</string>
+    <string name="faq_message">Dibuka dalam apl: PDF, Word (.docx) dan TXT.\n\nExcel, PowerPoint dan imej dibuka dengan apl lain pada telefon anda.\n\nJenis fail lain (APK, video, fail sistem…) belum disokong.</string>
+    <string name="convert">Tukar</string>
+    <string name="pdf_to_word">PDF ke Word</string>
+    <string name="converting_progress">Menukar… (%d%%)</string>
+    <string name="convert_failed">Penukaran gagal</string>
+    <string name="print">Cetak</string>
+    <string name="edit">Edit</string>
+    <string name="bookmarked">Ditanda</string>
+    <string name="pdf_password_protected">PDF ini dilindungi kata laluan atau rosak</string>
+    <string name="undo">Buat asal</string>
+    <string name="redo">Buat semula</string>
+    <string name="setup">Persediaan</string>
+    <string name="delete_pages_message"><![CDATA[Adakah anda pasti mahu memadam <font color=\"#0A5FD9\">%d</font> halaman yang dipilih?]]></string>
+    <string name="pdf_needs_page">PDF memerlukan sekurang-kurangnya satu halaman</string>
+    <string name="discard_title">Buang perubahan?</string>
+    <string name="discard_message">Perubahan halaman anda belum disimpan.</string>
+    <string name="discard">Buang</string>
+    <string name="saving">Menyimpan…</string>
+    <string name="extracting">Mengekstrak halaman…</string>
+    <string name="save_failed">Tidak dapat menyimpan PDF</string>
+    <string name="portrait">Potret</string>
+    <string name="landscape">Landskap</string>
+    <string name="size_letter">Letter</string>
+    <string name="size_legal">Legal</string>
+    <string name="tpl_blank">Kosong</string>
+    <string name="tpl_line1">Garisan 1</string>
+    <string name="tpl_line2">Garisan 2</string>
+    <string name="tpl_notebook">Buku nota</string>
+    <string name="tpl_cornell">Cornell</string>
+    <string name="tpl_grid">Grid</string>
+    <string name="tpl_graph">Graf</string>
+    <string name="pick_image_hint">Pilih JPG, PNG atau imej lain</string>
+    <string name="import_failed">Tidak dapat mengimport fail ini</string>
+    <string name="tpl_resume">Resume</string>
+    <string name="filter_original">Asal</string>
+    <string name="no_camera">Tiada apl kamera ditemui</string>
+    <string name="pick_word_hint">Pilih fail Word (.docx) atau TXT</string>
+    <string name="pick_pdf_hint">Pilih fail PDF</string>
+    <string name="pick_ppt_hint">Pilih fail PowerPoint (.pptx)</string>
+    <string name="convert_old_format">Format lama ini (.doc / .ppt) belum disokong. Sila gunakan .docx atau .pptx.</string>
+    <string name="dims_cm">%1$s cm x %2$s cm</string>
+    <string name="flash">Denyar</string>
+    <string name="grid">Grid</string>
+    <string name="shutter_sound">Bunyi pengatup</string>
+    <string name="center_guide">Panduan tengah</string>
+    <string name="compare">Bandingkan dengan asal</string>
+    <string name="filter_auto">Auto</string>
+    <string name="filter_docs">Dokumen</string>
+    <string name="filter_color">Warna</string>
+    <string name="filter_image">Imej</string>
+    <string name="filter_super">Super</string>
+    <string name="filter_enhance">Tingkatkan</string>
+    <string name="filter_enhance2">Tingkatkan2</string>
+    <string name="filter_gray">Kelabu</string>
+    <string name="filter_invert">Songsang</string>
+    <string name="underline">Garis bawah</string>
+    <string name="strikethrough">Garis lorek</string>
+    <string name="add_short">+ Tambah</string>
+    <string name="delete_signature">Padam tandatangan</string>
+    <string name="delete_signature_message">Alih keluar tandatangan yang disimpan ini?</string>
+    <string name="how_to_edit">Cara mengedit</string>
+    <string name="share_app_text">Saya guna %1$s untuk membuka dan mengedit fail PDF, Word, Excel dan PowerPoint. Cubalah:</string>
+    <string name="faq_yes">🥳 Ya</string>
+    <string name="faq_no">😞 Tidak</string>
+    <string name="faq_q_edit">Bagaimanakah cara mengedit PDF?</string>
+    <string name="faq_q_display">Bagaimanakah cara menukar paparan dokumen?</string>
+    <string name="faq_q_copy">Bagaimanakah cara menyalin teks?</string>
+    <string name="faq_q_search">Bagaimanakah cara mencari teks dalam fail?</string>
+    <string name="faq_q_open">Kenapa saya tidak dapat mencari atau membuka fail saya?</string>
+    <string name="faq_q_create">Bagaimanakah cara mencipta fail baharu?</string>
+    <string name="faq_q_print">Bagaimanakah cara mencetak fail?</string>
+    <string name="faq_q_subscription">Bagaimanakah cara mengurus atau membatalkan langganan saya?</string>
+    <string name="faq_q_ads">Kenapa ada iklan dalam apl?</string>
+    <string name="faq_q_slow">Kenapa fail dibuka dengan perlahan?</string>
+    <string name="faq_q_permissions">Kenapa apl memerlukan kebenaran akses fail?</string>
+    <string name="feedback_hint">Sila terangkan masalah atau cadangan anda dengan terperinci…</string>
+    <string name="fb_rating_line">Penilaian: %1$d/5</string>
+    <string name="fb_max_shots">Anda boleh menambah sehingga 4 tangkapan skrin</string>
+    <string name="get_premium">Dapatkan Premium</string>
+    <string name="premium_slide_sign">Edit &amp;\ntandatangan PDF</string>
+    <string name="premium_slide_convert">Tukar\nformat</string>
+    <string name="premium_slide_templates">Templat</string>
+    <string name="premium_slide_pages">Urus halaman</string>
+    <string name="feat_ad_free">Pengalaman tanpa iklan</string>
+    <string name="feat_edit_sign">Edit &amp; tandatangan PDF dengan mudah</string>
+    <string name="feat_convert">Tukar fail dengan segera</string>
+    <string name="feat_templates">Buka kunci templat premium</string>
+    <string name="feat_pages">Pengurusan halaman lengkap</string>
+    <string name="plan_yearly">Tahunan</string>
+    <string name="plan_monthly">Bulanan</string>
+    <string name="continue_label">Teruskan</string>
+    <string name="no_subscription_found">Tiada langganan sah ditemui.</string>
+    <string name="w_home">Laman utama</string>
+    <string name="w_recent">Terkini</string>
+    <string name="w_tools_title">Alat pantas</string>
+    <string name="w_tools_desc">Cari, buka fail terkini dan penanda buku, atau edit PDF dari skrin utama anda</string>
+    <string name="w_reader_title">Pembaca dokumen</string>
+    <string name="w_reader_desc">Buka fail PDF, Word, Excel dan PowerPoint dengan satu ketikan</string>
+    <string name="w_editor_title">Editor PDF</string>
+    <string name="w_editor_desc">Terus mula mengedit PDF</string>
+    <string name="add_widget_button">Tambah ke skrin utama</string>
+    <string name="widget_manual_hint">Tekan lama skrin utama anda, ketik Widget dan pilih apl ini</string>
+    <string name="thanks_support">Terima kasih atas sokongan anda!</string>
+    <string name="dont_miss_apps">Jangan lepaskan apl kami yang mendapat penilaian tertinggi 👇</string>
+    <string name="see_our_apps">Lihat apl kami di Google Play</string>
+    <string name="faq_a_edit">Buka tab &lt;b&gt;Alat&lt;/b&gt; dan ketik &lt;b&gt;Edit PDF&lt;/b&gt;, kemudian pilih fail. Anda boleh mengedit teks sedia ada, menambah teks baharu, menambah imej, membuat anotasi (serlah, garis bawah, garis lorek, lukis) dan menambah tandatangan anda. Ketik tanda semak untuk menyimpan salinan.</string>
+    <string name="faq_a_display">Semasa membaca, gunakan bar bawah untuk bertukar antara tatal &lt;b&gt;menegak&lt;/b&gt; dan &lt;b&gt;mendatar&lt;/b&gt;, memutar paparan atau menyongsangkan warna. Cubit untuk zum, dan ketik nombor halaman untuk melompat ke sesuatu halaman.</string>
+    <string name="faq_a_copy">Fungsi salin teks belum tersedia. Kami sedang mengusahakannya! Jika ini penting bagi anda, &lt;a href=\"app://feedback\"&gt;hantar maklum balas&lt;/a&gt; supaya kami boleh mengutamakannya.</string>
+    <string name="faq_a_search">Buka dokumen dan ketik &lt;b&gt;Cari&lt;/b&gt; di bar bawah, kemudian taip perkataan yang anda cari. Gunakan anak panah untuk beralih antara hasil. Untuk mencari fail mengikut nama, gunakan ikon carian di bahagian atas skrin utama.</string>
+    <string name="faq_a_open">Pastikan apl mempunyai kebenaran untuk mengakses fail anda. Jika fail berada dalam apl awan atau folder lain, bukanya dengan &lt;a href=\"app://filemanager\"&gt;pengurus fail&lt;/a&gt; anda dan pilih apl ini. Jika fail masih tidak dapat dibuka, ia mungkin rosak atau dilindungi kata laluan; sila &lt;a href=\"app://feedback\"&gt;beritahu kami&lt;/a&gt;.</string>
+    <string name="faq_a_create">Di halaman &lt;b&gt;Semua fail&lt;/b&gt;, ketik butang &lt;b&gt;+&lt;/b&gt;. Anda boleh mencipta dokumen daripada templat, mengimport fail, menukar imej kepada PDF atau mengimbas dokumen kertas dengan kamera anda.</string>
+    <string name="faq_a_print">Buka PDF, ketik menu &lt;b&gt;⋮&lt;/b&gt; dan pilih &lt;b&gt;Cetak&lt;/b&gt;. Format lain boleh ditukar kepada PDF terlebih dahulu dari tab &lt;b&gt;Alat&lt;/b&gt;.</string>
+    <string name="faq_a_subscription">Langganan diurus oleh Google Play. Pergi ke &lt;b&gt;Tetapan → Urus langganan&lt;/b&gt;, atau buka Google Play → Profil → Pembayaran &amp;amp; langganan. Lihat &lt;a href=\"app://terms\"&gt;Terma penggunaan&lt;/a&gt; kami untuk butiran.</string>
+    <string name="faq_a_ads">Iklan membantu kami mengekalkan apl ini percuma untuk semua orang. Anda boleh membuangnya dengan &lt;a href=\"app://premium\"&gt;Premium&lt;/a&gt;.</string>
+    <string name="faq_a_slow">Fail yang sangat besar atau mengandungi banyak imej mengambil masa lebih lama untuk dimuatkan. Menutup apl lain dan mengosongkan ruang storan boleh membantu. Jika fail sentiasa perlahan, sila &lt;a href=\"app://feedback\"&gt;hantar maklum balas&lt;/a&gt;.</string>
+    <string name="faq_a_permissions">Apl memerlukan akses fail hanya untuk mencari dan membuka dokumen pada peranti anda. Fail anda kekal pada peranti anda dan tidak pernah dimuat naik.</string>
+    <string name="terms_html">&lt;p&gt;&lt;i&gt;Kemas kini terakhir: September 2026&lt;/i&gt;&lt;/p&gt;&lt;p&gt;Terma penggunaan ini mengawal penggunaan anda terhadap &lt;b&gt;%1$s&lt;/b&gt; (\"Apl\"). Dengan menggunakan Apl, anda bersetuju dengan terma ini.&lt;/p&gt;&lt;h4&gt;1. Penggunaan Apl&lt;/h4&gt;&lt;p&gt;Anda boleh menggunakan Apl untuk melihat, mencipta, menukar dan mengedit dokumen bagi tujuan peribadi atau perniagaan. Anda bertanggungjawab atas dokumen yang anda buka dan cipta, serta memastikan anda berhak menggunakannya.&lt;/p&gt;&lt;h4&gt;2. Langganan&lt;/h4&gt;&lt;p&gt;Sesetengah ciri mungkin memerlukan langganan berbayar yang dibeli melalui Google Play. Langganan diperbaharui secara automatik melainkan dibatalkan sekurang-kurangnya 24 jam sebelum tamat tempoh semasa. Anda boleh mengurus atau membatalkan langganan dalam tetapan akaun Google Play anda. Bayaran balik tertakluk kepada dasar Google Play.&lt;/p&gt;&lt;h4&gt;3. Pengiklanan&lt;/h4&gt;&lt;p&gt;Versi percuma Apl mungkin memaparkan iklan yang disediakan oleh pihak ketiga.&lt;/p&gt;&lt;h4&gt;4. Tiada jaminan&lt;/h4&gt;&lt;p&gt;Apl disediakan \"sebagaimana adanya\". Kami berusaha sebaik mungkin untuk memastikannya boleh dipercayai, tetapi kami tidak menjamin bahawa ia bebas daripada ralat, dan kami tidak bertanggungjawab atas kehilangan data. Sila simpan sandaran fail penting.&lt;/p&gt;&lt;h4&gt;5. Perubahan&lt;/h4&gt;&lt;p&gt;Kami mungkin mengemas kini terma ini dari semasa ke semasa. Penggunaan Apl yang berterusan bermakna anda menerima terma yang dikemas kini.&lt;/p&gt;&lt;h4&gt;6. Hubungi&lt;/h4&gt;&lt;p&gt;Ada soalan? E-mel kami di %2$s.&lt;/p&gt;</string>
+    <string name="premium_trusted_top">Disukai oleh</string>
+    <string name="premium_trusted_count">pengguna kami</string>
+    <string name="premium_trusted_bottom">di seluruh dunia</string>
+    <string name="plan_trial_days">Percubaan Percuma %1$d Hari</string>
+    <string name="plan_then_only_per_day">Kemudian hanya %1$s/hari</string>
+    <string name="plan_per_day">%1$s/hari</string>
+    <string name="plan_price_year">%1$s/tahun</string>
+    <string name="plan_price_month">%1$s/bulan</string>
+    <string name="plan_save_percent">Jimat %1$d%%</string>
+    <string name="start_free_trial">Mulakan Percubaan Percuma</string>
+    <string name="trial_today">Hari ini</string>
+    <string name="trial_today_sub">Buka kunci semua ciri premium</string>
+    <string name="trial_full_access">Dapatkan akses penuh</string>
+    <string name="trial_full_access_sub">Buang semua iklan, baca fail dalam semua format, edit PDF dengan mudah, dsb.</string>
+    <string name="trial_day7">Hari ke-7</string>
+    <string name="trial_day7_sub">Tiada caj jika anda membatalkan sekurang-kurangnya 24 jam sebelum percubaan tamat.</string>
+    <string name="hot">HOT</string>
+    <string name="try_days_free">Cuba %1$d Hari Secara Percuma</string>
+    <string name="try_then">Kemudian %1$s/tahun, hanya %2$s/hari</string>
+    <string name="crop_not_found">Tidak dapat mengesan tepi halaman — gunakan Pangkas untuk melaraskan</string>
+    <string name="tpl_reset">Set semula</string>
+    <string name="tpl_close">Tutup</string>
+    <string name="tpl_download">Muat turun</string>
+    <string name="tpl_flip_h">Balik M</string>
+    <string name="tpl_flip_v">Balik T</string>
+    <string name="tpl_bold">Tebal</string>
+    <string name="tpl_italic">Condong</string>
+    <string name="tpl_underline">Garis bawah</string>
+    <string name="tpl_strike">Garis lorek</string>
+    <string name="tpl_bullets">Senarai berbulet</string>
+    <string name="tpl_numbers">Senarai bernombor</string>
+    <string name="tpl_save_failed">Tidak dapat menyimpan fail</string>
+    <string name="tpl_image_failed">Tidak dapat membuka gambar ini</string>
+    <string name="ad_badge">Iklan</string>
+    <string name="explore_nothing">Tiada apa-apa untuk dipaparkan sekarang. Sila semak sambungan internet anda.</string>
+    <string name="review1_title">Pembaca Fail Semua-dalam-Satu</string>
+    <string name="review1_text">Memang berbaloi melanggan!! Ia membuka fail semua format dengan pantas, menjejaki kemajuan membaca, berfungsi di luar talian, malah memulihkan fail yang dipadam!</string>
+    <string name="review2_title">Tiada Iklan, Tiada Caj Tersembunyi</string>
+    <string name="review2_text">Selepas melanggan, saya boleh guna lebih banyak ciri. Tiada iklan yang mengganggu bacaan dan suntingan saya, dan antara mukanya lebih kemas. Paling best, tiada caj tersembunyi!</string>
+    <string name="review3_title">Lebih Fokus, Kerja Lebih Pantas</string>
+    <string name="review3_text">Langganannya murah, dan kini saya boleh pratonton, mengedit dan mengurus fail tanpa iklan yang menjengkelkan. Memang meningkatkan kecekapan saya!</string>
+    <plurals name="deleted_count">
+        <item quantity="one">%d fail dipadam</item>
+        <item quantity="other">%d fail dipadam</item>
+    </plurals>
+    <plurals name="moved_to_bin_count">
+        <item quantity="one">%d fail dialihkan ke tong kitar semula</item>
+        <item quantity="other">%d fail dialihkan ke tong kitar semula</item>
+    </plurals>
+    <plurals name="days_left">
+        <item quantity="one">%d hari lagi</item>
+        <item quantity="other">%d hari lagi</item>
+    </plurals>
+    <plurals name="pages_selected">
+        <item quantity="one">%d halaman dipilih</item>
+        <item quantity="other">%d halaman dipilih</item>
+    </plurals>
+    <plurals name="days_count">
+        <item quantity="one">%d hari</item>
+        <item quantity="other">%d hari</item>
+    </plurals>
+    <plurals name="delete_forever_message">
+        <item quantity="one">%d fail akan dipadam secara kekal. Tindakan ini tidak boleh dibuat asal.</item>
+        <item quantity="other">%d fail akan dipadam secara kekal. Tindakan ini tidak boleh dibuat asal.</item>
+    </plurals>
+    <plurals name="restored_count">
+        <item quantity="one">%d fail dipulihkan</item>
+        <item quantity="other">%d fail dipulihkan</item>
+    </plurals>
+    <!-- /step59 -->
 </resources>

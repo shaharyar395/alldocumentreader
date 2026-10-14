@@ -27,6 +27,12 @@ class LanguageAdapter(
         fun bind(item: AppLanguage) {
             b.tvName.text = if (item.tag == Languages.DEFAULT_TAG)
                 b.root.context.getString(R.string.language_default) else item.displayName
+            // every name starts at the left, also Arabic / Persian / Urdu (they would otherwise
+            // line up on the right, next to the radio button)
+            b.root.layoutDirection = android.view.View.LAYOUT_DIRECTION_LTR
+            b.tvName.textDirection = android.view.View.TEXT_DIRECTION_LTR
+            b.tvName.textAlignment = android.view.View.TEXT_ALIGNMENT_TEXT_START
+            b.tvName.gravity = android.view.Gravity.START or android.view.Gravity.CENTER_VERTICAL
             b.rbSelected.isChecked = item.tag == selectedTag
             b.root.setOnClickListener {
                 val pos = bindingAdapterPosition

@@ -8,7 +8,6 @@ import android.os.Bundle
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.activity.OnBackPressedCallback
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.theoccess.alldocreader.data.Prefs
 import com.theoccess.alldocreader.databinding.ActivitySplashBinding
@@ -20,7 +19,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 @SuppressLint("CustomSplashScreen")
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivitySplashBinding
     private var progressAnim: ObjectAnimator? = null
@@ -39,15 +38,14 @@ class SplashActivity : AppCompatActivity() {
         animateIn()
         startProgress()
 
-        // returning users: start the ads SDK now so the full-screen ad is ready when loading ends
-        val firstRun = !Prefs.languageDone || !Prefs.onboardingDone
-        if (!firstRun) com.theoccess.alldocreader.ads.Ads.init(this)
+        // start the ads SDK now (asks for consent first in the EEA / UK) so the App Open ad is
+        // ready when loading ends
+        com.theoccess.alldocreader.ads.Ads.init(this)
 
         lifecycleScope.launch {
             delay(SPLASH_DURATION_MS)
-            if (firstRun) route()
-            // like the original: splash → full-screen ad → home (no ad on the very first start)
-            else com.theoccess.alldocreader.ads.Ads.showOnLaunch(this@SplashActivity, LAUNCH_AD_WAIT_MS) { route() }
+            // every start: "All Document Reader" loading → App Open ad → language / intro / home
+            com.theoccess.alldocreader.ads.Ads.showOnLaunch(this@SplashActivity, LAUNCH_AD_WAIT_MS) { route() }
         }
     }
 
@@ -91,7 +89,11 @@ class SplashActivity : AppCompatActivity() {
 
     companion object {
         private const val SPLASH_DURATION_MS = 2600L
-        /** How long the splash may keep loading while the full-screen ad arrives. */
-        private const val LAUNCH_AD_WAIT_MS = 4000L
+        /**
+         * How long the splash may keep loading while the App Open ad is still on its way. It only
+         * waits while the ad is actually loading: as soon as it is there it shows, and if it
+         * fails (no internet …) the app goes on straight away.
+         */
+        private const val LAUNCH_AD_WAIT_MS = 10_000L
     }
 }

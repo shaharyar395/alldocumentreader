@@ -115,6 +115,23 @@
                         android:importantForAccessibility="no"
                         android:scaleType="fitXY"
                         android:src="@drawable/ic_spiral" />
+
+                    <!-- number of pages, like the original -->
+                    <TextView
+                        android:id="@+id/tvPageCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bg_page_badge"
+                        android:gravity="center"
+                        android:minWidth="18dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
                 </FrameLayout>
             </FrameLayout>
 
@@ -238,4 +255,82 @@
                 android:columnCount="4" />
         </LinearLayout>
     </ScrollView>
+
+    <!-- Merge / Split: "Are you satisfied with our "Merge PDF" feature?"  😞 Not good | 🥰 Good -->
+    <LinearLayout
+        android:id="@+id/feedbackCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_satisfied_card"
+        android:orientation="vertical"
+        android:paddingStart="14dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="12dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvSatisfied"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnSatisfiedClose"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/cancel"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_close"
+                app:tint="@color/text_hint" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnNotGood"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_satisfied_btn"
+                android:gravity="center"
+                android:text="@string/satisfied_not_good"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp" />
+
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:id="@+id/btnGood"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_satisfied_btn"
+                android:gravity="center"
+                android:text="@string/satisfied_good"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

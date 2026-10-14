@@ -13,7 +13,6 @@ import android.view.MotionEvent
 import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.AspectRatio
 import androidx.camera.core.Camera
 import androidx.camera.core.CameraSelector
@@ -41,7 +40,7 @@ import java.io.File
  * tap to focus, shutter, last-shot thumbnail with count and the Next arrow.
  * Several pages can be shot in a row; [EXTRA_SINGLE] returns right after one shot (Retake).
  */
-class CameraActivity : AppCompatActivity() {
+class CameraActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivityCameraBinding
     private var imageCapture: ImageCapture? = null

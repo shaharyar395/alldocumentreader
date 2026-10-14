@@ -16,7 +16,6 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.SeekBar
-import androidx.appcompat.app.AppCompatActivity
 import com.theoccess.alldocreader.databinding.ActivitySignaturePadBinding
 import com.theoccess.alldocreader.util.dp
 import kotlin.math.max
@@ -26,7 +25,7 @@ import kotlin.math.min
  * Landscape signature pad: "Sign here", 6 ink colours, pen width, clear, undo / redo, Done.
  * The signature is trimmed, saved with [SignatureStore] and its path returned.
  */
-class SignaturePadActivity : AppCompatActivity() {
+class SignaturePadActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivitySignaturePadBinding
     private val colors = intArrayOf(

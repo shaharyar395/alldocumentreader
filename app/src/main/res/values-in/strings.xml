@@ -257,4 +257,324 @@
     <string name="helpful_no">😞 Tidak juga</string>
     <string name="helpful_yes">🥰 Bermanfaat</string>
     <!-- /step26 -->
+    <!-- step27 -->
+    <string name="search_no_results">Tidak ada hasil</string>
+    <!-- /step27 -->
+    <!-- step28 -->
+    <string name="search_in_document">Cari di Dokumen</string>
+    <string name="search_in_pdf">Cari di PDF</string>
+    <string name="search_in_ppt">Cari di PPT</string>
+    <string name="search_in_excel">Cari di Excel</string>
+    <string name="refresh">Muat ulang</string>
+    <string name="files_refreshed">File diperbarui</string>
+    <!-- /step28 -->
+    <!-- step29 -->
+    <string name="new_badge">Baru</string>
+    <string name="save_to_drive_short">Simpan ke Drive</string>
+    <string name="drive_saving">Menyimpan ke Google Drive…</string>
+    <string name="drive_saved">%1$s disimpan ke Google Drive (folder All Document Reader)</string>
+    <string name="drive_save_failed_title">Tidak dapat menyimpan ke Google Drive</string>
+    <string name="drive_not_allowed">Google tidak memberi akses ke Google Drive. Pilih akun Anda lalu ketuk Izinkan.</string>
+    <!-- /step29 -->
+    <!-- step30 -->
+    <string name="search_in_txt">Cari di TXT</string>
+    <!-- /step30 -->
+    <!-- step31 -->
+    <string name="drive_app_missing">Aplikasi Google Drive diperlukan untuk menyimpan file ke Drive. Instal dari Google Play, lalu coba lagi.</string>
+    <string name="drive_install">Instal</string>
+    <!-- /step31 -->
+    <!-- step32 -->
+    <string name="ready_top">Bersiaplah untuk</string>
+    <string name="ready_bottom">Uji Coba Gratis 7 Hari</string>
+    <string name="premium_slide_merge">Gabung &amp;\npisah PDF</string>
+    <string name="feat_merge">Gabung &amp; pisah PDF dengan mudah</string>
+    <string name="user_reviews">Ulasan Pengguna</string>
+    <string name="cancel_anytime">Batalkan kapan saja</string>
+    <!-- /step32 -->
+    <!-- step33 -->
+    <string name="tool_merge_pdf">Gabung PDF</string>
+    <string name="tool_split_pdf">Pisah PDF</string>
+    <string name="premium_free_uses_left">Coba gratis · sisa %1$d hari ini. Dapatkan Premium untuk penggunaan tanpa batas</string>
+    <string name="premium_last_free_use">Coba gratis terakhir hari ini. Dapatkan Premium untuk penggunaan tanpa batas</string>
+    <string name="premium_limit_reached">Coba gratis hari ini untuk \"%1$s\" sudah habis. Dapatkan Premium untuk penggunaan tanpa batas.</string>
+    <string name="select_pdfs_to_merge">Pilih PDF untuk digabung</string>
+    <string name="select_pdf_to_split">Pilih PDF untuk dipisah</string>
+    <string name="merge_n">Gabung (%1$d)</string>
+    <string name="merge_pick_two">Pilih minimal 2 PDF</string>
+    <string name="merging_progress">Menggabungkan… (%1$d%%)</string>
+    <string name="merge_failed">Tidak dapat menggabungkan PDF ini (berkata sandi atau rusak?)</string>
+    <string name="split_one_page">PDF ini hanya memiliki satu halaman</string>
+    <string name="split_info">%1$s · %2$d halaman</string>
+    <string name="split_ranges_hint">mis. 1-3, 5, 6-%1$d</string>
+    <string name="split_action">Pisah</string>
+    <string name="split_each_page">Setiap halaman sebagai PDF terpisah</string>
+    <string name="split_every_n">Setiap beberapa halaman</string>
+    <string name="split_every_hint">Halaman per file, mis. 2</string>
+    <string name="split_custom">Rentang halaman khusus</string>
+    <string name="split_invalid">Masukkan nomor halaman yang valid</string>
+    <string name="splitting_progress">Memisahkan… (%1$d%%)</string>
+    <string name="split_failed">Tidak dapat memisahkan PDF ini</string>
+    <plurals name="split_done">
+        <item quantity="one">Dipisah menjadi %1$d file</item>
+        <item quantity="other">Dipisah menjadi %1$d file</item>
+    </plurals>
+    <!-- /step33 -->
+    <!-- step35 -->
+    <string name="section_edit_manage">Edit &amp; Kelola</string>
+    <string name="add_files">Tambah file</string>
+    <string name="add_part">Tambah halaman</string>
+    <string name="continue_n">Lanjutkan (%1$d)</string>
+    <string name="quit">Keluar</string>
+    <string name="quit_merging_title">Keluar dari penggabungan?</string>
+    <string name="quit_splitting_title">Keluar dari pemisahan?</string>
+    <string name="quit_changes_message">Perubahan tidak akan disimpan. Yakin ingin keluar?</string>
+    <string name="merged_successfully_excl">Berhasil digabung!</string>
+    <string name="split_successfully_excl">Berhasil dipisah!</string>
+    <string name="satisfied_question">Puas dengan fitur \"%1$s\" kami?</string>
+    <string name="satisfied_not_good">😞\nKurang baik</string>
+    <string name="satisfied_good">🥰\nBaik</string>
+    <string name="thanks_feedback">Terima kasih atas masukan Anda!</string>
+    <string name="select_pages">Pilih halaman</string>
+    <string name="split_method">Metode pemisahan</string>
+    <string name="split_custom_range">Rentang khusus</string>
+    <string name="split_custom_range_sub">Pisah berdasarkan rentang khusus</string>
+    <string name="split_fixed_range">Rentang tetap</string>
+    <string name="split_fixed_range_sub">Pisah per jumlah halaman tetap</string>
+    <string name="interval_settings">Pengaturan interval</string>
+    <string name="split_n">Pisah (%1$d)</string>
+    <string name="part_pages">Halaman: %1$s</string>
+    <plurals name="pages_and_size">
+        <item quantity="one">%1$d halaman · %2$s</item>
+        <item quantity="other">%1$d halaman · %2$s</item>
+    </plurals>
+    <!-- /step35 -->
+    <!-- step39 -->
+    <string name="ad_loading">Memuat iklan…</string>
+    <!-- /step39 -->
+    <!-- step40 -->
+    <string name="swipe_pages_tip">Geser ke kiri/kanan untuk membalik halaman</string>
+    <!-- /step40 -->
+    <!-- step59 -->
+    <string name="done">Selesai</string>
+    <string name="ok">OK</string>
+    <string name="premium">Premium</string>
+    <string name="open">Buka</string>
+    <string name="add_bookmark">Tambahkan ke bookmark</string>
+    <string name="remove_bookmark">Hapus dari bookmark</string>
+    <string name="file_info_path">Lokasi</string>
+    <string name="file_info_size">Ukuran</string>
+    <string name="file_info_modified">Diubah</string>
+    <string name="no_app_to_open">Tidak ada aplikasi untuk membuka file ini</string>
+    <string name="file_not_found">File sudah tidak ada</string>
+    <string name="empty_folder">Folder ini kosong</string>
+    <string name="create_new">Buat baru</string>
+    <string name="settings_version">Versi %1$s</string>
+    <string name="tool_templates">Template</string>
+    <string name="press_back_again">Tekan kembali sekali lagi untuk keluar</string>
+    <string name="select">Pilih</string>
+    <string name="select_all">Pilih semua</string>
+    <string name="delete_failed">Beberapa file tidak dapat dihapus</string>
+    <string name="rename_empty">Nama tidak boleh kosong</string>
+    <string name="rename_invalid">Nama mengandung karakter yang tidak valid</string>
+    <string name="rename_exists">File dengan nama ini sudah ada</string>
+    <string name="rename_failed">Tidak dapat mengganti nama file ini</string>
+    <string name="rename_done">Nama diganti</string>
+    <string name="select_files_first">Pilih file terlebih dahulu</string>
+    <string name="shortcut_permission_message"><![CDATA[Untuk menambahkan file ke layar utama, kami memerlukan izin <font color=\"#0A5FD9\">\"Pintasan layar utama\"</font>.]]></string>
+    <string name="shortcut_added">Ditambahkan ke layar utama</string>
+    <string name="shortcut_not_supported">Launcher Anda tidak mendukung pintasan layar utama</string>
+    <string name="rate_title"><![CDATA[Apakah Anda menyukai <font color=\"#0A5FD9\">aplikasi kami</font>?]]></string>
+    <string name="rate_thanks">Terima kasih atas masukan Anda!</string>
+    <string name="restored">Dipulihkan</string>
+    <string name="restore_failed">Tidak dapat memulihkan (mungkin sudah ada file dengan nama yang sama)</string>
+    <string name="empty_recycle_bin_confirm">Hapus permanen semua file di tempat sampah?</string>
+    <string name="unsupported_message">Maaf, saat ini kami belum mendukung jenis file ini.\nNamun kami terus berupaya mengoptimalkan aplikasi dan akan mendukung lebih banyak jenis file nanti.</string>
+    <string name="faq">FAQ</string>
+    <string name="faq_message">Dibuka di aplikasi: PDF, Word (.docx) dan TXT.\n\nExcel, PowerPoint dan gambar dibuka dengan aplikasi lain di ponsel Anda.\n\nJenis file lain (APK, video, file sistem…) belum didukung.</string>
+    <string name="convert">Konversi</string>
+    <string name="pdf_to_word">PDF ke Word</string>
+    <string name="converting_progress">Mengonversi… (%d%%)</string>
+    <string name="convert_failed">Konversi gagal</string>
+    <string name="print">Cetak</string>
+    <string name="edit">Edit</string>
+    <string name="bookmarked">Di-bookmark</string>
+    <string name="pdf_password_protected">PDF ini dilindungi kata sandi atau rusak</string>
+    <string name="undo">Urungkan</string>
+    <string name="redo">Ulangi</string>
+    <string name="setup">Pengaturan</string>
+    <string name="delete_pages_message"><![CDATA[Yakin ingin menghapus <font color=\"#0A5FD9\">%d</font> halaman yang dipilih?]]></string>
+    <string name="pdf_needs_page">PDF harus memiliki minimal satu halaman</string>
+    <string name="discard_title">Buang perubahan?</string>
+    <string name="discard_message">Perubahan halaman Anda belum disimpan.</string>
+    <string name="discard">Buang</string>
+    <string name="saving">Menyimpan…</string>
+    <string name="extracting">Mengekstrak halaman…</string>
+    <string name="save_failed">Tidak dapat menyimpan PDF</string>
+    <string name="portrait">Potret</string>
+    <string name="landscape">Lanskap</string>
+    <string name="size_letter">Letter</string>
+    <string name="size_legal">Legal</string>
+    <string name="tpl_blank">Kosong</string>
+    <string name="tpl_line1">Garis 1</string>
+    <string name="tpl_line2">Garis 2</string>
+    <string name="tpl_notebook">Buku catatan</string>
+    <string name="tpl_cornell">Cornell</string>
+    <string name="tpl_grid">Kotak</string>
+    <string name="tpl_graph">Grafik</string>
+    <string name="pick_image_hint">Pilih JPG, PNG atau gambar lain</string>
+    <string name="import_failed">Tidak dapat mengimpor file ini</string>
+    <string name="tpl_resume">CV</string>
+    <string name="filter_original">Asli</string>
+    <string name="no_camera">Aplikasi kamera tidak ditemukan</string>
+    <string name="pick_word_hint">Pilih file Word (.docx) atau TXT</string>
+    <string name="pick_pdf_hint">Pilih file PDF</string>
+    <string name="pick_ppt_hint">Pilih file PowerPoint (.pptx)</string>
+    <string name="convert_old_format">Format lama ini (.doc / .ppt) belum didukung. Silakan gunakan .docx atau .pptx.</string>
+    <string name="dims_cm">%1$s cm x %2$s cm</string>
+    <string name="flash">Flash</string>
+    <string name="grid">Kisi</string>
+    <string name="shutter_sound">Suara rana</string>
+    <string name="center_guide">Panduan tengah</string>
+    <string name="compare">Bandingkan dengan asli</string>
+    <string name="filter_auto">Otomatis</string>
+    <string name="filter_docs">Dokumen</string>
+    <string name="filter_color">Warna</string>
+    <string name="filter_image">Gambar</string>
+    <string name="filter_super">Super</string>
+    <string name="filter_enhance">Pertajam</string>
+    <string name="filter_enhance2">Pertajam2</string>
+    <string name="filter_gray">Abu-abu</string>
+    <string name="filter_invert">Balik warna</string>
+    <string name="underline">Garis bawah</string>
+    <string name="strikethrough">Coret</string>
+    <string name="add_short">+ Tambah</string>
+    <string name="delete_signature">Hapus tanda tangan</string>
+    <string name="delete_signature_message">Hapus tanda tangan tersimpan ini?</string>
+    <string name="how_to_edit">Cara mengedit</string>
+    <string name="share_app_text">Saya pakai %1$s untuk membuka dan mengedit file PDF, Word, Excel dan PowerPoint. Coba deh:</string>
+    <string name="faq_yes">🥳 Ya</string>
+    <string name="faq_no">😞 Tidak</string>
+    <string name="faq_q_edit">Bagaimana cara mengedit PDF?</string>
+    <string name="faq_q_display">Bagaimana cara mengubah tampilan dokumen?</string>
+    <string name="faq_q_copy">Bagaimana cara menyalin teks?</string>
+    <string name="faq_q_search">Bagaimana cara mencari teks dalam file?</string>
+    <string name="faq_q_open">Mengapa saya tidak dapat menemukan atau membuka file saya?</string>
+    <string name="faq_q_create">Bagaimana cara membuat file baru?</string>
+    <string name="faq_q_print">Bagaimana cara mencetak file?</string>
+    <string name="faq_q_subscription">Bagaimana cara mengelola atau membatalkan langganan?</string>
+    <string name="faq_q_ads">Mengapa ada iklan di aplikasi?</string>
+    <string name="faq_q_slow">Mengapa file terbuka dengan lambat?</string>
+    <string name="faq_q_permissions">Mengapa aplikasi memerlukan izin akses file?</string>
+    <string name="feedback_hint">Jelaskan masalah atau saran Anda secara detail…</string>
+    <string name="fb_rating_line">Rating: %1$d/5</string>
+    <string name="fb_max_shots">Anda dapat menambahkan hingga 4 tangkapan layar</string>
+    <string name="get_premium">Dapatkan Premium</string>
+    <string name="premium_slide_sign">Edit &amp;\ntandatangani PDF</string>
+    <string name="premium_slide_convert">Konversi\nformat</string>
+    <string name="premium_slide_templates">Template</string>
+    <string name="premium_slide_pages">Kelola halaman</string>
+    <string name="feat_ad_free">Pengalaman tanpa iklan</string>
+    <string name="feat_edit_sign">Edit &amp; tanda tangani PDF dengan mudah</string>
+    <string name="feat_convert">Konversi file secara instan</string>
+    <string name="feat_templates">Buka template premium</string>
+    <string name="feat_pages">Pengelolaan halaman lengkap</string>
+    <string name="plan_yearly">Tahunan</string>
+    <string name="plan_monthly">Bulanan</string>
+    <string name="continue_label">Lanjutkan</string>
+    <string name="no_subscription_found">Tidak ditemukan langganan yang valid.</string>
+    <string name="w_home">Beranda</string>
+    <string name="w_recent">Terbaru</string>
+    <string name="w_tools_title">Alat cepat</string>
+    <string name="w_tools_desc">Cari, buka file terbaru dan bookmark, atau edit PDF dari layar utama</string>
+    <string name="w_reader_title">Pembaca dokumen</string>
+    <string name="w_reader_desc">Buka file PDF, Word, Excel dan PowerPoint dengan sekali ketuk</string>
+    <string name="w_editor_title">Editor PDF</string>
+    <string name="w_editor_desc">Langsung edit PDF</string>
+    <string name="add_widget_button">Tambahkan ke layar utama</string>
+    <string name="widget_manual_hint">Tekan lama layar utama, ketuk Widget, lalu pilih aplikasi ini</string>
+    <string name="thanks_support">Terima kasih atas dukungan Anda!</string>
+    <string name="dont_miss_apps">Jangan lewatkan aplikasi terbaik kami 👇</string>
+    <string name="see_our_apps">Lihat aplikasi kami di Google Play</string>
+    <string name="faq_a_edit">Buka tab &lt;b&gt;Alat&lt;/b&gt; dan ketuk &lt;b&gt;Edit PDF&lt;/b&gt;, lalu pilih file. Anda dapat mengedit teks yang ada, menambah teks baru, menambah gambar, membuat anotasi (sorot, garis bawah, coret, gambar) dan menambahkan tanda tangan. Ketuk tanda centang untuk menyimpan salinan.</string>
+    <string name="faq_a_display">Saat membaca, gunakan bilah bawah untuk beralih antara gulir &lt;b&gt;vertikal&lt;/b&gt; dan &lt;b&gt;horizontal&lt;/b&gt;, memutar tampilan atau membalik warna. Cubit untuk zoom, dan ketuk nomor halaman untuk melompat ke halaman.</string>
+    <string name="faq_a_copy">Fitur salin teks belum tersedia. Kami sedang mengerjakannya! Jika ini penting bagi Anda, &lt;a href=\"app://feedback\"&gt;kirim masukan&lt;/a&gt; agar kami bisa memprioritaskannya.</string>
+    <string name="faq_a_search">Buka dokumen dan ketuk &lt;b&gt;Cari&lt;/b&gt; di bilah bawah, lalu ketik kata yang Anda cari. Gunakan tanda panah untuk berpindah antar hasil. Untuk mencari file berdasarkan nama, gunakan ikon pencarian di bagian atas layar beranda.</string>
+    <string name="faq_a_open">Pastikan aplikasi memiliki izin untuk mengakses file Anda. Jika file ada di aplikasi cloud atau folder lain, buka dengan &lt;a href=\"app://filemanager\"&gt;pengelola file&lt;/a&gt; lalu pilih aplikasi ini. Jika file masih tidak bisa dibuka, file mungkin rusak atau dilindungi kata sandi; silakan &lt;a href=\"app://feedback\"&gt;beri tahu kami&lt;/a&gt;.</string>
+    <string name="faq_a_create">Di halaman &lt;b&gt;Semua file&lt;/b&gt;, ketuk tombol &lt;b&gt;+&lt;/b&gt;. Anda dapat membuat dokumen dari template, mengimpor file, mengonversi gambar ke PDF, atau memindai dokumen kertas dengan kamera.</string>
+    <string name="faq_a_print">Buka PDF, ketuk menu &lt;b&gt;⋮&lt;/b&gt; lalu pilih &lt;b&gt;Cetak&lt;/b&gt;. Format lain dapat dikonversi ke PDF terlebih dahulu dari tab &lt;b&gt;Alat&lt;/b&gt;.</string>
+    <string name="faq_a_subscription">Langganan dikelola oleh Google Play. Buka &lt;b&gt;Pengaturan → Kelola langganan&lt;/b&gt;, atau buka Google Play → Profil → Pembayaran &amp;amp; langganan. Lihat &lt;a href=\"app://terms\"&gt;Ketentuan penggunaan&lt;/a&gt; kami untuk detailnya.</string>
+    <string name="faq_a_ads">Iklan membantu kami menjaga aplikasi tetap gratis untuk semua orang. Anda dapat menghapusnya dengan &lt;a href=\"app://premium\"&gt;Premium&lt;/a&gt;.</string>
+    <string name="faq_a_slow">File yang sangat besar atau berisi banyak gambar membutuhkan waktu lebih lama untuk dimuat. Menutup aplikasi lain dan mengosongkan ruang penyimpanan dapat membantu. Jika file selalu lambat, silakan &lt;a href=\"app://feedback\"&gt;kirim masukan&lt;/a&gt;.</string>
+    <string name="faq_a_permissions">Aplikasi memerlukan akses file hanya untuk menemukan dan membuka dokumen di perangkat Anda. File Anda tetap berada di perangkat dan tidak pernah diunggah.</string>
+    <string name="terms_html">&lt;p&gt;&lt;i&gt;Terakhir diperbarui: September 2026&lt;/i&gt;&lt;/p&gt;&lt;p&gt;Ketentuan penggunaan ini mengatur penggunaan Anda atas &lt;b&gt;%1$s&lt;/b&gt; (\"Aplikasi\"). Dengan menggunakan Aplikasi, Anda menyetujui ketentuan ini.&lt;/p&gt;&lt;h4&gt;1. Penggunaan Aplikasi&lt;/h4&gt;&lt;p&gt;Anda dapat menggunakan Aplikasi untuk melihat, membuat, mengonversi, dan mengedit dokumen untuk keperluan pribadi atau bisnis. Anda bertanggung jawab atas dokumen yang Anda buka dan buat, serta memastikan Anda berhak menggunakannya.&lt;/p&gt;&lt;h4&gt;2. Langganan&lt;/h4&gt;&lt;p&gt;Beberapa fitur mungkin memerlukan langganan berbayar yang dibeli melalui Google Play. Langganan diperpanjang secara otomatis kecuali dibatalkan setidaknya 24 jam sebelum periode saat ini berakhir. Anda dapat mengelola atau membatalkan langganan di pengaturan akun Google Play Anda. Pengembalian dana mengikuti kebijakan Google Play.&lt;/p&gt;&lt;h4&gt;3. Iklan&lt;/h4&gt;&lt;p&gt;Versi gratis Aplikasi dapat menampilkan iklan yang disediakan oleh pihak ketiga.&lt;/p&gt;&lt;h4&gt;4. Tanpa jaminan&lt;/h4&gt;&lt;p&gt;Aplikasi disediakan \"sebagaimana adanya\". Kami berupaya menjaga keandalannya, tetapi kami tidak menjamin Aplikasi bebas dari kesalahan, dan kami tidak bertanggung jawab atas kehilangan data. Harap simpan cadangan file penting.&lt;/p&gt;&lt;h4&gt;5. Perubahan&lt;/h4&gt;&lt;p&gt;Kami dapat memperbarui ketentuan ini dari waktu ke waktu. Dengan terus menggunakan Aplikasi, Anda menerima ketentuan yang diperbarui.&lt;/p&gt;&lt;h4&gt;6. Kontak&lt;/h4&gt;&lt;p&gt;Ada pertanyaan? Kirim email kepada kami di %2$s.&lt;/p&gt;</string>
+    <string name="premium_trusted_top">Disukai oleh</string>
+    <string name="premium_trusted_count">pengguna kami</string>
+    <string name="premium_trusted_bottom">di seluruh dunia</string>
+    <string name="plan_trial_days">Uji Coba Gratis %1$d Hari</string>
+    <string name="plan_then_only_per_day">Lalu hanya %1$s/hari</string>
+    <string name="plan_per_day">%1$s/hari</string>
+    <string name="plan_price_year">%1$s/tahun</string>
+    <string name="plan_price_month">%1$s/bulan</string>
+    <string name="plan_save_percent">Hemat %1$d%%</string>
+    <string name="start_free_trial">Mulai Uji Coba Gratis</string>
+    <string name="trial_today">Hari ini</string>
+    <string name="trial_today_sub">Buka semua fitur premium</string>
+    <string name="trial_full_access">Dapatkan akses penuh</string>
+    <string name="trial_full_access_sub">Hapus semua iklan, baca file semua format, edit PDF dengan mudah, dll.</string>
+    <string name="trial_day7">Hari ke-7</string>
+    <string name="trial_day7_sub">Tanpa biaya jika Anda membatalkan setidaknya 24 jam sebelum uji coba berakhir.</string>
+    <string name="hot">HOT</string>
+    <string name="try_days_free">Coba Gratis %1$d Hari</string>
+    <string name="try_then">Lalu %1$s/tahun, hanya %2$s/hari</string>
+    <string name="crop_not_found">Tidak dapat menemukan tepi halaman — gunakan Pangkas untuk menyesuaikan</string>
+    <string name="tpl_reset">Reset</string>
+    <string name="tpl_close">Tutup</string>
+    <string name="tpl_download">Unduh</string>
+    <string name="tpl_flip_h">Balik H</string>
+    <string name="tpl_flip_v">Balik V</string>
+    <string name="tpl_bold">Tebal</string>
+    <string name="tpl_italic">Miring</string>
+    <string name="tpl_underline">Garis bawah</string>
+    <string name="tpl_strike">Coret</string>
+    <string name="tpl_bullets">Daftar berpoin</string>
+    <string name="tpl_numbers">Daftar bernomor</string>
+    <string name="tpl_save_failed">Tidak dapat menyimpan file</string>
+    <string name="tpl_image_failed">Tidak dapat membuka gambar ini</string>
+    <string name="ad_badge">Iklan</string>
+    <string name="explore_nothing">Belum ada yang bisa ditampilkan. Periksa koneksi internet Anda.</string>
+    <string name="review1_title">Pembaca File Serba Ada</string>
+    <string name="review1_text">Benar-benar layak berlangganan!! Bisa membuka file semua format dengan cepat, mencatat progres membaca, bisa offline, bahkan memulihkan file yang terhapus!</string>
+    <string name="review2_title">Tanpa Iklan, Tanpa Biaya Tersembunyi</string>
+    <string name="review2_text">Setelah berlangganan, saya bisa memakai lebih banyak fitur. Tidak ada iklan yang mengganggu saat membaca dan mengedit, dan tampilannya lebih bersih. Yang terbaik, tidak ada biaya tersembunyi!</string>
+    <string name="review3_title">Lebih Fokus, Kerja Lebih Cepat</string>
+    <string name="review3_text">Langganannya murah, dan sekarang saya bisa melihat, mengedit, dan mengelola file tanpa iklan yang mengganggu. Benar-benar meningkatkan efisiensi saya!</string>
+    <plurals name="deleted_count">
+        <item quantity="one">%d file dihapus</item>
+        <item quantity="other">%d file dihapus</item>
+    </plurals>
+    <plurals name="moved_to_bin_count">
+        <item quantity="one">%d file dipindahkan ke tempat sampah</item>
+        <item quantity="other">%d file dipindahkan ke tempat sampah</item>
+    </plurals>
+    <plurals name="days_left">
+        <item quantity="one">%d hari lagi</item>
+        <item quantity="other">%d hari lagi</item>
+    </plurals>
+    <plurals name="pages_selected">
+        <item quantity="one">%d halaman dipilih</item>
+        <item quantity="other">%d halaman dipilih</item>
+    </plurals>
+    <plurals name="days_count">
+        <item quantity="one">%d hari</item>
+        <item quantity="other">%d hari</item>
+    </plurals>
+    <plurals name="delete_forever_message">
+        <item quantity="one">%d file akan dihapus permanen. Tindakan ini tidak dapat dibatalkan.</item>
+        <item quantity="other">%d file akan dihapus permanen. Tindakan ini tidak dapat dibatalkan.</item>
+    </plurals>
+    <plurals name="restored_count">
+        <item quantity="one">%d file dipulihkan</item>
+        <item quantity="other">%d file dipulihkan</item>
+    </plurals>
+    <!-- /step59 -->
 </resources>

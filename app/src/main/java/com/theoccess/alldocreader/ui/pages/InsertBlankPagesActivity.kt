@@ -11,7 +11,6 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.widget.ImageViewCompat
 import androidx.recyclerview.widget.RecyclerView
@@ -38,7 +37,7 @@ import android.content.res.ColorStateList
 import kotlin.math.abs
 
 /** "Insert blank pages": template, page size, colour, orientation and count. */
-class InsertBlankPagesActivity : AppCompatActivity() {
+class InsertBlankPagesActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivityInsertBlankBinding
     private var template = 0

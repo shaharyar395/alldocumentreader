@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -30,7 +29,7 @@ import java.io.File
  * moved here.", each file with the days it has left; the check icon starts selection
  * ("N selected", select all) with Restore / Delete at the bottom.
  */
-class RecycleBinActivity : AppCompatActivity() {
+class RecycleBinActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivityRecycleBinBinding
     private var items: List<RecycleBin.Item> = emptyList()

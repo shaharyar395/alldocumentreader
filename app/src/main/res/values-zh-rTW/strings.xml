@@ -257,4 +257,317 @@
     <string name="helpful_no">😞 不太有</string>
     <string name="helpful_yes">🥰 有幫助</string>
     <!-- /step26 -->
+    <!-- step27 -->
+    <string name="search_no_results">找不到結果</string>
+    <!-- /step27 -->
+    <!-- step28 -->
+    <string name="search_in_document">在文件中搜尋</string>
+    <string name="search_in_pdf">在 PDF 中搜尋</string>
+    <string name="search_in_ppt">在 PPT 中搜尋</string>
+    <string name="search_in_excel">在 Excel 中搜尋</string>
+    <string name="refresh">重新整理</string>
+    <string name="files_refreshed">檔案已更新</string>
+    <!-- /step28 -->
+    <!-- step29 -->
+    <string name="new_badge">新</string>
+    <string name="save_to_drive_short">儲存到雲端硬碟</string>
+    <string name="drive_saving">正在儲存到 Google 雲端硬碟…</string>
+    <string name="drive_saved">已將 %1$s 儲存到 Google 雲端硬碟（All Document Reader 資料夾）</string>
+    <string name="drive_save_failed_title">無法儲存到 Google 雲端硬碟</string>
+    <string name="drive_not_allowed">Google 未授予 Google 雲端硬碟的存取權。請選擇帳戶並輕觸「允許」。</string>
+    <!-- /step29 -->
+    <!-- step30 -->
+    <string name="search_in_txt">在 TXT 中搜尋</string>
+    <!-- /step30 -->
+    <!-- step31 -->
+    <string name="drive_app_missing">需要 Google 雲端硬碟應用程式才能將檔案儲存到雲端硬碟。請從 Google Play 安裝後再試一次。</string>
+    <string name="drive_install">安裝</string>
+    <!-- /step31 -->
+    <!-- step32 -->
+    <string name="ready_top">準備開始您的</string>
+    <string name="ready_bottom">7 天免費試用</string>
+    <string name="premium_slide_merge">合併與\n分割 PDF</string>
+    <string name="feat_merge">輕鬆合併與分割 PDF</string>
+    <string name="user_reviews">使用者評價</string>
+    <string name="cancel_anytime">可隨時取消</string>
+    <!-- /step32 -->
+    <!-- step33 -->
+    <string name="tool_merge_pdf">合併 PDF</string>
+    <string name="tool_split_pdf">分割 PDF</string>
+    <string name="premium_free_uses_left">免費試用 · 今天還剩 %1$d 次。升級 Premium 即可無限使用</string>
+    <string name="premium_last_free_use">今天最後一次免費試用。升級 Premium 即可無限使用</string>
+    <string name="premium_limit_reached">今天「%1$s」的免費試用已用完。升級 Premium 即可無限使用。</string>
+    <string name="select_pdfs_to_merge">選擇要合併的 PDF</string>
+    <string name="select_pdf_to_split">選擇要分割的 PDF</string>
+    <string name="merge_n">合併 (%1$d)</string>
+    <string name="merge_pick_two">請至少選擇 2 個 PDF</string>
+    <string name="merging_progress">正在合併… (%1$d%%)</string>
+    <string name="merge_failed">無法合併這些 PDF（受密碼保護或已損毀？）</string>
+    <string name="split_one_page">此 PDF 只有一頁</string>
+    <string name="split_info">%1$s · %2$d 頁</string>
+    <string name="split_ranges_hint">例如 1-3, 5, 6-%1$d</string>
+    <string name="split_action">分割</string>
+    <string name="split_each_page">每頁各存成一個 PDF</string>
+    <string name="split_every_n">每隔幾頁</string>
+    <string name="split_every_hint">每個檔案的頁數，例如 2</string>
+    <string name="split_custom">自訂頁面範圍</string>
+    <string name="split_invalid">請輸入有效的頁碼</string>
+    <string name="splitting_progress">正在分割… (%1$d%%)</string>
+    <string name="split_failed">無法分割此 PDF</string>
+    <plurals name="split_done">
+        <item quantity="one">已分割成 %1$d 個檔案</item>
+        <item quantity="other">已分割成 %1$d 個檔案</item>
+    </plurals>
+    <!-- /step33 -->
+    <!-- step35 -->
+    <string name="section_edit_manage">編輯與管理</string>
+    <string name="add_files">新增檔案</string>
+    <string name="add_part">新增頁面</string>
+    <string name="continue_n">繼續 (%1$d)</string>
+    <string name="quit">離開</string>
+    <string name="quit_merging_title">要離開合併嗎？</string>
+    <string name="quit_splitting_title">要離開分割嗎？</string>
+    <string name="quit_changes_message">變更將不會儲存。確定要離開嗎？</string>
+    <string name="merged_successfully_excl">合併成功！</string>
+    <string name="split_successfully_excl">分割成功！</string>
+    <string name="satisfied_question">您對「%1$s」功能滿意嗎？</string>
+    <string name="satisfied_not_good">😞\n不太好</string>
+    <string name="satisfied_good">🥰\n很好</string>
+    <string name="thanks_feedback">感謝您的意見！</string>
+    <string name="select_pages">選擇頁面</string>
+    <string name="split_method">分割方式</string>
+    <string name="split_custom_range">自訂範圍</string>
+    <string name="split_custom_range_sub">依自訂範圍分割</string>
+    <string name="split_fixed_range">固定範圍</string>
+    <string name="split_fixed_range_sub">依固定頁數間隔分割</string>
+    <string name="interval_settings">間隔設定</string>
+    <string name="split_n">分割 (%1$d)</string>
+    <string name="part_pages">頁面：%1$s</string>
+    <plurals name="pages_and_size">
+        <item quantity="one">%1$d 頁 · %2$s</item>
+        <item quantity="other">%1$d 頁 · %2$s</item>
+    </plurals>
+    <!-- /step35 -->
+    <!-- step39 -->
+    <string name="ad_loading">正在載入廣告…</string>
+    <!-- /step39 -->
+    <!-- step40 -->
+    <string name="swipe_pages_tip">左右滑動即可翻頁</string>
+    <!-- /step40 -->
+    <!-- step59 -->
+    <string name="done">完成</string>
+    <string name="ok">確定</string>
+    <string name="premium">Premium</string>
+    <string name="open">開啟</string>
+    <string name="add_bookmark">加入書籤</string>
+    <string name="remove_bookmark">從書籤中移除</string>
+    <string name="file_info_path">路徑</string>
+    <string name="file_info_size">大小</string>
+    <string name="file_info_modified">修改時間</string>
+    <string name="no_app_to_open">找不到可開啟此檔案的應用程式</string>
+    <string name="file_not_found">檔案已不存在</string>
+    <string name="empty_folder">這個資料夾是空的</string>
+    <string name="create_new">新增</string>
+    <string name="settings_version">版本 %1$s</string>
+    <string name="tool_templates">範本</string>
+    <string name="press_back_again">再按一次返回鍵即可退出</string>
+    <string name="select">選取</string>
+    <string name="select_all">全選</string>
+    <string name="delete_failed">部分檔案無法刪除</string>
+    <string name="rename_empty">名稱不得為空白</string>
+    <string name="rename_invalid">名稱包含無效字元</string>
+    <string name="rename_exists">已有相同名稱的檔案</string>
+    <string name="rename_failed">無法重新命名這個檔案</string>
+    <string name="rename_done">已重新命名</string>
+    <string name="select_files_first">請先選取檔案</string>
+    <string name="shortcut_permission_message"><![CDATA[如要將檔案新增至主畫面，需要授予<font color=\"#0A5FD9\">「主畫面捷徑」</font>權限。]]></string>
+    <string name="shortcut_added">已新增至主畫面</string>
+    <string name="shortcut_not_supported">你的啟動器不支援主畫面捷徑</string>
+    <string name="rate_title"><![CDATA[你喜歡<font color=\"#0A5FD9\">我們的應用程式</font>嗎？]]></string>
+    <string name="rate_thanks">感謝你的意見回饋！</string>
+    <string name="restored">已還原</string>
+    <string name="restore_failed">無法還原（可能已有相同名稱的檔案）</string>
+    <string name="empty_recycle_bin_confirm">要永久刪除垃圾桶中的所有檔案嗎？</string>
+    <string name="unsupported_message">很抱歉，目前不支援這種檔案類型。\n我們持續努力改善應用程式，日後將支援更多檔案類型。</string>
+    <string name="faq">常見問題</string>
+    <string name="faq_message">可在應用程式內開啟：PDF、Word (.docx) 和 TXT。\n\nExcel、PowerPoint 和圖片會使用手機上的其他應用程式開啟。\n\n其他檔案類型（APK、影片、系統檔案…）目前尚不支援。</string>
+    <string name="convert">轉換</string>
+    <string name="pdf_to_word">PDF 轉 Word</string>
+    <string name="converting_progress">轉換中…（%d%%）</string>
+    <string name="convert_failed">轉換失敗</string>
+    <string name="print">列印</string>
+    <string name="edit">編輯</string>
+    <string name="bookmarked">已加入書籤</string>
+    <string name="pdf_password_protected">這個 PDF 受密碼保護或已損毀</string>
+    <string name="undo">復原</string>
+    <string name="redo">重做</string>
+    <string name="setup">設定</string>
+    <string name="delete_pages_message"><![CDATA[確定要刪除所選的 <font color=\"#0A5FD9\">%d</font> 個頁面嗎？]]></string>
+    <string name="pdf_needs_page">PDF 至少需要一個頁面</string>
+    <string name="discard_title">要捨棄變更嗎？</string>
+    <string name="discard_message">你對頁面的變更尚未儲存。</string>
+    <string name="discard">捨棄</string>
+    <string name="saving">儲存中…</string>
+    <string name="extracting">正在擷取頁面…</string>
+    <string name="save_failed">無法儲存 PDF</string>
+    <string name="portrait">直向</string>
+    <string name="landscape">橫向</string>
+    <string name="size_letter">Letter</string>
+    <string name="size_legal">Legal</string>
+    <string name="tpl_blank">空白</string>
+    <string name="tpl_line1">橫線 1</string>
+    <string name="tpl_line2">橫線 2</string>
+    <string name="tpl_notebook">筆記本</string>
+    <string name="tpl_cornell">康乃爾筆記</string>
+    <string name="tpl_grid">方格</string>
+    <string name="tpl_graph">方格紙</string>
+    <string name="pick_image_hint">選取 JPG、PNG 或其他圖片</string>
+    <string name="import_failed">無法匯入這個檔案</string>
+    <string name="tpl_resume">履歷</string>
+    <string name="filter_original">原始</string>
+    <string name="no_camera">找不到相機應用程式</string>
+    <string name="pick_word_hint">選取 Word (.docx) 或 TXT 檔案</string>
+    <string name="pick_pdf_hint">選取 PDF 檔案</string>
+    <string name="pick_ppt_hint">選取 PowerPoint (.pptx) 檔案</string>
+    <string name="convert_old_format">目前尚不支援這種舊格式（.doc / .ppt），請使用 .docx 或 .pptx。</string>
+    <string name="dims_cm">%1$s 公分 x %2$s 公分</string>
+    <string name="flash">閃光燈</string>
+    <string name="grid">格線</string>
+    <string name="shutter_sound">快門聲</string>
+    <string name="center_guide">中心參考線</string>
+    <string name="compare">與原始影像比較</string>
+    <string name="filter_auto">自動</string>
+    <string name="filter_docs">文件</string>
+    <string name="filter_color">彩色</string>
+    <string name="filter_image">圖片</string>
+    <string name="filter_super">超清晰</string>
+    <string name="filter_enhance">增強</string>
+    <string name="filter_enhance2">增強2</string>
+    <string name="filter_gray">灰階</string>
+    <string name="filter_invert">反轉</string>
+    <string name="underline">底線</string>
+    <string name="strikethrough">刪除線</string>
+    <string name="add_short">+ 新增</string>
+    <string name="delete_signature">刪除簽名</string>
+    <string name="delete_signature_message">要移除這個已儲存的簽名嗎？</string>
+    <string name="how_to_edit">如何編輯</string>
+    <string name="share_app_text">我用 %1$s 開啟和編輯 PDF、Word、Excel 和 PowerPoint 檔案，快來試試：</string>
+    <string name="faq_yes">🥳 是</string>
+    <string name="faq_no">😞 否</string>
+    <string name="faq_q_edit">如何編輯 PDF？</string>
+    <string name="faq_q_display">如何變更文件的顯示方式？</string>
+    <string name="faq_q_copy">如何複製文字？</string>
+    <string name="faq_q_search">如何在檔案中搜尋文字？</string>
+    <string name="faq_q_open">為什麼找不到或無法開啟我的檔案？</string>
+    <string name="faq_q_create">如何建立新檔案？</string>
+    <string name="faq_q_print">如何列印檔案？</string>
+    <string name="faq_q_subscription">如何管理或取消訂閱？</string>
+    <string name="faq_q_ads">為什麼應用程式中有廣告？</string>
+    <string name="faq_q_slow">為什麼檔案開啟速度很慢？</string>
+    <string name="faq_q_permissions">為什麼應用程式需要檔案存取權限？</string>
+    <string name="feedback_hint">請詳細描述你遇到的問題或建議…</string>
+    <string name="fb_rating_line">評分：%1$d/5</string>
+    <string name="fb_max_shots">最多可新增 4 張螢幕截圖</string>
+    <string name="get_premium">取得 Premium</string>
+    <string name="premium_slide_sign">編輯與\n簽署 PDF</string>
+    <string name="premium_slide_convert">格式\n轉換</string>
+    <string name="premium_slide_templates">範本</string>
+    <string name="premium_slide_pages">頁面管理</string>
+    <string name="feat_ad_free">無廣告體驗</string>
+    <string name="feat_edit_sign">輕鬆編輯與簽署 PDF</string>
+    <string name="feat_convert">立即轉換檔案</string>
+    <string name="feat_templates">解鎖進階範本</string>
+    <string name="feat_pages">完整的頁面管理</string>
+    <string name="plan_yearly">年繳</string>
+    <string name="plan_monthly">月繳</string>
+    <string name="continue_label">繼續</string>
+    <string name="no_subscription_found">找不到有效的訂閱。</string>
+    <string name="w_home">首頁</string>
+    <string name="w_recent">最近</string>
+    <string name="w_tools_title">快速工具</string>
+    <string name="w_tools_desc">在主畫面上搜尋、開啟最近的檔案和書籤，或編輯 PDF</string>
+    <string name="w_reader_title">文件閱讀器</string>
+    <string name="w_reader_desc">輕觸一下即可開啟 PDF、Word、Excel 和 PowerPoint 檔案</string>
+    <string name="w_editor_title">PDF 編輯器</string>
+    <string name="w_editor_desc">直接開始編輯 PDF</string>
+    <string name="add_widget_button">新增至主畫面</string>
+    <string name="widget_manual_hint">長按主畫面，輕觸「小工具」，然後選擇這個應用程式</string>
+    <string name="thanks_support">感謝你的支持！</string>
+    <string name="dont_miss_apps">別錯過我們的高評價應用程式 👇</string>
+    <string name="see_our_apps">在 Google Play 上查看我們的應用程式</string>
+    <string name="faq_a_edit">開啟&lt;b&gt;工具&lt;/b&gt;分頁，輕觸&lt;b&gt;編輯 PDF&lt;/b&gt;，然後選擇檔案。你可以編輯現有文字、新增文字、新增圖片、加上註解（醒目提示、底線、刪除線、繪圖）以及新增簽名。輕觸勾號即可儲存副本。</string>
+    <string name="faq_a_display">閱讀時，可使用底部列切換&lt;b&gt;垂直&lt;/b&gt;或&lt;b&gt;水平&lt;/b&gt;捲動、旋轉檢視畫面或反轉顏色。以雙指縮放畫面，輕觸頁碼即可跳至指定頁面。</string>
+    <string name="faq_a_copy">目前尚不支援複製文字，我們正在努力開發中！如果你需要這項功能，請&lt;a href=\"app://feedback\"&gt;提供意見回饋&lt;/a&gt;，讓我們優先處理。</string>
+    <string name="faq_a_search">開啟文件，輕觸底部列的&lt;b&gt;搜尋&lt;/b&gt;，然後輸入要尋找的字詞。使用箭頭在搜尋結果之間切換。如要依名稱尋找檔案，請使用主畫面頂端的搜尋圖示。</string>
+    <string name="faq_a_open">請確認應用程式有權存取你的檔案。如果檔案位於雲端應用程式或其他資料夾中，請使用&lt;a href=\"app://filemanager\"&gt;檔案管理工具&lt;/a&gt;開啟並選擇這個應用程式。如果檔案仍無法開啟，可能已損毀或受密碼保護，請&lt;a href=\"app://feedback\"&gt;告訴我們&lt;/a&gt;。</string>
+    <string name="faq_a_create">在&lt;b&gt;所有檔案&lt;/b&gt;頁面輕觸&lt;b&gt;+&lt;/b&gt;按鈕。你可以使用範本建立文件、匯入檔案、將圖片轉換為 PDF，或用相機掃描紙本文件。</string>
+    <string name="faq_a_print">開啟 PDF，輕觸&lt;b&gt;⋮&lt;/b&gt;選單並選擇&lt;b&gt;列印&lt;/b&gt;。其他格式可以先在&lt;b&gt;工具&lt;/b&gt;分頁中轉換為 PDF。</string>
+    <string name="faq_a_subscription">訂閱是由 Google Play 管理。請前往&lt;b&gt;設定 → 管理訂閱&lt;/b&gt;，或開啟 Google Play → 個人資料 → 付款和訂閱。詳情請參閱我們的&lt;a href=\"app://terms\"&gt;使用條款&lt;/a&gt;。</string>
+    <string name="faq_a_ads">廣告讓我們能為所有人免費提供這個應用程式。你可以透過 &lt;a href=\"app://premium\"&gt;Premium&lt;/a&gt; 移除廣告。</string>
+    <string name="faq_a_slow">非常大或含有大量圖片的檔案需要較長的載入時間。關閉其他應用程式並釋出儲存空間可能會有幫助。如果某個檔案總是開啟得很慢，請&lt;a href=\"app://feedback\"&gt;提供意見回饋&lt;/a&gt;。</string>
+    <string name="faq_a_permissions">應用程式需要檔案存取權限，僅是為了尋找並開啟裝置上的文件。你的檔案會保留在裝置上，絕不會上傳。</string>
+    <string name="terms_html">&lt;p&gt;&lt;i&gt;最後更新：2026 年 9 月&lt;/i&gt;&lt;/p&gt;&lt;p&gt;本使用條款規範你對 &lt;b&gt;%1$s&lt;/b&gt;（以下稱「本應用程式」）的使用。使用本應用程式即表示你同意本條款。&lt;/p&gt;&lt;h4&gt;1. 本應用程式的使用&lt;/h4&gt;&lt;p&gt;你可以將本應用程式用於個人或商業目的，以檢視、建立、轉換及編輯文件。你須對你開啟及建立的文件負責，並確保你有權使用這些文件。&lt;/p&gt;&lt;h4&gt;2. 訂閱&lt;/h4&gt;&lt;p&gt;部分功能可能需要透過 Google Play 購買付費訂閱。除非在目前訂閱期間結束前至少 24 小時取消，否則訂閱將自動續訂。你可以在 Google Play 帳戶設定中管理或取消訂閱。退款依循 Google Play 政策辦理。&lt;/p&gt;&lt;h4&gt;3. 廣告&lt;/h4&gt;&lt;p&gt;本應用程式的免費版本可能會顯示第三方提供的廣告。&lt;/p&gt;&lt;h4&gt;4. 免責聲明&lt;/h4&gt;&lt;p&gt;本應用程式係依「現況」提供。我們會盡力確保其穩定可靠，但不保證本應用程式沒有錯誤，亦不對資料遺失負責。請為重要檔案保留備份。&lt;/p&gt;&lt;h4&gt;5. 條款變更&lt;/h4&gt;&lt;p&gt;我們可能會不定期更新本條款。繼續使用本應用程式即表示你接受更新後的條款。&lt;/p&gt;&lt;h4&gt;6. 聯絡我們&lt;/h4&gt;&lt;p&gt;有任何問題嗎？請寄送電子郵件至 %2$s。&lt;/p&gt;</string>
+    <string name="premium_trusted_top">深受</string>
+    <string name="premium_trusted_count">全球使用者</string>
+    <string name="premium_trusted_bottom">喜愛</string>
+    <string name="plan_trial_days">%1$d 天免費試用</string>
+    <string name="plan_then_only_per_day">之後每天只要 %1$s</string>
+    <string name="plan_per_day">%1$s/天</string>
+    <string name="plan_price_year">%1$s/年</string>
+    <string name="plan_price_month">%1$s/月</string>
+    <string name="plan_save_percent">省下 %1$d%%</string>
+    <string name="start_free_trial">開始免費試用</string>
+    <string name="trial_today">今天</string>
+    <string name="trial_today_sub">解鎖所有進階功能</string>
+    <string name="trial_full_access">取得完整權限</string>
+    <string name="trial_full_access_sub">移除所有廣告、閱讀各種格式的檔案、輕鬆編輯 PDF 等。</string>
+    <string name="trial_day7">第 7 天</string>
+    <string name="trial_day7_sub">只要在試用期結束前至少 24 小時取消，就不會收費。</string>
+    <string name="hot">熱門</string>
+    <string name="try_days_free">免費試用 %1$d 天</string>
+    <string name="try_then">之後 %1$s/年，每天只要 %2$s</string>
+    <string name="crop_not_found">找不到頁面邊緣，請使用「裁剪」進行調整</string>
+    <string name="tpl_reset">重設</string>
+    <string name="tpl_close">關閉</string>
+    <string name="tpl_download">下載</string>
+    <string name="tpl_flip_h">水平翻轉</string>
+    <string name="tpl_flip_v">垂直翻轉</string>
+    <string name="tpl_bold">粗體</string>
+    <string name="tpl_italic">斜體</string>
+    <string name="tpl_underline">底線</string>
+    <string name="tpl_strike">刪除線</string>
+    <string name="tpl_bullets">項目符號清單</string>
+    <string name="tpl_numbers">編號清單</string>
+    <string name="tpl_save_failed">無法儲存檔案</string>
+    <string name="tpl_image_failed">無法開啟這張圖片</string>
+    <string name="ad_badge">廣告</string>
+    <string name="explore_nothing">目前沒有可顯示的內容，請檢查網路連線。</string>
+    <string name="review1_title">全方位檔案閱讀器</string>
+    <string name="review1_text">超值得訂閱！！各種格式的檔案都能快速開啟，還會記錄閱讀進度，離線也能用，甚至能救回刪除的檔案！</string>
+    <string name="review2_title">沒有廣告，沒有隱藏費用</string>
+    <string name="review2_text">訂閱後可以使用更多功能。閱讀和編輯時不再被廣告打斷，介面也更清爽。最棒的是完全沒有隱藏費用！</string>
+    <string name="review3_title">更專注，更有效率</string>
+    <string name="review3_text">訂閱很便宜，現在預覽、編輯和管理檔案都不會再有煩人的廣告了。效率真的大幅提升！</string>
+    <plurals name="deleted_count">
+        <item quantity="other">已刪除 %d 個檔案</item>
+    </plurals>
+    <plurals name="moved_to_bin_count">
+        <item quantity="other">已將 %d 個檔案移至垃圾桶</item>
+    </plurals>
+    <plurals name="days_left">
+        <item quantity="other">剩餘 %d 天</item>
+    </plurals>
+    <plurals name="pages_selected">
+        <item quantity="other">已選取 %d 頁</item>
+    </plurals>
+    <plurals name="days_count">
+        <item quantity="other">%d 天</item>
+    </plurals>
+    <plurals name="delete_forever_message">
+        <item quantity="other">%d 個檔案將遭永久刪除，這項操作無法復原。</item>
+    </plurals>
+    <plurals name="restored_count">
+        <item quantity="other">已還原 %d 個檔案</item>
+    </plurals>
+    <!-- /step59 -->
 </resources>

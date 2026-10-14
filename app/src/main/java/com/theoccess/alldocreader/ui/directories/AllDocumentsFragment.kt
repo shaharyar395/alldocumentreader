@@ -43,6 +43,7 @@ class AllDocumentsFragment : Fragment() {
         )
         b.rvList.layoutManager = LinearLayoutManager(requireContext())
         b.rvList.adapter = adapter
+        com.theoccess.alldocreader.data.NewFiles.changes.observe(viewLifecycleOwner) { adapter.refreshNewTags() }
     }
 
     override fun onResume() {

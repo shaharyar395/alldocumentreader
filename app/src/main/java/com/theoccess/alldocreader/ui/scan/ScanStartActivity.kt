@@ -3,7 +3,6 @@ package com.theoccess.alldocreader.ui.scan
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.theoccess.alldocreader.databinding.ActivityScanStartBinding
 
 /**
@@ -11,7 +10,7 @@ import com.theoccess.alldocreader.databinding.ActivityScanStartBinding
  * "Take a photo / Choose from gallery / Cancel"; Scan to PDF opens the camera directly.
  * The chosen pictures go through "Choose cropping method" into the page editor.
  */
-class ScanStartActivity : AppCompatActivity() {
+class ScanStartActivity : com.theoccess.alldocreader.ui.BaseActivity() {
 
     private lateinit var binding: ActivityScanStartBinding
 

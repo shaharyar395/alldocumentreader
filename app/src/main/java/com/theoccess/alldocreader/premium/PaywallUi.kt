@@ -77,7 +77,7 @@ object PaywallUi {
         var result = Billing.Result.CANCELED
         b.btnSubscribe.setOnClickListener {
             result = Billing.Result.SUCCESS
-            Billing.setTestPremium()
+            Billing.setTestPremium(plan)
             dialog.dismiss()
         }
         dialog.setContentView(b.root)
@@ -85,6 +85,10 @@ object PaywallUi {
         dialog.setOnDismissListener { done(result) }
         dialog.show()
     }
+
+    /** Restore found no active subscription: orange pill at the top, like the original. */
+    fun noSubscription(activity: Activity) =
+        TopPill.show(activity, activity.getString(R.string.no_subscription_found), R.drawable.ic_alert_circle, 28, R.drawable.bg_top_pill_warn)
 
     fun subscribeFailed(activity: Activity) =
         TopPill.show(activity, activity.getString(R.string.subscribe_failed), R.drawable.ic_alert_circle, 28, R.drawable.bg_top_pill_warn)

@@ -78,7 +78,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
-                    android:text="Search…"
+                    android:text="@string/search_for_files"
                     android:textColor="@color/text_hint"
                     android:textSize="8sp" />
             </LinearLayout>

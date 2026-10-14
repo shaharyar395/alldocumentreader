@@ -47,10 +47,18 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvLanguages"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:clipToPadding="false"
         android:paddingStart="12dp"
         android:paddingTop="6dp"
         android:paddingEnd="12dp"
         android:paddingBottom="12dp" />
+
+    <!-- banner ad at the bottom, like the other screens (hidden for premium / until an ad loads) -->
+    <com.theoccess.alldocreader.ads.AdBar
+        android:id="@+id/adBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface" />
 </LinearLayout>
